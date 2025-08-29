@@ -7,8 +7,8 @@
     <ProjectGuid>{2B7C2D2C-50CD-4C50-8E11-FDAABE9B3C9F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Tokyo_Ghoul</RootNamespace>
-    <AssemblyName>Tokyo Ghoul</AssemblyName>
+    <RootNamespace>ArimaERP</RootNamespace>
+    <AssemblyName>ArimaERP</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -55,6 +55,12 @@
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="EmpleadoClientes\MDIClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadoClientes\MDIClientes.Designer.cs">
+      <DependentUpon>MDIClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmpleadoProducto\MDIProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadoClientes\MDIClientes.resx">
+      <DependentUpon>MDIClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmpleadoProducto\MDIProductos.resx">
       <DependentUpon>MDIProductos.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,14 +101,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Administrador\" />
-    <Folder Include="EmpleadoCliente\" />
     <Folder Include="Preventista\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Capa_Datos\Capa_Datos.csproj">
-      <Project>{ed3e9ae6-3431-4c91-b2d8-f33dac9487fe}</Project>
-      <Name>Capa_Datos</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Capa_Logica\Capa_Logica.csproj">
       <Project>{4ce70d65-5b45-4533-b028-8c7919180bd0}</Project>
       <Name>Capa_Logica</Name>

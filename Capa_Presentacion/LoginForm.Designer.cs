@@ -59,12 +59,13 @@
             this.TLPBase.Controls.Add(this.BIngresar, 1, 2);
             this.TLPBase.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TLPBase.Location = new System.Drawing.Point(0, 0);
+            this.TLPBase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TLPBase.Name = "TLPBase";
             this.TLPBase.RowCount = 3;
             this.TLPBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.31579F));
             this.TLPBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.63158F));
             this.TLPBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.05263F));
-            this.TLPBase.Size = new System.Drawing.Size(584, 361);
+            this.TLPBase.Size = new System.Drawing.Size(779, 444);
             this.TLPBase.TabIndex = 0;
             // 
             // PHeader
@@ -73,19 +74,21 @@
             this.PHeader.Controls.Add(this.LSubtitulo);
             this.PHeader.Controls.Add(this.LTitulo);
             this.PHeader.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PHeader.Location = new System.Drawing.Point(102, 3);
+            this.PHeader.Location = new System.Drawing.Point(136, 4);
+            this.PHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PHeader.Name = "PHeader";
-            this.PHeader.Size = new System.Drawing.Size(379, 89);
+            this.PHeader.Size = new System.Drawing.Size(506, 108);
             this.PHeader.TabIndex = 0;
             // 
             // LSubtitulo
             // 
             this.LSubtitulo.AutoSize = true;
-            this.LSubtitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LSubtitulo.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LSubtitulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.LSubtitulo.Location = new System.Drawing.Point(3, 62);
+            this.LSubtitulo.Location = new System.Drawing.Point(4, 76);
+            this.LSubtitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LSubtitulo.Name = "LSubtitulo";
-            this.LSubtitulo.Size = new System.Drawing.Size(382, 18);
+            this.LSubtitulo.Size = new System.Drawing.Size(461, 25);
             this.LSubtitulo.TabIndex = 1;
             this.LSubtitulo.Text = "Los datos de tu empresa, ordenados de la mejor manera";
             this.LSubtitulo.Click += new System.EventHandler(this.LSubtitulo_Click);
@@ -94,11 +97,12 @@
             // 
             this.LTitulo.AutoSize = true;
             this.LTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.LTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LTitulo.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LTitulo.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.LTitulo.Location = new System.Drawing.Point(109, 25);
+            this.LTitulo.Location = new System.Drawing.Point(146, 22);
+            this.LTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LTitulo.Name = "LTitulo";
-            this.LTitulo.Size = new System.Drawing.Size(175, 37);
+            this.LTitulo.Size = new System.Drawing.Size(204, 54);
             this.LTitulo.TabIndex = 0;
             this.LTitulo.Text = "Arima ERP";
             this.LTitulo.Click += new System.EventHandler(this.label1_Click);
@@ -111,12 +115,13 @@
             this.TLPBody.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.TLPBody.Controls.Add(this.PBody, 1, 0);
             this.TLPBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TLPBody.Location = new System.Drawing.Point(102, 98);
+            this.TLPBody.Location = new System.Drawing.Point(136, 120);
+            this.TLPBody.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TLPBody.Name = "TLPBody";
             this.TLPBody.RowCount = 1;
             this.TLPBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TLPBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 184F));
-            this.TLPBody.Size = new System.Drawing.Size(379, 184);
+            this.TLPBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 226F));
+            this.TLPBody.Size = new System.Drawing.Size(506, 225);
             this.TLPBody.TabIndex = 1;
             // 
             // PBody
@@ -126,27 +131,30 @@
             this.PBody.Controls.Add(this.LContraseña);
             this.PBody.Controls.Add(this.TCorreo);
             this.PBody.Controls.Add(this.LCorreo);
-            this.PBody.Location = new System.Drawing.Point(78, 3);
+            this.PBody.Location = new System.Drawing.Point(105, 4);
+            this.PBody.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PBody.Name = "PBody";
-            this.PBody.Size = new System.Drawing.Size(221, 178);
+            this.PBody.Size = new System.Drawing.Size(295, 217);
             this.PBody.TabIndex = 0;
             // 
             // CMostrar
             // 
             this.CMostrar.AutoSize = true;
             this.CMostrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.CMostrar.Location = new System.Drawing.Point(75, 142);
+            this.CMostrar.Location = new System.Drawing.Point(100, 175);
+            this.CMostrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CMostrar.Name = "CMostrar";
-            this.CMostrar.Size = new System.Drawing.Size(61, 17);
+            this.CMostrar.Size = new System.Drawing.Size(74, 20);
             this.CMostrar.TabIndex = 4;
             this.CMostrar.Text = "Mostrar";
             this.CMostrar.UseVisualStyleBackColor = true;
             // 
             // TContrasena
             // 
-            this.TContrasena.Location = new System.Drawing.Point(3, 116);
+            this.TContrasena.Location = new System.Drawing.Point(4, 143);
+            this.TContrasena.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TContrasena.Name = "TContrasena";
-            this.TContrasena.Size = new System.Drawing.Size(215, 20);
+            this.TContrasena.Size = new System.Drawing.Size(285, 22);
             this.TContrasena.TabIndex = 3;
             this.TContrasena.UseSystemPasswordChar = true;
             // 
@@ -154,11 +162,12 @@
             // 
             this.LContraseña.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LContraseña.AutoSize = true;
-            this.LContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LContraseña.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LContraseña.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.LContraseña.Location = new System.Drawing.Point(49, 88);
+            this.LContraseña.Location = new System.Drawing.Point(72, 101);
+            this.LContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LContraseña.Name = "LContraseña";
-            this.LContraseña.Size = new System.Drawing.Size(123, 25);
+            this.LContraseña.Size = new System.Drawing.Size(156, 38);
             this.LContraseña.TabIndex = 2;
             this.LContraseña.Text = "Contraseña";
             this.LContraseña.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -166,9 +175,10 @@
             // TCorreo
             // 
             this.TCorreo.BackColor = System.Drawing.SystemColors.Window;
-            this.TCorreo.Location = new System.Drawing.Point(3, 46);
+            this.TCorreo.Location = new System.Drawing.Point(4, 57);
+            this.TCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TCorreo.Name = "TCorreo";
-            this.TCorreo.Size = new System.Drawing.Size(215, 20);
+            this.TCorreo.Size = new System.Drawing.Size(285, 22);
             this.TCorreo.TabIndex = 1;
             this.TCorreo.TextChanged += new System.EventHandler(this.TCorreo_TextChanged);
             // 
@@ -176,11 +186,12 @@
             // 
             this.LCorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LCorreo.AutoSize = true;
-            this.LCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LCorreo.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LCorreo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.LCorreo.Location = new System.Drawing.Point(70, 18);
+            this.LCorreo.Location = new System.Drawing.Point(93, 15);
+            this.LCorreo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LCorreo.Name = "LCorreo";
-            this.LCorreo.Size = new System.Drawing.Size(77, 25);
+            this.LCorreo.Size = new System.Drawing.Size(101, 38);
             this.LCorreo.TabIndex = 0;
             this.LCorreo.Text = "Correo";
             this.LCorreo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -190,9 +201,10 @@
             this.BIngresar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BIngresar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BIngresar.Location = new System.Drawing.Point(231, 303);
+            this.BIngresar.Location = new System.Drawing.Point(309, 372);
+            this.BIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BIngresar.Name = "BIngresar";
-            this.BIngresar.Size = new System.Drawing.Size(120, 40);
+            this.BIngresar.Size = new System.Drawing.Size(160, 49);
             this.BIngresar.TabIndex = 2;
             this.BIngresar.Text = "Iniciar Sesión";
             this.BIngresar.UseVisualStyleBackColor = true;
@@ -200,18 +212,19 @@
             // LoginForm
             // 
             this.AcceptButton = this.BIngresar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(584, 361);
+            this.ClientSize = new System.Drawing.Size(779, 444);
             this.Controls.Add(this.TLPBase);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "a";
+            this.Text = "Arima ERP - Login";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.TLPBase.ResumeLayout(false);
             this.PHeader.ResumeLayout(false);
