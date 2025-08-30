@@ -61,6 +61,12 @@
     <Compile Include="EmpleadoClientes\MDIClientes.Designer.cs">
       <DependentUpon>MDIClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmpleadoProducto\FormAlerta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadoProducto\FormAlerta.Designer.cs">
+      <DependentUpon>FormAlerta.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmpleadoProducto\MDIProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmpleadoClientes\MDIClientes.resx">
       <DependentUpon>MDIClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadoProducto\FormAlerta.resx">
+      <DependentUpon>FormAlerta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmpleadoProducto\MDIProductos.resx">
       <DependentUpon>MDIProductos.cs</DependentUpon>
