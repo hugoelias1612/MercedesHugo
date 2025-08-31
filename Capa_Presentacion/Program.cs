@@ -12,7 +12,7 @@ namespace ArimaERP
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Cambia el formulario de inicio:
-            Application.Run(new Empleado_Producto.MDIProductos());
+            Application.Run(new EmpleadoClientes.MDIClientes());
         }
     }
 }

@@ -16,5 +16,20 @@ namespace ArimaERP.EmpleadoClientes
         {
             InitializeComponent();
         }
+
+        private void MDIClientes_Load(object sender, EventArgs e)
+        {
+            // Obtener el área de trabajo del monitor principal (sin la barra de tareas)
+            Rectangle areaTrabajo = Screen.PrimaryScreen.WorkingArea;
+
+            // Establecer el tamaño y posición del formulario
+            this.Location = areaTrabajo.Location;
+            this.Size = areaTrabajo.Size;
+    }
+
+        private void lblNombreUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

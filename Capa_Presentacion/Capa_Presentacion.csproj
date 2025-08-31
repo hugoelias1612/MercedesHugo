@@ -96,6 +96,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
@@ -108,6 +109,24 @@
       <Project>{4ce70d65-5b45-4533-b028-8c7919180bd0}</Project>
       <Name>Capa_Logica</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\perfil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BUSCAR_reducido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pedido-reducido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preventista-reducido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientes-reducido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cobros-reducido.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

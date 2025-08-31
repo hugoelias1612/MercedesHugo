@@ -59,7 +59,7 @@
             this.TLPBase.Controls.Add(this.BIngresar, 1, 2);
             this.TLPBase.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TLPBase.Location = new System.Drawing.Point(0, 0);
-            this.TLPBase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TLPBase.Margin = new System.Windows.Forms.Padding(4);
             this.TLPBase.Name = "TLPBase";
             this.TLPBase.RowCount = 3;
             this.TLPBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.31579F));
@@ -75,7 +75,7 @@
             this.PHeader.Controls.Add(this.LTitulo);
             this.PHeader.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PHeader.Location = new System.Drawing.Point(136, 4);
-            this.PHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PHeader.Margin = new System.Windows.Forms.Padding(4);
             this.PHeader.Name = "PHeader";
             this.PHeader.Size = new System.Drawing.Size(506, 108);
             this.PHeader.TabIndex = 0;
@@ -116,11 +116,11 @@
             this.TLPBody.Controls.Add(this.PBody, 1, 0);
             this.TLPBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TLPBody.Location = new System.Drawing.Point(136, 120);
-            this.TLPBody.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TLPBody.Margin = new System.Windows.Forms.Padding(4);
             this.TLPBody.Name = "TLPBody";
             this.TLPBody.RowCount = 1;
             this.TLPBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TLPBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 226F));
+            this.TLPBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 225F));
             this.TLPBody.Size = new System.Drawing.Size(506, 225);
             this.TLPBody.TabIndex = 1;
             // 
@@ -132,7 +132,7 @@
             this.PBody.Controls.Add(this.TCorreo);
             this.PBody.Controls.Add(this.LCorreo);
             this.PBody.Location = new System.Drawing.Point(105, 4);
-            this.PBody.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PBody.Margin = new System.Windows.Forms.Padding(4);
             this.PBody.Name = "PBody";
             this.PBody.Size = new System.Drawing.Size(295, 217);
             this.PBody.TabIndex = 0;
@@ -142,7 +142,7 @@
             this.CMostrar.AutoSize = true;
             this.CMostrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.CMostrar.Location = new System.Drawing.Point(100, 175);
-            this.CMostrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CMostrar.Margin = new System.Windows.Forms.Padding(4);
             this.CMostrar.Name = "CMostrar";
             this.CMostrar.Size = new System.Drawing.Size(74, 20);
             this.CMostrar.TabIndex = 4;
@@ -152,7 +152,7 @@
             // TContrasena
             // 
             this.TContrasena.Location = new System.Drawing.Point(4, 143);
-            this.TContrasena.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TContrasena.Margin = new System.Windows.Forms.Padding(4);
             this.TContrasena.Name = "TContrasena";
             this.TContrasena.Size = new System.Drawing.Size(285, 22);
             this.TContrasena.TabIndex = 3;
@@ -176,7 +176,7 @@
             // 
             this.TCorreo.BackColor = System.Drawing.SystemColors.Window;
             this.TCorreo.Location = new System.Drawing.Point(4, 57);
-            this.TCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.TCorreo.Name = "TCorreo";
             this.TCorreo.Size = new System.Drawing.Size(285, 22);
             this.TCorreo.TabIndex = 1;
@@ -202,7 +202,7 @@
             this.BIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BIngresar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BIngresar.Location = new System.Drawing.Point(309, 372);
-            this.BIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BIngresar.Margin = new System.Windows.Forms.Padding(4);
             this.BIngresar.Name = "BIngresar";
             this.BIngresar.Size = new System.Drawing.Size(160, 49);
             this.BIngresar.TabIndex = 2;
@@ -220,11 +220,12 @@
             this.Controls.Add(this.TLPBase);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Arima ERP - Login";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.TLPBase.ResumeLayout(false);
             this.PHeader.ResumeLayout(false);
