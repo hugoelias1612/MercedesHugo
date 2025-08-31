@@ -44,5 +44,10 @@ namespace ArimaERP.Empleado_Producto
         {
             timer1.Start();
         }
+
+        private void BAlerta_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
