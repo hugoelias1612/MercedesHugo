@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace ArimaERP.Empleado_Producto
+namespace ArimaERP.EmpleadoProducto
 {
     public partial class MDIProductos : Form
     {
@@ -45,9 +45,27 @@ namespace ArimaERP.Empleado_Producto
             timer1.Start();
         }
 
+<<<<<<< HEAD
         private void BAlerta_Click(object sender, EventArgs e)
         {
 
+=======
+
+        private void CargarFormEnPanel(Form frm)
+        {
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Dock = DockStyle.Fill;
+
+            PContent.Controls.Clear();
+            PContent.Controls.Add(frm);
+            frm.Show();
+        }
+
+        private void BAlerta_Click(object sender, EventArgs e)
+        {
+            CargarFormEnPanel(new EmpleadoProducto.FormAlerta());
+>>>>>>> ae148a34cce8d430b156c9a1a11bba668fd465d9
         }
     }
 }
