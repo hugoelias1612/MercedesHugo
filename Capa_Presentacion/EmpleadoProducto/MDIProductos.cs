@@ -45,12 +45,6 @@ namespace ArimaERP.EmpleadoProducto
             timer1.Start();
         }
 
-<<<<<<< HEAD
-        private void BAlerta_Click(object sender, EventArgs e)
-        {
-
-=======
-
         private void CargarFormEnPanel(Form frm)
         {
             frm.TopLevel = false;
@@ -65,7 +59,6 @@ namespace ArimaERP.EmpleadoProducto
         private void BAlerta_Click(object sender, EventArgs e)
         {
             CargarFormEnPanel(new EmpleadoProducto.FormAlerta());
->>>>>>> ae148a34cce8d430b156c9a1a11bba668fd465d9
-        }
+    }
     }
 }
