@@ -108,7 +108,7 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = global::ArimaERP.Properties.Resources.perfil;
-            this.pictureBox1.Location = new System.Drawing.Point(848, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(857, 2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 8, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(55, 52);
@@ -122,13 +122,13 @@
             this.lblNombreUsuario.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblNombreUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreUsuario.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblNombreUsuario.Location = new System.Drawing.Point(903, 2);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(912, 2);
             this.lblNombreUsuario.Margin = new System.Windows.Forms.Padding(3, 3, 20, 0);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
             this.lblNombreUsuario.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
-            this.lblNombreUsuario.Size = new System.Drawing.Size(275, 36);
+            this.lblNombreUsuario.Size = new System.Drawing.Size(266, 36);
             this.lblNombreUsuario.TabIndex = 3;
-            this.lblNombreUsuario.Text = "Usuario Mercedes Fernandez";
+            this.lblNombreUsuario.Text = "Usuario Mercede Fernandez";
             // 
             // lblHora
             // 
