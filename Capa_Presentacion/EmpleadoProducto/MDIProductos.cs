@@ -59,6 +59,6 @@ namespace ArimaERP.EmpleadoProducto
         private void BAlerta_Click(object sender, EventArgs e)
         {
             CargarFormEnPanel(new EmpleadoProducto.FormAlerta());
-        }
+    }
     }
 }

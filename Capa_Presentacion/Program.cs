@@ -10,9 +10,8 @@ namespace ArimaERP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            // Cambia el formulario de inicio:
             Application.Run(new EmpleadoClientes.MDIClientes());
+
         }
     }
 }
