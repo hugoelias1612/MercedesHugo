@@ -179,9 +179,9 @@
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.Location = new System.Drawing.Point(1105, 0);
+            this.button1.Location = new System.Drawing.Point(1068, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 110);
+            this.button1.Size = new System.Drawing.Size(112, 110);
             this.button1.TabIndex = 5;
             this.button1.UseVisualStyleBackColor = true;
             // 

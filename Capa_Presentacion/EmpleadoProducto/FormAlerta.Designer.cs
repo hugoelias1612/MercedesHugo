@@ -50,14 +50,14 @@
             this.BComprar = new System.Windows.Forms.Button();
             this.TLPGrid = new System.Windows.Forms.TableLayoutPanel();
             this.DGResultados = new System.Windows.Forms.DataGridView();
-            this.PEstado = new System.Windows.Forms.Panel();
-            this.LEstado = new System.Windows.Forms.Label();
             this.ColumnaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CFamilia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CUStockMinimo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PEstado = new System.Windows.Forms.Panel();
+            this.LEstado = new System.Windows.Forms.Label();
             this.TLPBase.SuspendLayout();
             this.TLPHeader.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -131,13 +131,13 @@
             this.tableLayoutPanel2.Controls.Add(this.label12, 6, 0);
             this.tableLayoutPanel2.Controls.Add(this.label9, 3, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 56);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 55);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.26087F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.73913F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1264, 60);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1264, 61);
             this.tableLayoutPanel2.TabIndex = 6;
             // 
             // CbOrden
@@ -153,7 +153,7 @@
             "Nombre"});
             this.CbOrden.Location = new System.Drawing.Point(887, 35);
             this.CbOrden.Name = "CbOrden";
-            this.CbOrden.Size = new System.Drawing.Size(115, 21);
+            this.CbOrden.Size = new System.Drawing.Size(115, 27);
             this.CbOrden.TabIndex = 15;
             // 
             // CbProveedor
@@ -165,7 +165,7 @@
             this.CbProveedor.FormattingEnabled = true;
             this.CbProveedor.Location = new System.Drawing.Point(381, 35);
             this.CbProveedor.Name = "CbProveedor";
-            this.CbProveedor.Size = new System.Drawing.Size(120, 21);
+            this.CbProveedor.Size = new System.Drawing.Size(120, 27);
             this.CbProveedor.TabIndex = 11;
             // 
             // label7
@@ -173,9 +173,9 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(773, 3);
+            this.label7.Location = new System.Drawing.Point(761, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 25);
+            this.label7.Size = new System.Drawing.Size(115, 32);
             this.label7.TabIndex = 6;
             this.label7.Text = "Agotados";
             // 
@@ -184,9 +184,9 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(647, 3);
+            this.label8.Location = new System.Drawing.Point(635, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 25);
+            this.label8.Size = new System.Drawing.Size(116, 32);
             this.label8.TabIndex = 5;
             this.label8.Text = "StockMax";
             // 
@@ -195,9 +195,9 @@
             this.LProveedor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LProveedor.AutoSize = true;
             this.LProveedor.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LProveedor.Location = new System.Drawing.Point(391, 3);
+            this.LProveedor.Location = new System.Drawing.Point(383, 0);
             this.LProveedor.Name = "LProveedor";
-            this.LProveedor.Size = new System.Drawing.Size(99, 25);
+            this.LProveedor.Size = new System.Drawing.Size(115, 32);
             this.LProveedor.TabIndex = 3;
             this.LProveedor.Text = "Proveedor";
             // 
@@ -206,9 +206,9 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(279, 3);
+            this.label11.Location = new System.Drawing.Point(271, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 25);
+            this.label11.Size = new System.Drawing.Size(88, 32);
             this.label11.TabIndex = 0;
             this.label11.Text = "Familia";
             // 
@@ -221,21 +221,21 @@
             this.CbFamilia.FormattingEnabled = true;
             this.CbFamilia.Location = new System.Drawing.Point(255, 35);
             this.CbFamilia.Name = "CbFamilia";
-            this.CbFamilia.Size = new System.Drawing.Size(120, 21);
+            this.CbFamilia.Size = new System.Drawing.Size(120, 27);
             this.CbFamilia.TabIndex = 1;
             // 
             // NStockMax
             // 
             this.NStockMax.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NStockMax.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NStockMax.Location = new System.Drawing.Point(665, 34);
+            this.NStockMax.Location = new System.Drawing.Point(665, 35);
             this.NStockMax.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.NStockMax.Name = "NStockMax";
-            this.NStockMax.Size = new System.Drawing.Size(56, 22);
+            this.NStockMax.Size = new System.Drawing.Size(56, 26);
             this.NStockMax.TabIndex = 16;
             this.NStockMax.Value = new decimal(new int[] {
             10,
@@ -248,9 +248,9 @@
             this.CheckBoxAgotados.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CheckBoxAgotados.AutoSize = true;
             this.CheckBoxAgotados.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckBoxAgotados.Location = new System.Drawing.Point(770, 35);
+            this.CheckBoxAgotados.Location = new System.Drawing.Point(759, 35);
             this.CheckBoxAgotados.Name = "CheckBoxAgotados";
-            this.CheckBoxAgotados.Size = new System.Drawing.Size(98, 21);
+            this.CheckBoxAgotados.Size = new System.Drawing.Size(120, 23);
             this.CheckBoxAgotados.TabIndex = 17;
             this.CheckBoxAgotados.Text = "Solo stock 0";
             this.CheckBoxAgotados.UseVisualStyleBackColor = true;
@@ -259,9 +259,9 @@
             // 
             this.TNombreContiene.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TNombreContiene.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TNombreContiene.Location = new System.Drawing.Point(507, 34);
+            this.TNombreContiene.Location = new System.Drawing.Point(507, 35);
             this.TNombreContiene.Name = "TNombreContiene";
-            this.TNombreContiene.Size = new System.Drawing.Size(120, 22);
+            this.TNombreContiene.Size = new System.Drawing.Size(120, 26);
             this.TNombreContiene.TabIndex = 18;
             // 
             // label12
@@ -269,9 +269,9 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(907, 3);
+            this.label12.Location = new System.Drawing.Point(899, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(75, 25);
+            this.label12.Size = new System.Drawing.Size(92, 32);
             this.label12.TabIndex = 7;
             this.label12.Text = "Criterio";
             // 
@@ -280,9 +280,9 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(526, 3);
+            this.label9.Location = new System.Drawing.Point(516, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(81, 25);
+            this.label9.Size = new System.Drawing.Size(102, 32);
             this.label9.TabIndex = 4;
             this.label9.Text = "Nombre";
             // 
@@ -291,9 +291,9 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(464, 5);
+            this.label1.Location = new System.Drawing.Point(425, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(335, 45);
+            this.label1.Size = new System.Drawing.Size(413, 54);
             this.label1.TabIndex = 7;
             this.label1.Text = "Control de stock bajo ";
             // 
@@ -405,9 +405,64 @@
             this.DGResultados.Name = "DGResultados";
             this.DGResultados.ReadOnly = true;
             this.DGResultados.RowHeadersVisible = false;
+            this.DGResultados.RowHeadersWidth = 51;
             this.DGResultados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGResultados.Size = new System.Drawing.Size(1264, 330);
             this.DGResultados.TabIndex = 0;
+            // 
+            // ColumnaNombre
+            // 
+            this.ColumnaNombre.DataPropertyName = "Producto";
+            this.ColumnaNombre.FillWeight = 220F;
+            this.ColumnaNombre.HeaderText = "Producto";
+            this.ColumnaNombre.MinimumWidth = 6;
+            this.ColumnaNombre.Name = "ColumnaNombre";
+            this.ColumnaNombre.ReadOnly = true;
+            // 
+            // CFamilia
+            // 
+            this.CFamilia.DataPropertyName = "Familia";
+            this.CFamilia.FillWeight = 120F;
+            this.CFamilia.HeaderText = "Familia";
+            this.CFamilia.MinimumWidth = 6;
+            this.CFamilia.Name = "CFamilia";
+            this.CFamilia.ReadOnly = true;
+            // 
+            // Proveedor
+            // 
+            this.Proveedor.DataPropertyName = "Proveedor";
+            this.Proveedor.FillWeight = 120F;
+            this.Proveedor.HeaderText = "Proveedor";
+            this.Proveedor.MinimumWidth = 6;
+            this.Proveedor.Name = "Proveedor";
+            this.Proveedor.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            this.Precio.DataPropertyName = "Precio";
+            this.Precio.FillWeight = 90F;
+            this.Precio.HeaderText = "Precio";
+            this.Precio.MinimumWidth = 6;
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // Stock
+            // 
+            this.Stock.DataPropertyName = "Stock";
+            this.Stock.FillWeight = 70F;
+            this.Stock.HeaderText = "Stock";
+            this.Stock.MinimumWidth = 6;
+            this.Stock.Name = "Stock";
+            this.Stock.ReadOnly = true;
+            // 
+            // CUStockMinimo
+            // 
+            this.CUStockMinimo.DataPropertyName = "StockMinimo";
+            this.CUStockMinimo.FillWeight = 90F;
+            this.CUStockMinimo.HeaderText = "StockMinimo";
+            this.CUStockMinimo.MinimumWidth = 6;
+            this.CUStockMinimo.Name = "CUStockMinimo";
+            this.CUStockMinimo.ReadOnly = true;
             // 
             // PEstado
             // 
@@ -432,54 +487,6 @@
             this.LEstado.Text = "0 Productos";
             this.LEstado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LEstado.Click += new System.EventHandler(this.label2_Click_1);
-            // 
-            // ColumnaNombre
-            // 
-            this.ColumnaNombre.DataPropertyName = "Producto";
-            this.ColumnaNombre.FillWeight = 220F;
-            this.ColumnaNombre.HeaderText = "Producto";
-            this.ColumnaNombre.Name = "ColumnaNombre";
-            this.ColumnaNombre.ReadOnly = true;
-            // 
-            // CFamilia
-            // 
-            this.CFamilia.DataPropertyName = "Familia";
-            this.CFamilia.FillWeight = 120F;
-            this.CFamilia.HeaderText = "Familia";
-            this.CFamilia.Name = "CFamilia";
-            this.CFamilia.ReadOnly = true;
-            // 
-            // Proveedor
-            // 
-            this.Proveedor.DataPropertyName = "Proveedor";
-            this.Proveedor.FillWeight = 120F;
-            this.Proveedor.HeaderText = "Proveedor";
-            this.Proveedor.Name = "Proveedor";
-            this.Proveedor.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            this.Precio.DataPropertyName = "Precio";
-            this.Precio.FillWeight = 90F;
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            // 
-            // Stock
-            // 
-            this.Stock.DataPropertyName = "Stock";
-            this.Stock.FillWeight = 70F;
-            this.Stock.HeaderText = "Stock";
-            this.Stock.Name = "Stock";
-            this.Stock.ReadOnly = true;
-            // 
-            // CUStockMinimo
-            // 
-            this.CUStockMinimo.DataPropertyName = "StockMinimo";
-            this.CUStockMinimo.FillWeight = 90F;
-            this.CUStockMinimo.HeaderText = "StockMinimo";
-            this.CUStockMinimo.Name = "CUStockMinimo";
-            this.CUStockMinimo.ReadOnly = true;
             // 
             // FormAlerta
             // 
