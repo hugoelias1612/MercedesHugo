@@ -10,7 +10,7 @@ namespace ArimaERP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EmpleadoClientes.MDIClientes());
+            Application.Run(new EmpleadoProducto.MDIProductos());
 
         }
     }
