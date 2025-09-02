@@ -44,10 +44,29 @@
             this.btnPreventista = new System.Windows.Forms.Button();
             this.btnPedidos = new System.Windows.Forms.Button();
             this.pnlVista = new System.Windows.Forms.Panel();
+            this.pnlVistaMenuSecundario = new System.Windows.Forms.Panel();
+            this.pnlPreventistas = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.pnlPedidos = new System.Windows.Forms.Panel();
+            this.btnCancelarPedido = new System.Windows.Forms.Button();
+            this.btnModificarPedido = new System.Windows.Forms.Button();
+            this.btnCrearPedido = new System.Windows.Forms.Button();
+            this.pnlClientes = new System.Windows.Forms.Panel();
+            this.btnCuentaCorriente = new System.Windows.Forms.Button();
+            this.btnHistorial = new System.Windows.Forms.Button();
+            this.btnBaja = new System.Windows.Forms.Button();
+            this.btnModificacion = new System.Windows.Forms.Button();
+            this.btnAlta = new System.Windows.Forms.Button();
             this.pnlUSUARIO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.panel1.SuspendLayout();
+            this.pnlVista.SuspendLayout();
+            this.pnlPreventistas.SuspendLayout();
+            this.pnlPedidos.SuspendLayout();
+            this.pnlClientes.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlUSUARIO
@@ -110,7 +129,6 @@
             this.lblNombreUsuario.Size = new System.Drawing.Size(275, 36);
             this.lblNombreUsuario.TabIndex = 3;
             this.lblNombreUsuario.Text = "Usuario Mercedes Fernandez";
-            this.lblNombreUsuario.Click += new System.EventHandler(this.lblNombreUsuario_Click);
             // 
             // lblHora
             // 
@@ -198,6 +216,7 @@
             this.btnClientes.Size = new System.Drawing.Size(112, 110);
             this.btnClientes.TabIndex = 2;
             this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // btnPreventista
             // 
@@ -209,6 +228,7 @@
             this.btnPreventista.Size = new System.Drawing.Size(112, 110);
             this.btnPreventista.TabIndex = 1;
             this.btnPreventista.UseVisualStyleBackColor = true;
+            this.btnPreventista.Click += new System.EventHandler(this.btnPreventista_Click);
             // 
             // btnPedidos
             // 
@@ -220,15 +240,200 @@
             this.btnPedidos.Size = new System.Drawing.Size(112, 110);
             this.btnPedidos.TabIndex = 0;
             this.btnPedidos.UseVisualStyleBackColor = true;
+            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 
             // pnlVista
             // 
             this.pnlVista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(180)))));
+            this.pnlVista.Controls.Add(this.pnlVistaMenuSecundario);
+            this.pnlVista.Controls.Add(this.pnlPreventistas);
+            this.pnlVista.Controls.Add(this.pnlPedidos);
+            this.pnlVista.Controls.Add(this.pnlClientes);
             this.pnlVista.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlVista.Location = new System.Drawing.Point(0, 170);
             this.pnlVista.Name = "pnlVista";
+            this.pnlVista.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.pnlVista.Size = new System.Drawing.Size(1182, 885);
             this.pnlVista.TabIndex = 4;
+            // 
+            // pnlVistaMenuSecundario
+            // 
+            this.pnlVistaMenuSecundario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlVistaMenuSecundario.Location = new System.Drawing.Point(621, 10);
+            this.pnlVistaMenuSecundario.Name = "pnlVistaMenuSecundario";
+            this.pnlVistaMenuSecundario.Size = new System.Drawing.Size(561, 875);
+            this.pnlVistaMenuSecundario.TabIndex = 2;
+            // 
+            // pnlPreventistas
+            // 
+            this.pnlPreventistas.Controls.Add(this.button3);
+            this.pnlPreventistas.Controls.Add(this.button4);
+            this.pnlPreventistas.Controls.Add(this.button5);
+            this.pnlPreventistas.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlPreventistas.Location = new System.Drawing.Point(414, 10);
+            this.pnlPreventistas.Name = "pnlPreventistas";
+            this.pnlPreventistas.Size = new System.Drawing.Size(207, 875);
+            this.pnlPreventistas.TabIndex = 3;
+            this.pnlPreventistas.Visible = false;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(0, 118);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(207, 59);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Historial";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(0, 59);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(207, 59);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "Baja";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(0, 0);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(207, 59);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "Modificación";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // pnlPedidos
+            // 
+            this.pnlPedidos.Controls.Add(this.btnCancelarPedido);
+            this.pnlPedidos.Controls.Add(this.btnModificarPedido);
+            this.pnlPedidos.Controls.Add(this.btnCrearPedido);
+            this.pnlPedidos.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlPedidos.Location = new System.Drawing.Point(207, 10);
+            this.pnlPedidos.Name = "pnlPedidos";
+            this.pnlPedidos.Size = new System.Drawing.Size(207, 875);
+            this.pnlPedidos.TabIndex = 2;
+            this.pnlPedidos.Visible = false;
+            // 
+            // btnCancelarPedido
+            // 
+            this.btnCancelarPedido.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCancelarPedido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarPedido.Location = new System.Drawing.Point(0, 118);
+            this.btnCancelarPedido.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
+            this.btnCancelarPedido.Name = "btnCancelarPedido";
+            this.btnCancelarPedido.Size = new System.Drawing.Size(207, 59);
+            this.btnCancelarPedido.TabIndex = 1;
+            this.btnCancelarPedido.Text = "Cancelar";
+            this.btnCancelarPedido.UseVisualStyleBackColor = true;
+            // 
+            // btnModificarPedido
+            // 
+            this.btnModificarPedido.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnModificarPedido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarPedido.Location = new System.Drawing.Point(0, 59);
+            this.btnModificarPedido.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
+            this.btnModificarPedido.Name = "btnModificarPedido";
+            this.btnModificarPedido.Size = new System.Drawing.Size(207, 59);
+            this.btnModificarPedido.TabIndex = 1;
+            this.btnModificarPedido.Text = "Modificar";
+            this.btnModificarPedido.UseVisualStyleBackColor = true;
+            // 
+            // btnCrearPedido
+            // 
+            this.btnCrearPedido.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCrearPedido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearPedido.Location = new System.Drawing.Point(0, 0);
+            this.btnCrearPedido.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
+            this.btnCrearPedido.Name = "btnCrearPedido";
+            this.btnCrearPedido.Size = new System.Drawing.Size(207, 59);
+            this.btnCrearPedido.TabIndex = 1;
+            this.btnCrearPedido.Text = "Crear";
+            this.btnCrearPedido.UseVisualStyleBackColor = true;
+            // 
+            // pnlClientes
+            // 
+            this.pnlClientes.Controls.Add(this.btnCuentaCorriente);
+            this.pnlClientes.Controls.Add(this.btnHistorial);
+            this.pnlClientes.Controls.Add(this.btnBaja);
+            this.pnlClientes.Controls.Add(this.btnModificacion);
+            this.pnlClientes.Controls.Add(this.btnAlta);
+            this.pnlClientes.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlClientes.Location = new System.Drawing.Point(0, 10);
+            this.pnlClientes.Name = "pnlClientes";
+            this.pnlClientes.Size = new System.Drawing.Size(207, 875);
+            this.pnlClientes.TabIndex = 0;
+            this.pnlClientes.Visible = false;
+            // 
+            // btnCuentaCorriente
+            // 
+            this.btnCuentaCorriente.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCuentaCorriente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCuentaCorriente.Location = new System.Drawing.Point(0, 236);
+            this.btnCuentaCorriente.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
+            this.btnCuentaCorriente.Name = "btnCuentaCorriente";
+            this.btnCuentaCorriente.Size = new System.Drawing.Size(207, 59);
+            this.btnCuentaCorriente.TabIndex = 1;
+            this.btnCuentaCorriente.Text = "Cuenta Corriente";
+            this.btnCuentaCorriente.UseVisualStyleBackColor = true;
+            // 
+            // btnHistorial
+            // 
+            this.btnHistorial.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHistorial.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorial.Location = new System.Drawing.Point(0, 177);
+            this.btnHistorial.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
+            this.btnHistorial.Name = "btnHistorial";
+            this.btnHistorial.Size = new System.Drawing.Size(207, 59);
+            this.btnHistorial.TabIndex = 1;
+            this.btnHistorial.Text = "Historial";
+            this.btnHistorial.UseVisualStyleBackColor = true;
+            // 
+            // btnBaja
+            // 
+            this.btnBaja.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBaja.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaja.Location = new System.Drawing.Point(0, 118);
+            this.btnBaja.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
+            this.btnBaja.Name = "btnBaja";
+            this.btnBaja.Size = new System.Drawing.Size(207, 59);
+            this.btnBaja.TabIndex = 1;
+            this.btnBaja.Text = "Baja";
+            this.btnBaja.UseVisualStyleBackColor = true;
+            // 
+            // btnModificacion
+            // 
+            this.btnModificacion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnModificacion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificacion.Location = new System.Drawing.Point(0, 59);
+            this.btnModificacion.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
+            this.btnModificacion.Name = "btnModificacion";
+            this.btnModificacion.Size = new System.Drawing.Size(207, 59);
+            this.btnModificacion.TabIndex = 1;
+            this.btnModificacion.Text = "Modificación";
+            this.btnModificacion.UseVisualStyleBackColor = true;
+            // 
+            // btnAlta
+            // 
+            this.btnAlta.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAlta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlta.Location = new System.Drawing.Point(0, 0);
+            this.btnAlta.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
+            this.btnAlta.Name = "btnAlta";
+            this.btnAlta.Size = new System.Drawing.Size(207, 59);
+            this.btnAlta.TabIndex = 1;
+            this.btnAlta.Text = "Alta";
+            this.btnAlta.UseVisualStyleBackColor = true;
+            this.btnAlta.Click += new System.EventHandler(this.btnAlta_Click);
             // 
             // MDIClientes
             // 
@@ -250,6 +455,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.pnlVista.ResumeLayout(false);
+            this.pnlPreventistas.ResumeLayout(false);
+            this.pnlPedidos.ResumeLayout(false);
+            this.pnlClientes.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -272,5 +481,20 @@
         private System.Windows.Forms.Button btnPreventista;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel pnlVista;
+        private System.Windows.Forms.Panel pnlClientes;
+        private System.Windows.Forms.Button btnModificacion;
+        private System.Windows.Forms.Button btnAlta;
+        private System.Windows.Forms.Button btnCuentaCorriente;
+        private System.Windows.Forms.Button btnHistorial;
+        private System.Windows.Forms.Button btnBaja;
+        private System.Windows.Forms.Panel pnlPedidos;
+        private System.Windows.Forms.Button btnCancelarPedido;
+        private System.Windows.Forms.Button btnModificarPedido;
+        private System.Windows.Forms.Button btnCrearPedido;
+        private System.Windows.Forms.Panel pnlPreventistas;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel pnlVistaMenuSecundario;
     }
 }
