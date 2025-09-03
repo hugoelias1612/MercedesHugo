@@ -1,4 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ArimaERP.EmpleadoProducto
@@ -10,55 +18,45 @@ namespace ArimaERP.EmpleadoProducto
             InitializeComponent();
         }
 
-        private void TLPBody_Paint(object sender, PaintEventArgs e)
+        private void MDIProductos_Load(object sender, EventArgs e)
+        {
+ 
+        }
+
+        private void AbrirFormEnPanel(Form formHijo)
+        {
+            // Si ya hay controles dentro del panel, los limpio
+            pnlContent.Controls.Clear();
+
+            // Configuro el form hijo
+            formHijo.TopLevel = false;            // No será ventana independiente
+            formHijo.FormBorderStyle = FormBorderStyle.None; // Sin bordes
+            formHijo.Dock = DockStyle.Fill;       // Que ocupe todo el panel
+
+            // Lo agrego al panel
+            pnlContent.Controls.Add(formHijo);
+            pnlContent.Tag = formHijo;
+
+            // Muestro el formulario
+            formHijo.Show();
+        }
+
+
+
+        private void lblRol_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void BStock_Click(object sender, EventArgs e)
+        private void btnAlerta_Click(object sender, EventArgs e)
         {
-
+           AbrirFormEnPanel(new FormAlerta());
         }
 
-        private void BAgregar_Click(object sender, EventArgs e)
+        private void btnABM_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BComprar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BBuscar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MDIProducto_Load(object sender, EventArgs e)
-        {
-            timer1.Start();
-        }
-
-        private void CargarFormEnPanel(Form frm)
-        {
-            frm.TopLevel = false;
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.Dock = DockStyle.Fill;
-
-            PContent.Controls.Clear();
-            PContent.Controls.Add(frm);
-            frm.Show();
-        }
-
-        private void BAlerta_Click(object sender, EventArgs e)
-        {
-            CargarFormEnPanel(new EmpleadoProducto.FormAlerta());
+       
+            AbrirFormEnPanel(new FormABM());
     }
     }
 }

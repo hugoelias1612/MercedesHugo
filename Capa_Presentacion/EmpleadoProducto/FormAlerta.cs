@@ -23,6 +23,11 @@ namespace ArimaERP.EmpleadoProducto
             DGResultados.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
             DGResultados.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             DGResultados.ColumnHeadersHeight = 34;
+            DGResultados.EnableHeadersVisualStyles = false; // para que respete tus colores
+            DGResultados.ColumnHeadersDefaultCellStyle.SelectionBackColor = DGResultados.ColumnHeadersDefaultCellStyle.BackColor;
+            DGResultados.ColumnHeadersDefaultCellStyle.SelectionForeColor = DGResultados.ColumnHeadersDefaultCellStyle.ForeColor;
+
+
 
             // Filas
             DGResultados.DefaultCellStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
