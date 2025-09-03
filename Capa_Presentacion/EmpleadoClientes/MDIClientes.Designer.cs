@@ -1,6 +1,6 @@
 ﻿namespace ArimaERP.EmpleadoClientes
 {
-    partial class MDIProductos
+    partial class MDIClientes
     {
         /// <summary>
         /// Required designer variable.
@@ -59,6 +59,8 @@
             this.btnBaja = new System.Windows.Forms.Button();
             this.btnModificacion = new System.Windows.Forms.Button();
             this.btnAlta = new System.Windows.Forms.Button();
+            this.btnConfirmarPedido = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlUSUARIO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -82,39 +84,39 @@
             this.pnlUSUARIO.Controls.Add(this.picLogo);
             this.pnlUSUARIO.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlUSUARIO.Location = new System.Drawing.Point(0, 0);
-            this.pnlUSUARIO.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlUSUARIO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlUSUARIO.Name = "pnlUSUARIO";
-            this.pnlUSUARIO.Padding = new System.Windows.Forms.Padding(2);
-            this.pnlUSUARIO.Size = new System.Drawing.Size(948, 39);
+            this.pnlUSUARIO.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlUSUARIO.Size = new System.Drawing.Size(1262, 48);
             this.pnlUSUARIO.TabIndex = 1;
             // 
             // btnBuscar
             // 
             this.btnBuscar.Image = global::ArimaERP.Properties.Resources.BUSCAR_reducido;
-            this.btnBuscar.Location = new System.Drawing.Point(322, 2);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Location = new System.Drawing.Point(429, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(45, 42);
+            this.btnBuscar.Size = new System.Drawing.Size(60, 52);
             this.btnBuscar.TabIndex = 6;
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(359, 7);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBuscar.Location = new System.Drawing.Point(479, 9);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(131, 32);
+            this.txtBuscar.Size = new System.Drawing.Size(173, 38);
             this.txtBuscar.TabIndex = 5;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = global::ArimaERP.Properties.Resources.perfil;
-            this.pictureBox1.Location = new System.Drawing.Point(689, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 3, 4, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(936, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 5, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 33);
+            this.pictureBox1.Size = new System.Drawing.Size(55, 42);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -125,11 +127,11 @@
             this.lblNombreUsuario.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblNombreUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreUsuario.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblNombreUsuario.Location = new System.Drawing.Point(730, 2);
-            this.lblNombreUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 11, 0);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(991, 2);
+            this.lblNombreUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 15, 0);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
-            this.lblNombreUsuario.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
-            this.lblNombreUsuario.Size = new System.Drawing.Size(214, 29);
+            this.lblNombreUsuario.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.lblNombreUsuario.Size = new System.Drawing.Size(266, 38);
             this.lblNombreUsuario.TabIndex = 3;
             this.lblNombreUsuario.Text = "Usuario Mercede Fernandez";
             // 
@@ -138,10 +140,9 @@
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblHora.Location = new System.Drawing.Point(238, 12);
-            this.lblHora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHora.Location = new System.Drawing.Point(317, 15);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(43, 20);
+            this.lblHora.Size = new System.Drawing.Size(54, 25);
             this.lblHora.TabIndex = 2;
             this.lblHora.Text = "Hora";
             // 
@@ -150,19 +151,18 @@
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblFecha.Location = new System.Drawing.Point(109, 12);
-            this.lblFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFecha.Location = new System.Drawing.Point(145, 15);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(49, 20);
+            this.lblFecha.Size = new System.Drawing.Size(61, 25);
             this.lblFecha.TabIndex = 1;
             this.lblFecha.Text = "Fecha";
             // 
             // picLogo
             // 
             this.picLogo.Location = new System.Drawing.Point(0, 0);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(75, 45);
+            this.picLogo.Size = new System.Drawing.Size(100, 55);
             this.picLogo.TabIndex = 0;
             this.picLogo.TabStop = false;
             // 
@@ -177,30 +177,30 @@
             this.panel1.Controls.Add(this.btnPreventista);
             this.panel1.Controls.Add(this.btnPedidos);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 39);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(0, 48);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(948, 74);
+            this.panel1.Size = new System.Drawing.Size(1262, 91);
             this.panel1.TabIndex = 3;
             // 
             // btnSalir
             // 
             this.btnSalir.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSalir.Image = global::ArimaERP.Properties.Resources.salir_reducido;
-            this.btnSalir.Location = new System.Drawing.Point(1067, 0);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalir.Location = new System.Drawing.Point(1111, 0);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(5);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(112, 110);
+            this.btnSalir.Size = new System.Drawing.Size(149, 89);
             this.btnSalir.TabIndex = 5;
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
             // btnConfirmar
             // 
             this.btnConfirmar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnConfirmar.Location = new System.Drawing.Point(336, 0);
-            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(4, 5, 15, 16);
+            this.btnConfirmar.Location = new System.Drawing.Point(448, 0);
+            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(5, 6, 20, 20);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(84, 72);
+            this.btnConfirmar.Size = new System.Drawing.Size(112, 89);
             this.btnConfirmar.TabIndex = 4;
             this.btnConfirmar.UseVisualStyleBackColor = true;
             // 
@@ -208,10 +208,10 @@
             // 
             this.btnCobros.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnCobros.Image = global::ArimaERP.Properties.Resources.cobros_reducido;
-            this.btnCobros.Location = new System.Drawing.Point(252, 0);
-            this.btnCobros.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCobros.Location = new System.Drawing.Point(336, 0);
+            this.btnCobros.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnCobros.Name = "btnCobros";
-            this.btnCobros.Size = new System.Drawing.Size(84, 72);
+            this.btnCobros.Size = new System.Drawing.Size(112, 89);
             this.btnCobros.TabIndex = 3;
             this.btnCobros.UseVisualStyleBackColor = true;
             // 
@@ -219,10 +219,10 @@
             // 
             this.btnClientes.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnClientes.Image = global::ArimaERP.Properties.Resources.clientes_reducido;
-            this.btnClientes.Location = new System.Drawing.Point(168, 0);
-            this.btnClientes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnClientes.Location = new System.Drawing.Point(224, 0);
+            this.btnClientes.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(84, 72);
+            this.btnClientes.Size = new System.Drawing.Size(112, 89);
             this.btnClientes.TabIndex = 2;
             this.btnClientes.UseVisualStyleBackColor = true;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
@@ -231,10 +231,10 @@
             // 
             this.btnPreventista.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnPreventista.Image = global::ArimaERP.Properties.Resources.preventista_reducido;
-            this.btnPreventista.Location = new System.Drawing.Point(84, 0);
-            this.btnPreventista.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnPreventista.Location = new System.Drawing.Point(112, 0);
+            this.btnPreventista.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnPreventista.Name = "btnPreventista";
-            this.btnPreventista.Size = new System.Drawing.Size(84, 72);
+            this.btnPreventista.Size = new System.Drawing.Size(112, 89);
             this.btnPreventista.TabIndex = 1;
             this.btnPreventista.UseVisualStyleBackColor = true;
             this.btnPreventista.Click += new System.EventHandler(this.btnPreventista_Click);
@@ -244,9 +244,9 @@
             this.btnPedidos.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnPedidos.Image = global::ArimaERP.Properties.Resources.pedido_reducido;
             this.btnPedidos.Location = new System.Drawing.Point(0, 0);
-            this.btnPedidos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnPedidos.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnPedidos.Name = "btnPedidos";
-            this.btnPedidos.Size = new System.Drawing.Size(84, 72);
+            this.btnPedidos.Size = new System.Drawing.Size(112, 89);
             this.btnPedidos.TabIndex = 0;
             this.btnPedidos.UseVisualStyleBackColor = true;
             this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
@@ -259,31 +259,34 @@
             this.pnlVista.Controls.Add(this.pnlPedidos);
             this.pnlVista.Controls.Add(this.pnlClientes);
             this.pnlVista.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlVista.Location = new System.Drawing.Point(0, 113);
-            this.pnlVista.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlVista.Location = new System.Drawing.Point(0, 139);
+            this.pnlVista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlVista.Name = "pnlVista";
-            this.pnlVista.Size = new System.Drawing.Size(948, 440);
+            this.pnlVista.Size = new System.Drawing.Size(1262, 534);
             this.pnlVista.TabIndex = 4;
             // 
             // pnlVistaMenuSecundario
             // 
+            this.pnlVistaMenuSecundario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
             this.pnlVistaMenuSecundario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlVistaMenuSecundario.Location = new System.Drawing.Point(828, 12);
-            this.pnlVistaMenuSecundario.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlVistaMenuSecundario.Location = new System.Drawing.Point(828, 0);
+            this.pnlVistaMenuSecundario.Margin = new System.Windows.Forms.Padding(5);
             this.pnlVistaMenuSecundario.Name = "pnlVistaMenuSecundario";
-            this.pnlVistaMenuSecundario.Size = new System.Drawing.Size(327, 440);
+            this.pnlVistaMenuSecundario.Size = new System.Drawing.Size(434, 534);
             this.pnlVistaMenuSecundario.TabIndex = 2;
             // 
             // pnlPreventistas
             // 
+            this.pnlPreventistas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
+            this.pnlPreventistas.Controls.Add(this.button1);
             this.pnlPreventistas.Controls.Add(this.button3);
             this.pnlPreventistas.Controls.Add(this.button4);
             this.pnlPreventistas.Controls.Add(this.button5);
             this.pnlPreventistas.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlPreventistas.Location = new System.Drawing.Point(552, 12);
-            this.pnlPreventistas.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlPreventistas.Location = new System.Drawing.Point(552, 0);
+            this.pnlPreventistas.Margin = new System.Windows.Forms.Padding(5);
             this.pnlPreventistas.Name = "pnlPreventistas";
-            this.pnlPreventistas.Size = new System.Drawing.Size(207, 440);
+            this.pnlPreventistas.Size = new System.Drawing.Size(276, 534);
             this.pnlPreventistas.TabIndex = 3;
             this.pnlPreventistas.Visible = false;
             // 
@@ -291,10 +294,10 @@
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(0, 118);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
+            this.button3.Location = new System.Drawing.Point(0, 146);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 40, 37);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(207, 59);
+            this.button3.Size = new System.Drawing.Size(276, 73);
             this.button3.TabIndex = 1;
             this.button3.Text = "Historial";
             this.button3.UseVisualStyleBackColor = true;
@@ -303,10 +306,10 @@
             // 
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(0, 59);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
+            this.button4.Location = new System.Drawing.Point(0, 73);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 40, 37);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(207, 59);
+            this.button4.Size = new System.Drawing.Size(276, 73);
             this.button4.TabIndex = 1;
             this.button4.Text = "Baja";
             this.button4.UseVisualStyleBackColor = true;
@@ -316,23 +319,25 @@
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(0, 0);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 40, 37);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(207, 59);
+            this.button5.Size = new System.Drawing.Size(276, 73);
             this.button5.TabIndex = 1;
             this.button5.Text = "Modificación";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // pnlPedidos
             // 
+            this.pnlPedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
+            this.pnlPedidos.Controls.Add(this.btnConfirmarPedido);
             this.pnlPedidos.Controls.Add(this.btnCancelarPedido);
             this.pnlPedidos.Controls.Add(this.btnModificarPedido);
             this.pnlPedidos.Controls.Add(this.btnCrearPedido);
             this.pnlPedidos.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlPedidos.Location = new System.Drawing.Point(276, 12);
-            this.pnlPedidos.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlPedidos.Location = new System.Drawing.Point(276, 0);
+            this.pnlPedidos.Margin = new System.Windows.Forms.Padding(5);
             this.pnlPedidos.Name = "pnlPedidos";
-            this.pnlPedidos.Size = new System.Drawing.Size(207, 440);
+            this.pnlPedidos.Size = new System.Drawing.Size(276, 534);
             this.pnlPedidos.TabIndex = 2;
             this.pnlPedidos.Visible = false;
             // 
@@ -340,10 +345,10 @@
             // 
             this.btnCancelarPedido.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCancelarPedido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarPedido.Location = new System.Drawing.Point(0, 118);
-            this.btnCancelarPedido.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
+            this.btnCancelarPedido.Location = new System.Drawing.Point(0, 146);
+            this.btnCancelarPedido.Margin = new System.Windows.Forms.Padding(4, 4, 40, 37);
             this.btnCancelarPedido.Name = "btnCancelarPedido";
-            this.btnCancelarPedido.Size = new System.Drawing.Size(207, 59);
+            this.btnCancelarPedido.Size = new System.Drawing.Size(276, 73);
             this.btnCancelarPedido.TabIndex = 1;
             this.btnCancelarPedido.Text = "Cancelar";
             this.btnCancelarPedido.UseVisualStyleBackColor = true;
@@ -352,10 +357,10 @@
             // 
             this.btnModificarPedido.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnModificarPedido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarPedido.Location = new System.Drawing.Point(0, 59);
-            this.btnModificarPedido.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
+            this.btnModificarPedido.Location = new System.Drawing.Point(0, 73);
+            this.btnModificarPedido.Margin = new System.Windows.Forms.Padding(4, 4, 40, 37);
             this.btnModificarPedido.Name = "btnModificarPedido";
-            this.btnModificarPedido.Size = new System.Drawing.Size(207, 59);
+            this.btnModificarPedido.Size = new System.Drawing.Size(276, 73);
             this.btnModificarPedido.TabIndex = 1;
             this.btnModificarPedido.Text = "Modificar";
             this.btnModificarPedido.UseVisualStyleBackColor = true;
@@ -365,25 +370,26 @@
             this.btnCrearPedido.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCrearPedido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearPedido.Location = new System.Drawing.Point(0, 0);
-            this.btnCrearPedido.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
+            this.btnCrearPedido.Margin = new System.Windows.Forms.Padding(4, 4, 40, 37);
             this.btnCrearPedido.Name = "btnCrearPedido";
-            this.btnCrearPedido.Size = new System.Drawing.Size(207, 59);
+            this.btnCrearPedido.Size = new System.Drawing.Size(276, 73);
             this.btnCrearPedido.TabIndex = 1;
             this.btnCrearPedido.Text = "Crear";
             this.btnCrearPedido.UseVisualStyleBackColor = true;
             // 
             // pnlClientes
             // 
+            this.pnlClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
             this.pnlClientes.Controls.Add(this.btnCuentaCorriente);
             this.pnlClientes.Controls.Add(this.btnHistorial);
             this.pnlClientes.Controls.Add(this.btnBaja);
             this.pnlClientes.Controls.Add(this.btnModificacion);
             this.pnlClientes.Controls.Add(this.btnAlta);
             this.pnlClientes.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlClientes.Location = new System.Drawing.Point(0, 12);
-            this.pnlClientes.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlClientes.Location = new System.Drawing.Point(0, 0);
+            this.pnlClientes.Margin = new System.Windows.Forms.Padding(5);
             this.pnlClientes.Name = "pnlClientes";
-            this.pnlClientes.Size = new System.Drawing.Size(207, 440);
+            this.pnlClientes.Size = new System.Drawing.Size(276, 534);
             this.pnlClientes.TabIndex = 0;
             this.pnlClientes.Visible = false;
             // 
@@ -391,10 +397,10 @@
             // 
             this.btnCuentaCorriente.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCuentaCorriente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCuentaCorriente.Location = new System.Drawing.Point(0, 236);
-            this.btnCuentaCorriente.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
+            this.btnCuentaCorriente.Location = new System.Drawing.Point(0, 292);
+            this.btnCuentaCorriente.Margin = new System.Windows.Forms.Padding(4, 4, 40, 37);
             this.btnCuentaCorriente.Name = "btnCuentaCorriente";
-            this.btnCuentaCorriente.Size = new System.Drawing.Size(207, 59);
+            this.btnCuentaCorriente.Size = new System.Drawing.Size(276, 73);
             this.btnCuentaCorriente.TabIndex = 1;
             this.btnCuentaCorriente.Text = "Cuenta Corriente";
             this.btnCuentaCorriente.UseVisualStyleBackColor = true;
@@ -403,10 +409,10 @@
             // 
             this.btnHistorial.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHistorial.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistorial.Location = new System.Drawing.Point(0, 177);
-            this.btnHistorial.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
+            this.btnHistorial.Location = new System.Drawing.Point(0, 219);
+            this.btnHistorial.Margin = new System.Windows.Forms.Padding(4, 4, 40, 37);
             this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Size = new System.Drawing.Size(207, 59);
+            this.btnHistorial.Size = new System.Drawing.Size(276, 73);
             this.btnHistorial.TabIndex = 1;
             this.btnHistorial.Text = "Historial";
             this.btnHistorial.UseVisualStyleBackColor = true;
@@ -415,10 +421,10 @@
             // 
             this.btnBaja.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBaja.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBaja.Location = new System.Drawing.Point(0, 118);
-            this.btnBaja.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
+            this.btnBaja.Location = new System.Drawing.Point(0, 146);
+            this.btnBaja.Margin = new System.Windows.Forms.Padding(4, 4, 40, 37);
             this.btnBaja.Name = "btnBaja";
-            this.btnBaja.Size = new System.Drawing.Size(207, 59);
+            this.btnBaja.Size = new System.Drawing.Size(276, 73);
             this.btnBaja.TabIndex = 1;
             this.btnBaja.Text = "Baja";
             this.btnBaja.UseVisualStyleBackColor = true;
@@ -427,10 +433,10 @@
             // 
             this.btnModificacion.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnModificacion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificacion.Location = new System.Drawing.Point(0, 59);
-            this.btnModificacion.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
+            this.btnModificacion.Location = new System.Drawing.Point(0, 73);
+            this.btnModificacion.Margin = new System.Windows.Forms.Padding(4, 4, 40, 37);
             this.btnModificacion.Name = "btnModificacion";
-            this.btnModificacion.Size = new System.Drawing.Size(207, 59);
+            this.btnModificacion.Size = new System.Drawing.Size(276, 73);
             this.btnModificacion.TabIndex = 1;
             this.btnModificacion.Text = "Modificación";
             this.btnModificacion.UseVisualStyleBackColor = true;
@@ -440,29 +446,52 @@
             this.btnAlta.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAlta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlta.Location = new System.Drawing.Point(0, 0);
-            this.btnAlta.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
+            this.btnAlta.Margin = new System.Windows.Forms.Padding(4, 4, 40, 37);
             this.btnAlta.Name = "btnAlta";
-            this.btnAlta.Size = new System.Drawing.Size(207, 59);
+            this.btnAlta.Size = new System.Drawing.Size(276, 73);
             this.btnAlta.TabIndex = 1;
             this.btnAlta.Text = "Alta";
             this.btnAlta.UseVisualStyleBackColor = true;
             this.btnAlta.Click += new System.EventHandler(this.btnAlta_Click);
             // 
-            // MDIProductos
+            // btnConfirmarPedido
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.btnConfirmarPedido.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConfirmarPedido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmarPedido.Location = new System.Drawing.Point(0, 219);
+            this.btnConfirmarPedido.Margin = new System.Windows.Forms.Padding(4, 4, 40, 37);
+            this.btnConfirmarPedido.Name = "btnConfirmarPedido";
+            this.btnConfirmarPedido.Size = new System.Drawing.Size(276, 73);
+            this.btnConfirmarPedido.TabIndex = 2;
+            this.btnConfirmarPedido.Text = "Confirmar";
+            this.btnConfirmarPedido.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(0, 219);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 40, 37);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(276, 73);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Alta";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // MDIClientes
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(948, 553);
+            this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Controls.Add(this.pnlVista);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlUSUARIO);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "MDIProductos";
+            this.Name = "MDIClientes";
             this.Text = "MDIClientes";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MDIClientes_Load);
             this.pnlUSUARIO.ResumeLayout(false);
             this.pnlUSUARIO.PerformLayout();
@@ -510,5 +539,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel pnlVistaMenuSecundario;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConfirmarPedido;
     }
 }

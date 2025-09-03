@@ -61,11 +61,9 @@
             this.lblDNI = new System.Windows.Forms.Label();
             this.grpBoxContacto = new System.Windows.Forms.GroupBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.maskedTextBoxTelFijoCliente = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxTelMovilCliente = new System.Windows.Forms.MaskedTextBox();
             this.lblTelefonoMovil = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.lblTelefonoFijo = new System.Windows.Forms.Label();
             this.groupBoxDatosComerciales = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateTimePickerFechaAlta = new System.Windows.Forms.DateTimePicker();
@@ -132,11 +130,11 @@
             this.grpBoxDatosCliente.Controls.Add(this.groupBoxDatosComerciales);
             this.grpBoxDatosCliente.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpBoxDatosCliente.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpBoxDatosCliente.Location = new System.Drawing.Point(0, 16);
-            this.grpBoxDatosCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpBoxDatosCliente.Location = new System.Drawing.Point(0, 20);
+            this.grpBoxDatosCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpBoxDatosCliente.Name = "grpBoxDatosCliente";
-            this.grpBoxDatosCliente.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
-            this.grpBoxDatosCliente.Size = new System.Drawing.Size(1043, 366);
+            this.grpBoxDatosCliente.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
+            this.grpBoxDatosCliente.Size = new System.Drawing.Size(1392, 450);
             this.grpBoxDatosCliente.TabIndex = 0;
             this.grpBoxDatosCliente.TabStop = false;
             this.grpBoxDatosCliente.Text = "Datos Personales y Comerciales";
@@ -147,10 +145,10 @@
             this.pnlCentroDatos.Controls.Add(this.grpDireccion);
             this.pnlCentroDatos.Controls.Add(this.groupBoxCategoria);
             this.pnlCentroDatos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCentroDatos.Location = new System.Drawing.Point(564, 34);
-            this.pnlCentroDatos.Margin = new System.Windows.Forms.Padding(10);
+            this.pnlCentroDatos.Location = new System.Drawing.Point(750, 34);
+            this.pnlCentroDatos.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.pnlCentroDatos.Name = "pnlCentroDatos";
-            this.pnlCentroDatos.Size = new System.Drawing.Size(414, 407);
+            this.pnlCentroDatos.Size = new System.Drawing.Size(227, 406);
             this.pnlCentroDatos.TabIndex = 11;
             // 
             // grpDireccion
@@ -166,60 +164,64 @@
             this.grpDireccion.Controls.Add(this.lblNumero);
             this.grpDireccion.Controls.Add(this.lblCalle);
             this.grpDireccion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpDireccion.Location = new System.Drawing.Point(0, 108);
-            this.grpDireccion.Margin = new System.Windows.Forms.Padding(2, 16, 2, 2);
+            this.grpDireccion.Location = new System.Drawing.Point(0, 164);
+            this.grpDireccion.Margin = new System.Windows.Forms.Padding(3, 20, 3, 2);
             this.grpDireccion.Name = "grpDireccion";
-            this.grpDireccion.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.grpDireccion.Size = new System.Drawing.Size(308, 222);
+            this.grpDireccion.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpDireccion.Size = new System.Drawing.Size(227, 242);
             this.grpDireccion.TabIndex = 3;
             this.grpDireccion.TabStop = false;
             this.grpDireccion.Text = "Dirección";
             // 
             // txtProvincia
             // 
-            this.txtProvincia.Location = new System.Drawing.Point(220, 234);
+            this.txtProvincia.Location = new System.Drawing.Point(293, 288);
+            this.txtProvincia.Margin = new System.Windows.Forms.Padding(4);
             this.txtProvincia.Name = "txtProvincia";
-            this.txtProvincia.Size = new System.Drawing.Size(181, 31);
+            this.txtProvincia.Size = new System.Drawing.Size(240, 31);
             this.txtProvincia.TabIndex = 9;
             // 
             // txtLocalidad
             // 
-            this.txtLocalidad.Location = new System.Drawing.Point(220, 188);
+            this.txtLocalidad.Location = new System.Drawing.Point(293, 231);
+            this.txtLocalidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtLocalidad.Name = "txtLocalidad";
-            this.txtLocalidad.Size = new System.Drawing.Size(181, 31);
+            this.txtLocalidad.Size = new System.Drawing.Size(240, 31);
             this.txtLocalidad.TabIndex = 8;
             // 
             // txtBarrio
             // 
-            this.txtBarrio.Location = new System.Drawing.Point(220, 141);
+            this.txtBarrio.Location = new System.Drawing.Point(293, 174);
+            this.txtBarrio.Margin = new System.Windows.Forms.Padding(4);
             this.txtBarrio.Name = "txtBarrio";
-            this.txtBarrio.Size = new System.Drawing.Size(181, 31);
+            this.txtBarrio.Size = new System.Drawing.Size(240, 31);
             this.txtBarrio.TabIndex = 7;
             this.txtBarrio.TextChanged += new System.EventHandler(this.txtBarrio_TextChanged);
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(220, 91);
+            this.txtNumero.Location = new System.Drawing.Point(293, 112);
+            this.txtNumero.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(181, 31);
+            this.txtNumero.Size = new System.Drawing.Size(240, 31);
             this.txtNumero.TabIndex = 6;
             this.txtNumero.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
             // 
             // txtCalle
             // 
-            this.txtCalle.Location = new System.Drawing.Point(220, 40);
+            this.txtCalle.Location = new System.Drawing.Point(293, 49);
+            this.txtCalle.Margin = new System.Windows.Forms.Padding(4);
             this.txtCalle.Name = "txtCalle";
-            this.txtCalle.Size = new System.Drawing.Size(181, 31);
+            this.txtCalle.Size = new System.Drawing.Size(240, 31);
             this.txtCalle.TabIndex = 5;
             this.txtCalle.TextChanged += new System.EventHandler(this.txtCalle_TextChanged);
             // 
             // lblProvincia
             // 
             this.lblProvincia.AutoSize = true;
-            this.lblProvincia.Location = new System.Drawing.Point(16, 192);
-            this.lblProvincia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblProvincia.Location = new System.Drawing.Point(21, 236);
             this.lblProvincia.Name = "lblProvincia";
-            this.lblProvincia.Size = new System.Drawing.Size(69, 20);
+            this.lblProvincia.Size = new System.Drawing.Size(83, 25);
             this.lblProvincia.TabIndex = 4;
             this.lblProvincia.Text = "Provincia";
             this.lblProvincia.Click += new System.EventHandler(this.lblProvincia_Click);
@@ -227,10 +229,9 @@
             // lblLocalidad
             // 
             this.lblLocalidad.AutoSize = true;
-            this.lblLocalidad.Location = new System.Drawing.Point(16, 154);
-            this.lblLocalidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLocalidad.Location = new System.Drawing.Point(21, 190);
             this.lblLocalidad.Name = "lblLocalidad";
-            this.lblLocalidad.Size = new System.Drawing.Size(74, 20);
+            this.lblLocalidad.Size = new System.Drawing.Size(87, 25);
             this.lblLocalidad.TabIndex = 3;
             this.lblLocalidad.Text = "Localidad";
             this.lblLocalidad.Click += new System.EventHandler(this.lblLocalidad_Click);
@@ -238,20 +239,18 @@
             // lblBarrio
             // 
             this.lblBarrio.AutoSize = true;
-            this.lblBarrio.Location = new System.Drawing.Point(16, 116);
-            this.lblBarrio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBarrio.Location = new System.Drawing.Point(21, 143);
             this.lblBarrio.Name = "lblBarrio";
-            this.lblBarrio.Size = new System.Drawing.Size(49, 20);
+            this.lblBarrio.Size = new System.Drawing.Size(58, 25);
             this.lblBarrio.TabIndex = 2;
             this.lblBarrio.Text = "Barrio";
             // 
             // lblNumero
             // 
             this.lblNumero.AutoSize = true;
-            this.lblNumero.Location = new System.Drawing.Point(16, 73);
-            this.lblNumero.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNumero.Location = new System.Drawing.Point(21, 90);
             this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(63, 20);
+            this.lblNumero.Size = new System.Drawing.Size(77, 25);
             this.lblNumero.TabIndex = 1;
             this.lblNumero.Text = "Número";
             this.lblNumero.Click += new System.EventHandler(this.lblNumero_Click);
@@ -259,10 +258,9 @@
             // lblCalle
             // 
             this.lblCalle.AutoSize = true;
-            this.lblCalle.Location = new System.Drawing.Point(16, 37);
-            this.lblCalle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCalle.Location = new System.Drawing.Point(21, 46);
             this.lblCalle.Name = "lblCalle";
-            this.lblCalle.Size = new System.Drawing.Size(42, 20);
+            this.lblCalle.Size = new System.Drawing.Size(49, 25);
             this.lblCalle.TabIndex = 0;
             this.lblCalle.Text = "Calle";
             // 
@@ -274,8 +272,10 @@
             this.groupBoxCategoria.Controls.Add(this.lblJerarquiaSegmento);
             this.groupBoxCategoria.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBoxCategoria.Location = new System.Drawing.Point(0, 0);
+            this.groupBoxCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxCategoria.Name = "groupBoxCategoria";
-            this.groupBoxCategoria.Size = new System.Drawing.Size(414, 133);
+            this.groupBoxCategoria.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBoxCategoria.Size = new System.Drawing.Size(227, 164);
             this.groupBoxCategoria.TabIndex = 5;
             this.groupBoxCategoria.TabStop = false;
             this.groupBoxCategoria.Text = "Categoría";
@@ -288,15 +288,17 @@
             "Activo",
             "Potencial",
             "Inactivo"});
-            this.comboBoxCondicionCliente.Location = new System.Drawing.Point(190, 85);
+            this.comboBoxCondicionCliente.Location = new System.Drawing.Point(253, 105);
+            this.comboBoxCondicionCliente.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxCondicionCliente.Name = "comboBoxCondicionCliente";
-            this.comboBoxCondicionCliente.Size = new System.Drawing.Size(218, 33);
+            this.comboBoxCondicionCliente.Size = new System.Drawing.Size(289, 33);
             this.comboBoxCondicionCliente.TabIndex = 5;
             // 
             // lblCondicion
             // 
             this.lblCondicion.AutoSize = true;
-            this.lblCondicion.Location = new System.Drawing.Point(6, 88);
+            this.lblCondicion.Location = new System.Drawing.Point(8, 108);
+            this.lblCondicion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCondicion.Name = "lblCondicion";
             this.lblCondicion.Size = new System.Drawing.Size(150, 25);
             this.lblCondicion.TabIndex = 4;
@@ -314,15 +316,17 @@
             "Pequeño",
             "Mediano",
             "Grande"});
-            this.comboBoxJerarquiaSegmento.Location = new System.Drawing.Point(189, 44);
+            this.comboBoxJerarquiaSegmento.Location = new System.Drawing.Point(252, 54);
+            this.comboBoxJerarquiaSegmento.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxJerarquiaSegmento.Name = "comboBoxJerarquiaSegmento";
-            this.comboBoxJerarquiaSegmento.Size = new System.Drawing.Size(218, 33);
+            this.comboBoxJerarquiaSegmento.Size = new System.Drawing.Size(289, 33);
             this.comboBoxJerarquiaSegmento.TabIndex = 3;
             // 
             // lblJerarquiaSegmento
             // 
             this.lblJerarquiaSegmento.AutoSize = true;
-            this.lblJerarquiaSegmento.Location = new System.Drawing.Point(9, 48);
+            this.lblJerarquiaSegmento.Location = new System.Drawing.Point(12, 59);
+            this.lblJerarquiaSegmento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblJerarquiaSegmento.Name = "lblJerarquiaSegmento";
             this.lblJerarquiaSegmento.Size = new System.Drawing.Size(171, 25);
             this.lblJerarquiaSegmento.TabIndex = 0;
@@ -333,10 +337,10 @@
             this.pnlIzquierdaDatos.Controls.Add(this.grpBox1);
             this.pnlIzquierdaDatos.Controls.Add(this.grpBoxContacto);
             this.pnlIzquierdaDatos.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlIzquierdaDatos.Location = new System.Drawing.Point(10, 34);
-            this.pnlIzquierdaDatos.Margin = new System.Windows.Forms.Padding(10, 10, 50, 10);
+            this.pnlIzquierdaDatos.Location = new System.Drawing.Point(11, 34);
+            this.pnlIzquierdaDatos.Margin = new System.Windows.Forms.Padding(13, 12, 67, 12);
             this.pnlIzquierdaDatos.Name = "pnlIzquierdaDatos";
-            this.pnlIzquierdaDatos.Size = new System.Drawing.Size(554, 407);
+            this.pnlIzquierdaDatos.Size = new System.Drawing.Size(739, 406);
             this.pnlIzquierdaDatos.TabIndex = 10;
             // 
             // grpBox1
@@ -352,69 +356,74 @@
             this.grpBox1.Controls.Add(this.lblApellido);
             this.grpBox1.Controls.Add(this.lblDNI);
             this.grpBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpBox1.Location = new System.Drawing.Point(0, 156);
-            this.grpBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpBox1.Location = new System.Drawing.Point(0, 236);
+            this.grpBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpBox1.Name = "grpBox1";
-            this.grpBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.grpBox1.Size = new System.Drawing.Size(416, 210);
+            this.grpBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpBox1.Size = new System.Drawing.Size(739, 258);
             this.grpBox1.TabIndex = 4;
             this.grpBox1.TabStop = false;
             // 
             // maskedTextBoxCuil
             // 
-            this.maskedTextBoxCuil.Location = new System.Drawing.Point(290, 138);
+            this.maskedTextBoxCuil.Location = new System.Drawing.Point(387, 170);
+            this.maskedTextBoxCuil.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxCuil.Mask = "00\\-00000000\\-0";
             this.maskedTextBoxCuil.Name = "maskedTextBoxCuil";
-            this.maskedTextBoxCuil.Size = new System.Drawing.Size(222, 31);
+            this.maskedTextBoxCuil.Size = new System.Drawing.Size(295, 31);
             this.maskedTextBoxCuil.TabIndex = 5;
             // 
             // dateTimePickerNacCliente
             // 
             this.dateTimePickerNacCliente.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerNacCliente.Location = new System.Drawing.Point(341, 176);
+            this.dateTimePickerNacCliente.Location = new System.Drawing.Point(455, 217);
+            this.dateTimePickerNacCliente.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePickerNacCliente.Name = "dateTimePickerNacCliente";
-            this.dateTimePickerNacCliente.Size = new System.Drawing.Size(200, 31);
+            this.dateTimePickerNacCliente.Size = new System.Drawing.Size(265, 31);
             this.dateTimePickerNacCliente.TabIndex = 5;
             // 
             // lblFecNacimiento
             // 
             this.lblFecNacimiento.AutoSize = true;
-            this.lblFecNacimiento.Location = new System.Drawing.Point(2, 143);
-            this.lblFecNacimiento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFecNacimiento.Location = new System.Drawing.Point(3, 176);
             this.lblFecNacimiento.Name = "lblFecNacimiento";
-            this.lblFecNacimiento.Size = new System.Drawing.Size(115, 20);
+            this.lblFecNacimiento.Size = new System.Drawing.Size(137, 25);
             this.lblFecNacimiento.TabIndex = 9;
             this.lblFecNacimiento.Text = "Fec. Nacimiento";
             this.lblFecNacimiento.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtDNI
             // 
-            this.txtDNI.Location = new System.Drawing.Point(290, 101);
+            this.txtDNI.Location = new System.Drawing.Point(387, 124);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(4);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(222, 31);
+            this.txtDNI.Size = new System.Drawing.Size(295, 31);
             this.txtDNI.TabIndex = 7;
             this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNI_KeyPress);
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(289, 61);
+            this.txtApellido.Location = new System.Drawing.Point(385, 75);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(222, 31);
+            this.txtApellido.Size = new System.Drawing.Size(295, 31);
             this.txtApellido.TabIndex = 6;
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(289, 21);
+            this.txtNombre.Location = new System.Drawing.Point(385, 26);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(222, 31);
+            this.txtNombre.Size = new System.Drawing.Size(295, 31);
             this.txtNombre.TabIndex = 5;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(3, 21);
+            this.lblNombre.Location = new System.Drawing.Point(4, 26);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(78, 25);
             this.lblNombre.TabIndex = 1;
@@ -424,7 +433,8 @@
             // lblCuil
             // 
             this.lblCuil.AutoSize = true;
-            this.lblCuil.Location = new System.Drawing.Point(4, 139);
+            this.lblCuil.Location = new System.Drawing.Point(5, 171);
+            this.lblCuil.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCuil.Name = "lblCuil";
             this.lblCuil.Size = new System.Drawing.Size(92, 25);
             this.lblCuil.TabIndex = 2;
@@ -433,7 +443,8 @@
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(3, 64);
+            this.lblApellido.Location = new System.Drawing.Point(4, 79);
+            this.lblApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(78, 25);
             this.lblApellido.TabIndex = 1;
@@ -443,7 +454,8 @@
             // lblDNI
             // 
             this.lblDNI.AutoSize = true;
-            this.lblDNI.Location = new System.Drawing.Point(3, 101);
+            this.lblDNI.Location = new System.Drawing.Point(4, 124);
+            this.lblDNI.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDNI.Name = "lblDNI";
             this.lblDNI.Size = new System.Drawing.Size(43, 25);
             this.lblDNI.TabIndex = 1;
@@ -453,16 +465,15 @@
             // grpBoxContacto
             // 
             this.grpBoxContacto.Controls.Add(this.txtEmail);
-            this.grpBoxContacto.Controls.Add(this.maskedTextBoxTelFijoCliente);
             this.grpBoxContacto.Controls.Add(this.maskedTextBoxTelMovilCliente);
             this.grpBoxContacto.Controls.Add(this.lblTelefonoMovil);
             this.grpBoxContacto.Controls.Add(this.lblEmail);
-            this.grpBoxContacto.Controls.Add(this.lblTelefonoFijo);
             this.grpBoxContacto.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpBoxContacto.Location = new System.Drawing.Point(0, 0);
-            this.grpBoxContacto.Margin = new System.Windows.Forms.Padding(10);
+            this.grpBoxContacto.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.grpBoxContacto.Name = "grpBoxContacto";
-            this.grpBoxContacto.Size = new System.Drawing.Size(554, 192);
+            this.grpBoxContacto.Padding = new System.Windows.Forms.Padding(4);
+            this.grpBoxContacto.Size = new System.Drawing.Size(739, 236);
             this.grpBoxContacto.TabIndex = 2;
             this.grpBoxContacto.TabStop = false;
             this.grpBoxContacto.Text = "Contacto";
@@ -470,35 +481,29 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(280, 141);
+            this.txtEmail.Location = new System.Drawing.Point(373, 115);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(225, 31);
+            this.txtEmail.Size = new System.Drawing.Size(299, 31);
             this.txtEmail.TabIndex = 5;
             this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
-            // maskedTextBoxTelFijoCliente
-            // 
-            this.maskedTextBoxTelFijoCliente.Location = new System.Drawing.Point(281, 97);
-            this.maskedTextBoxTelFijoCliente.Mask = "(999)000-0000";
-            this.maskedTextBoxTelFijoCliente.Name = "maskedTextBoxTelFijoCliente";
-            this.maskedTextBoxTelFijoCliente.Size = new System.Drawing.Size(225, 31);
-            this.maskedTextBoxTelFijoCliente.TabIndex = 6;
-            this.maskedTextBoxTelFijoCliente.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxTelFijoCliente_MaskInputRejected);
-            // 
             // maskedTextBoxTelMovilCliente
             // 
-            this.maskedTextBoxTelMovilCliente.Location = new System.Drawing.Point(280, 53);
+            this.maskedTextBoxTelMovilCliente.Location = new System.Drawing.Point(373, 65);
+            this.maskedTextBoxTelMovilCliente.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBoxTelMovilCliente.Mask = "000-000-0000";
             this.maskedTextBoxTelMovilCliente.Name = "maskedTextBoxTelMovilCliente";
-            this.maskedTextBoxTelMovilCliente.Size = new System.Drawing.Size(225, 31);
+            this.maskedTextBoxTelMovilCliente.Size = new System.Drawing.Size(299, 31);
             this.maskedTextBoxTelMovilCliente.TabIndex = 5;
             this.maskedTextBoxTelMovilCliente.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxTelMovilCliente_MaskInputRejected);
             // 
             // lblTelefonoMovil
             // 
             this.lblTelefonoMovil.AutoSize = true;
-            this.lblTelefonoMovil.Location = new System.Drawing.Point(9, 50);
+            this.lblTelefonoMovil.Location = new System.Drawing.Point(12, 62);
+            this.lblTelefonoMovil.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelefonoMovil.Name = "lblTelefonoMovil";
             this.lblTelefonoMovil.Size = new System.Drawing.Size(128, 25);
             this.lblTelefonoMovil.TabIndex = 1;
@@ -507,22 +512,13 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(9, 137);
+            this.lblEmail.Location = new System.Drawing.Point(12, 121);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(54, 25);
             this.lblEmail.TabIndex = 1;
             this.lblEmail.Text = "Email";
             this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
-            // 
-            // lblTelefonoFijo
-            // 
-            this.lblTelefonoFijo.AutoSize = true;
-            this.lblTelefonoFijo.Location = new System.Drawing.Point(6, 100);
-            this.lblTelefonoFijo.Name = "lblTelefonoFijo";
-            this.lblTelefonoFijo.Size = new System.Drawing.Size(112, 25);
-            this.lblTelefonoFijo.TabIndex = 1;
-            this.lblTelefonoFijo.Text = "Teléfono Fijo";
-            this.lblTelefonoFijo.Click += new System.EventHandler(this.lblTelefonoFijo_Click);
             // 
             // groupBoxDatosComerciales
             // 
@@ -539,11 +535,11 @@
             this.groupBoxDatosComerciales.Controls.Add(this.txtNombreComercial);
             this.groupBoxDatosComerciales.Controls.Add(this.lblNombreComercial);
             this.groupBoxDatosComerciales.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBoxDatosComerciales.Location = new System.Drawing.Point(732, 28);
-            this.groupBoxDatosComerciales.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.groupBoxDatosComerciales.Location = new System.Drawing.Point(977, 34);
+            this.groupBoxDatosComerciales.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.groupBoxDatosComerciales.Name = "groupBoxDatosComerciales";
-            this.groupBoxDatosComerciales.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBoxDatosComerciales.Size = new System.Drawing.Size(303, 330);
+            this.groupBoxDatosComerciales.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBoxDatosComerciales.Size = new System.Drawing.Size(404, 406);
             this.groupBoxDatosComerciales.TabIndex = 6;
             this.groupBoxDatosComerciales.TabStop = false;
             // 
@@ -552,9 +548,11 @@
             this.groupBox1.Controls.Add(this.dateTimePickerFechaAlta);
             this.groupBox1.Controls.Add(this.lblFechaAlta);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox1.Location = new System.Drawing.Point(3, 326);
+            this.groupBox1.Location = new System.Drawing.Point(3, 308);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(398, 78);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(398, 96);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
@@ -562,15 +560,17 @@
             // 
             this.dateTimePickerFechaAlta.Dock = System.Windows.Forms.DockStyle.Right;
             this.dateTimePickerFechaAlta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerFechaAlta.Location = new System.Drawing.Point(262, 27);
+            this.dateTimePickerFechaAlta.Location = new System.Drawing.Point(218, 28);
+            this.dateTimePickerFechaAlta.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePickerFechaAlta.Name = "dateTimePickerFechaAlta";
-            this.dateTimePickerFechaAlta.Size = new System.Drawing.Size(133, 31);
+            this.dateTimePickerFechaAlta.Size = new System.Drawing.Size(176, 31);
             this.dateTimePickerFechaAlta.TabIndex = 8;
             // 
             // lblFechaAlta
             // 
             this.lblFechaAlta.AutoSize = true;
-            this.lblFechaAlta.Location = new System.Drawing.Point(6, 30);
+            this.lblFechaAlta.Location = new System.Drawing.Point(8, 37);
+            this.lblFechaAlta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaAlta.Name = "lblFechaAlta";
             this.lblFechaAlta.Size = new System.Drawing.Size(93, 25);
             this.lblFechaAlta.TabIndex = 7;
@@ -580,15 +580,17 @@
             // 
             this.comboBoxZona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxZona.FormattingEnabled = true;
-            this.comboBoxZona.Location = new System.Drawing.Point(208, 180);
+            this.comboBoxZona.Location = new System.Drawing.Point(277, 222);
+            this.comboBoxZona.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxZona.Name = "comboBoxZona";
-            this.comboBoxZona.Size = new System.Drawing.Size(189, 33);
+            this.comboBoxZona.Size = new System.Drawing.Size(251, 33);
             this.comboBoxZona.TabIndex = 13;
             // 
             // lblZona
             // 
             this.lblZona.AutoSize = true;
-            this.lblZona.Location = new System.Drawing.Point(12, 183);
+            this.lblZona.Location = new System.Drawing.Point(16, 225);
+            this.lblZona.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblZona.Name = "lblZona";
             this.lblZona.Size = new System.Drawing.Size(52, 25);
             this.lblZona.TabIndex = 12;
@@ -597,7 +599,8 @@
             // chkHabilitaCtaCte
             // 
             this.chkHabilitaCtaCte.AutoSize = true;
-            this.chkHabilitaCtaCte.Location = new System.Drawing.Point(15, 225);
+            this.chkHabilitaCtaCte.Location = new System.Drawing.Point(20, 277);
+            this.chkHabilitaCtaCte.Margin = new System.Windows.Forms.Padding(4);
             this.chkHabilitaCtaCte.Name = "chkHabilitaCtaCte";
             this.chkHabilitaCtaCte.Size = new System.Drawing.Size(231, 29);
             this.chkHabilitaCtaCte.TabIndex = 7;
@@ -606,19 +609,19 @@
             // 
             // txtObservaciones
             // 
-            this.txtObservaciones.Location = new System.Drawing.Point(208, 137);
+            this.txtObservaciones.Location = new System.Drawing.Point(277, 169);
+            this.txtObservaciones.Margin = new System.Windows.Forms.Padding(4);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
-            this.txtObservaciones.Size = new System.Drawing.Size(189, 37);
+            this.txtObservaciones.Size = new System.Drawing.Size(251, 45);
             this.txtObservaciones.TabIndex = 7;
             // 
             // lblObervaciones
             // 
             this.lblObervaciones.AutoSize = true;
-            this.lblObervaciones.Location = new System.Drawing.Point(9, 115);
-            this.lblObervaciones.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblObervaciones.Location = new System.Drawing.Point(12, 142);
             this.lblObervaciones.Name = "lblObervaciones";
-            this.lblObervaciones.Size = new System.Drawing.Size(105, 20);
+            this.lblObervaciones.Size = new System.Drawing.Size(128, 25);
             this.lblObervaciones.TabIndex = 7;
             this.lblObervaciones.Text = "Observaciones";
             // 
@@ -626,15 +629,17 @@
             // 
             this.comboBoxPreventistas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPreventistas.FormattingEnabled = true;
-            this.comboBoxPreventistas.Location = new System.Drawing.Point(208, 95);
+            this.comboBoxPreventistas.Location = new System.Drawing.Point(277, 117);
+            this.comboBoxPreventistas.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxPreventistas.Name = "comboBoxPreventistas";
-            this.comboBoxPreventistas.Size = new System.Drawing.Size(193, 33);
+            this.comboBoxPreventistas.Size = new System.Drawing.Size(256, 33);
             this.comboBoxPreventistas.TabIndex = 11;
             // 
             // lblPreventistaAsignado
             // 
             this.lblPreventistaAsignado.AutoSize = true;
-            this.lblPreventistaAsignado.Location = new System.Drawing.Point(12, 98);
+            this.lblPreventistaAsignado.Location = new System.Drawing.Point(16, 121);
+            this.lblPreventistaAsignado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPreventistaAsignado.Name = "lblPreventistaAsignado";
             this.lblPreventistaAsignado.Size = new System.Drawing.Size(179, 25);
             this.lblPreventistaAsignado.TabIndex = 10;
@@ -642,16 +647,18 @@
             // 
             // txtRubro
             // 
-            this.txtRubro.Location = new System.Drawing.Point(208, 58);
+            this.txtRubro.Location = new System.Drawing.Point(277, 71);
+            this.txtRubro.Margin = new System.Windows.Forms.Padding(4);
             this.txtRubro.Name = "txtRubro";
-            this.txtRubro.Size = new System.Drawing.Size(189, 31);
+            this.txtRubro.Size = new System.Drawing.Size(251, 31);
             this.txtRubro.TabIndex = 9;
             this.txtRubro.TextChanged += new System.EventHandler(this.txtRubro_TextChanged);
             // 
             // lblRubro
             // 
             this.lblRubro.AutoSize = true;
-            this.lblRubro.Location = new System.Drawing.Point(12, 64);
+            this.lblRubro.Location = new System.Drawing.Point(16, 79);
+            this.lblRubro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRubro.Name = "lblRubro";
             this.lblRubro.Size = new System.Drawing.Size(61, 25);
             this.lblRubro.TabIndex = 8;
@@ -660,15 +667,17 @@
             // 
             // txtNombreComercial
             // 
-            this.txtNombreComercial.Location = new System.Drawing.Point(208, 19);
+            this.txtNombreComercial.Location = new System.Drawing.Point(277, 23);
+            this.txtNombreComercial.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreComercial.Name = "txtNombreComercial";
-            this.txtNombreComercial.Size = new System.Drawing.Size(189, 31);
+            this.txtNombreComercial.Size = new System.Drawing.Size(251, 31);
             this.txtNombreComercial.TabIndex = 7;
             // 
             // lblNombreComercial
             // 
             this.lblNombreComercial.AutoSize = true;
-            this.lblNombreComercial.Location = new System.Drawing.Point(12, 26);
+            this.lblNombreComercial.Location = new System.Drawing.Point(16, 32);
+            this.lblNombreComercial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreComercial.Name = "lblNombreComercial";
             this.lblNombreComercial.Size = new System.Drawing.Size(161, 25);
             this.lblNombreComercial.TabIndex = 0;
@@ -681,11 +690,11 @@
             this.groupBoxDatosDeFacturacion.Controls.Add(this.groupBox2);
             this.groupBoxDatosDeFacturacion.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBoxDatosDeFacturacion.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxDatosDeFacturacion.Location = new System.Drawing.Point(0, 382);
-            this.groupBoxDatosDeFacturacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxDatosDeFacturacion.Location = new System.Drawing.Point(0, 470);
+            this.groupBoxDatosDeFacturacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxDatosDeFacturacion.Name = "groupBoxDatosDeFacturacion";
-            this.groupBoxDatosDeFacturacion.Padding = new System.Windows.Forms.Padding(2, 24, 2, 24);
-            this.groupBoxDatosDeFacturacion.Size = new System.Drawing.Size(1043, 228);
+            this.groupBoxDatosDeFacturacion.Padding = new System.Windows.Forms.Padding(3, 30, 3, 30);
+            this.groupBoxDatosDeFacturacion.Size = new System.Drawing.Size(1392, 281);
             this.groupBoxDatosDeFacturacion.TabIndex = 9;
             this.groupBoxDatosDeFacturacion.TabStop = false;
             this.groupBoxDatosDeFacturacion.Text = "Datos de Facturación";
@@ -695,17 +704,19 @@
             // 
             this.panel1.Controls.Add(this.btnGuardarCliente);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(1186, 54);
+            this.panel1.Location = new System.Drawing.Point(1118, 54);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(203, 196);
+            this.panel1.Size = new System.Drawing.Size(271, 197);
             this.panel1.TabIndex = 12;
             // 
             // btnGuardarCliente
             // 
             this.btnGuardarCliente.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnGuardarCliente.Location = new System.Drawing.Point(0, 137);
+            this.btnGuardarCliente.Location = new System.Drawing.Point(0, 124);
+            this.btnGuardarCliente.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardarCliente.Name = "btnGuardarCliente";
-            this.btnGuardarCliente.Size = new System.Drawing.Size(203, 59);
+            this.btnGuardarCliente.Size = new System.Drawing.Size(271, 73);
             this.btnGuardarCliente.TabIndex = 12;
             this.btnGuardarCliente.Text = "Guardar";
             this.btnGuardarCliente.UseVisualStyleBackColor = true;
@@ -720,22 +731,26 @@
             this.groupBox3.Controls.Add(this.lblRazonSocial);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox3.Location = new System.Drawing.Point(482, 54);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(535, 196);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Size = new System.Drawing.Size(713, 197);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             // 
             // txtRazonSocial
             // 
-            this.txtRazonSocial.Location = new System.Drawing.Point(271, 46);
+            this.txtRazonSocial.Location = new System.Drawing.Point(361, 57);
+            this.txtRazonSocial.Margin = new System.Windows.Forms.Padding(4);
             this.txtRazonSocial.Name = "txtRazonSocial";
-            this.txtRazonSocial.Size = new System.Drawing.Size(258, 31);
+            this.txtRazonSocial.Size = new System.Drawing.Size(343, 31);
             this.txtRazonSocial.TabIndex = 6;
             // 
             // lblTipoFactura
             // 
             this.lblTipoFactura.AutoSize = true;
-            this.lblTipoFactura.Location = new System.Drawing.Point(6, 159);
+            this.lblTipoFactura.Location = new System.Drawing.Point(8, 196);
+            this.lblTipoFactura.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTipoFactura.Name = "lblTipoFactura";
             this.lblTipoFactura.Size = new System.Drawing.Size(108, 25);
             this.lblTipoFactura.TabIndex = 9;
@@ -750,15 +765,17 @@
             "A",
             "B",
             "C"});
-            this.comboBoxTipoFactura.Location = new System.Drawing.Point(271, 151);
+            this.comboBoxTipoFactura.Location = new System.Drawing.Point(361, 186);
+            this.comboBoxTipoFactura.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxTipoFactura.Name = "comboBoxTipoFactura";
-            this.comboBoxTipoFactura.Size = new System.Drawing.Size(258, 33);
+            this.comboBoxTipoFactura.Size = new System.Drawing.Size(343, 33);
             this.comboBoxTipoFactura.TabIndex = 10;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 104);
+            this.label3.Location = new System.Drawing.Point(8, 128);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(193, 25);
             this.label3.TabIndex = 7;
@@ -775,16 +792,18 @@
             "Exento",
             "No Responzable",
             "Consumidor Final"});
-            this.comboBoxCondicionIVA.Location = new System.Drawing.Point(271, 98);
+            this.comboBoxCondicionIVA.Location = new System.Drawing.Point(361, 121);
+            this.comboBoxCondicionIVA.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxCondicionIVA.Name = "comboBoxCondicionIVA";
-            this.comboBoxCondicionIVA.Size = new System.Drawing.Size(258, 33);
+            this.comboBoxCondicionIVA.Size = new System.Drawing.Size(343, 33);
             this.comboBoxCondicionIVA.TabIndex = 8;
             this.comboBoxCondicionIVA.SelectedIndexChanged += new System.EventHandler(this.comboBoxCondicionIVA_SelectedIndexChanged);
             // 
             // lblRazonSocial
             // 
             this.lblRazonSocial.AutoSize = true;
-            this.lblRazonSocial.Location = new System.Drawing.Point(7, 55);
+            this.lblRazonSocial.Location = new System.Drawing.Point(9, 68);
+            this.lblRazonSocial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRazonSocial.Name = "lblRazonSocial";
             this.lblRazonSocial.Size = new System.Drawing.Size(110, 25);
             this.lblRazonSocial.TabIndex = 5;
@@ -801,66 +820,64 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox2.Location = new System.Drawing.Point(2, 44);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Location = new System.Drawing.Point(3, 54);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Size = new System.Drawing.Size(359, 160);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(479, 197);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dirección Fiscal";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(151, 123);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Location = new System.Drawing.Point(201, 151);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(198, 27);
+            this.textBox1.Size = new System.Drawing.Size(263, 31);
             this.textBox1.TabIndex = 9;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(151, 93);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Location = new System.Drawing.Point(201, 114);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(198, 27);
+            this.textBox2.Size = new System.Drawing.Size(263, 31);
             this.textBox2.TabIndex = 8;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(151, 63);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Location = new System.Drawing.Point(201, 78);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(198, 27);
+            this.textBox4.Size = new System.Drawing.Size(263, 31);
             this.textBox4.TabIndex = 6;
             this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(151, 32);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Location = new System.Drawing.Point(201, 39);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(198, 27);
+            this.textBox5.Size = new System.Drawing.Size(263, 31);
             this.textBox5.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 128);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(11, 158);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 20);
+            this.label1.Size = new System.Drawing.Size(83, 25);
             this.label1.TabIndex = 4;
             this.label1.Text = "Provincia";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 98);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(11, 121);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 20);
+            this.label2.Size = new System.Drawing.Size(87, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "Localidad";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -868,20 +885,18 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 67);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(11, 82);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 20);
+            this.label4.Size = new System.Drawing.Size(77, 25);
             this.label4.TabIndex = 1;
             this.label4.Text = "Número";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 42);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(11, 52);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 20);
+            this.label5.Size = new System.Drawing.Size(49, 25);
             this.label5.TabIndex = 0;
             this.label5.Text = "Calle";
             // 
@@ -907,16 +922,16 @@
             // 
             // FormClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1060, 466);
+            this.ClientSize = new System.Drawing.Size(1413, 574);
             this.Controls.Add(this.groupBoxDatosDeFacturacion);
             this.Controls.Add(this.grpBoxDatosCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormClientes";
-            this.Padding = new System.Windows.Forms.Padding(0, 16, 0, 0);
+            this.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
             this.Text = "FormClientes";
             this.Load += new System.EventHandler(this.FormClientes_Load);
             this.grpBoxDatosCliente.ResumeLayout(false);
@@ -955,7 +970,6 @@
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblTelefonoMovil;
-        private System.Windows.Forms.Label lblTelefonoFijo;
         private System.Windows.Forms.Label lblDNI;
         private System.Windows.Forms.GroupBox grpBoxContacto;
         private System.Windows.Forms.Label lblCuil;
@@ -973,7 +987,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerNacCliente;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxTelMovilCliente;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.MaskedTextBox maskedTextBoxTelFijoCliente;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxCuil;
         private System.Windows.Forms.TextBox txtCalle;
         private System.Windows.Forms.TextBox txtLocalidad;

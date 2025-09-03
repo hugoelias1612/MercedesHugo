@@ -31,7 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ArimaERP.Program</StartupObject>
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
@@ -156,12 +157,9 @@
     <None Include="Resources\cobros-reducido.png" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-=======
     <None Include="Resources\alerta_reducido1.png" />
   </ItemGroup>
   <ItemGroup>
->>>>>>> 3d1b4e0a548dbfd881c83e1a0ef6db402d23927d
     <None Include="Resources\salir_reducido.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
