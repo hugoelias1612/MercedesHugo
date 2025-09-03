@@ -1,8 +1,6 @@
-﻿using System.Windows.Forms;
-
-namespace ArimaERP.EmpleadoProducto
+﻿namespace ArimaERP.EmpleadoProducto
 {
-    public partial class MDIProductos : Form
+    partial class MDIProductos
     {
         /// <summary>
         /// Required designer variable.
@@ -30,250 +28,202 @@ namespace ArimaERP.EmpleadoProducto
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MDIProductos));
-            this.TLPBody = new System.Windows.Forms.TableLayoutPanel();
-            this.TLPBotones = new System.Windows.Forms.TableLayoutPanel();
-            this.BPerfil = new System.Windows.Forms.Button();
-            this.BSalir = new System.Windows.Forms.Button();
-            this.BComprar = new System.Windows.Forms.Button();
-            this.BBuscar = new System.Windows.Forms.Button();
-            this.BAgregar = new System.Windows.Forms.Button();
-            this.BStock = new System.Windows.Forms.Button();
-            this.BABM = new System.Windows.Forms.Button();
-            this.BAlerta = new System.Windows.Forms.Button();
-            this.PContent = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.TLPBody.SuspendLayout();
-            this.TLPBotones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblRol = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnFMP = new System.Windows.Forms.Button();
+            this.btnABM = new System.Windows.Forms.Button();
+            this.btnStock = new System.Windows.Forms.Button();
+            this.btnAlerta = new System.Windows.Forms.Button();
+            this.pnlVista = new System.Windows.Forms.Panel();
+            this.pnlContent = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            this.pnlVista.SuspendLayout();
             this.SuspendLayout();
             // 
-            // TLPBody
+            // panel1
             // 
-            this.TLPBody.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(150)))));
-            this.TLPBody.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.TLPBody.ColumnCount = 1;
-            this.TLPBody.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TLPBody.Controls.Add(this.TLPBotones, 0, 0);
-            this.TLPBody.Controls.Add(this.PContent, 0, 1);
-            this.TLPBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TLPBody.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TLPBody.Location = new System.Drawing.Point(0, 0);
-            this.TLPBody.Margin = new System.Windows.Forms.Padding(0);
-            this.TLPBody.Name = "TLPBody";
-            this.TLPBody.RowCount = 2;
-            this.TLPBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.06902F));
-            this.TLPBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.93098F));
-            this.TLPBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.TLPBody.Size = new System.Drawing.Size(1685, 838);
-            this.TLPBody.TabIndex = 0;
-            this.TLPBody.Paint += new System.Windows.Forms.PaintEventHandler(this.TLPBody_Paint);
+            this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lblFecha);
+            this.panel1.Controls.Add(this.lblRol);
+            this.panel1.Controls.Add(this.lblNombre);
+            this.panel1.Controls.Add(this.btnSalir);
+            this.panel1.Controls.Add(this.btnBuscar);
+            this.panel1.Controls.Add(this.btnFMP);
+            this.panel1.Controls.Add(this.btnABM);
+            this.panel1.Controls.Add(this.btnStock);
+            this.panel1.Controls.Add(this.btnAlerta);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1264, 112);
+            this.panel1.TabIndex = 3;
             // 
-            // TLPBotones
+            // lblFecha
             // 
-            this.TLPBotones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.TLPBotones.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.TLPBotones.ColumnCount = 12;
-            this.TLPBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
-            this.TLPBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
-            this.TLPBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
-            this.TLPBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
-            this.TLPBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
-            this.TLPBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
-            this.TLPBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
-            this.TLPBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.31354F));
-            this.TLPBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.234363F));
-            this.TLPBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
-            this.TLPBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
-            this.TLPBotones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333332F));
-            this.TLPBotones.Controls.Add(this.BPerfil, 10, 0);
-            this.TLPBotones.Controls.Add(this.BSalir, 11, 0);
-            this.TLPBotones.Controls.Add(this.BComprar, 5, 0);
-            this.TLPBotones.Controls.Add(this.BBuscar, 4, 0);
-            this.TLPBotones.Controls.Add(this.BAgregar, 3, 0);
-            this.TLPBotones.Controls.Add(this.BStock, 2, 0);
-            this.TLPBotones.Controls.Add(this.BABM, 1, 0);
-            this.TLPBotones.Controls.Add(this.BAlerta, 0, 0);
-            this.TLPBotones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TLPBotones.Location = new System.Drawing.Point(0, 10);
-            this.TLPBotones.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.TLPBotones.Name = "TLPBotones";
-            this.TLPBotones.RowCount = 1;
-            this.TLPBotones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TLPBotones.Size = new System.Drawing.Size(1685, 97);
-            this.TLPBotones.TabIndex = 0;
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Location = new System.Drawing.Point(659, 74);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(65, 25);
+            this.lblFecha.TabIndex = 8;
+            this.lblFecha.Text = "Fecha:";
             // 
-            // BPerfil
+            // lblRol
             // 
-            this.BPerfil.BackColor = System.Drawing.SystemColors.Window;
-            this.BPerfil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BPerfil.BackgroundImage")));
-            this.BPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BPerfil.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BPerfil.Location = new System.Drawing.Point(1052, 3);
-            this.BPerfil.Margin = new System.Windows.Forms.Padding(2);
-            this.BPerfil.Name = "BPerfil";
-            this.BPerfil.Size = new System.Drawing.Size(100, 73);
-            this.BPerfil.TabIndex = 20;
-            this.BPerfil.UseVisualStyleBackColor = false;
+            this.lblRol.AutoSize = true;
+            this.lblRol.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRol.Location = new System.Drawing.Point(659, 40);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(42, 25);
+            this.lblRol.TabIndex = 7;
+            this.lblRol.Text = "Rol:";
+            this.lblRol.Click += new System.EventHandler(this.lblRol_Click);
             // 
-            // BSalir
+            // lblNombre
             // 
-            this.BSalir.BackColor = System.Drawing.SystemColors.Window;
-            this.BSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BSalir.BackgroundImage")));
-            this.BSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BSalir.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BSalir.Location = new System.Drawing.Point(1158, 4);
-            this.BSalir.Name = "BSalir";
-            this.BSalir.Size = new System.Drawing.Size(102, 71);
-            this.BSalir.TabIndex = 16;
-            this.BSalir.UseVisualStyleBackColor = false;
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(659, 8);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(85, 25);
+            this.lblNombre.TabIndex = 6;
+            this.lblNombre.Text = "Nombre:";
             // 
-            // BComprar
+            // btnSalir
             // 
-            this.BComprar.BackColor = System.Drawing.SystemColors.Window;
-            this.BComprar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BComprar.BackgroundImage")));
-            this.BComprar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BComprar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BComprar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BComprar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BComprar.Location = new System.Drawing.Point(528, 3);
-            this.BComprar.Margin = new System.Windows.Forms.Padding(2);
-            this.BComprar.Name = "BComprar";
-            this.BComprar.Size = new System.Drawing.Size(100, 73);
-            this.BComprar.TabIndex = 8;
-            this.BComprar.UseVisualStyleBackColor = false;
+            this.btnSalir.BackColor = System.Drawing.SystemColors.Window;
+            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSalir.Image = global::ArimaERP.Properties.Resources.salir_reducido;
+            this.btnSalir.Location = new System.Drawing.Point(1150, 0);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(112, 110);
+            this.btnSalir.TabIndex = 5;
+            this.btnSalir.UseVisualStyleBackColor = false;
             // 
-            // BBuscar
+            // btnBuscar
             // 
-            this.BBuscar.BackColor = System.Drawing.SystemColors.Window;
-            this.BBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BBuscar.BackgroundImage")));
-            this.BBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BBuscar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BBuscar.Location = new System.Drawing.Point(423, 3);
-            this.BBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.BBuscar.Name = "BBuscar";
-            this.BBuscar.Size = new System.Drawing.Size(100, 73);
-            this.BBuscar.TabIndex = 4;
-            this.BBuscar.UseVisualStyleBackColor = false;
-            this.BBuscar.Click += new System.EventHandler(this.button4_Click);
+            this.btnBuscar.BackColor = System.Drawing.SystemColors.Window;
+            this.btnBuscar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.Location = new System.Drawing.Point(448, 0);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 15, 16);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(112, 110);
+            this.btnBuscar.TabIndex = 4;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             // 
-            // BAgregar
+            // btnFMP
             // 
-            this.BAgregar.BackColor = System.Drawing.SystemColors.Window;
-            this.BAgregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BAgregar.BackgroundImage")));
-            this.BAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BAgregar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BAgregar.Location = new System.Drawing.Point(318, 3);
-            this.BAgregar.Margin = new System.Windows.Forms.Padding(2);
-            this.BAgregar.Name = "BAgregar";
-            this.BAgregar.Size = new System.Drawing.Size(100, 73);
-            this.BAgregar.TabIndex = 3;
-            this.BAgregar.UseVisualStyleBackColor = false;
-            this.BAgregar.Click += new System.EventHandler(this.BAgregar_Click);
+            this.btnFMP.BackColor = System.Drawing.SystemColors.Window;
+            this.btnFMP.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnFMP.Image = ((System.Drawing.Image)(resources.GetObject("btnFMP.Image")));
+            this.btnFMP.Location = new System.Drawing.Point(336, 0);
+            this.btnFMP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnFMP.Name = "btnFMP";
+            this.btnFMP.Size = new System.Drawing.Size(112, 110);
+            this.btnFMP.TabIndex = 3;
+            this.btnFMP.UseVisualStyleBackColor = false;
             // 
-            // BStock
+            // btnABM
             // 
-            this.BStock.BackColor = System.Drawing.SystemColors.Window;
-            this.BStock.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BStock.BackgroundImage")));
-            this.BStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BStock.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BStock.Location = new System.Drawing.Point(213, 3);
-            this.BStock.Margin = new System.Windows.Forms.Padding(2);
-            this.BStock.Name = "BStock";
-            this.BStock.Size = new System.Drawing.Size(100, 73);
-            this.BStock.TabIndex = 2;
-            this.BStock.UseVisualStyleBackColor = false;
-            this.BStock.Click += new System.EventHandler(this.BStock_Click);
+            this.btnABM.BackColor = System.Drawing.SystemColors.Window;
+            this.btnABM.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnABM.Image = ((System.Drawing.Image)(resources.GetObject("btnABM.Image")));
+            this.btnABM.Location = new System.Drawing.Point(224, 0);
+            this.btnABM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnABM.Name = "btnABM";
+            this.btnABM.Size = new System.Drawing.Size(112, 110);
+            this.btnABM.TabIndex = 2;
+            this.btnABM.UseVisualStyleBackColor = false;
+            this.btnABM.Click += new System.EventHandler(this.btnABM_Click);
             // 
-            // BABM
+            // btnStock
             // 
-            this.BABM.BackColor = System.Drawing.SystemColors.Window;
-            this.BABM.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BABM.BackgroundImage")));
-            this.BABM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BABM.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BABM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BABM.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BABM.Location = new System.Drawing.Point(108, 3);
-            this.BABM.Margin = new System.Windows.Forms.Padding(2);
-            this.BABM.Name = "BABM";
-            this.BABM.Size = new System.Drawing.Size(100, 73);
-            this.BABM.TabIndex = 1;
-            this.BABM.UseVisualStyleBackColor = false;
+            this.btnStock.BackColor = System.Drawing.SystemColors.Window;
+            this.btnStock.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnStock.Image = ((System.Drawing.Image)(resources.GetObject("btnStock.Image")));
+            this.btnStock.Location = new System.Drawing.Point(112, 0);
+            this.btnStock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnStock.Name = "btnStock";
+            this.btnStock.Size = new System.Drawing.Size(112, 110);
+            this.btnStock.TabIndex = 1;
+            this.btnStock.UseVisualStyleBackColor = false;
             // 
-            // BAlerta
+            // btnAlerta
             // 
-            this.BAlerta.BackColor = System.Drawing.SystemColors.Window;
-            this.BAlerta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BAlerta.BackgroundImage")));
-            this.BAlerta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BAlerta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BAlerta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BAlerta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BAlerta.Location = new System.Drawing.Point(3, 3);
-            this.BAlerta.Margin = new System.Windows.Forms.Padding(2);
-            this.BAlerta.Name = "BAlerta";
-            this.BAlerta.Size = new System.Drawing.Size(100, 73);
-            this.BAlerta.TabIndex = 0;
-            this.BAlerta.Text = "\r\n";
-            this.BAlerta.UseVisualStyleBackColor = false;
-            this.BAlerta.Click += new System.EventHandler(this.BAlerta_Click);
-            // PContent
+            this.btnAlerta.BackColor = System.Drawing.SystemColors.Window;
+            this.btnAlerta.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnAlerta.Image = global::ArimaERP.Properties.Resources.alerta_reducido;
+            this.btnAlerta.Location = new System.Drawing.Point(0, 0);
+            this.btnAlerta.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAlerta.Name = "btnAlerta";
+            this.btnAlerta.Size = new System.Drawing.Size(112, 110);
+            this.btnAlerta.TabIndex = 0;
+            this.btnAlerta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAlerta.UseVisualStyleBackColor = false;
+            this.btnAlerta.Click += new System.EventHandler(this.btnAlerta_Click);
             // 
-            this.PContent.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PContent.Location = new System.Drawing.Point(0, 99);
-            this.PContent.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.PContent.Name = "PContent";
-            this.PContent.Size = new System.Drawing.Size(1264, 582);
-            this.PContent.TabIndex = 1;
-            // timer1
+            // pnlVista
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
+            this.pnlVista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(180)))));
+            this.pnlVista.Controls.Add(this.pnlContent);
+            this.pnlVista.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlVista.Location = new System.Drawing.Point(0, 112);
+            this.pnlVista.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlVista.Name = "pnlVista";
+            this.pnlVista.Size = new System.Drawing.Size(1264, 569);
+            this.pnlVista.TabIndex = 4;
+            // 
+            // pnlContent
+            // 
+            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContent.Location = new System.Drawing.Point(0, 0);
+            this.pnlContent.Name = "pnlContent";
+            this.pnlContent.Size = new System.Drawing.Size(1264, 569);
+            this.pnlContent.TabIndex = 2;
             // 
             // MDIProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1685, 838);
-            this.Controls.Add(this.TLPBody);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.pnlVista);
+            this.Controls.Add(this.panel1);
+            this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MDIProductos";
-            this.Text = "Arima ERP - Empleado Productos";
-            this.Load += new System.EventHandler(this.MDIProducto_Load);
-            this.TLPBody.ResumeLayout(false);
-            this.TLPBotones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            this.Text = "MDIProductos";
+            this.Load += new System.EventHandler(this.MDIProductos_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.pnlVista.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TableLayoutPanel TLPBody;
-        private System.Windows.Forms.BindingSource bindingSource1;
-        private Timer timer1;
-        private Panel PContent;
-        private TableLayoutPanel TLPBotones;
-        private Button BPerfil;
-        private Button BSalir;
-        private Button BComprar;
-        private Button BBuscar;
-        private Button BAgregar;
-        private Button BStock;
-        private Button BABM;
-        private Button BAlerta;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnAlerta;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnFMP;
+        private System.Windows.Forms.Button btnABM;
+        private System.Windows.Forms.Button btnStock;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Panel pnlVista;
+        private System.Windows.Forms.Panel pnlContent;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblRol;
     }
 }

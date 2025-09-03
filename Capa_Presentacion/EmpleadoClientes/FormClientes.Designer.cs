@@ -132,10 +132,11 @@
             this.grpBoxDatosCliente.Controls.Add(this.groupBoxDatosComerciales);
             this.grpBoxDatosCliente.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpBoxDatosCliente.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpBoxDatosCliente.Location = new System.Drawing.Point(0, 20);
+            this.grpBoxDatosCliente.Location = new System.Drawing.Point(0, 16);
+            this.grpBoxDatosCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grpBoxDatosCliente.Name = "grpBoxDatosCliente";
-            this.grpBoxDatosCliente.Padding = new System.Windows.Forms.Padding(10);
-            this.grpBoxDatosCliente.Size = new System.Drawing.Size(1392, 451);
+            this.grpBoxDatosCliente.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.grpBoxDatosCliente.Size = new System.Drawing.Size(1043, 366);
             this.grpBoxDatosCliente.TabIndex = 0;
             this.grpBoxDatosCliente.TabStop = false;
             this.grpBoxDatosCliente.Text = "Datos Personales y Comerciales";
@@ -165,10 +166,11 @@
             this.grpDireccion.Controls.Add(this.lblNumero);
             this.grpDireccion.Controls.Add(this.lblCalle);
             this.grpDireccion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpDireccion.Location = new System.Drawing.Point(0, 133);
-            this.grpDireccion.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.grpDireccion.Location = new System.Drawing.Point(0, 108);
+            this.grpDireccion.Margin = new System.Windows.Forms.Padding(2, 16, 2, 2);
             this.grpDireccion.Name = "grpDireccion";
-            this.grpDireccion.Size = new System.Drawing.Size(414, 274);
+            this.grpDireccion.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpDireccion.Size = new System.Drawing.Size(308, 222);
             this.grpDireccion.TabIndex = 3;
             this.grpDireccion.TabStop = false;
             this.grpDireccion.Text = "Dirección";
@@ -214,9 +216,10 @@
             // lblProvincia
             // 
             this.lblProvincia.AutoSize = true;
-            this.lblProvincia.Location = new System.Drawing.Point(22, 236);
+            this.lblProvincia.Location = new System.Drawing.Point(16, 192);
+            this.lblProvincia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProvincia.Name = "lblProvincia";
-            this.lblProvincia.Size = new System.Drawing.Size(83, 25);
+            this.lblProvincia.Size = new System.Drawing.Size(69, 20);
             this.lblProvincia.TabIndex = 4;
             this.lblProvincia.Text = "Provincia";
             this.lblProvincia.Click += new System.EventHandler(this.lblProvincia_Click);
@@ -224,9 +227,10 @@
             // lblLocalidad
             // 
             this.lblLocalidad.AutoSize = true;
-            this.lblLocalidad.Location = new System.Drawing.Point(21, 189);
+            this.lblLocalidad.Location = new System.Drawing.Point(16, 154);
+            this.lblLocalidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLocalidad.Name = "lblLocalidad";
-            this.lblLocalidad.Size = new System.Drawing.Size(87, 25);
+            this.lblLocalidad.Size = new System.Drawing.Size(74, 20);
             this.lblLocalidad.TabIndex = 3;
             this.lblLocalidad.Text = "Localidad";
             this.lblLocalidad.Click += new System.EventHandler(this.lblLocalidad_Click);
@@ -234,18 +238,20 @@
             // lblBarrio
             // 
             this.lblBarrio.AutoSize = true;
-            this.lblBarrio.Location = new System.Drawing.Point(22, 143);
+            this.lblBarrio.Location = new System.Drawing.Point(16, 116);
+            this.lblBarrio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBarrio.Name = "lblBarrio";
-            this.lblBarrio.Size = new System.Drawing.Size(58, 25);
+            this.lblBarrio.Size = new System.Drawing.Size(49, 20);
             this.lblBarrio.TabIndex = 2;
             this.lblBarrio.Text = "Barrio";
             // 
             // lblNumero
             // 
             this.lblNumero.AutoSize = true;
-            this.lblNumero.Location = new System.Drawing.Point(21, 90);
+            this.lblNumero.Location = new System.Drawing.Point(16, 73);
+            this.lblNumero.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(77, 25);
+            this.lblNumero.Size = new System.Drawing.Size(63, 20);
             this.lblNumero.TabIndex = 1;
             this.lblNumero.Text = "Número";
             this.lblNumero.Click += new System.EventHandler(this.lblNumero_Click);
@@ -253,9 +259,10 @@
             // lblCalle
             // 
             this.lblCalle.AutoSize = true;
-            this.lblCalle.Location = new System.Drawing.Point(21, 46);
+            this.lblCalle.Location = new System.Drawing.Point(16, 37);
+            this.lblCalle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCalle.Name = "lblCalle";
-            this.lblCalle.Size = new System.Drawing.Size(49, 25);
+            this.lblCalle.Size = new System.Drawing.Size(42, 20);
             this.lblCalle.TabIndex = 0;
             this.lblCalle.Text = "Calle";
             // 
@@ -345,9 +352,11 @@
             this.grpBox1.Controls.Add(this.lblApellido);
             this.grpBox1.Controls.Add(this.lblDNI);
             this.grpBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpBox1.Location = new System.Drawing.Point(0, 192);
+            this.grpBox1.Location = new System.Drawing.Point(0, 156);
+            this.grpBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grpBox1.Name = "grpBox1";
-            this.grpBox1.Size = new System.Drawing.Size(554, 259);
+            this.grpBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpBox1.Size = new System.Drawing.Size(416, 210);
             this.grpBox1.TabIndex = 4;
             this.grpBox1.TabStop = false;
             // 
@@ -370,9 +379,10 @@
             // lblFecNacimiento
             // 
             this.lblFecNacimiento.AutoSize = true;
-            this.lblFecNacimiento.Location = new System.Drawing.Point(3, 176);
+            this.lblFecNacimiento.Location = new System.Drawing.Point(2, 143);
+            this.lblFecNacimiento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFecNacimiento.Name = "lblFecNacimiento";
-            this.lblFecNacimiento.Size = new System.Drawing.Size(137, 25);
+            this.lblFecNacimiento.Size = new System.Drawing.Size(115, 20);
             this.lblFecNacimiento.TabIndex = 9;
             this.lblFecNacimiento.Text = "Fec. Nacimiento";
             this.lblFecNacimiento.Click += new System.EventHandler(this.label1_Click);
@@ -529,10 +539,11 @@
             this.groupBoxDatosComerciales.Controls.Add(this.txtNombreComercial);
             this.groupBoxDatosComerciales.Controls.Add(this.lblNombreComercial);
             this.groupBoxDatosComerciales.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBoxDatosComerciales.Location = new System.Drawing.Point(978, 34);
-            this.groupBoxDatosComerciales.Margin = new System.Windows.Forms.Padding(10);
+            this.groupBoxDatosComerciales.Location = new System.Drawing.Point(732, 28);
+            this.groupBoxDatosComerciales.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.groupBoxDatosComerciales.Name = "groupBoxDatosComerciales";
-            this.groupBoxDatosComerciales.Size = new System.Drawing.Size(404, 407);
+            this.groupBoxDatosComerciales.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxDatosComerciales.Size = new System.Drawing.Size(303, 330);
             this.groupBoxDatosComerciales.TabIndex = 6;
             this.groupBoxDatosComerciales.TabStop = false;
             // 
@@ -604,9 +615,10 @@
             // lblObervaciones
             // 
             this.lblObervaciones.AutoSize = true;
-            this.lblObervaciones.Location = new System.Drawing.Point(12, 142);
+            this.lblObervaciones.Location = new System.Drawing.Point(9, 115);
+            this.lblObervaciones.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblObervaciones.Name = "lblObervaciones";
-            this.lblObervaciones.Size = new System.Drawing.Size(128, 25);
+            this.lblObervaciones.Size = new System.Drawing.Size(105, 20);
             this.lblObervaciones.TabIndex = 7;
             this.lblObervaciones.Text = "Observaciones";
             // 
@@ -669,10 +681,11 @@
             this.groupBoxDatosDeFacturacion.Controls.Add(this.groupBox2);
             this.groupBoxDatosDeFacturacion.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBoxDatosDeFacturacion.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxDatosDeFacturacion.Location = new System.Drawing.Point(0, 471);
+            this.groupBoxDatosDeFacturacion.Location = new System.Drawing.Point(0, 382);
+            this.groupBoxDatosDeFacturacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxDatosDeFacturacion.Name = "groupBoxDatosDeFacturacion";
-            this.groupBoxDatosDeFacturacion.Padding = new System.Windows.Forms.Padding(3, 30, 3, 30);
-            this.groupBoxDatosDeFacturacion.Size = new System.Drawing.Size(1392, 280);
+            this.groupBoxDatosDeFacturacion.Padding = new System.Windows.Forms.Padding(2, 24, 2, 24);
+            this.groupBoxDatosDeFacturacion.Size = new System.Drawing.Size(1043, 228);
             this.groupBoxDatosDeFacturacion.TabIndex = 9;
             this.groupBoxDatosDeFacturacion.TabStop = false;
             this.groupBoxDatosDeFacturacion.Text = "Datos de Facturación";
@@ -788,58 +801,66 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox2.Location = new System.Drawing.Point(3, 54);
+            this.groupBox2.Location = new System.Drawing.Point(2, 44);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(479, 196);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(359, 160);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dirección Fiscal";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(201, 151);
+            this.textBox1.Location = new System.Drawing.Point(151, 123);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(263, 31);
+            this.textBox1.Size = new System.Drawing.Size(198, 27);
             this.textBox1.TabIndex = 9;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(201, 114);
+            this.textBox2.Location = new System.Drawing.Point(151, 93);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(263, 31);
+            this.textBox2.Size = new System.Drawing.Size(198, 27);
             this.textBox2.TabIndex = 8;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(201, 77);
+            this.textBox4.Location = new System.Drawing.Point(151, 63);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(263, 31);
+            this.textBox4.Size = new System.Drawing.Size(198, 27);
             this.textBox4.TabIndex = 6;
             this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(201, 40);
+            this.textBox5.Location = new System.Drawing.Point(151, 32);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(263, 31);
+            this.textBox5.Size = new System.Drawing.Size(198, 27);
             this.textBox5.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 157);
+            this.label1.Location = new System.Drawing.Point(8, 128);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 25);
+            this.label1.Size = new System.Drawing.Size(69, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Provincia";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 120);
+            this.label2.Location = new System.Drawing.Point(8, 98);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 25);
+            this.label2.Size = new System.Drawing.Size(74, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Localidad";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -847,18 +868,20 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 83);
+            this.label4.Location = new System.Drawing.Point(8, 67);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 25);
+            this.label4.Size = new System.Drawing.Size(63, 20);
             this.label4.TabIndex = 1;
             this.label4.Text = "Número";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 52);
+            this.label5.Location = new System.Drawing.Point(8, 42);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 25);
+            this.label5.Size = new System.Drawing.Size(42, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "Calle";
             // 
@@ -884,15 +907,16 @@
             // 
             // FormClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1413, 573);
+            this.ClientSize = new System.Drawing.Size(1060, 466);
             this.Controls.Add(this.groupBoxDatosDeFacturacion);
             this.Controls.Add(this.grpBoxDatosCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormClientes";
-            this.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
+            this.Padding = new System.Windows.Forms.Padding(0, 16, 0, 0);
             this.Text = "FormClientes";
             this.Load += new System.EventHandler(this.FormClientes_Load);
             this.grpBoxDatosCliente.ResumeLayout(false);

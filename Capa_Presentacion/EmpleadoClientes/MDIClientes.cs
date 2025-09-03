@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace ArimaERP.EmpleadoClientes
 {
-    public partial class MDIClientes : Form
+    public partial class MDIProductos : Form
     {
-        public MDIClientes()
+        public MDIProductos()
         {
             InitializeComponent();
         }
