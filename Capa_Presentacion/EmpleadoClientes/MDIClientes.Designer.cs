@@ -37,7 +37,7 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.btnCobros = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
@@ -168,7 +168,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Controls.Add(this.btnConfirmar);
             this.panel1.Controls.Add(this.btnCobros);
             this.panel1.Controls.Add(this.btnClientes);
@@ -181,15 +181,16 @@
             this.panel1.Size = new System.Drawing.Size(1181, 112);
             this.panel1.TabIndex = 3;
             // 
-            // button1
+            // btnSalir
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.Location = new System.Drawing.Point(1030, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 110);
-            this.button1.TabIndex = 5;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSalir.Image = global::ArimaERP.Properties.Resources.salir_reducido;
+            this.btnSalir.Location = new System.Drawing.Point(1067, 0);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(112, 110);
+            this.btnSalir.TabIndex = 5;
+            this.btnSalir.UseVisualStyleBackColor = true;
             // 
             // btnConfirmar
             // 
@@ -267,7 +268,7 @@
             // 
             this.pnlVistaMenuSecundario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlVistaMenuSecundario.Location = new System.Drawing.Point(828, 12);
-            this.pnlVistaMenuSecundario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlVistaMenuSecundario.Margin = new System.Windows.Forms.Padding(4);
             this.pnlVistaMenuSecundario.Name = "pnlVistaMenuSecundario";
             this.pnlVistaMenuSecundario.Size = new System.Drawing.Size(353, 872);
             this.pnlVistaMenuSecundario.TabIndex = 2;
@@ -279,7 +280,7 @@
             this.pnlPreventistas.Controls.Add(this.button5);
             this.pnlPreventistas.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlPreventistas.Location = new System.Drawing.Point(552, 12);
-            this.pnlPreventistas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlPreventistas.Margin = new System.Windows.Forms.Padding(4);
             this.pnlPreventistas.Name = "pnlPreventistas";
             this.pnlPreventistas.Size = new System.Drawing.Size(276, 872);
             this.pnlPreventistas.TabIndex = 3;
@@ -328,7 +329,7 @@
             this.pnlPedidos.Controls.Add(this.btnCrearPedido);
             this.pnlPedidos.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlPedidos.Location = new System.Drawing.Point(276, 12);
-            this.pnlPedidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlPedidos.Margin = new System.Windows.Forms.Padding(4);
             this.pnlPedidos.Name = "pnlPedidos";
             this.pnlPedidos.Size = new System.Drawing.Size(276, 872);
             this.pnlPedidos.TabIndex = 2;
@@ -379,7 +380,7 @@
             this.pnlClientes.Controls.Add(this.btnAlta);
             this.pnlClientes.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlClientes.Location = new System.Drawing.Point(0, 12);
-            this.pnlClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlClientes.Margin = new System.Windows.Forms.Padding(4);
             this.pnlClientes.Name = "pnlClientes";
             this.pnlClientes.Size = new System.Drawing.Size(276, 872);
             this.pnlClientes.TabIndex = 0;
@@ -491,7 +492,7 @@
         private System.Windows.Forms.Button btnCobros;
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnPreventista;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Panel pnlVista;
         private System.Windows.Forms.Panel pnlClientes;
         private System.Windows.Forms.Button btnModificacion;
