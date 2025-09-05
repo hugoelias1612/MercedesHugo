@@ -56,11 +56,35 @@
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
-    <Compile Include="EmpleadoClientes\FormClientes.cs">
+    <Compile Include="EmpleadoClientes\FormBajaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmpleadoClientes\FormClientes.Designer.cs">
-      <DependentUpon>FormClientes.cs</DependentUpon>
+    <Compile Include="EmpleadoClientes\FormBajaCliente.Designer.cs">
+      <DependentUpon>FormBajaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormCliente.Designer.cs">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormCrearPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormCrearPedido.Designer.cs">
+      <DependentUpon>FormCrearPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormEditarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormEditarCliente.Designer.cs">
+      <DependentUpon>FormEditarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormModificacionCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormModificacionCliente.Designer.cs">
+      <DependentUpon>FormModificacionCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="EmpleadoClientes\MDIClientes.cs">
       <SubType>Form</SubType>
@@ -79,6 +103,12 @@
     </Compile>
     <Compile Include="EmpleadoProducto\FormAlerta.Designer.cs">
       <DependentUpon>FormAlerta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadoProducto\FormEditarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadoProducto\FormEditarProducto.Designer.cs">
+      <DependentUpon>FormEditarProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="EmpleadoProducto\MDIProductos.cs">
       <SubType>Form</SubType>
@@ -104,8 +134,20 @@
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmpleadoClientes\FormClientes.resx">
-      <DependentUpon>FormClientes.cs</DependentUpon>
+    <EmbeddedResource Include="EmpleadoClientes\FormBajaCliente.resx">
+      <DependentUpon>FormBajaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadoClientes\FormCliente.resx">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadoClientes\FormCrearPedido.resx">
+      <DependentUpon>FormCrearPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadoClientes\FormEditarCliente.resx">
+      <DependentUpon>FormEditarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadoClientes\FormModificacionCliente.resx">
+      <DependentUpon>FormModificacionCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmpleadoClientes\MDIClientes.resx">
       <DependentUpon>MDIClientes.cs</DependentUpon>
@@ -115,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmpleadoProducto\FormAlerta.resx">
       <DependentUpon>FormAlerta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadoProducto\FormEditarProducto.resx">
+      <DependentUpon>FormEditarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmpleadoProducto\MDIProductos.resx">
       <DependentUpon>MDIProductos.cs</DependentUpon>

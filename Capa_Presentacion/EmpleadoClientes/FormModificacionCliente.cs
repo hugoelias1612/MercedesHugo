@@ -1,5 +1,4 @@
-﻿using ArimaERP.EmpleadoClientes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,50 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ArimaERP.EmpleadoProducto
+namespace ArimaERP.EmpleadoClientes
 {
-    public partial class FormABM : Form
+    public partial class FormModificacionCliente : Form
     {
-        public FormABM()
+        public FormModificacionCliente()
         {
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void tableLayoutPanelModificarCliente_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private enum Vista { Alta, Baja, Modificacion }
-
-        private void MostrarVista(Vista v)
-        {
-            // Aseguramos que solo 1 vista esté visible
-            PAlta.Visible = (v == Vista.Alta);
-            PBaja.Visible = (v == Vista.Baja);
-            PModificacion.Visible = (v == Vista.Modificacion);
-
-            // Y traemos al frente la vista activa
-            switch (v)
-            {
-                case Vista.Alta: PAlta.BringToFront(); break;
-                case Vista.Baja: PBaja.BringToFront(); break;
-                case Vista.Modificacion: PModificacion.BringToFront(); break;
-            }
-        }
-
-        private void btnAlta_Click(object sender, EventArgs e)
-        {
-            MostrarVista(Vista.Alta);
-        }
-
-        private void btnBaja_Click(object sender, EventArgs e)
-        {
-            MostrarVista(Vista.Baja);
-        }
-        private void btnModificacion_Click(object sender, EventArgs e)
-        {
-            MostrarVista(Vista.Modificacion);
         }
 
         private void txtBuscarDni_KeyDown(object sender, KeyEventArgs e)
@@ -78,9 +45,9 @@ namespace ArimaERP.EmpleadoProducto
         {
             if (e.ColumnIndex >= 0)
             {
-                FormEditarProducto formEditarProducto = new FormEditarProducto();
-                formEditarProducto.ShowDialog();
-                // formEditarCliente.txtBoxNombre.Text = txtBuscarDni.Text;
+                FormEditarCliente formEditarCliente = new FormEditarCliente();
+                formEditarCliente.ShowDialog();
+               // formEditarCliente.txtBoxNombre.Text = txtBuscarDni.Text;
             }
         }
 
@@ -89,11 +56,20 @@ namespace ArimaERP.EmpleadoProducto
             if (e.KeyCode == Keys.Enter && dataGridView1.CurrentRow != null)
             {
 
-                FormEditarProducto formEditarProducto = new FormEditarProducto();
-                formEditarProducto.ShowDialog();
+                FormEditarCliente formEditarCliente = new FormEditarCliente();
+                formEditarCliente.ShowDialog();
                 e.SuppressKeyPress = true; // evita que se edite la celda
             }
         }
 
+        private void FormModificacionCliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

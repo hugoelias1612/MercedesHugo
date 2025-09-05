@@ -55,16 +55,63 @@ namespace ArimaERP.EmpleadoClientes
             pnlVistaMenuSecundario.Controls.Clear();
 
             // Instanciar el formulario
-            FormClientes formClientes = new FormClientes();
+            FormCliente formCliente = new FormCliente();
 
             // Configurar como control embebido
-            formClientes.TopLevel = false;
-            formClientes.FormBorderStyle = FormBorderStyle.None;
-            formClientes.Dock = DockStyle.Fill;
+            formCliente.TopLevel = false;
+            formCliente.FormBorderStyle = FormBorderStyle.None;
+            formCliente.Dock = DockStyle.Fill;
 
             // Agregar al panel y mostrar
-            pnlVistaMenuSecundario.Controls.Add(formClientes);
-            formClientes.Show();
+            pnlVistaMenuSecundario.Controls.Add(formCliente);
+            formCliente.Show();
+        }
+
+        private void btnModificacion_Click_1(object sender, EventArgs e)
+        {
+            // Limpiar el panel antes de agregar nuevo contenido
+            pnlVistaMenuSecundario.Controls.Clear();
+            // Instanciar el formulario
+            FormModificacionCliente formModificacionCliente = new FormModificacionCliente();
+            // Configurar como control embebido
+            formModificacionCliente.TopLevel = false;
+            formModificacionCliente.FormBorderStyle = FormBorderStyle.None;
+            formModificacionCliente.Dock = DockStyle.Fill;
+            // Agregar al panel y mostrar
+            pnlVistaMenuSecundario.Controls.Add(formModificacionCliente);
+            formModificacionCliente.Show();
+        }
+
+        private void btnBajaPreventistas_Click(object sender, EventArgs e)
+        {
+            // Limpiar el panel antes de agregar nuevo contenido
+            pnlVistaMenuSecundario.Controls.Clear();
+            // Instanciar el formulario
+            FormModificacionCliente formModificacionCliente = new FormModificacionCliente();
+            // Configurar como control embebido
+            formModificacionCliente.TopLevel = false;
+            formModificacionCliente.FormBorderStyle = FormBorderStyle.None;
+            formModificacionCliente.Dock = DockStyle.Fill;
+            // Agregar al panel y mostrar
+            pnlVistaMenuSecundario.Controls.Add(formModificacionCliente);
+            formModificacionCliente.Show();
+        }
+
+        private void btnBaja_Click(object sender, EventArgs e)
+        {
+            {
+                // Limpiar el panel antes de agregar nuevo contenido
+                pnlVistaMenuSecundario.Controls.Clear();
+                // Instanciar el formulario
+                FormBajaCliente formBajaCliente = new FormBajaCliente();
+                // Configurar como control embebido
+                formBajaCliente.TopLevel = false;
+                formBajaCliente.FormBorderStyle = FormBorderStyle.None;
+                formBajaCliente.Dock = DockStyle.Fill;
+                // Agregar al panel y mostrar
+                pnlVistaMenuSecundario.Controls.Add(formBajaCliente);
+                formBajaCliente.Show();
+            }
         }
     }
 }
