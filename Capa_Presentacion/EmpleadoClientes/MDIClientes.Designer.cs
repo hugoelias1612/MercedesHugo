@@ -379,6 +379,7 @@
             this.btnCrearPedido.TabIndex = 1;
             this.btnCrearPedido.Text = "Crear";
             this.btnCrearPedido.UseVisualStyleBackColor = true;
+            this.btnCrearPedido.Click += new System.EventHandler(this.btnCrearPedido_Click);
             // 
             // pnlClientes
             // 

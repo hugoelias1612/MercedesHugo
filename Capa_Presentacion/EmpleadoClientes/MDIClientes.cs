@@ -113,5 +113,20 @@ namespace ArimaERP.EmpleadoClientes
                 formBajaCliente.Show();
             }
         }
+
+        private void btnCrearPedido_Click(object sender, EventArgs e)
+        {
+            // Limpiar el panel antes de agregar nuevo contenido
+            pnlVistaMenuSecundario.Controls.Clear();
+            // Instanciar el formulario
+            FormCrearPedido formCrearPedido = new FormCrearPedido();
+            // Configurar como control embebido
+            formCrearPedido.TopLevel = false;
+            formCrearPedido.FormBorderStyle = FormBorderStyle.None;
+            formCrearPedido.Dock = DockStyle.Fill;
+            // Agregar al panel y mostrar
+            pnlVistaMenuSecundario.Controls.Add(formCrearPedido);
+            formCrearPedido.Show();
+        }
     }
 }
