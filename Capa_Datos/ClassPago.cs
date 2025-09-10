@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Capa_Datos.Contexto
+namespace Capa_Datos
 {
-    internal class MiDbContext
+    internal class ClassPago
     {
     }
 }

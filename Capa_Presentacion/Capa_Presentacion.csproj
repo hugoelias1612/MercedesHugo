@@ -31,7 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ArimaERP.Program</StartupObject>
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
@@ -48,6 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrador\FormAgregarRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\FormAgregarRol.Designer.cs">
+      <DependentUpon>FormAgregarRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\FormRegistrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\FormRegistrarUsuario.Designer.cs">
+      <DependentUpon>FormRegistrarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,11 +68,35 @@
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
-    <Compile Include="EmpleadoClientes\FormClientes.cs">
+    <Compile Include="EmpleadoClientes\FormBajaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmpleadoClientes\FormClientes.Designer.cs">
-      <DependentUpon>FormClientes.cs</DependentUpon>
+    <Compile Include="EmpleadoClientes\FormBajaCliente.Designer.cs">
+      <DependentUpon>FormBajaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormCliente.Designer.cs">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormCrearPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormCrearPedido.Designer.cs">
+      <DependentUpon>FormCrearPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormEditarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormEditarCliente.Designer.cs">
+      <DependentUpon>FormEditarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormModificacionCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormModificacionCliente.Designer.cs">
+      <DependentUpon>FormModificacionCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="EmpleadoClientes\MDIClientes.cs">
       <SubType>Form</SubType>
@@ -78,6 +115,12 @@
     </Compile>
     <Compile Include="EmpleadoProducto\FormAlerta.Designer.cs">
       <DependentUpon>FormAlerta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadoProducto\FormEditarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadoProducto\FormEditarProducto.Designer.cs">
+      <DependentUpon>FormEditarProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="EmpleadoProducto\MDIProductos.cs">
       <SubType>Form</SubType>
@@ -98,13 +141,44 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="TallerProgramacionIIDataSet2.cs">
+      <DependentUpon>TallerProgramacionIIDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TallerProgramacionIIDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TallerProgramacionIIDataSet2.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Administrador\FormAgregarRol.resx">
+      <DependentUpon>FormAgregarRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\FormRegistrarUsuario.resx">
+      <DependentUpon>FormRegistrarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmpleadoClientes\FormClientes.resx">
-      <DependentUpon>FormClientes.cs</DependentUpon>
+    <EmbeddedResource Include="EmpleadoClientes\FormBajaCliente.resx">
+      <DependentUpon>FormBajaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadoClientes\FormCliente.resx">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadoClientes\FormCrearPedido.resx">
+      <DependentUpon>FormCrearPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadoClientes\FormEditarCliente.resx">
+      <DependentUpon>FormEditarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadoClientes\FormModificacionCliente.resx">
+      <DependentUpon>FormModificacionCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmpleadoClientes\MDIClientes.resx">
       <DependentUpon>MDIClientes.cs</DependentUpon>
@@ -114,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmpleadoProducto\FormAlerta.resx">
       <DependentUpon>FormAlerta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadoProducto\FormEditarProducto.resx">
+      <DependentUpon>FormEditarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmpleadoProducto\MDIProductos.resx">
       <DependentUpon>MDIProductos.cs</DependentUpon>
@@ -128,7 +205,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Administrador\" />
     <Folder Include="Preventista\" />
   </ItemGroup>
   <ItemGroup>
@@ -138,7 +214,23 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Resources\perfil.png" />
+    <None Include="TallerProgramacionIIDataSet2.xsc">
+      <DependentUpon>TallerProgramacionIIDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TallerProgramacionIIDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TallerProgramacionIIDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TallerProgramacionIIDataSet2.xss">
+      <DependentUpon>TallerProgramacionIIDataSet2.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BUSCAR_reducido.png" />

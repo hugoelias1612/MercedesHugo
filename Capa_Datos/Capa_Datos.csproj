@@ -45,6 +45,8 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SqlXml" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,9 +55,91 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Contexto\MiDbContext.cs" />
+    <Compile Include="ACCION.cs">
+      <DependentUpon>ModelGestion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AUDITORIA.cs">
+      <DependentUpon>ModelGestion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCliente.cs" />
+    <Compile Include="ClassPago.cs" />
+    <Compile Include="ClassPedido.cs" />
+    <Compile Include="ClassProducto.cs" />
+    <Compile Include="ClassProveedor.cs" />
+    <Compile Include="ClassUsuariocs.cs" />
+    <Compile Include="CLIENTE.cs">
+      <DependentUpon>ModelGestion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CUENTA_CORRIENTE.cs">
+      <DependentUpon>ModelGestion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DETALLE_PEDIDO.cs">
+      <DependentUpon>ModelGestion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESTADO_PAGO.cs">
+      <DependentUpon>ModelGestion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESTADO_PEDIDO.cs">
+      <DependentUpon>ModelGestion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FAMILIA.cs">
+      <DependentUpon>ModelGestion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MARCA.cs">
+      <DependentUpon>ModelGestion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="METODO_PAGO.cs">
+      <DependentUpon>ModelGestion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelGestion.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelGestion.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelGestion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelGestion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelGestion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelGestion.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PAGO.cs">
+      <DependentUpon>ModelGestion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PEDIDO.cs">
+      <DependentUpon>ModelGestion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PRESENTACION.cs">
+      <DependentUpon>ModelGestion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PRODUCTO.cs">
+      <DependentUpon>ModelGestion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="producto_presentacion.cs">
+      <DependentUpon>ModelGestion.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PROVEEDOR.cs">
+      <DependentUpon>ModelGestion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ROL.cs">
+      <DependentUpon>ModelGestion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>ModelGestion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAMAÑO_NEGOCIO.cs">
+      <DependentUpon>ModelGestion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USUARIOS.cs">
+      <DependentUpon>ModelGestion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ZONA.cs">
+      <DependentUpon>ModelGestion.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Capa_Entidades\Capa_Entidades.csproj">
@@ -65,7 +149,29 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <EntityDeploy Include="ModelGestion.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelGestion.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelGestion.edmx.diagram">
+      <DependentUpon>ModelGestion.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModelGestion.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelGestion.edmx</DependentUpon>
+      <LastGenOutput>ModelGestion.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelGestion.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelGestion.edmx</DependentUpon>
+      <LastGenOutput>ModelGestion.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
