@@ -166,6 +166,7 @@
             this.btnFMP.Size = new System.Drawing.Size(112, 110);
             this.btnFMP.TabIndex = 3;
             this.btnFMP.UseVisualStyleBackColor = false;
+            this.btnFMP.Click += new System.EventHandler(this.btnFMP_Click);
             // 
             // btnABM
             // 
@@ -191,6 +192,7 @@
             this.btnStock.Size = new System.Drawing.Size(112, 110);
             this.btnStock.TabIndex = 1;
             this.btnStock.UseVisualStyleBackColor = false;
+            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
             // 
             // btnAlerta
             // 

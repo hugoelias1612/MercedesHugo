@@ -64,6 +64,9 @@
             this.TLPFooter = new System.Windows.Forms.TableLayoutPanel();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.labelTitulo = new System.Windows.Forms.Label();
             this.TLPBase.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -74,24 +77,28 @@
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.TLPFooter.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // TLPBase
             // 
             this.TLPBase.ColumnCount = 1;
             this.TLPBase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TLPBase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TLPBase.Controls.Add(this.groupBox1, 0, 0);
-            this.TLPBase.Controls.Add(this.TLPCentral, 0, 1);
-            this.TLPBase.Controls.Add(this.TLPFooter, 0, 2);
+            this.TLPBase.Controls.Add(this.panel2, 0, 0);
+            this.TLPBase.Controls.Add(this.groupBox1, 0, 1);
+            this.TLPBase.Controls.Add(this.TLPCentral, 0, 2);
+            this.TLPBase.Controls.Add(this.TLPFooter, 0, 3);
+            this.TLPBase.Controls.Add(this.panel1, 0, 4);
             this.TLPBase.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TLPBase.Location = new System.Drawing.Point(0, 0);
             this.TLPBase.Margin = new System.Windows.Forms.Padding(0);
             this.TLPBase.Name = "TLPBase";
-            this.TLPBase.RowCount = 3;
+            this.TLPBase.RowCount = 5;
+            this.TLPBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.TLPBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.TLPBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TLPBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78F));
+            this.TLPBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.TLPBase.Size = new System.Drawing.Size(1264, 569);
             this.TLPBase.TabIndex = 0;
             // 
@@ -100,7 +107,7 @@
             this.groupBox1.Controls.Add(this.tableLayoutPanel1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Location = new System.Drawing.Point(3, 63);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1258, 114);
             this.groupBox1.TabIndex = 0;
@@ -273,12 +280,12 @@
             this.TLPCentral.Controls.Add(this.gbxProductos, 0, 0);
             this.TLPCentral.Controls.Add(this.gbxCarrito, 1, 0);
             this.TLPCentral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TLPCentral.Location = new System.Drawing.Point(3, 123);
+            this.TLPCentral.Location = new System.Drawing.Point(3, 183);
             this.TLPCentral.Name = "TLPCentral";
             this.TLPCentral.RowCount = 1;
             this.TLPCentral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TLPCentral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TLPCentral.Size = new System.Drawing.Size(1258, 365);
+            this.TLPCentral.Size = new System.Drawing.Size(1258, 265);
             this.TLPCentral.TabIndex = 1;
             // 
             // gbxProductos
@@ -288,7 +295,7 @@
             this.gbxProductos.Location = new System.Drawing.Point(0, 0);
             this.gbxProductos.Margin = new System.Windows.Forms.Padding(0);
             this.gbxProductos.Name = "gbxProductos";
-            this.gbxProductos.Size = new System.Drawing.Size(751, 356);
+            this.gbxProductos.Size = new System.Drawing.Size(751, 265);
             this.gbxProductos.TabIndex = 0;
             this.gbxProductos.TabStop = false;
             this.gbxProductos.Text = "Productos disponibles";
@@ -313,7 +320,7 @@
             this.dgvProductos.Margin = new System.Windows.Forms.Padding(0);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
-            this.dgvProductos.Size = new System.Drawing.Size(739, 325);
+            this.dgvProductos.Size = new System.Drawing.Size(739, 234);
             this.dgvProductos.TabIndex = 0;
             // 
             // Codigo
@@ -365,7 +372,7 @@
             this.gbxCarrito.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxCarrito.Location = new System.Drawing.Point(754, 3);
             this.gbxCarrito.Name = "gbxCarrito";
-            this.gbxCarrito.Size = new System.Drawing.Size(501, 359);
+            this.gbxCarrito.Size = new System.Drawing.Size(501, 259);
             this.gbxCarrito.TabIndex = 1;
             this.gbxCarrito.TabStop = false;
             this.gbxCarrito.Text = "Carrito de compras";
@@ -380,9 +387,9 @@
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 25);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.89655F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.10345F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(495, 331);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.02339F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.97661F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(495, 231);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // dataGridView1
@@ -395,7 +402,7 @@
             this.Cantidad});
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(487, 252);
+            this.dataGridView1.Size = new System.Drawing.Size(487, 169);
             this.dataGridView1.TabIndex = 0;
             // 
             // Producto
@@ -423,7 +430,7 @@
             this.btnCarrito.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCarrito.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCarrito.Location = new System.Drawing.Point(158, 292);
+            this.btnCarrito.Location = new System.Drawing.Point(158, 186);
             this.btnCarrito.Name = "btnCarrito";
             this.btnCarrito.Size = new System.Drawing.Size(179, 33);
             this.btnCarrito.TabIndex = 22;
@@ -469,7 +476,7 @@
             this.TLPFooter.Controls.Add(this.btnGuardar, 3, 1);
             this.TLPFooter.Controls.Add(this.lblTotal, 2, 0);
             this.TLPFooter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TLPFooter.Location = new System.Drawing.Point(3, 494);
+            this.TLPFooter.Location = new System.Drawing.Point(3, 454);
             this.TLPFooter.Name = "TLPFooter";
             this.TLPFooter.RowCount = 2;
             this.TLPFooter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -501,6 +508,38 @@
             this.lblTotal.TabIndex = 14;
             this.lblTotal.Text = "Total: $*******.";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 529);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1264, 40);
+            this.panel1.TabIndex = 3;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel2.Controls.Add(this.labelTitulo);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1264, 60);
+            this.panel2.TabIndex = 4;
+            // 
+            // labelTitulo
+            // 
+            this.labelTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTitulo.AutoSize = true;
+            this.labelTitulo.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitulo.Location = new System.Drawing.Point(513, 9);
+            this.labelTitulo.Name = "labelTitulo";
+            this.labelTitulo.Size = new System.Drawing.Size(298, 45);
+            this.labelTitulo.TabIndex = 8;
+            this.labelTitulo.Text = "Comprar productos";
+            // 
             // FormComprar
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -523,6 +562,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.TLPFooter.ResumeLayout(false);
             this.TLPFooter.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -565,5 +606,8 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label labelTitulo;
     }
 }
