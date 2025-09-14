@@ -30,6 +30,8 @@ namespace ArimaERP.EmpleadoClientes
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
+            // Limpiar el panel antes de agregar nuevo contenido
+            pnlVistaMenuSecundario.Controls.Clear();
             pnlClientes.Visible = true;
             pnlPedidos.Visible = false;
             pnlPreventistas.Visible = false;
@@ -37,6 +39,8 @@ namespace ArimaERP.EmpleadoClientes
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
+            // Limpiar el panel antes de agregar nuevo contenido
+            pnlVistaMenuSecundario.Controls.Clear();
             pnlClientes.Visible = false;
             pnlPedidos.Visible = true;
             pnlPreventistas.Visible = false;
@@ -44,6 +48,8 @@ namespace ArimaERP.EmpleadoClientes
 
         private void btnPreventista_Click(object sender, EventArgs e)
         {
+            // Limpiar el panel antes de agregar nuevo contenido
+            pnlVistaMenuSecundario.Controls.Clear();
             pnlPedidos.Visible = false;
             pnlClientes.Visible = false;
             pnlPreventistas.Visible = true;
@@ -84,17 +90,7 @@ namespace ArimaERP.EmpleadoClientes
 
         private void btnBajaPreventistas_Click(object sender, EventArgs e)
         {
-            // Limpiar el panel antes de agregar nuevo contenido
-            pnlVistaMenuSecundario.Controls.Clear();
-            // Instanciar el formulario
-            FormModificacionCliente formModificacionCliente = new FormModificacionCliente();
-            // Configurar como control embebido
-            formModificacionCliente.TopLevel = false;
-            formModificacionCliente.FormBorderStyle = FormBorderStyle.None;
-            formModificacionCliente.Dock = DockStyle.Fill;
-            // Agregar al panel y mostrar
-            pnlVistaMenuSecundario.Controls.Add(formModificacionCliente);
-            formModificacionCliente.Show();
+           
         }
 
         private void btnBaja_Click(object sender, EventArgs e)
@@ -127,6 +123,18 @@ namespace ArimaERP.EmpleadoClientes
             // Agregar al panel y mostrar
             pnlVistaMenuSecundario.Controls.Add(formCrearPedido);
             formCrearPedido.Show();
+        }
+
+        private void btnCobros_Click(object sender, EventArgs e)
+        {
+            // Limpiar el panel antes de agregar nuevo contenido
+            pnlVistaMenuSecundario.Controls.Clear();
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            // Limpiar el panel antes de agregar nuevo contenido
+            pnlVistaMenuSecundario.Controls.Clear();
         }
     }
 }

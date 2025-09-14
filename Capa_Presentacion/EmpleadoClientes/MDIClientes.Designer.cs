@@ -181,6 +181,7 @@
             this.btnConfirmar.Size = new System.Drawing.Size(112, 105);
             this.btnConfirmar.TabIndex = 4;
             this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // btnCobros
             // 
@@ -192,6 +193,7 @@
             this.btnCobros.Size = new System.Drawing.Size(112, 105);
             this.btnCobros.TabIndex = 3;
             this.btnCobros.UseVisualStyleBackColor = true;
+            this.btnCobros.Click += new System.EventHandler(this.btnCobros_Click);
             // 
             // btnClientes
             // 
@@ -233,9 +235,9 @@
             // 
             this.pnlVista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(180)))));
             this.pnlVista.Controls.Add(this.pnlVistaMenuSecundario);
+            this.pnlVista.Controls.Add(this.pnlClientes);
             this.pnlVista.Controls.Add(this.pnlPreventistas);
             this.pnlVista.Controls.Add(this.pnlPedidos);
-            this.pnlVista.Controls.Add(this.pnlClientes);
             this.pnlVista.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlVista.Location = new System.Drawing.Point(0, 155);
             this.pnlVista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -261,7 +263,7 @@
             this.pnlPreventistas.Controls.Add(this.btnModificacionPreventistas);
             this.pnlPreventistas.Controls.Add(this.btnAltaPrevent);
             this.pnlPreventistas.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlPreventistas.Location = new System.Drawing.Point(449, 0);
+            this.pnlPreventistas.Location = new System.Drawing.Point(224, 0);
             this.pnlPreventistas.Margin = new System.Windows.Forms.Padding(5);
             this.pnlPreventistas.Name = "pnlPreventistas";
             this.pnlPreventistas.Size = new System.Drawing.Size(220, 518);
@@ -325,7 +327,7 @@
             this.pnlPedidos.Controls.Add(this.btnModificarPedido);
             this.pnlPedidos.Controls.Add(this.btnCrearPedido);
             this.pnlPedidos.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlPedidos.Location = new System.Drawing.Point(225, 0);
+            this.pnlPedidos.Location = new System.Drawing.Point(0, 0);
             this.pnlPedidos.Margin = new System.Windows.Forms.Padding(5);
             this.pnlPedidos.Name = "pnlPedidos";
             this.pnlPedidos.Size = new System.Drawing.Size(224, 518);
@@ -390,7 +392,7 @@
             this.pnlClientes.Controls.Add(this.btnModificacion);
             this.pnlClientes.Controls.Add(this.btnAlta);
             this.pnlClientes.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlClientes.Location = new System.Drawing.Point(0, 0);
+            this.pnlClientes.Location = new System.Drawing.Point(444, 0);
             this.pnlClientes.Margin = new System.Windows.Forms.Padding(5);
             this.pnlClientes.Name = "pnlClientes";
             this.pnlClientes.Size = new System.Drawing.Size(225, 518);

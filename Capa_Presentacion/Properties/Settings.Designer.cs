@@ -26,11 +26,11 @@ namespace ArimaERP.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MECHITA23\\SQLEXPRESS;Initial Catalog=TallerProgramacionII;Integrated " +
-            "Security=True;TrustServerCertificate=True")]
-        public string TallerProgramacionIIConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MECHITA23\\SQLEXPRESS;Initial Catalog=ArimaERP;Integrated Security=Tru" +
+            "e;TrustServerCertificate=True")]
+        public string ArimaERPConnectionString {
             get {
-                return ((string)(this["TallerProgramacionIIConnectionString"]));
+                return ((string)(this["ArimaERPConnectionString"]));
             }
         }
     }

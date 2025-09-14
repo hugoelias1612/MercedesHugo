@@ -37,10 +37,10 @@
             System.Windows.Forms.Label nombreLabel;
             System.Windows.Forms.Label apellidoLabel;
             System.Windows.Forms.Label iD_rolLabel;
-            this.tallerProgramacionIIDataSet = new ArimaERP.TallerProgramacionIIDataSet();
+          
             this.uSUARIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.uSUARIOSTableAdapter = new ArimaERP.TallerProgramacionIIDataSetTableAdapters.USUARIOSTableAdapter();
-            this.tableAdapterManager = new ArimaERP.TallerProgramacionIIDataSetTableAdapters.TableAdapterManager();
+            
+           
             this.uSUARIOSBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -76,7 +76,7 @@
             nombreLabel = new System.Windows.Forms.Label();
             apellidoLabel = new System.Windows.Forms.Label();
             iD_rolLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.tallerProgramacionIIDataSet)).BeginInit();
+        
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingNavigator)).BeginInit();
             this.uSUARIOSBindingNavigator.SuspendLayout();
@@ -85,45 +85,20 @@
             // 
             // tallerProgramacionIIDataSet
             // 
-            this.tallerProgramacionIIDataSet.DataSetName = "TallerProgramacionIIDataSet";
-            this.tallerProgramacionIIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
+            
             // uSUARIOSBindingSource
+            // is.tallerProgramacionIIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             this.uSUARIOSBindingSource.DataMember = "USUARIOS";
-            this.uSUARIOSBindingSource.DataSource = this.tallerProgramacionIIDataSet;
+         
             // 
             // uSUARIOSTableAdapter
             // 
-            this.uSUARIOSTableAdapter.ClearBeforeFill = true;
+            
             // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.ACCIONTableAdapter = null;
-            this.tableAdapterManager.AUDITORIATableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CLIENTETableAdapter = null;
-            this.tableAdapterManager.CUENTA_CORRIENTETableAdapter = null;
-            this.tableAdapterManager.DETALLE_PEDIDOTableAdapter = null;
-            this.tableAdapterManager.ESTADO_PAGOTableAdapter = null;
-            this.tableAdapterManager.ESTADO_PEDIDOTableAdapter = null;
-            this.tableAdapterManager.FAMILIATableAdapter = null;
-            this.tableAdapterManager.MARCA_PROVEEDORTableAdapter = null;
-            this.tableAdapterManager.MARCATableAdapter = null;
-            this.tableAdapterManager.METODO_PAGOTableAdapter = null;
-            this.tableAdapterManager.PAGOTableAdapter = null;
-            this.tableAdapterManager.pedido_pagoTableAdapter = null;
-            this.tableAdapterManager.PEDIDOTableAdapter = null;
-            this.tableAdapterManager.PRESENTACIONTableAdapter = null;
-            this.tableAdapterManager.PreventistaTableAdapter = null;
-            this.tableAdapterManager.producto_presentacionTableAdapter = null;
-            this.tableAdapterManager.PRODUCTOTableAdapter = null;
-            this.tableAdapterManager.PROVEEDORTableAdapter = null;
-            this.tableAdapterManager.ROLTableAdapter = null;
-            this.tableAdapterManager.TAMAÑO_NEGOCIOTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = ArimaERP.TallerProgramacionIIDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.USUARIOSTableAdapter = this.uSUARIOSTableAdapter;
-            this.tableAdapterManager.ZONATableAdapter = null;
+           
             // 
             // uSUARIOSBindingNavigator
             // 
@@ -248,7 +223,7 @@
             this.uSUARIOSBindingNavigatorSaveItem.Name = "uSUARIOSBindingNavigatorSaveItem";
             this.uSUARIOSBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
             this.uSUARIOSBindingNavigatorSaveItem.Text = "Guardar datos";
-            this.uSUARIOSBindingNavigatorSaveItem.Click += new System.EventHandler(this.uSUARIOSBindingNavigatorSaveItem_Click_1);
+  
             // 
             // uSUARIOSDataGridView
             // 
@@ -475,7 +450,7 @@
             this.Name = "FormRegistrarUsuario";
             this.Text = "Alta-Modificación-Baja de Usuario";
             this.Load += new System.EventHandler(this.FormRegistrarUsuario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tallerProgramacionIIDataSet)).EndInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingNavigator)).EndInit();
             this.uSUARIOSBindingNavigator.ResumeLayout(false);
@@ -488,10 +463,8 @@
 
         #endregion
 
-        private TallerProgramacionIIDataSet tallerProgramacionIIDataSet;
+      
         private System.Windows.Forms.BindingSource uSUARIOSBindingSource;
-        private TallerProgramacionIIDataSetTableAdapters.USUARIOSTableAdapter uSUARIOSTableAdapter;
-        private TallerProgramacionIIDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator uSUARIOSBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;

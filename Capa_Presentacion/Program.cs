@@ -2,6 +2,8 @@
 using System;
 using System.Windows.Forms;
 
+
+
 namespace ArimaERP
 {
     internal static class Program
@@ -9,8 +11,10 @@ namespace ArimaERP
         [STAThread]
         static void Main()
         {
+           
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
             //Application.Run(new EmpleadoProducto.MDIProductos());
            Application.Run(new EmpleadoClientes.MDIClientes());
            // Application.Run(new Administrador.FormRegistrarUsuario());

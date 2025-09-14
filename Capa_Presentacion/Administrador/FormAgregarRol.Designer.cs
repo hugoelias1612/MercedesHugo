@@ -31,16 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label descripcionLabel;
             System.Windows.Forms.Label iD_rolLabel;
-            this.tallerProgramacionIIDataSet = new ArimaERP.TallerProgramacionIIDataSet();
-            this.rOLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rOLTableAdapter = new ArimaERP.TallerProgramacionIIDataSetTableAdapters.ROLTableAdapter();
-            this.tableAdapterManager = new ArimaERP.TallerProgramacionIIDataSetTableAdapters.TableAdapterManager();
             this.rOLDataGridView = new System.Windows.Forms.DataGridView();
             this.descripcionTextBox = new System.Windows.Forms.TextBox();
             this.iD_rolTextBox = new System.Windows.Forms.TextBox();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -48,8 +42,6 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             descripcionLabel = new System.Windows.Forms.Label();
             iD_rolLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.tallerProgramacionIIDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rOLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rOLDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -72,59 +64,12 @@
             iD_rolLabel.TabIndex = 4;
             iD_rolLabel.Text = "ID rol:";
             // 
-            // tallerProgramacionIIDataSet
-            // 
-            this.tallerProgramacionIIDataSet.DataSetName = "TallerProgramacionIIDataSet";
-            this.tallerProgramacionIIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // rOLBindingSource
-            // 
-            this.rOLBindingSource.DataMember = "ROL";
-            this.rOLBindingSource.DataSource = this.tallerProgramacionIIDataSet;
-            // 
-            // rOLTableAdapter
-            // 
-            this.rOLTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.ACCIONTableAdapter = null;
-            this.tableAdapterManager.AUDITORIATableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CLIENTETableAdapter = null;
-            this.tableAdapterManager.CUENTA_CORRIENTETableAdapter = null;
-            this.tableAdapterManager.DETALLE_PEDIDOTableAdapter = null;
-            this.tableAdapterManager.ESTADO_PAGOTableAdapter = null;
-            this.tableAdapterManager.ESTADO_PEDIDOTableAdapter = null;
-            this.tableAdapterManager.FAMILIATableAdapter = null;
-            this.tableAdapterManager.MARCA_PROVEEDORTableAdapter = null;
-            this.tableAdapterManager.MARCATableAdapter = null;
-            this.tableAdapterManager.METODO_PAGOTableAdapter = null;
-            this.tableAdapterManager.PAGOTableAdapter = null;
-            this.tableAdapterManager.pedido_pagoTableAdapter = null;
-            this.tableAdapterManager.PEDIDOTableAdapter = null;
-            this.tableAdapterManager.PRESENTACIONTableAdapter = null;
-            this.tableAdapterManager.PreventistaTableAdapter = null;
-            this.tableAdapterManager.producto_presentacionTableAdapter = null;
-            this.tableAdapterManager.PRODUCTOTableAdapter = null;
-            this.tableAdapterManager.PROVEEDORTableAdapter = null;
-            this.tableAdapterManager.ROLTableAdapter = this.rOLTableAdapter;
-            this.tableAdapterManager.TAMAÑO_NEGOCIOTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = ArimaERP.TallerProgramacionIIDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.USUARIOSTableAdapter = null;
-            this.tableAdapterManager.ZONATableAdapter = null;
-            // 
             // rOLDataGridView
             // 
             this.rOLDataGridView.AllowUserToAddRows = false;
             this.rOLDataGridView.AllowUserToDeleteRows = false;
-            this.rOLDataGridView.AutoGenerateColumns = false;
             this.rOLDataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.rOLDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.rOLDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn1});
-            this.rOLDataGridView.DataSource = this.rOLBindingSource;
             this.rOLDataGridView.Location = new System.Drawing.Point(25, 123);
             this.rOLDataGridView.Name = "rOLDataGridView";
             this.rOLDataGridView.ReadOnly = true;
@@ -136,7 +81,6 @@
             // 
             // descripcionTextBox
             // 
-            this.descripcionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rOLBindingSource, "descripcion", true));
             this.descripcionTextBox.Location = new System.Drawing.Point(598, 225);
             this.descripcionTextBox.Name = "descripcionTextBox";
             this.descripcionTextBox.Size = new System.Drawing.Size(183, 22);
@@ -145,7 +89,6 @@
             // 
             // iD_rolTextBox
             // 
-            this.iD_rolTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rOLBindingSource, "ID_rol", true));
             this.iD_rolTextBox.Location = new System.Drawing.Point(598, 197);
             this.iD_rolTextBox.Name = "iD_rolTextBox";
             this.iD_rolTextBox.Size = new System.Drawing.Size(183, 22);
@@ -161,24 +104,6 @@
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "ID_rol";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ID_rol";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "descripcion";
-            this.dataGridViewTextBoxColumn1.HeaderText = "descripcion";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 190;
             // 
             // btnGuardar
             // 
@@ -244,9 +169,7 @@
             this.Controls.Add(this.rOLDataGridView);
             this.Name = "FormAgregarRol";
             this.Text = "Alta_Baja Roles de Usuario";
-            this.Load += new System.EventHandler(this.FormaAgregarRol_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tallerProgramacionIIDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rOLBindingSource)).EndInit();
+            
             ((System.ComponentModel.ISupportInitialize)(this.rOLDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
@@ -255,17 +178,10 @@
         }
 
         #endregion
-
-        private TallerProgramacionIIDataSet tallerProgramacionIIDataSet;
-        private System.Windows.Forms.BindingSource rOLBindingSource;
-        private TallerProgramacionIIDataSetTableAdapters.ROLTableAdapter rOLTableAdapter;
-        private TallerProgramacionIIDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView rOLDataGridView;
         private System.Windows.Forms.TextBox descripcionTextBox;
         private System.Windows.Forms.TextBox iD_rolTextBox;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEliminar;
