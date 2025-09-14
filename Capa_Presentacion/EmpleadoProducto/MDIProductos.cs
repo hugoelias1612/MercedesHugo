@@ -58,5 +58,21 @@ namespace ArimaERP.EmpleadoProducto
        
             AbrirFormEnPanel(new FormABM());
     }
+
+        private void btnComprar_Click(object sender, EventArgs e)
+        {
+
+            AbrirFormEnPanel(new FormComprar());
+        }
+
+        private void btnFMP_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new FormFMP());
+        }
+
+        private void btnStock_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new FormStock());
+        }
     }
 }
