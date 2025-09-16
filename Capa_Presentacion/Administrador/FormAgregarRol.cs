@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace ArimaERP.Administrador
 {
-    public partial class FormAgregarRol : Form
+    public partial class FormAgregarRol : BaseForm
     {
         public FormAgregarRol()
         {
             InitializeComponent();
+            ConfigurarDataGridView();
         }
 
      
@@ -30,14 +31,6 @@ namespace ArimaERP.Administrador
         {
             
         }
-        private bool completoCampos()
-        {
-            if (string.IsNullOrWhiteSpace(descripcionTextBox.Text))
-            {
-                return false;
-            }
-            return true;
-        }
 
         private void btnNuevo_Click(object sender, EventArgs e)
 
@@ -46,17 +39,10 @@ namespace ArimaERP.Administrador
     }
         private void bloqueo()
         {
-            rOLDataGridView.Enabled = false;
-            btnNuevo.Enabled = false;
-            btnCancelar.Enabled = true;
-            btnEliminar.Enabled = false;
+    
         }
         private void desbloqueo()
         {
-            rOLDataGridView.Enabled = true;
-            btnNuevo.Enabled = true;
-            btnCancelar.Enabled = false;
-            btnEliminar.Enabled = true;
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -71,18 +57,44 @@ namespace ArimaERP.Administrador
 
         private void descripcionTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Convertir a mayúsculas
-            e.KeyChar = char.ToUpper(e.KeyChar);
-            // Permitir solo letras, espacios y teclas de control
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-                errorProvider1.SetError(descripcionTextBox, "Solo se permiten letras y espacios.");
-            }
-            else
-            {
-                errorProvider1.SetError(descripcionTextBox, "");
-            }
+        }
+
+        private void FormAgregarRol_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ConfigurarDataGridView()
+        {
+            // Configuraciones básicas del DataGridView
+            dgvRoles.AllowUserToAddRows = false;
+            dgvRoles.AllowUserToDeleteRows = false;
+            dgvRoles.ReadOnly = true;
+            dgvRoles.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvRoles.MultiSelect = false;
+            dgvRoles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvRoles.RowHeadersVisible = false;
+            dgvRoles.BackgroundColor = Color.White;
+            dgvRoles.BorderStyle = BorderStyle.Fixed3D;
+
+            // Limpiar columnas existentes
+            dgvRoles.Columns.Clear();
+
+            // Crear y agregar columna ID
+            DataGridViewTextBoxColumn colIdRol = new DataGridViewTextBoxColumn();
+            colIdRol.Name = "id_rol";
+            colIdRol.HeaderText = "ID";
+            colIdRol.DataPropertyName = "id_rol";
+            colIdRol.FillWeight = 20;
+            dgvRoles.Columns.Add(colIdRol);
+
+            // Crear y agregar columna Descripción
+            DataGridViewTextBoxColumn colDescripcion = new DataGridViewTextBoxColumn();
+            colDescripcion.Name = "descripcion";
+            colDescripcion.HeaderText = "Descripción";
+            colDescripcion.DataPropertyName = "descripcion";
+            colDescripcion.FillWeight = 80;
+            dgvRoles.Columns.Add(colDescripcion);
         }
     }
 }

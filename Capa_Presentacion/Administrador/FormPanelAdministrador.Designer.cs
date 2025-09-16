@@ -210,7 +210,7 @@
             this.Accion2.Name = "Accion2";
             this.Accion2.Size = new System.Drawing.Size(289, 35);
             this.Accion2.TabIndex = 1;
-            this.Accion2.Text = "Completar";
+            this.Accion2.Text = "Gestion de Roles";
             this.Accion2.UseVisualStyleBackColor = false;
             // 
             // Accion3
