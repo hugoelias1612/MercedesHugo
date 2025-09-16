@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TLPMain = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -39,7 +39,6 @@
             this.btnBaja = new System.Windows.Forms.Button();
             this.btnAlta = new System.Windows.Forms.Button();
             this.pnlContenido = new System.Windows.Forms.Panel();
-            this.PModificacion = new System.Windows.Forms.Panel();
             this.PBaja = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tlpBotonesBV = new System.Windows.Forms.TableLayoutPanel();
@@ -64,6 +63,7 @@
             this.txtNombreBaja = new System.Windows.Forms.TextBox();
             this.pnlBoton = new System.Windows.Forms.Panel();
             this.btnBuscarBaja = new System.Windows.Forms.Button();
+            this.PModificacion = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -111,7 +111,6 @@
             this.PNav.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.pnlContenido.SuspendLayout();
-            this.PModificacion.SuspendLayout();
             this.PBaja.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tlpBotonesBV.SuspendLayout();
@@ -119,6 +118,7 @@
             this.TLPBaja.SuspendLayout();
             this.tlpBuscarBaja.SuspendLayout();
             this.pnlBoton.SuspendLayout();
+            this.PModificacion.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
@@ -255,9 +255,9 @@
             // pnlContenido
             // 
             this.pnlContenido.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.pnlContenido.Controls.Add(this.PBaja);
-            this.pnlContenido.Controls.Add(this.PModificacion);
             this.pnlContenido.Controls.Add(this.PAlta);
+            this.pnlContenido.Controls.Add(this.PModificacion);
+            this.pnlContenido.Controls.Add(this.PBaja);
             this.pnlContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenido.Location = new System.Drawing.Point(0, 102);
             this.pnlContenido.Margin = new System.Windows.Forms.Padding(0);
@@ -265,18 +265,6 @@
             this.pnlContenido.Padding = new System.Windows.Forms.Padding(8);
             this.pnlContenido.Size = new System.Drawing.Size(1264, 414);
             this.pnlContenido.TabIndex = 2;
-            // 
-            // PModificacion
-            // 
-            this.PModificacion.Controls.Add(this.tableLayoutPanel3);
-            this.PModificacion.Controls.Add(this.tableLayoutPanel5);
-            this.PModificacion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PModificacion.Location = new System.Drawing.Point(8, 8);
-            this.PModificacion.Margin = new System.Windows.Forms.Padding(0);
-            this.PModificacion.Name = "PModificacion";
-            this.PModificacion.Size = new System.Drawing.Size(1248, 398);
-            this.PModificacion.TabIndex = 6;
-            this.PModificacion.Visible = false;
             // 
             // PBaja
             // 
@@ -368,14 +356,14 @@
             this.Familia,
             this.Marca,
             this.Proveedor});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGResultadosBaja.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGResultadosBaja.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGResultadosBaja.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.DGResultadosBaja.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DGResultadosBaja.Location = new System.Drawing.Point(205, 4);
@@ -582,6 +570,18 @@
             this.btnBuscarBaja.Text = "Buscar";
             this.btnBuscarBaja.UseVisualStyleBackColor = false;
             // 
+            // PModificacion
+            // 
+            this.PModificacion.Controls.Add(this.tableLayoutPanel3);
+            this.PModificacion.Controls.Add(this.tableLayoutPanel5);
+            this.PModificacion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PModificacion.Location = new System.Drawing.Point(8, 8);
+            this.PModificacion.Margin = new System.Windows.Forms.Padding(0);
+            this.PModificacion.Name = "PModificacion";
+            this.PModificacion.Size = new System.Drawing.Size(1248, 398);
+            this.PModificacion.TabIndex = 6;
+            this.PModificacion.Visible = false;
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 3;
@@ -613,14 +613,14 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.UnidadesBulto});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.Location = new System.Drawing.Point(133, 4);
@@ -1103,7 +1103,6 @@
             this.PNav.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.pnlContenido.ResumeLayout(false);
-            this.PModificacion.ResumeLayout(false);
             this.PBaja.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tlpBotonesBV.ResumeLayout(false);
@@ -1112,6 +1111,7 @@
             this.tlpBuscarBaja.ResumeLayout(false);
             this.tlpBuscarBaja.PerformLayout();
             this.pnlBoton.ResumeLayout(false);
+            this.PModificacion.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
