@@ -72,7 +72,7 @@
             this.tableLayoutPanel1.Controls.Add(this.lblRegistrarCliente, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -147,7 +147,7 @@
             this.comboBoxLetraApellido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxLetraApellido.FormattingEnabled = true;
             this.comboBoxLetraApellido.Location = new System.Drawing.Point(44, 33);
-            this.comboBoxLetraApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxLetraApellido.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxLetraApellido.Name = "comboBoxLetraApellido";
             this.comboBoxLetraApellido.Size = new System.Drawing.Size(134, 21);
             this.comboBoxLetraApellido.TabIndex = 2;
@@ -156,7 +156,7 @@
             // 
             this.txtBuscarDni.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBuscarDni.Location = new System.Drawing.Point(182, 34);
-            this.txtBuscarDni.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscarDni.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscarDni.Name = "txtBuscarDni";
             this.txtBuscarDni.Size = new System.Drawing.Size(134, 20);
             this.txtBuscarDni.TabIndex = 21;
@@ -165,7 +165,7 @@
             // 
             this.txtBuscarCuilCuit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBuscarCuilCuit.Location = new System.Drawing.Point(320, 34);
-            this.txtBuscarCuilCuit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscarCuilCuit.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscarCuilCuit.Name = "txtBuscarCuilCuit";
             this.txtBuscarCuilCuit.Size = new System.Drawing.Size(134, 20);
             this.txtBuscarCuilCuit.TabIndex = 23;
@@ -174,7 +174,7 @@
             // 
             this.txtBusacarEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBusacarEmail.Location = new System.Drawing.Point(458, 34);
-            this.txtBusacarEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBusacarEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtBusacarEmail.Name = "txtBusacarEmail";
             this.txtBusacarEmail.Size = new System.Drawing.Size(134, 20);
             this.txtBusacarEmail.TabIndex = 25;
@@ -184,7 +184,7 @@
             this.comboBoxBuscarClienteZona.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxBuscarClienteZona.FormattingEnabled = true;
             this.comboBoxBuscarClienteZona.Location = new System.Drawing.Point(596, 33);
-            this.comboBoxBuscarClienteZona.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxBuscarClienteZona.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxBuscarClienteZona.Name = "comboBoxBuscarClienteZona";
             this.comboBoxBuscarClienteZona.Size = new System.Drawing.Size(134, 21);
             this.comboBoxBuscarClienteZona.TabIndex = 27;
@@ -196,7 +196,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxBuscarClientePreventista.FormattingEnabled = true;
             this.comboBoxBuscarClientePreventista.Location = new System.Drawing.Point(734, 32);
-            this.comboBoxBuscarClientePreventista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxBuscarClientePreventista.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxBuscarClientePreventista.Name = "comboBoxBuscarClientePreventista";
             this.comboBoxBuscarClientePreventista.Size = new System.Drawing.Size(134, 21);
             this.comboBoxBuscarClientePreventista.TabIndex = 29;
@@ -208,7 +208,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscarTodosClientes.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarTodosClientes.Location = new System.Drawing.Point(872, 2);
-            this.btnBuscarTodosClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscarTodosClientes.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarTodosClientes.Name = "btnBuscarTodosClientes";
             this.btnBuscarTodosClientes.Size = new System.Drawing.Size(134, 26);
             this.btnBuscarTodosClientes.TabIndex = 30;
@@ -286,7 +286,7 @@
             this.panel1.Controls.Add(this.btnGuardar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 421);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1054, 84);
             this.panel1.TabIndex = 9;
@@ -300,7 +300,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Location = new System.Drawing.Point(437, 21);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(225, 41);
             this.btnGuardar.TabIndex = 39;
@@ -405,7 +405,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormBajaCliente";
             this.Text = "FormBajaCliente";
             this.Load += new System.EventHandler(this.FormBajaCliente_Load);

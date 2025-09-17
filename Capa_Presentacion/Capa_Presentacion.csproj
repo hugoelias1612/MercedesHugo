@@ -175,6 +175,30 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Preventista\FormAltaBajaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preventista\FormAltaBajaCliente.Designer.cs">
+      <DependentUpon>FormAltaBajaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Preventista\FormCrearPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preventista\FormCrearPedido.Designer.cs">
+      <DependentUpon>FormCrearPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Preventista\MDIPreventista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preventista\MDIPreventista.Designer.cs">
+      <DependentUpon>MDIPreventista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Preventista\ModalSeleccionarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preventista\ModalSeleccionarCliente.Designer.cs">
+      <DependentUpon>ModalSeleccionarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -244,15 +268,25 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Preventista\FormAltaBajaCliente.resx">
+      <DependentUpon>FormAltaBajaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preventista\FormCrearPedido.resx">
+      <DependentUpon>FormCrearPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preventista\MDIPreventista.resx">
+      <DependentUpon>MDIPreventista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preventista\ModalSeleccionarCliente.resx">
+      <DependentUpon>ModalSeleccionarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Preventista\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Capa_Entidades\Capa_Entidades.csproj">
       <Project>{e672c138-029e-42ad-83df-e070f114482b}</Project>

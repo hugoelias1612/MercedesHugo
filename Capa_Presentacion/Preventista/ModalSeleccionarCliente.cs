@@ -8,21 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ArimaERP.Administrador
+namespace ArimaERP.Preventista
 {
-    public partial class FormPanelAdministrador : Form
+    public partial class ModalSeleccionarCliente : Form
     {
-        public FormPanelAdministrador()
+        public ModalSeleccionarCliente()
         {
             InitializeComponent();
         }
 
-        private void FormPanelAdministrador_Load(object sender, EventArgs e)
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

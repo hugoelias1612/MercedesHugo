@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ArimaERP.Administrador
 {
-    public partial class FormRegistrarUsuario : BaseForm
+    public partial class FormRegistrarUsuario : Form
     {
         public FormRegistrarUsuario()
         {

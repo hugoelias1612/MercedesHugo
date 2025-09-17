@@ -36,6 +36,7 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnVolverPanel = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.btnCobros = new System.Windows.Forms.Button();
@@ -60,7 +61,6 @@
             this.btnConfPedido = new System.Windows.Forms.Button();
             this.btnModificarPedido = new System.Windows.Forms.Button();
             this.btnCrearPedido = new System.Windows.Forms.Button();
-            this.btnVolverPanel = new System.Windows.Forms.Button();
             this.pnlUSUARIO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -164,6 +164,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1264, 87);
             this.panel1.TabIndex = 3;
+            // 
+            // btnVolverPanel
+            // 
+            this.btnVolverPanel.BackColor = System.Drawing.SystemColors.Window;
+            this.btnVolverPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnVolverPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnVolverPanel.Image = ((System.Drawing.Image)(resources.GetObject("btnVolverPanel.Image")));
+            this.btnVolverPanel.Location = new System.Drawing.Point(1105, 0);
+            this.btnVolverPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVolverPanel.Name = "btnVolverPanel";
+            this.btnVolverPanel.Size = new System.Drawing.Size(84, 85);
+            this.btnVolverPanel.TabIndex = 11;
+            this.btnVolverPanel.UseVisualStyleBackColor = false;
+            this.btnVolverPanel.Visible = false;
             // 
             // btnSalir
             // 
@@ -466,20 +480,6 @@
             this.btnCrearPedido.Text = "Crear";
             this.btnCrearPedido.UseVisualStyleBackColor = true;
             this.btnCrearPedido.Click += new System.EventHandler(this.btnCrearPedido_Click);
-            // 
-            // btnVolverPanel
-            // 
-            this.btnVolverPanel.BackColor = System.Drawing.SystemColors.Window;
-            this.btnVolverPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnVolverPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnVolverPanel.Image = ((System.Drawing.Image)(resources.GetObject("btnVolverPanel.Image")));
-            this.btnVolverPanel.Location = new System.Drawing.Point(1105, 0);
-            this.btnVolverPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.btnVolverPanel.Name = "btnVolverPanel";
-            this.btnVolverPanel.Size = new System.Drawing.Size(84, 85);
-            this.btnVolverPanel.TabIndex = 11;
-            this.btnVolverPanel.UseVisualStyleBackColor = false;
-            this.btnVolverPanel.Visible = false;
             // 
             // MDIClientes
             // 
