@@ -16,5 +16,10 @@ namespace ArimaERP.EmpleadoClientes
         {
             InitializeComponent();
         }
+
+        private void FormEditarCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

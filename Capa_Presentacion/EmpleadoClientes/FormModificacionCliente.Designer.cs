@@ -62,9 +62,10 @@
             // 
             this.comboBoxLetraApellido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxLetraApellido.FormattingEnabled = true;
-            this.comboBoxLetraApellido.Location = new System.Drawing.Point(54, 42);
+            this.comboBoxLetraApellido.Location = new System.Drawing.Point(40, 33);
+            this.comboBoxLetraApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxLetraApellido.Name = "comboBoxLetraApellido";
-            this.comboBoxLetraApellido.Size = new System.Drawing.Size(163, 24);
+            this.comboBoxLetraApellido.Size = new System.Drawing.Size(123, 21);
             this.comboBoxLetraApellido.TabIndex = 2;
             // 
             // TLPHeader
@@ -72,8 +73,8 @@
             this.TLPHeader.BackColor = System.Drawing.Color.LightSteelBlue;
             this.TLPHeader.ColumnCount = 1;
             this.TLPHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TLPHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TLPHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.TLPHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.TLPHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.TLPHeader.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.TLPHeader.Controls.Add(this.label2, 0, 0);
             this.TLPHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -83,7 +84,7 @@
             this.TLPHeader.RowCount = 2;
             this.TLPHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.27586F));
             this.TLPHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.72414F));
-            this.TLPHeader.Size = new System.Drawing.Size(1289, 137);
+            this.TLPHeader.Size = new System.Drawing.Size(967, 111);
             this.TLPHeader.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -113,13 +114,13 @@
             this.tableLayoutPanel2.Controls.Add(this.label5, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.label6, 6, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 66);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 53);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.26087F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.73913F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1289, 71);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(967, 58);
             this.tableLayoutPanel2.TabIndex = 6;
             // 
             // lblLetraApellido
@@ -127,9 +128,10 @@
             this.lblLetraApellido.AutoSize = true;
             this.lblLetraApellido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblLetraApellido.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLetraApellido.Location = new System.Drawing.Point(54, 0);
+            this.lblLetraApellido.Location = new System.Drawing.Point(40, 0);
+            this.lblLetraApellido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLetraApellido.Name = "lblLetraApellido";
-            this.lblLetraApellido.Size = new System.Drawing.Size(163, 37);
+            this.lblLetraApellido.Size = new System.Drawing.Size(123, 30);
             this.lblLetraApellido.TabIndex = 4;
             this.lblLetraApellido.Text = "Letra Apellido";
             this.lblLetraApellido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -137,35 +139,39 @@
             // txtBuscarDni
             // 
             this.txtBuscarDni.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBuscarDni.Location = new System.Drawing.Point(223, 43);
+            this.txtBuscarDni.Location = new System.Drawing.Point(167, 34);
+            this.txtBuscarDni.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBuscarDni.Name = "txtBuscarDni";
-            this.txtBuscarDni.Size = new System.Drawing.Size(163, 22);
+            this.txtBuscarDni.Size = new System.Drawing.Size(123, 20);
             this.txtBuscarDni.TabIndex = 21;
             this.txtBuscarDni.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscarDni_KeyDown);
             // 
             // txtBuscarCuilCuit
             // 
             this.txtBuscarCuilCuit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBuscarCuilCuit.Location = new System.Drawing.Point(392, 43);
+            this.txtBuscarCuilCuit.Location = new System.Drawing.Point(294, 34);
+            this.txtBuscarCuilCuit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBuscarCuilCuit.Name = "txtBuscarCuilCuit";
-            this.txtBuscarCuilCuit.Size = new System.Drawing.Size(163, 22);
+            this.txtBuscarCuilCuit.Size = new System.Drawing.Size(123, 20);
             this.txtBuscarCuilCuit.TabIndex = 23;
             // 
             // txtBusacarEmail
             // 
             this.txtBusacarEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBusacarEmail.Location = new System.Drawing.Point(561, 43);
+            this.txtBusacarEmail.Location = new System.Drawing.Point(421, 34);
+            this.txtBusacarEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBusacarEmail.Name = "txtBusacarEmail";
-            this.txtBusacarEmail.Size = new System.Drawing.Size(163, 22);
+            this.txtBusacarEmail.Size = new System.Drawing.Size(123, 20);
             this.txtBusacarEmail.TabIndex = 25;
             // 
             // comboBoxBuscarClienteZona
             // 
             this.comboBoxBuscarClienteZona.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxBuscarClienteZona.FormattingEnabled = true;
-            this.comboBoxBuscarClienteZona.Location = new System.Drawing.Point(730, 42);
+            this.comboBoxBuscarClienteZona.Location = new System.Drawing.Point(548, 33);
+            this.comboBoxBuscarClienteZona.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxBuscarClienteZona.Name = "comboBoxBuscarClienteZona";
-            this.comboBoxBuscarClienteZona.Size = new System.Drawing.Size(163, 24);
+            this.comboBoxBuscarClienteZona.Size = new System.Drawing.Size(123, 21);
             this.comboBoxBuscarClienteZona.TabIndex = 27;
             // 
             // comboBoxBuscarClientePreventista
@@ -174,9 +180,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxBuscarClientePreventista.FormattingEnabled = true;
-            this.comboBoxBuscarClientePreventista.Location = new System.Drawing.Point(899, 40);
+            this.comboBoxBuscarClientePreventista.Location = new System.Drawing.Point(675, 32);
+            this.comboBoxBuscarClientePreventista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxBuscarClientePreventista.Name = "comboBoxBuscarClientePreventista";
-            this.comboBoxBuscarClientePreventista.Size = new System.Drawing.Size(163, 24);
+            this.comboBoxBuscarClientePreventista.Size = new System.Drawing.Size(123, 21);
             this.comboBoxBuscarClientePreventista.TabIndex = 29;
             // 
             // btnBuscarTodosClientes
@@ -185,9 +192,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscarTodosClientes.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarTodosClientes.Location = new System.Drawing.Point(1068, 3);
+            this.btnBuscarTodosClientes.Location = new System.Drawing.Point(802, 2);
+            this.btnBuscarTodosClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscarTodosClientes.Name = "btnBuscarTodosClientes";
-            this.btnBuscarTodosClientes.Size = new System.Drawing.Size(163, 31);
+            this.btnBuscarTodosClientes.Size = new System.Drawing.Size(123, 26);
             this.btnBuscarTodosClientes.TabIndex = 30;
             this.btnBuscarTodosClientes.Text = "TODOS";
             this.btnBuscarTodosClientes.UseVisualStyleBackColor = true;
@@ -197,9 +205,10 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(223, 0);
+            this.label1.Location = new System.Drawing.Point(167, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 37);
+            this.label1.Size = new System.Drawing.Size(123, 30);
             this.label1.TabIndex = 31;
             this.label1.Text = "DNI";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -209,9 +218,10 @@
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(392, 0);
+            this.label3.Location = new System.Drawing.Point(294, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(163, 37);
+            this.label3.Size = new System.Drawing.Size(123, 30);
             this.label3.TabIndex = 32;
             this.label3.Text = "CUIL/CUIT";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -221,9 +231,10 @@
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(561, 0);
+            this.label4.Location = new System.Drawing.Point(421, 0);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(163, 37);
+            this.label4.Size = new System.Drawing.Size(123, 30);
             this.label4.TabIndex = 33;
             this.label4.Text = "EMAIL";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -233,9 +244,10 @@
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(730, 0);
+            this.label5.Location = new System.Drawing.Point(548, 0);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(163, 37);
+            this.label5.Size = new System.Drawing.Size(123, 30);
             this.label5.TabIndex = 34;
             this.label5.Text = "ZONA";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -245,9 +257,10 @@
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(899, 0);
+            this.label6.Location = new System.Drawing.Point(675, 0);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(163, 37);
+            this.label6.Size = new System.Drawing.Size(123, 30);
             this.label6.TabIndex = 35;
             this.label6.Text = "PREVENTISTA";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -257,9 +270,10 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(499, 6);
+            this.label2.Location = new System.Drawing.Point(366, 4);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(290, 54);
+            this.label2.Size = new System.Drawing.Size(234, 45);
             this.label2.TabIndex = 7;
             this.label2.Text = "Buscar Clientes";
             // 
@@ -280,7 +294,8 @@
             this.ColumnaModificar});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Window;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 137);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 111);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -289,7 +304,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1289, 462);
+            this.dataGridView1.Size = new System.Drawing.Size(967, 376);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
@@ -348,19 +363,21 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 495);
+            this.panel1.Location = new System.Drawing.Point(0, 403);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1289, 104);
+            this.panel1.Size = new System.Drawing.Size(967, 84);
             this.panel1.TabIndex = 3;
             // 
             // FormModificacionCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1289, 599);
+            this.ClientSize = new System.Drawing.Size(967, 487);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.TLPHeader);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormModificacionCliente";
             this.Text = "FormModificacionCliente";
             this.Load += new System.EventHandler(this.FormModificacionCliente_Load);

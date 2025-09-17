@@ -21,5 +21,10 @@ namespace ArimaERP.EmpleadoClientes
         {
 
         }
+
+        private void FormBajaCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
