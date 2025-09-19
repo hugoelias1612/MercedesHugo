@@ -83,6 +83,16 @@ namespace ArimaERP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BUSCAR_reducido20x20 {
+            get {
+                object obj = ResourceManager.GetObject("BUSCAR_reducido20x20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clientes_reducido {
             get {
                 object obj = ResourceManager.GetObject("clientes-reducido", resourceCulture);

@@ -28,44 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBoxLetraApellido = new System.Windows.Forms.ComboBox();
             this.TLPHeader = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblLetraApellido = new System.Windows.Forms.Label();
-            this.txtBuscarDni = new System.Windows.Forms.TextBox();
-            this.txtBuscarCuilCuit = new System.Windows.Forms.TextBox();
             this.txtBusacarEmail = new System.Windows.Forms.TextBox();
             this.comboBoxBuscarClienteZona = new System.Windows.Forms.ComboBox();
-            this.comboBoxBuscarClientePreventista = new System.Windows.Forms.ComboBox();
-            this.btnBuscarTodosClientes = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.txtBuscarDni = new System.Windows.Forms.TextBox();
+            this.txtNombreApellido = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblLetraApellido = new System.Windows.Forms.Label();
+            this.textBoxBUSCARGENERAL = new System.Windows.Forms.TextBox();
+            this.txtIndicaciones = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColumnaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnaDNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnaCUIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnaEMAIL = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.ColumnaZona = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnaPreventista = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnaModificar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridListarClientes = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.txtIndicacionesFila = new System.Windows.Forms.TextBox();
+            this.pictureBoxBuscar = new System.Windows.Forms.PictureBox();
             this.TLPHeader.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridListarClientes)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBuscar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // comboBoxLetraApellido
-            // 
-            this.comboBoxLetraApellido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxLetraApellido.FormattingEnabled = true;
-            this.comboBoxLetraApellido.Location = new System.Drawing.Point(54, 42);
-            this.comboBoxLetraApellido.Name = "comboBoxLetraApellido";
-            this.comboBoxLetraApellido.Size = new System.Drawing.Size(163, 24);
-            this.comboBoxLetraApellido.TabIndex = 2;
             // 
             // TLPHeader
             // 
@@ -90,28 +76,25 @@
             // 
             this.tableLayoutPanel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tableLayoutPanel2.ColumnCount = 9;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.008534F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.05896F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.14263F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.14263F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.14263F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.14263F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.14263F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.14263F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.0008F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.14263F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.14263F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.14263F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.14263F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.14263F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.14263F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.14263F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.0008F));
-            this.tableLayoutPanel2.Controls.Add(this.lblLetraApellido, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.comboBoxLetraApellido, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtBuscarDni, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtBuscarCuilCuit, 3, 1);
             this.tableLayoutPanel2.Controls.Add(this.txtBusacarEmail, 4, 1);
             this.tableLayoutPanel2.Controls.Add(this.comboBoxBuscarClienteZona, 5, 1);
-            this.tableLayoutPanel2.Controls.Add(this.comboBoxBuscarClientePreventista, 6, 1);
-            this.tableLayoutPanel2.Controls.Add(this.btnBuscarTodosClientes, 7, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label1, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label3, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label4, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.label5, 5, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label6, 6, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txtBuscarDni, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txtNombreApellido, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label1, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lblLetraApellido, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.textBoxBUSCARGENERAL, 7, 1);
+            this.tableLayoutPanel2.Controls.Add(this.pictureBoxBuscar, 6, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 66);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
@@ -122,35 +105,6 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1289, 71);
             this.tableLayoutPanel2.TabIndex = 6;
             // 
-            // lblLetraApellido
-            // 
-            this.lblLetraApellido.AutoSize = true;
-            this.lblLetraApellido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblLetraApellido.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLetraApellido.Location = new System.Drawing.Point(54, 0);
-            this.lblLetraApellido.Name = "lblLetraApellido";
-            this.lblLetraApellido.Size = new System.Drawing.Size(163, 37);
-            this.lblLetraApellido.TabIndex = 4;
-            this.lblLetraApellido.Text = "Letra Apellido";
-            this.lblLetraApellido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtBuscarDni
-            // 
-            this.txtBuscarDni.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBuscarDni.Location = new System.Drawing.Point(223, 43);
-            this.txtBuscarDni.Name = "txtBuscarDni";
-            this.txtBuscarDni.Size = new System.Drawing.Size(163, 22);
-            this.txtBuscarDni.TabIndex = 21;
-            this.txtBuscarDni.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscarDni_KeyDown);
-            // 
-            // txtBuscarCuilCuit
-            // 
-            this.txtBuscarCuilCuit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBuscarCuilCuit.Location = new System.Drawing.Point(392, 43);
-            this.txtBuscarCuilCuit.Name = "txtBuscarCuilCuit";
-            this.txtBuscarCuilCuit.Size = new System.Drawing.Size(163, 22);
-            this.txtBuscarCuilCuit.TabIndex = 23;
-            // 
             // txtBusacarEmail
             // 
             this.txtBusacarEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -158,6 +112,7 @@
             this.txtBusacarEmail.Name = "txtBusacarEmail";
             this.txtBusacarEmail.Size = new System.Drawing.Size(163, 22);
             this.txtBusacarEmail.TabIndex = 25;
+            this.txtBusacarEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBusacarEmail_KeyDown);
             // 
             // comboBoxBuscarClienteZona
             // 
@@ -167,54 +122,7 @@
             this.comboBoxBuscarClienteZona.Name = "comboBoxBuscarClienteZona";
             this.comboBoxBuscarClienteZona.Size = new System.Drawing.Size(163, 24);
             this.comboBoxBuscarClienteZona.TabIndex = 27;
-            // 
-            // comboBoxBuscarClientePreventista
-            // 
-            this.comboBoxBuscarClientePreventista.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxBuscarClientePreventista.FormattingEnabled = true;
-            this.comboBoxBuscarClientePreventista.Location = new System.Drawing.Point(899, 40);
-            this.comboBoxBuscarClientePreventista.Name = "comboBoxBuscarClientePreventista";
-            this.comboBoxBuscarClientePreventista.Size = new System.Drawing.Size(163, 24);
-            this.comboBoxBuscarClientePreventista.TabIndex = 29;
-            // 
-            // btnBuscarTodosClientes
-            // 
-            this.btnBuscarTodosClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscarTodosClientes.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarTodosClientes.Location = new System.Drawing.Point(1068, 3);
-            this.btnBuscarTodosClientes.Name = "btnBuscarTodosClientes";
-            this.btnBuscarTodosClientes.Size = new System.Drawing.Size(163, 31);
-            this.btnBuscarTodosClientes.TabIndex = 30;
-            this.btnBuscarTodosClientes.Text = "TODOS";
-            this.btnBuscarTodosClientes.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(223, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 37);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "DNI";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(392, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(163, 37);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "CUIL/CUIT";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.comboBoxBuscarClienteZona.SelectedIndexChanged += new System.EventHandler(this.comboBoxBuscarClienteZona_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -240,17 +148,66 @@
             this.label5.Text = "ZONA";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label6
+            // txtBuscarDni
             // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(899, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(163, 37);
-            this.label6.TabIndex = 35;
-            this.label6.Text = "PREVENTISTA";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtBuscarDni.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBuscarDni.Location = new System.Drawing.Point(392, 43);
+            this.txtBuscarDni.Name = "txtBuscarDni";
+            this.txtBuscarDni.Size = new System.Drawing.Size(163, 22);
+            this.txtBuscarDni.TabIndex = 21;
+            this.txtBuscarDni.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscarDni_KeyDown);
+            // 
+            // txtNombreApellido
+            // 
+            this.txtNombreApellido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNombreApellido.Location = new System.Drawing.Point(223, 43);
+            this.txtNombreApellido.Name = "txtNombreApellido";
+            this.txtNombreApellido.Size = new System.Drawing.Size(163, 22);
+            this.txtNombreApellido.TabIndex = 36;
+            this.txtNombreApellido.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombreApellido_KeyDown);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(392, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(163, 37);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "DNI";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLetraApellido
+            // 
+            this.lblLetraApellido.AutoSize = true;
+            this.lblLetraApellido.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblLetraApellido.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLetraApellido.Location = new System.Drawing.Point(223, 0);
+            this.lblLetraApellido.Name = "lblLetraApellido";
+            this.lblLetraApellido.Size = new System.Drawing.Size(163, 37);
+            this.lblLetraApellido.TabIndex = 4;
+            this.lblLetraApellido.Text = "Nombre o Apellido";
+            this.lblLetraApellido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBoxBUSCARGENERAL
+            // 
+            this.textBoxBUSCARGENERAL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxBUSCARGENERAL.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBUSCARGENERAL.Location = new System.Drawing.Point(1068, 40);
+            this.textBoxBUSCARGENERAL.Name = "textBoxBUSCARGENERAL";
+            this.textBoxBUSCARGENERAL.Size = new System.Drawing.Size(163, 27);
+            this.textBoxBUSCARGENERAL.TabIndex = 37;
+            this.textBoxBUSCARGENERAL.TextChanged += new System.EventHandler(this.textBoxBUSCARGENERAL_TextChanged);
+            // 
+            // txtIndicaciones
+            // 
+            this.txtIndicaciones.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIndicaciones.Location = new System.Drawing.Point(12, 13);
+            this.txtIndicaciones.Name = "txtIndicaciones";
+            this.txtIndicaciones.Size = new System.Drawing.Size(227, 25);
+            this.txtIndicaciones.TabIndex = 1;
+            this.txtIndicaciones.Text = "Presione Enter para iniciar búsqueda";
             // 
             // label2
             // 
@@ -263,95 +220,71 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Buscar Clientes";
             // 
-            // dataGridView1
+            // dataGridListarClientes
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnaNombre,
-            this.ColumnaDNI,
-            this.ColumnaCUIL,
-            this.ColumnaEMAIL,
-            this.ColumnaZona,
-            this.ColumnaPreventista,
-            this.ColumnaModificar});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.Window;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 137);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1289, 462);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
-            // 
-            // ColumnaNombre
-            // 
-            this.ColumnaNombre.HeaderText = "Nombre";
-            this.ColumnaNombre.MinimumWidth = 6;
-            this.ColumnaNombre.Name = "ColumnaNombre";
-            this.ColumnaNombre.ReadOnly = true;
-            // 
-            // ColumnaDNI
-            // 
-            this.ColumnaDNI.HeaderText = "DNI";
-            this.ColumnaDNI.MinimumWidth = 6;
-            this.ColumnaDNI.Name = "ColumnaDNI";
-            this.ColumnaDNI.ReadOnly = true;
-            // 
-            // ColumnaCUIL
-            // 
-            this.ColumnaCUIL.HeaderText = "CUIL/CUIT";
-            this.ColumnaCUIL.MinimumWidth = 6;
-            this.ColumnaCUIL.Name = "ColumnaCUIL";
-            this.ColumnaCUIL.ReadOnly = true;
-            // 
-            // ColumnaEMAIL
-            // 
-            this.ColumnaEMAIL.HeaderText = "EMAIL";
-            this.ColumnaEMAIL.MinimumWidth = 6;
-            this.ColumnaEMAIL.Name = "ColumnaEMAIL";
-            this.ColumnaEMAIL.ReadOnly = true;
-            // 
-            // ColumnaZona
-            // 
-            this.ColumnaZona.HeaderText = "Zona";
-            this.ColumnaZona.MinimumWidth = 6;
-            this.ColumnaZona.Name = "ColumnaZona";
-            this.ColumnaZona.ReadOnly = true;
-            // 
-            // ColumnaPreventista
-            // 
-            this.ColumnaPreventista.HeaderText = "Preventista Asignado";
-            this.ColumnaPreventista.MinimumWidth = 6;
-            this.ColumnaPreventista.Name = "ColumnaPreventista";
-            this.ColumnaPreventista.ReadOnly = true;
-            // 
-            // ColumnaModificar
-            // 
-            this.ColumnaModificar.HeaderText = "Acción";
-            this.ColumnaModificar.MinimumWidth = 6;
-            this.ColumnaModificar.Name = "ColumnaModificar";
-            this.ColumnaModificar.ReadOnly = true;
+            this.dataGridListarClientes.AllowUserToAddRows = false;
+            this.dataGridListarClientes.AllowUserToDeleteRows = false;
+            this.dataGridListarClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridListarClientes.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridListarClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridListarClientes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridListarClientes.GridColor = System.Drawing.SystemColors.Window;
+            this.dataGridListarClientes.Location = new System.Drawing.Point(0, 137);
+            this.dataGridListarClientes.MultiSelect = false;
+            this.dataGridListarClientes.Name = "dataGridListarClientes";
+            this.dataGridListarClientes.ReadOnly = true;
+            this.dataGridListarClientes.RowHeadersVisible = false;
+            this.dataGridListarClientes.RowHeadersWidth = 51;
+            this.dataGridListarClientes.RowTemplate.Height = 24;
+            this.dataGridListarClientes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridListarClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridListarClientes.Size = new System.Drawing.Size(1289, 462);
+            this.dataGridListarClientes.TabIndex = 2;
+            this.dataGridListarClientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dataGridListarClientes.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel1.Controls.Add(this.txtIndicacionesFila);
+            this.panel1.Controls.Add(this.btnCancelar);
+            this.panel1.Controls.Add(this.txtIndicaciones);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 495);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1289, 104);
             this.panel1.TabIndex = 3;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnCancelar.Location = new System.Drawing.Point(1049, 26);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(147, 51);
+            this.btnCancelar.TabIndex = 0;
+            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // txtIndicacionesFila
+            // 
+            this.txtIndicacionesFila.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIndicacionesFila.Location = new System.Drawing.Point(12, 44);
+            this.txtIndicacionesFila.Name = "txtIndicacionesFila";
+            this.txtIndicacionesFila.Size = new System.Drawing.Size(227, 25);
+            this.txtIndicacionesFila.TabIndex = 2;
+            this.txtIndicacionesFila.Text = "Presione Enter para Seleccionar Fila";
+            // 
+            // pictureBoxBuscar
+            // 
+            this.pictureBoxBuscar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBoxBuscar.Image = global::ArimaERP.Properties.Resources.BUSCAR_reducido20x20;
+            this.pictureBoxBuscar.Location = new System.Drawing.Point(1033, 40);
+            this.pictureBoxBuscar.Name = "pictureBoxBuscar";
+            this.pictureBoxBuscar.Size = new System.Drawing.Size(29, 28);
+            this.pictureBoxBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxBuscar.TabIndex = 38;
+            this.pictureBoxBuscar.TabStop = false;
             // 
             // FormModificacionCliente
             // 
@@ -359,7 +292,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1289, 599);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridListarClientes);
             this.Controls.Add(this.TLPHeader);
             this.Name = "FormModificacionCliente";
             this.Text = "FormModificacionCliente";
@@ -368,36 +301,32 @@
             this.TLPHeader.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridListarClientes)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBuscar)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox comboBoxLetraApellido;
         private System.Windows.Forms.TableLayoutPanel TLPHeader;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBuscarDni;
-        private System.Windows.Forms.TextBox txtBuscarCuilCuit;
         private System.Windows.Forms.TextBox txtBusacarEmail;
         private System.Windows.Forms.ComboBox comboBoxBuscarClienteZona;
-        private System.Windows.Forms.ComboBox comboBoxBuscarClientePreventista;
-        private System.Windows.Forms.Button btnBuscarTodosClientes;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaDNI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaCUIL;
-        private System.Windows.Forms.DataGridViewLinkColumn ColumnaEMAIL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaZona;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaPreventista;
-        private System.Windows.Forms.DataGridViewButtonColumn ColumnaModificar;
+        private System.Windows.Forms.DataGridView dataGridListarClientes;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblLetraApellido;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtNombreApellido;
+        private System.Windows.Forms.TextBox textBoxBUSCARGENERAL;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TextBox txtIndicaciones;
+        private System.Windows.Forms.TextBox txtIndicacionesFila;
+        private System.Windows.Forms.PictureBox pictureBoxBuscar;
     }
 }

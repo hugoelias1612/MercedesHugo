@@ -26,7 +26,11 @@ namespace Capa_Logica
         {
             return ClassZona.ListarZonas();
         }
-
+        //Devuelve lista clientes
+        public List<CLIENTE> ObtenerClientes()
+        {
+            return ClassCliente.ListarClientes();
+        }
         public Boolean AgregarCliente(string nombre, string apellido, string id_tamano, string id_zona, DateTime fecha_alta, string email, string telefono, string dni, string cuit_cuil, string calle, string numero, string ciudad, string provincia, string razon_social, bool estado, bool confiable, string condicion_frenteIVA, string cod_postal)
         {
             try

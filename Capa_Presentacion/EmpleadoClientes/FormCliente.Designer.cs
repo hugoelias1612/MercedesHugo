@@ -92,7 +92,7 @@
             this.tableLayoutPanelAltaCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.825077F));
             this.tableLayoutPanelAltaCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.64257F));
             this.tableLayoutPanelAltaCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.9963F));
-            this.tableLayoutPanelAltaCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 270F));
+            this.tableLayoutPanelAltaCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 273F));
             this.tableLayoutPanelAltaCliente.Controls.Add(this.lblNbre, 1, 2);
             this.tableLayoutPanelAltaCliente.Controls.Add(this.lblApell, 1, 3);
             this.tableLayoutPanelAltaCliente.Controls.Add(this.lblDni, 1, 4);
@@ -198,7 +198,7 @@
             this.txtBoxNombre.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxNombre.Location = new System.Drawing.Point(349, 46);
             this.txtBoxNombre.Name = "txtBoxNombre";
-            this.txtBoxNombre.Size = new System.Drawing.Size(184, 27);
+            this.txtBoxNombre.Size = new System.Drawing.Size(183, 27);
             this.txtBoxNombre.TabIndex = 4;
             this.txtBoxNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxNombre_KeyPress);
             this.txtBoxNombre.Validating += new System.ComponentModel.CancelEventHandler(this.txtBoxNombre_Validating);
@@ -209,7 +209,7 @@
             this.txtBoxApellido.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxApellido.Location = new System.Drawing.Point(349, 86);
             this.txtBoxApellido.Name = "txtBoxApellido";
-            this.txtBoxApellido.Size = new System.Drawing.Size(184, 27);
+            this.txtBoxApellido.Size = new System.Drawing.Size(183, 27);
             this.txtBoxApellido.TabIndex = 5;
             this.txtBoxApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxApellido_KeyPress);
             this.txtBoxApellido.Validating += new System.ComponentModel.CancelEventHandler(this.txtBoxApellido_Validating);
@@ -220,7 +220,7 @@
             this.txtBoxDni.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxDni.Location = new System.Drawing.Point(349, 126);
             this.txtBoxDni.Name = "txtBoxDni";
-            this.txtBoxDni.Size = new System.Drawing.Size(184, 27);
+            this.txtBoxDni.Size = new System.Drawing.Size(183, 27);
             this.txtBoxDni.TabIndex = 6;
             this.txtBoxDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxDni_KeyPress);
             this.txtBoxDni.Validating += new System.ComponentModel.CancelEventHandler(this.txtBoxDni_Validating);
@@ -243,7 +243,7 @@
             this.txtBoxCuil.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxCuil.Location = new System.Drawing.Point(349, 206);
             this.txtBoxCuil.Name = "txtBoxCuil";
-            this.txtBoxCuil.Size = new System.Drawing.Size(184, 27);
+            this.txtBoxCuil.Size = new System.Drawing.Size(183, 27);
             this.txtBoxCuil.TabIndex = 9;
             this.txtBoxCuil.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxCuil_KeyPress);
             this.txtBoxCuil.Validating += new System.ComponentModel.CancelEventHandler(this.txtBoxCuil_Validating);
@@ -266,7 +266,7 @@
             this.txtBoxMovil.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxMovil.Location = new System.Drawing.Point(349, 246);
             this.txtBoxMovil.Name = "txtBoxMovil";
-            this.txtBoxMovil.Size = new System.Drawing.Size(184, 27);
+            this.txtBoxMovil.Size = new System.Drawing.Size(183, 27);
             this.txtBoxMovil.TabIndex = 11;
             this.txtBoxMovil.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxMovil_KeyPress);
             // 
@@ -336,7 +336,7 @@
             this.txtMail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMail.Location = new System.Drawing.Point(349, 286);
             this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(184, 27);
+            this.txtMail.Size = new System.Drawing.Size(183, 27);
             this.txtMail.TabIndex = 18;
             this.txtMail.Validating += new System.ComponentModel.CancelEventHandler(this.txtMail_Validating);
             // 
@@ -346,7 +346,7 @@
             this.txtBoxCalle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxCalle.Location = new System.Drawing.Point(349, 366);
             this.txtBoxCalle.Name = "txtBoxCalle";
-            this.txtBoxCalle.Size = new System.Drawing.Size(184, 27);
+            this.txtBoxCalle.Size = new System.Drawing.Size(183, 27);
             this.txtBoxCalle.TabIndex = 19;
             this.txtBoxCalle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxCalle_KeyPress);
             this.txtBoxCalle.Validating += new System.ComponentModel.CancelEventHandler(this.txtBoxCalle_Validating);
@@ -357,7 +357,7 @@
             this.txtNumero.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero.Location = new System.Drawing.Point(349, 406);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(184, 27);
+            this.txtNumero.Size = new System.Drawing.Size(183, 27);
             this.txtNumero.TabIndex = 20;
             this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero_KeyPress);
             // 
@@ -367,7 +367,7 @@
             this.txtBoxLocalidad.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxLocalidad.Location = new System.Drawing.Point(349, 446);
             this.txtBoxLocalidad.Name = "txtBoxLocalidad";
-            this.txtBoxLocalidad.Size = new System.Drawing.Size(184, 27);
+            this.txtBoxLocalidad.Size = new System.Drawing.Size(183, 27);
             this.txtBoxLocalidad.TabIndex = 21;
             this.txtBoxLocalidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxLocalidad_KeyPress);
             this.txtBoxLocalidad.Validating += new System.ComponentModel.CancelEventHandler(this.txtBoxLocalidad_Validating);
@@ -390,7 +390,7 @@
             this.txtBoxProvincia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxProvincia.Location = new System.Drawing.Point(349, 486);
             this.txtBoxProvincia.Name = "txtBoxProvincia";
-            this.txtBoxProvincia.Size = new System.Drawing.Size(184, 27);
+            this.txtBoxProvincia.Size = new System.Drawing.Size(183, 27);
             this.txtBoxProvincia.TabIndex = 22;
             this.txtBoxProvincia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxProvincia_KeyPress);
             this.txtBoxProvincia.Validating += new System.ComponentModel.CancelEventHandler(this.txtBoxProvincia_Validating);
@@ -400,7 +400,7 @@
             this.lblTamano.AutoSize = true;
             this.lblTamano.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblTamano.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTamano.Location = new System.Drawing.Point(592, 40);
+            this.lblTamano.Location = new System.Drawing.Point(591, 40);
             this.lblTamano.Name = "lblTamano";
             this.lblTamano.Size = new System.Drawing.Size(70, 40);
             this.lblTamano.TabIndex = 23;
@@ -412,7 +412,7 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblEstado.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(592, 80);
+            this.lblEstado.Location = new System.Drawing.Point(591, 80);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(61, 40);
             this.lblEstado.TabIndex = 26;
@@ -424,7 +424,7 @@
             this.lblFacturacion.AutoSize = true;
             this.lblFacturacion.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblFacturacion.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFacturacion.Location = new System.Drawing.Point(592, 160);
+            this.lblFacturacion.Location = new System.Drawing.Point(591, 160);
             this.lblFacturacion.Name = "lblFacturacion";
             this.lblFacturacion.Size = new System.Drawing.Size(101, 40);
             this.lblFacturacion.TabIndex = 27;
@@ -436,7 +436,7 @@
             this.lblRazonSocial.AutoSize = true;
             this.lblRazonSocial.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblRazonSocial.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRazonSocial.Location = new System.Drawing.Point(592, 200);
+            this.lblRazonSocial.Location = new System.Drawing.Point(591, 200);
             this.lblRazonSocial.Name = "lblRazonSocial";
             this.lblRazonSocial.Size = new System.Drawing.Size(106, 40);
             this.lblRazonSocial.TabIndex = 28;
@@ -448,7 +448,7 @@
             this.lblCondicionIVA.AutoSize = true;
             this.lblCondicionIVA.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblCondicionIVA.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCondicionIVA.Location = new System.Drawing.Point(592, 240);
+            this.lblCondicionIVA.Location = new System.Drawing.Point(591, 240);
             this.lblCondicionIVA.Name = "lblCondicionIVA";
             this.lblCondicionIVA.Size = new System.Drawing.Size(137, 40);
             this.lblCondicionIVA.TabIndex = 30;
@@ -460,7 +460,7 @@
             this.lblFechaAlta.AutoSize = true;
             this.lblFechaAlta.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblFechaAlta.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaAlta.Location = new System.Drawing.Point(592, 280);
+            this.lblFechaAlta.Location = new System.Drawing.Point(591, 280);
             this.lblFechaAlta.Name = "lblFechaAlta";
             this.lblFechaAlta.Size = new System.Drawing.Size(89, 40);
             this.lblFechaAlta.TabIndex = 31;
@@ -473,7 +473,7 @@
             this.dateTimePickerFechaAlta.Enabled = false;
             this.dateTimePickerFechaAlta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerFechaAlta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerFechaAlta.Location = new System.Drawing.Point(745, 286);
+            this.dateTimePickerFechaAlta.Location = new System.Drawing.Point(744, 286);
             this.dateTimePickerFechaAlta.Name = "dateTimePickerFechaAlta";
             this.dateTimePickerFechaAlta.Size = new System.Drawing.Size(212, 27);
             this.dateTimePickerFechaAlta.TabIndex = 33;
@@ -483,7 +483,7 @@
             this.lblZonz.AutoSize = true;
             this.lblZonz.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblZonz.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZonz.Location = new System.Drawing.Point(592, 360);
+            this.lblZonz.Location = new System.Drawing.Point(591, 360);
             this.lblZonz.Name = "lblZonz";
             this.lblZonz.Size = new System.Drawing.Size(49, 40);
             this.lblZonz.TabIndex = 36;
@@ -502,7 +502,7 @@
             "MONOTRIBUTISTA",
             "NO RESPONSABLE",
             "CONSUMIDOR FINAL"});
-            this.comboBoxCondicionFrenteIVA.Location = new System.Drawing.Point(745, 244);
+            this.comboBoxCondicionFrenteIVA.Location = new System.Drawing.Point(744, 244);
             this.comboBoxCondicionFrenteIVA.Name = "comboBoxCondicionFrenteIVA";
             this.comboBoxCondicionFrenteIVA.Size = new System.Drawing.Size(212, 31);
             this.comboBoxCondicionFrenteIVA.TabIndex = 42;
@@ -512,7 +512,7 @@
             // 
             this.txtRazonSocial.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtRazonSocial.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRazonSocial.Location = new System.Drawing.Point(745, 206);
+            this.txtRazonSocial.Location = new System.Drawing.Point(744, 206);
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.Size = new System.Drawing.Size(212, 27);
             this.txtRazonSocial.TabIndex = 43;
@@ -524,7 +524,7 @@
             this.comboBoxSeleccionarZona.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxSeleccionarZona.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSeleccionarZona.FormattingEnabled = true;
-            this.comboBoxSeleccionarZona.Location = new System.Drawing.Point(745, 364);
+            this.comboBoxSeleccionarZona.Location = new System.Drawing.Point(744, 364);
             this.comboBoxSeleccionarZona.Name = "comboBoxSeleccionarZona";
             this.comboBoxSeleccionarZona.Size = new System.Drawing.Size(212, 31);
             this.comboBoxSeleccionarZona.TabIndex = 44;
@@ -534,7 +534,7 @@
             this.comboBoxSeleccionarTamano.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxSeleccionarTamano.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSeleccionarTamano.FormattingEnabled = true;
-            this.comboBoxSeleccionarTamano.Location = new System.Drawing.Point(745, 44);
+            this.comboBoxSeleccionarTamano.Location = new System.Drawing.Point(744, 44);
             this.comboBoxSeleccionarTamano.Name = "comboBoxSeleccionarTamano";
             this.comboBoxSeleccionarTamano.Size = new System.Drawing.Size(212, 31);
             this.comboBoxSeleccionarTamano.TabIndex = 45;
@@ -545,7 +545,7 @@
             this.btnGuardar.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(745, 403);
+            this.btnGuardar.Location = new System.Drawing.Point(744, 403);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(212, 34);
             this.btnGuardar.TabIndex = 38;
@@ -559,7 +559,7 @@
             this.btnLimpiar.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(745, 443);
+            this.btnLimpiar.Location = new System.Drawing.Point(744, 443);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(212, 34);
             this.btnLimpiar.TabIndex = 39;
@@ -573,7 +573,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(745, 483);
+            this.btnCancelar.Location = new System.Drawing.Point(744, 483);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(212, 34);
             this.btnCancelar.TabIndex = 47;
@@ -599,7 +599,7 @@
             this.txtCodigoPostal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigoPostal.Location = new System.Drawing.Point(349, 526);
             this.txtCodigoPostal.Name = "txtCodigoPostal";
-            this.txtCodigoPostal.Size = new System.Drawing.Size(184, 27);
+            this.txtCodigoPostal.Size = new System.Drawing.Size(183, 27);
             this.txtCodigoPostal.TabIndex = 50;
             // 
             // checkBoxActivo
@@ -607,7 +607,7 @@
             this.checkBoxActivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxActivo.AutoSize = true;
             this.checkBoxActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxActivo.Location = new System.Drawing.Point(745, 88);
+            this.checkBoxActivo.Location = new System.Drawing.Point(744, 88);
             this.checkBoxActivo.Name = "checkBoxActivo";
             this.checkBoxActivo.Size = new System.Drawing.Size(212, 24);
             this.checkBoxActivo.TabIndex = 51;
@@ -619,7 +619,7 @@
             this.checkBoxConfiable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxConfiable.AutoSize = true;
             this.checkBoxConfiable.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxConfiable.Location = new System.Drawing.Point(745, 128);
+            this.checkBoxConfiable.Location = new System.Drawing.Point(744, 128);
             this.checkBoxConfiable.Name = "checkBoxConfiable";
             this.checkBoxConfiable.Size = new System.Drawing.Size(212, 24);
             this.checkBoxConfiable.TabIndex = 52;

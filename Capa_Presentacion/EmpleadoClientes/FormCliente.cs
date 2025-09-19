@@ -498,14 +498,33 @@ namespace ArimaERP.EmpleadoClientes
             txtBoxLocalidad.Clear();
             txtBoxProvincia.Clear();
             txtRazonSocial.Clear();
-            comboBoxSeleccionarTamano.SelectedIndex = -1;
             dateTimePickerFechaAlta.Value = DateTime.Now;
-            comboBoxSeleccionarZona.SelectedIndex = -1;
             errorProvider1.Clear();
             comboBoxCondicionFrenteIVA.SelectedIndex = 0;
             checkBoxActivo.Checked = false;
             checkBoxConfiable.Checked = false;
             txtCodigoPostal.Clear();
+            //cargar combobox de base de datos
+            var tamanos = clienteLogica.ObtenerTamanos();
+            comboBoxSeleccionarTamano.Items.Clear();
+            comboBoxSeleccionarTamano.Items.Add("Seleccione tamaño");
+            foreach (var tamano in tamanos)
+            {
+                string descripcion = $"{tamano.id_tamano} - {tamano.descripcion}";
+                comboBoxSeleccionarTamano.Items.Add(descripcion);
+            }
+            comboBoxSeleccionarTamano.SelectedIndex = 0;
+
+            var zonas = clienteLogica.ObtenerZonas();
+            comboBoxSeleccionarZona.Items.Clear();
+            comboBoxSeleccionarZona.Items.Add("Seleccione zona");
+            foreach (var zona in zonas)
+            {
+                string nombre = $"{zona.id_zona} - {zona.nombre}";
+                comboBoxSeleccionarZona.Items.Add(nombre);
+            }
+            comboBoxSeleccionarZona.SelectedIndex = 0;
+
         }
 
         private void FormCliente_Load(object sender, EventArgs e)
