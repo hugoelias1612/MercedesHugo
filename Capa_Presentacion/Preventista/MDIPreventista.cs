@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ArimaERP.EmpleadoProducto
+namespace ArimaERP.Preventista
 {
     public partial class MDIPreventista : Form
     {
@@ -50,29 +50,24 @@ namespace ArimaERP.EmpleadoProducto
 
         private void btnAlerta_Click(object sender, EventArgs e)
         {
-           AbrirFormEnPanel(new FormAlerta());
         }
 
         private void btnABM_Click(object sender, EventArgs e)
         {
        
-            AbrirFormEnPanel(new FormABM());
     }
 
         private void btnComprar_Click(object sender, EventArgs e)
         {
 
-            AbrirFormEnPanel(new FormComprar());
         }
 
         private void btnFMP_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new FormFMP());
         }
 
         private void btnStock_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new FormStock());
         }
     }
 }

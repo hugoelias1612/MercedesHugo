@@ -13,7 +13,7 @@ using System.Windows.Forms;
 using Capa_Entidades;
 
 
-namespace ArimaERP.EmpleadoClientes
+namespace ArimaERP.Preventista
 {
     public partial class FormAltaBajaCliente : Form
     {
@@ -405,7 +405,6 @@ namespace ArimaERP.EmpleadoClientes
                 string.IsNullOrWhiteSpace(comboBoxCondicionFrenteIVA.Text) ||
                 string.IsNullOrWhiteSpace(txtCodigoPostal.Text) ||
                 comboBoxSeleccionarTamano.SelectedIndex == 0 ||
-                comboBoxSeleccionarZona.SelectedIndex == 0 ||
                 comboBoxCondicionFrenteIVA.SelectedIndex == 0 ||
                 dateTimePickerFechaAlta.Value.Date > DateTime.Now.Date)
             {
@@ -414,7 +413,7 @@ namespace ArimaERP.EmpleadoClientes
             }
 
             
-             if(clienteLogica.AgregarCliente(txtBoxNombre.Text, txtBoxApellido.Text, "1", "1", dateTimePickerFechaAlta.Value, txtMail.Text, txtBoxMovil.Text, txtBoxDni.Text, txtBoxCuil.Text, txtBoxCalle.Text, txtNumero.Text, txtBoxLocalidad.Text, txtBoxProvincia.Text, txtRazonSocial.Text, checkBoxActivo.Checked, checkBoxConfiable.Checked, comboBoxCondicionFrenteIVA.Text, txtCodigoPostal.Text))
+             if(clienteLogica.AgregarCliente(txtBoxNombre.Text, txtBoxApellido.Text, "1", "1", dateTimePickerFechaAlta.Value, txtMail.Text, txtBoxMovil.Text, txtBoxDni.Text, txtBoxCuil.Text, txtBoxCalle.Text, txtNumero.Text, txtBoxLocalidad.Text, txtBoxProvincia.Text, txtRazonSocial.Text, checkBoxActivo.Checked, false, comboBoxCondicionFrenteIVA.Text, txtCodigoPostal.Text))
              {
                 // Si todos los campos son válidos mostrar mensaje de éxito
                 MessageBox.Show("Cliente guardado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -500,11 +499,10 @@ namespace ArimaERP.EmpleadoClientes
             txtRazonSocial.Clear();
             comboBoxSeleccionarTamano.SelectedIndex = -1;
             dateTimePickerFechaAlta.Value = DateTime.Now;
-            comboBoxSeleccionarZona.SelectedIndex = -1;
             errorProvider1.Clear();
             comboBoxCondicionFrenteIVA.SelectedIndex = 0;
             checkBoxActivo.Checked = false;
-            checkBoxConfiable.Checked = false;
+            
             txtCodigoPostal.Clear();
         }
 
@@ -568,10 +566,7 @@ namespace ArimaERP.EmpleadoClientes
 
         }
 
-        private void lblRazonSocial_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
 

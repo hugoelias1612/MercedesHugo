@@ -208,6 +208,7 @@
             this.BIngresar.TabIndex = 2;
             this.BIngresar.Text = "Iniciar Sesión";
             this.BIngresar.UseVisualStyleBackColor = true;
+            this.BIngresar.Click += new System.EventHandler(this.BIngresar_Click);
             // 
             // LoginForm
             // 
@@ -225,7 +226,6 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Arima ERP - Login";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.TLPBase.ResumeLayout(false);
             this.PHeader.ResumeLayout(false);

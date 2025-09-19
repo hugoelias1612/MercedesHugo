@@ -136,5 +136,13 @@ namespace ArimaERP.EmpleadoClientes
             // Limpiar el panel antes de agregar nuevo contenido
             pnlVistaMenuSecundario.Controls.Clear();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            //volver al login
+            this.Close();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace ArimaERP.EmpleadoProducto
+﻿namespace ArimaERP.Preventista
 {
     partial class MDIPreventista
     {
