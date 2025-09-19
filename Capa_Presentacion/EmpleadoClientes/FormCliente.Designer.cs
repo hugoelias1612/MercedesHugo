@@ -86,7 +86,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanelAltaCliente.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tableLayoutPanelAltaCliente.ColumnCount = 7;
-            this.tableLayoutPanelAltaCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 181F));
+            this.tableLayoutPanelAltaCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136F));
             this.tableLayoutPanelAltaCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.22172F));
             this.tableLayoutPanelAltaCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.31434F));
             this.tableLayoutPanelAltaCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.825077F));
@@ -133,27 +133,27 @@
             this.tableLayoutPanelAltaCliente.Controls.Add(this.txtCodigoPostal, 2, 14);
             this.tableLayoutPanelAltaCliente.Controls.Add(this.checkBoxActivo, 5, 3);
             this.tableLayoutPanelAltaCliente.Controls.Add(this.checkBoxConfiable, 5, 4);
-            this.tableLayoutPanelAltaCliente.Location = new System.Drawing.Point(17, 72);
-            this.tableLayoutPanelAltaCliente.Margin = new System.Windows.Forms.Padding(30, 3, 3, 3);
+            this.tableLayoutPanelAltaCliente.Location = new System.Drawing.Point(13, 58);
+            this.tableLayoutPanelAltaCliente.Margin = new System.Windows.Forms.Padding(22, 2, 2, 2);
             this.tableLayoutPanelAltaCliente.Name = "tableLayoutPanelAltaCliente";
             this.tableLayoutPanelAltaCliente.RowCount = 15;
-            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelAltaCliente.Size = new System.Drawing.Size(1233, 556);
+            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanelAltaCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanelAltaCliente.Size = new System.Drawing.Size(925, 452);
             this.tableLayoutPanelAltaCliente.TabIndex = 0;
             // 
             // lblNbre
@@ -161,9 +161,10 @@
             this.lblNbre.AutoSize = true;
             this.lblNbre.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblNbre.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNbre.Location = new System.Drawing.Point(184, 40);
+            this.lblNbre.Location = new System.Drawing.Point(138, 32);
+            this.lblNbre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNbre.Name = "lblNbre";
-            this.lblNbre.Size = new System.Drawing.Size(73, 40);
+            this.lblNbre.Size = new System.Drawing.Size(59, 32);
             this.lblNbre.TabIndex = 0;
             this.lblNbre.Text = "Nombre";
             this.lblNbre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -173,9 +174,10 @@
             this.lblApell.AutoSize = true;
             this.lblApell.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblApell.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApell.Location = new System.Drawing.Point(184, 80);
+            this.lblApell.Location = new System.Drawing.Point(138, 64);
+            this.lblApell.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblApell.Name = "lblApell";
-            this.lblApell.Size = new System.Drawing.Size(72, 40);
+            this.lblApell.Size = new System.Drawing.Size(58, 32);
             this.lblApell.TabIndex = 1;
             this.lblApell.Text = "Apellido";
             this.lblApell.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -185,9 +187,10 @@
             this.lblDni.AutoSize = true;
             this.lblDni.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblDni.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDni.Location = new System.Drawing.Point(184, 120);
+            this.lblDni.Location = new System.Drawing.Point(138, 96);
+            this.lblDni.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(40, 40);
+            this.lblDni.Size = new System.Drawing.Size(33, 32);
             this.lblDni.TabIndex = 2;
             this.lblDni.Text = "DNI";
             this.lblDni.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -196,7 +199,8 @@
             // 
             this.txtBoxNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxNombre.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxNombre.Location = new System.Drawing.Point(349, 46);
+            this.txtBoxNombre.Location = new System.Drawing.Point(261, 36);
+            this.txtBoxNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBoxNombre.Name = "txtBoxNombre";
             this.txtBoxNombre.Size = new System.Drawing.Size(183, 27);
             this.txtBoxNombre.TabIndex = 4;
@@ -207,7 +211,8 @@
             // 
             this.txtBoxApellido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxApellido.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxApellido.Location = new System.Drawing.Point(349, 86);
+            this.txtBoxApellido.Location = new System.Drawing.Point(261, 68);
+            this.txtBoxApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBoxApellido.Name = "txtBoxApellido";
             this.txtBoxApellido.Size = new System.Drawing.Size(183, 27);
             this.txtBoxApellido.TabIndex = 5;
@@ -218,7 +223,8 @@
             // 
             this.txtBoxDni.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxDni.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxDni.Location = new System.Drawing.Point(349, 126);
+            this.txtBoxDni.Location = new System.Drawing.Point(261, 100);
+            this.txtBoxDni.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBoxDni.Name = "txtBoxDni";
             this.txtBoxDni.Size = new System.Drawing.Size(183, 27);
             this.txtBoxDni.TabIndex = 6;
@@ -228,11 +234,13 @@
             // lblCuil
             // 
             this.lblCuil.AutoSize = true;
+            this.lblCuil.BackColor = System.Drawing.Color.Transparent;
             this.lblCuil.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblCuil.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCuil.Location = new System.Drawing.Point(184, 200);
+            this.lblCuil.Location = new System.Drawing.Point(138, 160);
+            this.lblCuil.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCuil.Name = "lblCuil";
-            this.lblCuil.Size = new System.Drawing.Size(90, 40);
+            this.lblCuil.Size = new System.Drawing.Size(74, 32);
             this.lblCuil.TabIndex = 8;
             this.lblCuil.Text = "CUIL/CUIT";
             this.lblCuil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -241,7 +249,8 @@
             // 
             this.txtBoxCuil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxCuil.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxCuil.Location = new System.Drawing.Point(349, 206);
+            this.txtBoxCuil.Location = new System.Drawing.Point(261, 164);
+            this.txtBoxCuil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBoxCuil.Name = "txtBoxCuil";
             this.txtBoxCuil.Size = new System.Drawing.Size(183, 27);
             this.txtBoxCuil.TabIndex = 9;
@@ -253,9 +262,10 @@
             this.lblTelMóvil.AutoSize = true;
             this.lblTelMóvil.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblTelMóvil.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelMóvil.Location = new System.Drawing.Point(184, 240);
+            this.lblTelMóvil.Location = new System.Drawing.Point(138, 192);
+            this.lblTelMóvil.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTelMóvil.Name = "lblTelMóvil";
-            this.lblTelMóvil.Size = new System.Drawing.Size(120, 40);
+            this.lblTelMóvil.Size = new System.Drawing.Size(98, 32);
             this.lblTelMóvil.TabIndex = 10;
             this.lblTelMóvil.Text = "Teléfono Móvil";
             this.lblTelMóvil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -264,7 +274,8 @@
             // 
             this.txtBoxMovil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxMovil.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxMovil.Location = new System.Drawing.Point(349, 246);
+            this.txtBoxMovil.Location = new System.Drawing.Point(261, 196);
+            this.txtBoxMovil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBoxMovil.Name = "txtBoxMovil";
             this.txtBoxMovil.Size = new System.Drawing.Size(183, 27);
             this.txtBoxMovil.TabIndex = 11;
@@ -275,9 +286,10 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(184, 280);
+            this.lblEmail.Location = new System.Drawing.Point(138, 224);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(51, 40);
+            this.lblEmail.Size = new System.Drawing.Size(41, 32);
             this.lblEmail.TabIndex = 12;
             this.lblEmail.Text = "Email";
             this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -287,9 +299,10 @@
             this.lblDir.AutoSize = true;
             this.lblDir.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblDir.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDir.Location = new System.Drawing.Point(184, 320);
+            this.lblDir.Location = new System.Drawing.Point(138, 256);
+            this.lblDir.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDir.Name = "lblDir";
-            this.lblDir.Size = new System.Drawing.Size(85, 40);
+            this.lblDir.Size = new System.Drawing.Size(68, 32);
             this.lblDir.TabIndex = 13;
             this.lblDir.Text = "Dirección:";
             this.lblDir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -299,9 +312,10 @@
             this.lblCalle.AutoSize = true;
             this.lblCalle.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblCalle.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCalle.Location = new System.Drawing.Point(184, 360);
+            this.lblCalle.Location = new System.Drawing.Point(138, 288);
+            this.lblCalle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCalle.Name = "lblCalle";
-            this.lblCalle.Size = new System.Drawing.Size(47, 40);
+            this.lblCalle.Size = new System.Drawing.Size(38, 32);
             this.lblCalle.TabIndex = 14;
             this.lblCalle.Text = "Calle";
             this.lblCalle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -311,9 +325,10 @@
             this.lblNumero.AutoSize = true;
             this.lblNumero.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblNumero.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumero.Location = new System.Drawing.Point(184, 400);
+            this.lblNumero.Location = new System.Drawing.Point(138, 320);
+            this.lblNumero.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(73, 40);
+            this.lblNumero.Size = new System.Drawing.Size(59, 32);
             this.lblNumero.TabIndex = 15;
             this.lblNumero.Text = "Número";
             this.lblNumero.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -323,9 +338,10 @@
             this.lblLocalidad.AutoSize = true;
             this.lblLocalidad.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblLocalidad.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocalidad.Location = new System.Drawing.Point(184, 440);
+            this.lblLocalidad.Location = new System.Drawing.Point(138, 352);
+            this.lblLocalidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLocalidad.Name = "lblLocalidad";
-            this.lblLocalidad.Size = new System.Drawing.Size(82, 40);
+            this.lblLocalidad.Size = new System.Drawing.Size(66, 32);
             this.lblLocalidad.TabIndex = 16;
             this.lblLocalidad.Text = "Localidad";
             this.lblLocalidad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -334,7 +350,8 @@
             // 
             this.txtMail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMail.Location = new System.Drawing.Point(349, 286);
+            this.txtMail.Location = new System.Drawing.Point(261, 228);
+            this.txtMail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(183, 27);
             this.txtMail.TabIndex = 18;
@@ -344,7 +361,8 @@
             // 
             this.txtBoxCalle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxCalle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxCalle.Location = new System.Drawing.Point(349, 366);
+            this.txtBoxCalle.Location = new System.Drawing.Point(261, 292);
+            this.txtBoxCalle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBoxCalle.Name = "txtBoxCalle";
             this.txtBoxCalle.Size = new System.Drawing.Size(183, 27);
             this.txtBoxCalle.TabIndex = 19;
@@ -355,7 +373,8 @@
             // 
             this.txtNumero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNumero.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero.Location = new System.Drawing.Point(349, 406);
+            this.txtNumero.Location = new System.Drawing.Point(261, 324);
+            this.txtNumero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(183, 27);
             this.txtNumero.TabIndex = 20;
@@ -365,7 +384,8 @@
             // 
             this.txtBoxLocalidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxLocalidad.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxLocalidad.Location = new System.Drawing.Point(349, 446);
+            this.txtBoxLocalidad.Location = new System.Drawing.Point(261, 356);
+            this.txtBoxLocalidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBoxLocalidad.Name = "txtBoxLocalidad";
             this.txtBoxLocalidad.Size = new System.Drawing.Size(183, 27);
             this.txtBoxLocalidad.TabIndex = 21;
@@ -377,9 +397,10 @@
             this.lblProvincia.AutoSize = true;
             this.lblProvincia.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblProvincia.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProvincia.Location = new System.Drawing.Point(184, 480);
+            this.lblProvincia.Location = new System.Drawing.Point(138, 384);
+            this.lblProvincia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProvincia.Name = "lblProvincia";
-            this.lblProvincia.Size = new System.Drawing.Size(79, 40);
+            this.lblProvincia.Size = new System.Drawing.Size(64, 32);
             this.lblProvincia.TabIndex = 17;
             this.lblProvincia.Text = "Provincia";
             this.lblProvincia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -388,7 +409,8 @@
             // 
             this.txtBoxProvincia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxProvincia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxProvincia.Location = new System.Drawing.Point(349, 486);
+            this.txtBoxProvincia.Location = new System.Drawing.Point(261, 388);
+            this.txtBoxProvincia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBoxProvincia.Name = "txtBoxProvincia";
             this.txtBoxProvincia.Size = new System.Drawing.Size(183, 27);
             this.txtBoxProvincia.TabIndex = 22;
@@ -402,7 +424,7 @@
             this.lblTamano.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTamano.Location = new System.Drawing.Point(591, 40);
             this.lblTamano.Name = "lblTamano";
-            this.lblTamano.Size = new System.Drawing.Size(70, 40);
+            this.lblTamano.Size = new System.Drawing.Size(56, 32);
             this.lblTamano.TabIndex = 23;
             this.lblTamano.Text = "Tamaño";
             this.lblTamano.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -414,7 +436,7 @@
             this.lblEstado.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.Location = new System.Drawing.Point(591, 80);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(61, 40);
+            this.lblEstado.Size = new System.Drawing.Size(50, 32);
             this.lblEstado.TabIndex = 26;
             this.lblEstado.Text = "Estado";
             this.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -426,7 +448,7 @@
             this.lblFacturacion.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFacturacion.Location = new System.Drawing.Point(591, 160);
             this.lblFacturacion.Name = "lblFacturacion";
-            this.lblFacturacion.Size = new System.Drawing.Size(101, 40);
+            this.lblFacturacion.Size = new System.Drawing.Size(82, 32);
             this.lblFacturacion.TabIndex = 27;
             this.lblFacturacion.Text = "Datos de Facturación:";
             this.lblFacturacion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -438,7 +460,7 @@
             this.lblRazonSocial.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRazonSocial.Location = new System.Drawing.Point(591, 200);
             this.lblRazonSocial.Name = "lblRazonSocial";
-            this.lblRazonSocial.Size = new System.Drawing.Size(106, 40);
+            this.lblRazonSocial.Size = new System.Drawing.Size(84, 32);
             this.lblRazonSocial.TabIndex = 28;
             this.lblRazonSocial.Text = "Razón Social";
             this.lblRazonSocial.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -450,7 +472,7 @@
             this.lblCondicionIVA.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCondicionIVA.Location = new System.Drawing.Point(591, 240);
             this.lblCondicionIVA.Name = "lblCondicionIVA";
-            this.lblCondicionIVA.Size = new System.Drawing.Size(137, 40);
+            this.lblCondicionIVA.Size = new System.Drawing.Size(110, 32);
             this.lblCondicionIVA.TabIndex = 30;
             this.lblCondicionIVA.Text = "Condición frente al IVA";
             this.lblCondicionIVA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -462,7 +484,7 @@
             this.lblFechaAlta.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaAlta.Location = new System.Drawing.Point(591, 280);
             this.lblFechaAlta.Name = "lblFechaAlta";
-            this.lblFechaAlta.Size = new System.Drawing.Size(89, 40);
+            this.lblFechaAlta.Size = new System.Drawing.Size(72, 32);
             this.lblFechaAlta.TabIndex = 31;
             this.lblFechaAlta.Text = "Fecha Alta";
             this.lblFechaAlta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -475,7 +497,7 @@
             this.dateTimePickerFechaAlta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerFechaAlta.Location = new System.Drawing.Point(744, 286);
             this.dateTimePickerFechaAlta.Name = "dateTimePickerFechaAlta";
-            this.dateTimePickerFechaAlta.Size = new System.Drawing.Size(212, 27);
+            this.dateTimePickerFechaAlta.Size = new System.Drawing.Size(159, 23);
             this.dateTimePickerFechaAlta.TabIndex = 33;
             // 
             // lblZonz
@@ -485,7 +507,7 @@
             this.lblZonz.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblZonz.Location = new System.Drawing.Point(591, 360);
             this.lblZonz.Name = "lblZonz";
-            this.lblZonz.Size = new System.Drawing.Size(49, 40);
+            this.lblZonz.Size = new System.Drawing.Size(40, 32);
             this.lblZonz.TabIndex = 36;
             this.lblZonz.Text = "Zona";
             this.lblZonz.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -504,7 +526,7 @@
             "CONSUMIDOR FINAL"});
             this.comboBoxCondicionFrenteIVA.Location = new System.Drawing.Point(744, 244);
             this.comboBoxCondicionFrenteIVA.Name = "comboBoxCondicionFrenteIVA";
-            this.comboBoxCondicionFrenteIVA.Size = new System.Drawing.Size(212, 31);
+            this.comboBoxCondicionFrenteIVA.Size = new System.Drawing.Size(159, 27);
             this.comboBoxCondicionFrenteIVA.TabIndex = 42;
             this.comboBoxCondicionFrenteIVA.Text = "Seleccionar";
             // 
@@ -514,7 +536,7 @@
             this.txtRazonSocial.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRazonSocial.Location = new System.Drawing.Point(744, 206);
             this.txtRazonSocial.Name = "txtRazonSocial";
-            this.txtRazonSocial.Size = new System.Drawing.Size(212, 27);
+            this.txtRazonSocial.Size = new System.Drawing.Size(159, 23);
             this.txtRazonSocial.TabIndex = 43;
             this.txtRazonSocial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRazonSocial_KeyPress);
             this.txtRazonSocial.Validating += new System.ComponentModel.CancelEventHandler(this.txtRazonSocial_Validating);
@@ -526,7 +548,7 @@
             this.comboBoxSeleccionarZona.FormattingEnabled = true;
             this.comboBoxSeleccionarZona.Location = new System.Drawing.Point(744, 364);
             this.comboBoxSeleccionarZona.Name = "comboBoxSeleccionarZona";
-            this.comboBoxSeleccionarZona.Size = new System.Drawing.Size(212, 31);
+            this.comboBoxSeleccionarZona.Size = new System.Drawing.Size(159, 27);
             this.comboBoxSeleccionarZona.TabIndex = 44;
             // 
             // comboBoxSeleccionarTamano
@@ -536,7 +558,7 @@
             this.comboBoxSeleccionarTamano.FormattingEnabled = true;
             this.comboBoxSeleccionarTamano.Location = new System.Drawing.Point(744, 44);
             this.comboBoxSeleccionarTamano.Name = "comboBoxSeleccionarTamano";
-            this.comboBoxSeleccionarTamano.Size = new System.Drawing.Size(212, 31);
+            this.comboBoxSeleccionarTamano.Size = new System.Drawing.Size(159, 27);
             this.comboBoxSeleccionarTamano.TabIndex = 45;
             // 
             // btnGuardar
@@ -547,7 +569,7 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Location = new System.Drawing.Point(744, 403);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(212, 34);
+            this.btnGuardar.Size = new System.Drawing.Size(159, 28);
             this.btnGuardar.TabIndex = 38;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -561,7 +583,7 @@
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.Location = new System.Drawing.Point(744, 443);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(212, 34);
+            this.btnLimpiar.Size = new System.Drawing.Size(159, 28);
             this.btnLimpiar.TabIndex = 39;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -575,7 +597,7 @@
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Location = new System.Drawing.Point(744, 483);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(212, 34);
+            this.btnCancelar.Size = new System.Drawing.Size(159, 28);
             this.btnCancelar.TabIndex = 47;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -586,9 +608,10 @@
             this.lblCodPostal.AutoSize = true;
             this.lblCodPostal.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblCodPostal.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodPostal.Location = new System.Drawing.Point(184, 520);
+            this.lblCodPostal.Location = new System.Drawing.Point(138, 416);
+            this.lblCodPostal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCodPostal.Name = "lblCodPostal";
-            this.lblCodPostal.Size = new System.Drawing.Size(115, 40);
+            this.lblCodPostal.Size = new System.Drawing.Size(93, 36);
             this.lblCodPostal.TabIndex = 49;
             this.lblCodPostal.Text = "Codigo Postal";
             this.lblCodPostal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -597,7 +620,8 @@
             // 
             this.txtCodigoPostal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCodigoPostal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoPostal.Location = new System.Drawing.Point(349, 526);
+            this.txtCodigoPostal.Location = new System.Drawing.Point(261, 422);
+            this.txtCodigoPostal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCodigoPostal.Name = "txtCodigoPostal";
             this.txtCodigoPostal.Size = new System.Drawing.Size(183, 27);
             this.txtCodigoPostal.TabIndex = 50;
@@ -609,7 +633,7 @@
             this.checkBoxActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxActivo.Location = new System.Drawing.Point(744, 88);
             this.checkBoxActivo.Name = "checkBoxActivo";
-            this.checkBoxActivo.Size = new System.Drawing.Size(212, 24);
+            this.checkBoxActivo.Size = new System.Drawing.Size(159, 21);
             this.checkBoxActivo.TabIndex = 51;
             this.checkBoxActivo.Text = "Activo";
             this.checkBoxActivo.UseVisualStyleBackColor = true;
@@ -621,7 +645,7 @@
             this.checkBoxConfiable.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxConfiable.Location = new System.Drawing.Point(744, 128);
             this.checkBoxConfiable.Name = "checkBoxConfiable";
-            this.checkBoxConfiable.Size = new System.Drawing.Size(212, 24);
+            this.checkBoxConfiable.Size = new System.Drawing.Size(159, 21);
             this.checkBoxConfiable.TabIndex = 52;
             this.checkBoxConfiable.Text = "Confiable";
             this.checkBoxConfiable.UseVisualStyleBackColor = true;
@@ -636,11 +660,12 @@
             this.tableLayoutPanel1.Controls.Add(this.lblRegistrarCliente, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1262, 55);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(946, 45);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // lblRegistrarCliente
@@ -648,9 +673,10 @@
             this.lblRegistrarCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRegistrarCliente.AutoSize = true;
             this.lblRegistrarCliente.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistrarCliente.Location = new System.Drawing.Point(423, 0);
+            this.lblRegistrarCliente.Location = new System.Drawing.Point(317, 0);
+            this.lblRegistrarCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRegistrarCliente.Name = "lblRegistrarCliente";
-            this.lblRegistrarCliente.Size = new System.Drawing.Size(414, 54);
+            this.lblRegistrarCliente.Size = new System.Drawing.Size(311, 45);
             this.lblRegistrarCliente.TabIndex = 0;
             this.lblRegistrarCliente.Text = "Registrar Cliente";
             this.lblRegistrarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -660,9 +686,10 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panel1.Location = new System.Drawing.Point(0, 640);
+            this.panel1.Location = new System.Drawing.Point(0, 520);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1262, 39);
+            this.panel1.Size = new System.Drawing.Size(946, 32);
             this.panel1.TabIndex = 2;
             // 
             // errorProvider1
@@ -671,12 +698,13 @@
             // 
             // FormCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.ClientSize = new System.Drawing.Size(946, 547);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanelAltaCliente);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormCliente";
             this.Text = "FormCliente";
             this.Load += new System.EventHandler(this.FormCliente_Load);

@@ -8,21 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ArimaERP.EmpleadoClientes
+namespace ArimaERP.Administrador
 {
-    public partial class FormBajaCliente : Form
+    public partial class FormPanelAdministrador : Form
     {
-        public FormBajaCliente()
+        public FormPanelAdministrador()
         {
             InitializeComponent();
         }
 
-        private void lblRegistrarCliente_Click(object sender, EventArgs e)
+        private void FormPanelAdministrador_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void FormBajaCliente_Load(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

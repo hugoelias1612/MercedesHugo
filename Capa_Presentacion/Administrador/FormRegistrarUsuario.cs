@@ -17,14 +17,14 @@ namespace ArimaERP.Administrador
             InitializeComponent();
         }
 
-        
-
-        private void FormRegistrarUsuario_Load(object sender, EventArgs e)
+        private void tableLayoutPanel6_Paint(object sender, PaintEventArgs e)
         {
-            
 
         }
 
-       
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

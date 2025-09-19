@@ -8,21 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ArimaERP.EmpleadoClientes
+namespace ArimaERP.Preventista
 {
-    public partial class FormBajaCliente : Form
+    public partial class ModalSeleccionarCliente : Form
     {
-        public FormBajaCliente()
+        public ModalSeleccionarCliente()
         {
             InitializeComponent();
         }
 
-        private void lblRegistrarCliente_Click(object sender, EventArgs e)
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void FormBajaCliente_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

@@ -1,6 +1,6 @@
 ﻿namespace ArimaERP.EmpleadoProducto
 {
-    partial class MDIProductos
+    partial class MDIPreventista
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MDIProductos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MDIPreventista));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnVolverPanel = new System.Windows.Forms.Button();
-            this.btnComprar = new System.Windows.Forms.Button();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.btnFMP = new System.Windows.Forms.Button();
             this.btnABM = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
@@ -52,12 +50,10 @@
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnVolverPanel);
-            this.panel1.Controls.Add(this.btnComprar);
             this.panel1.Controls.Add(this.lblFecha);
             this.panel1.Controls.Add(this.lblRol);
             this.panel1.Controls.Add(this.lblNombre);
             this.panel1.Controls.Add(this.btnSalir);
-            this.panel1.Controls.Add(this.btnBuscar);
             this.panel1.Controls.Add(this.btnFMP);
             this.panel1.Controls.Add(this.btnABM);
             this.panel1.Controls.Add(this.btnStock);
@@ -75,25 +71,12 @@
             this.btnVolverPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnVolverPanel.Image = ((System.Drawing.Image)(resources.GetObject("btnVolverPanel.Image")));
             this.btnVolverPanel.Location = new System.Drawing.Point(1038, 0);
-            this.btnVolverPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVolverPanel.Margin = new System.Windows.Forms.Padding(0);
             this.btnVolverPanel.Name = "btnVolverPanel";
             this.btnVolverPanel.Size = new System.Drawing.Size(112, 110);
             this.btnVolverPanel.TabIndex = 10;
             this.btnVolverPanel.UseVisualStyleBackColor = false;
             this.btnVolverPanel.Visible = false;
-            // 
-            // btnComprar
-            // 
-            this.btnComprar.BackColor = System.Drawing.SystemColors.Window;
-            this.btnComprar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnComprar.Image = ((System.Drawing.Image)(resources.GetObject("btnComprar.Image")));
-            this.btnComprar.Location = new System.Drawing.Point(560, 0);
-            this.btnComprar.Margin = new System.Windows.Forms.Padding(4, 5, 15, 16);
-            this.btnComprar.Name = "btnComprar";
-            this.btnComprar.Size = new System.Drawing.Size(112, 110);
-            this.btnComprar.TabIndex = 9;
-            this.btnComprar.UseVisualStyleBackColor = false;
-            this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
             // 
             // lblFecha
             // 
@@ -138,18 +121,6 @@
             this.btnSalir.TabIndex = 5;
             this.btnSalir.UseVisualStyleBackColor = false;
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.SystemColors.Window;
-            this.btnBuscar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(448, 0);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 15, 16);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(112, 110);
-            this.btnBuscar.TabIndex = 4;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            // 
             // btnFMP
             // 
             this.btnFMP.BackColor = System.Drawing.SystemColors.Window;
@@ -193,7 +164,7 @@
             // 
             this.btnAlerta.BackColor = System.Drawing.SystemColors.Window;
             this.btnAlerta.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnAlerta.Image = global::ArimaERP.Properties.Resources.alerta_reducido;
+            this.btnAlerta.Image = ((System.Drawing.Image)(resources.GetObject("btnAlerta.Image")));
             this.btnAlerta.Location = new System.Drawing.Point(0, 0);
             this.btnAlerta.Margin = new System.Windows.Forms.Padding(0);
             this.btnAlerta.Name = "btnAlerta";
@@ -223,7 +194,7 @@
             this.pnlContent.Size = new System.Drawing.Size(1264, 569);
             this.pnlContent.TabIndex = 2;
             // 
-            // MDIProductos
+            // MDIPreventista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -235,8 +206,8 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "MDIProductos";
-            this.Text = "MDIProductos";
+            this.Name = "MDIPreventista";
+            this.Text = "MDIPreventista";
             this.Load += new System.EventHandler(this.MDIProductos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -248,7 +219,6 @@
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAlerta;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnFMP;
         private System.Windows.Forms.Button btnABM;
         private System.Windows.Forms.Button btnStock;
@@ -258,7 +228,6 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblRol;
-        private System.Windows.Forms.Button btnComprar;
         private System.Windows.Forms.Button btnVolverPanel;
     }
 }
