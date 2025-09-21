@@ -90,9 +90,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.comboBoxMetodoPago = new System.Windows.Forms.ComboBox();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -740,6 +740,7 @@
             this.tableLayoutPanelRegistrarPago.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
             this.tableLayoutPanelRegistrarPago.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 289F));
             this.tableLayoutPanelRegistrarPago.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 370F));
+            this.tableLayoutPanelRegistrarPago.Controls.Add(this.dateTimePicker5, 1, 1);
             this.tableLayoutPanelRegistrarPago.Controls.Add(this.textBox8, 3, 0);
             this.tableLayoutPanelRegistrarPago.Controls.Add(this.lblCliente, 0, 0);
             this.tableLayoutPanelRegistrarPago.Controls.Add(this.lblFecha, 0, 1);
@@ -748,7 +749,6 @@
             this.tableLayoutPanelRegistrarPago.Controls.Add(this.button4, 4, 1);
             this.tableLayoutPanelRegistrarPago.Controls.Add(this.button5, 4, 0);
             this.tableLayoutPanelRegistrarPago.Controls.Add(this.textBox1, 1, 0);
-            this.tableLayoutPanelRegistrarPago.Controls.Add(this.textBox7, 1, 1);
             this.tableLayoutPanelRegistrarPago.Controls.Add(this.comboBoxMetodoPago, 3, 1);
             this.tableLayoutPanelRegistrarPago.Location = new System.Drawing.Point(86, 504);
             this.tableLayoutPanelRegistrarPago.Name = "tableLayoutPanelRegistrarPago";
@@ -842,15 +842,6 @@
             this.textBox1.Size = new System.Drawing.Size(236, 31);
             this.textBox1.TabIndex = 6;
             // 
-            // textBox7
-            // 
-            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(122, 59);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(236, 31);
-            this.textBox7.TabIndex = 7;
-            // 
             // comboBoxMetodoPago
             // 
             this.comboBoxMetodoPago.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -871,6 +862,16 @@
             this.btnVolver.TabIndex = 11;
             this.btnVolver.Text = "Salir";
             this.btnVolver.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker5
+            // 
+            this.dateTimePicker5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePicker5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker5.Location = new System.Drawing.Point(122, 60);
+            this.dateTimePicker5.Name = "dateTimePicker5";
+            this.dateTimePicker5.Size = new System.Drawing.Size(236, 30);
+            this.dateTimePicker5.TabIndex = 44;
             // 
             // FormPagos
             // 
@@ -972,9 +973,9 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBoxMetodoPago;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.DateTimePicker dateTimePicker5;
     }
 }
