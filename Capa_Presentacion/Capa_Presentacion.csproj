@@ -91,11 +91,23 @@
     <Compile Include="BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmpleadoClientes\FormAltaPreventista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormAltaPreventista.Designer.cs">
+      <DependentUpon>FormAltaPreventista.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmpleadoClientes\FormBajaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EmpleadoClientes\FormBajaCliente.Designer.cs">
       <DependentUpon>FormBajaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormCancelarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormCancelarPedido.Designer.cs">
+      <DependentUpon>FormCancelarPedido.cs</DependentUpon>
     </Compile>
     <Compile Include="EmpleadoClientes\FormCliente.cs">
       <SubType>Form</SubType>
@@ -115,11 +127,35 @@
     <Compile Include="EmpleadoClientes\FormEditarCliente.Designer.cs">
       <DependentUpon>FormEditarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmpleadoClientes\FormHistorialPreventista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormHistorialPreventista.Designer.cs">
+      <DependentUpon>FormHistorialPreventista.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmpleadoClientes\FormModificacionCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EmpleadoClientes\FormModificacionCliente.Designer.cs">
       <DependentUpon>FormModificacionCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormModificarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormModificarPedido.Designer.cs">
+      <DependentUpon>FormModificarPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormMotivoCancelacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormMotivoCancelacion.Designer.cs">
+      <DependentUpon>FormMotivoCancelacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormPagos.Designer.cs">
+      <DependentUpon>FormPagos.cs</DependentUpon>
     </Compile>
     <Compile Include="EmpleadoClientes\MDIClientes.cs">
       <SubType>Form</SubType>
@@ -226,8 +262,14 @@
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadoClientes\FormAltaPreventista.resx">
+      <DependentUpon>FormAltaPreventista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmpleadoClientes\FormBajaCliente.resx">
       <DependentUpon>FormBajaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadoClientes\FormCancelarPedido.resx">
+      <DependentUpon>FormCancelarPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmpleadoClientes\FormCliente.resx">
       <DependentUpon>FormCliente.cs</DependentUpon>
@@ -238,8 +280,20 @@
     <EmbeddedResource Include="EmpleadoClientes\FormEditarCliente.resx">
       <DependentUpon>FormEditarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadoClientes\FormHistorialPreventista.resx">
+      <DependentUpon>FormHistorialPreventista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmpleadoClientes\FormModificacionCliente.resx">
       <DependentUpon>FormModificacionCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadoClientes\FormModificarPedido.resx">
+      <DependentUpon>FormModificarPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadoClientes\FormMotivoCancelacion.resx">
+      <DependentUpon>FormMotivoCancelacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadoClientes\FormPagos.resx">
+      <DependentUpon>FormPagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmpleadoClientes\MDIClientes.resx">
       <DependentUpon>MDIClientes.cs</DependentUpon>

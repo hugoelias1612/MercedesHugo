@@ -26,7 +26,12 @@ namespace ArimaERP.EmpleadoClientes
             // Establecer el tamaño y posición del formulario
             this.Location = areaTrabajo.Location;
             this.Size = areaTrabajo.Size;
+                    
+            lblFecha.Text = lblFecha.Text + DateTime.Now.ToString("dd/MM/yyyy");
+            lblHora.Text = lblHora.Text + DateTime.Now.ToString("HH:mm:ss");
         }
+
+        
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
@@ -129,6 +134,15 @@ namespace ArimaERP.EmpleadoClientes
         {
             // Limpiar el panel antes de agregar nuevo contenido
             pnlVistaMenuSecundario.Controls.Clear();
+            // Instanciar el formulario
+            FormPagos formCobros = new FormPagos();
+            // Configurar como control embebido
+            formCobros.TopLevel = false;
+            formCobros.FormBorderStyle = FormBorderStyle.None;
+            formCobros.Dock = DockStyle.Fill;
+            // Agregar al panel y mostrar
+            pnlVistaMenuSecundario.Controls.Add(formCobros);
+            formCobros.Show();
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
@@ -144,5 +158,71 @@ namespace ArimaERP.EmpleadoClientes
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
             }
+
+        private void pnlVistaMenuSecundario_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnModificarPedido_Click(object sender, EventArgs e)
+        {
+            // Limpiar el panel antes de agregar nuevo contenido
+            pnlVistaMenuSecundario.Controls.Clear();
+            // Instanciar el formulario
+            FormModificarPedido formModificarPedido = new FormModificarPedido();
+            // Configurar como control embebido
+            formModificarPedido.TopLevel = false;
+            formModificarPedido.FormBorderStyle = FormBorderStyle.None;
+            formModificarPedido.Dock = DockStyle.Fill;
+            // Agregar al panel y mostrar
+            pnlVistaMenuSecundario.Controls.Add(formModificarPedido);
+            formModificarPedido.Show();
+
+        }
+
+        private void btnCancPedido_Click(object sender, EventArgs e)
+        {
+            // Limpiar el panel antes de agregar nuevo contenido
+            pnlVistaMenuSecundario.Controls.Clear();
+            // Instanciar el formulario
+            FormCancelarPedido formCancelarPedido = new FormCancelarPedido();
+            // Configurar como control embebido
+            formCancelarPedido.TopLevel = false;
+            formCancelarPedido.FormBorderStyle = FormBorderStyle.None;
+            formCancelarPedido.Dock = DockStyle.Fill;
+            // Agregar al panel y mostrar
+            pnlVistaMenuSecundario.Controls.Add(formCancelarPedido);
+            formCancelarPedido.Show();
+            }
+
+        private void btnAltaPrevent_Click(object sender, EventArgs e)
+        {
+            // Limpiar el panel antes de agregar nuevo contenido
+            pnlVistaMenuSecundario.Controls.Clear();
+            // Instanciar el formulario
+            FormAltaPreventista formAltaPreventista = new FormAltaPreventista();
+            // Configurar como control embebido
+            formAltaPreventista.TopLevel = false;
+            formAltaPreventista.FormBorderStyle = FormBorderStyle.None;
+            formAltaPreventista.Dock = DockStyle.Fill;
+            // Agregar al panel y mostrar
+            pnlVistaMenuSecundario.Controls.Add(formAltaPreventista);
+            formAltaPreventista.Show();
+        }
+
+        private void btnHistorialPreventistas_Click(object sender, EventArgs e)
+        {
+            // Limpiar el panel antes de agregar nuevo contenido
+            pnlVistaMenuSecundario.Controls.Clear();
+            // Instanciar el formulario
+            FormHistorialPreventista formHistorialPreventistas = new FormHistorialPreventista();
+            // Configurar como control embebido
+            formHistorialPreventistas.TopLevel = false;
+            formHistorialPreventistas.FormBorderStyle = FormBorderStyle.None;
+            formHistorialPreventistas.Dock = DockStyle.Fill;
+            // Agregar al panel y mostrar
+            pnlVistaMenuSecundario.Controls.Add(formHistorialPreventistas);
+            formHistorialPreventistas.Show();
+        }
     }
 }
