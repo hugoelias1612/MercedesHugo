@@ -47,7 +47,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tlpGestion = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxDescripcion = new System.Windows.Forms.TextBox();
             this.lblIdRol = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -77,7 +77,7 @@
             this.tableLayoutPanel1.Controls.Add(this.gbxGestion, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -92,9 +92,9 @@
             this.gbxListaRoles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbxListaRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxListaRoles.Location = new System.Drawing.Point(4, 4);
-            this.gbxListaRoles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxListaRoles.Margin = new System.Windows.Forms.Padding(4);
             this.gbxListaRoles.Name = "gbxListaRoles";
-            this.gbxListaRoles.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxListaRoles.Padding = new System.Windows.Forms.Padding(4);
             this.gbxListaRoles.Size = new System.Drawing.Size(504, 467);
             this.gbxListaRoles.TabIndex = 0;
             this.gbxListaRoles.TabStop = false;
@@ -109,7 +109,7 @@
             this.tlpDataAcciones.Controls.Add(this.tlpBotonesAlcance, 0, 1);
             this.tlpDataAcciones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpDataAcciones.Location = new System.Drawing.Point(4, 27);
-            this.tlpDataAcciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tlpDataAcciones.Margin = new System.Windows.Forms.Padding(4);
             this.tlpDataAcciones.Name = "tlpDataAcciones";
             this.tlpDataAcciones.RowCount = 2;
             this.tlpDataAcciones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -129,7 +129,7 @@
             this.Descripcion,
             this.Estado});
             this.dgvRoles.Location = new System.Drawing.Point(4, 4);
-            this.dgvRoles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvRoles.Margin = new System.Windows.Forms.Padding(4);
             this.dgvRoles.Name = "dgvRoles";
             this.dgvRoles.RowHeadersWidth = 51;
             this.dgvRoles.Size = new System.Drawing.Size(488, 362);
@@ -165,11 +165,11 @@
             this.tlpBotonesAlcance.Controls.Add(this.btnAlcance, 0, 0);
             this.tlpBotonesAlcance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpBotonesAlcance.Location = new System.Drawing.Point(4, 374);
-            this.tlpBotonesAlcance.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tlpBotonesAlcance.Margin = new System.Windows.Forms.Padding(4);
             this.tlpBotonesAlcance.Name = "tlpBotonesAlcance";
             this.tlpBotonesAlcance.RowCount = 1;
             this.tlpBotonesAlcance.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpBotonesAlcance.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 59F));
+            this.tlpBotonesAlcance.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
             this.tlpBotonesAlcance.Size = new System.Drawing.Size(488, 58);
             this.tlpBotonesAlcance.TabIndex = 1;
             // 
@@ -181,7 +181,7 @@
             this.btnVerUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerUsuarios.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnVerUsuarios.Location = new System.Drawing.Point(213, 7);
-            this.btnVerUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVerUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.btnVerUsuarios.Name = "btnVerUsuarios";
             this.btnVerUsuarios.Size = new System.Drawing.Size(257, 43);
             this.btnVerUsuarios.TabIndex = 1;
@@ -196,7 +196,7 @@
             this.btnAlcance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlcance.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnAlcance.Location = new System.Drawing.Point(4, 7);
-            this.btnAlcance.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAlcance.Margin = new System.Windows.Forms.Padding(4);
             this.btnAlcance.Name = "btnAlcance";
             this.btnAlcance.Size = new System.Drawing.Size(187, 43);
             this.btnAlcance.TabIndex = 0;
@@ -214,9 +214,9 @@
             this.gbxGestion.Controls.Add(this.tlpGestion);
             this.gbxGestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxGestion.Location = new System.Drawing.Point(516, 4);
-            this.gbxGestion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxGestion.Margin = new System.Windows.Forms.Padding(4);
             this.gbxGestion.Name = "gbxGestion";
-            this.gbxGestion.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxGestion.Padding = new System.Windows.Forms.Padding(4);
             this.gbxGestion.Size = new System.Drawing.Size(412, 467);
             this.gbxGestion.TabIndex = 1;
             this.gbxGestion.TabStop = false;
@@ -230,7 +230,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.button1.Location = new System.Drawing.Point(85, 422);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(257, 34);
             this.button1.TabIndex = 2;
@@ -245,9 +245,9 @@
             this.gbxEliminar.Controls.Add(this.comboBox1);
             this.gbxEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxEliminar.Location = new System.Drawing.Point(0, 217);
-            this.gbxEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.gbxEliminar.Name = "gbxEliminar";
-            this.gbxEliminar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxEliminar.Padding = new System.Windows.Forms.Padding(4);
             this.gbxEliminar.Size = new System.Drawing.Size(432, 191);
             this.gbxEliminar.TabIndex = 1;
             this.gbxEliminar.TabStop = false;
@@ -261,12 +261,13 @@
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnEliminar.Location = new System.Drawing.Point(101, 143);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(211, 34);
             this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "Eliminar Rol";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // label1
             // 
@@ -285,7 +286,7 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(124, 86);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(160, 32);
             this.comboBox1.TabIndex = 0;
@@ -296,14 +297,14 @@
             this.tlpGestion.ColumnCount = 2;
             this.tlpGestion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 177F));
             this.tlpGestion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
-            this.tlpGestion.Controls.Add(this.textBox2, 1, 1);
+            this.tlpGestion.Controls.Add(this.textBoxDescripcion, 1, 1);
             this.tlpGestion.Controls.Add(this.lblIdRol, 0, 0);
             this.tlpGestion.Controls.Add(this.lblDescripcion, 0, 1);
             this.tlpGestion.Controls.Add(this.textBox1, 1, 0);
             this.tlpGestion.Controls.Add(this.btnAgregarRol, 1, 3);
             this.tlpGestion.Controls.Add(this.btnLimpiar, 0, 3);
             this.tlpGestion.Location = new System.Drawing.Point(8, 31);
-            this.tlpGestion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tlpGestion.Margin = new System.Windows.Forms.Padding(4);
             this.tlpGestion.Name = "tlpGestion";
             this.tlpGestion.RowCount = 4;
             this.tlpGestion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
@@ -314,15 +315,16 @@
             this.tlpGestion.Size = new System.Drawing.Size(396, 164);
             this.tlpGestion.TabIndex = 0;
             // 
-            // textBox2
+            // textBoxDescripcion
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(182, 51);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(209, 26);
-            this.textBox2.TabIndex = 3;
+            this.textBoxDescripcion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDescripcion.Location = new System.Drawing.Point(182, 51);
+            this.textBoxDescripcion.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDescripcion.Name = "textBoxDescripcion";
+            this.textBoxDescripcion.Size = new System.Drawing.Size(209, 26);
+            this.textBoxDescripcion.TabIndex = 3;
+            this.textBoxDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDescripcion_KeyPress);
             // 
             // lblIdRol
             // 
@@ -351,7 +353,7 @@
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(213, 8);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(147, 26);
             this.textBox1.TabIndex = 2;
@@ -364,12 +366,13 @@
             this.btnAgregarRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarRol.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnAgregarRol.Location = new System.Drawing.Point(181, 115);
-            this.btnAgregarRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarRol.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarRol.Name = "btnAgregarRol";
             this.btnAgregarRol.Size = new System.Drawing.Size(211, 45);
             this.btnAgregarRol.TabIndex = 4;
             this.btnAgregarRol.Text = "Agregar Rol";
             this.btnAgregarRol.UseVisualStyleBackColor = false;
+            this.btnAgregarRol.Click += new System.EventHandler(this.btnAgregarRol_Click);
             // 
             // btnLimpiar
             // 
@@ -379,12 +382,13 @@
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnLimpiar.Location = new System.Drawing.Point(4, 115);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(169, 45);
             this.btnLimpiar.TabIndex = 5;
             this.btnLimpiar.Text = "Limpiar Campos";
             this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // FormAgregarRol
             // 
@@ -429,7 +433,7 @@
         private System.Windows.Forms.GroupBox gbxGestion;
         private System.Windows.Forms.TableLayoutPanel tlpGestion;
         private System.Windows.Forms.GroupBox gbxEliminar;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxDescripcion;
         private System.Windows.Forms.Label lblIdRol;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.TextBox textBox1;

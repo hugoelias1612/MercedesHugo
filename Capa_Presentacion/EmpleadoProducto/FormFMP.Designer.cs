@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnEditarMarca = new System.Windows.Forms.Button();
@@ -39,7 +40,7 @@
             this.gbxProveedor = new System.Windows.Forms.GroupBox();
             this.btnEditarProveedor = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBoxNroCalle = new System.Windows.Forms.TextBox();
             this.txtCalle = new System.Windows.Forms.TextBox();
             this.txtCiudad = new System.Windows.Forms.TextBox();
             this.txtProvincia = new System.Windows.Forms.TextBox();
@@ -63,6 +64,7 @@
             this.btnComprar = new System.Windows.Forms.Button();
             this.btnVerMarcas = new System.Windows.Forms.Button();
             this.btnVerProveedores = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -71,6 +73,7 @@
             this.TLPMain.SuspendLayout();
             this.panel2.SuspendLayout();
             this.gbxAcciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -139,6 +142,7 @@
             this.txtNombreMarca.Name = "txtNombreMarca";
             this.txtNombreMarca.Size = new System.Drawing.Size(275, 32);
             this.txtNombreMarca.TabIndex = 1;
+            this.txtNombreMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreMarca_KeyPress);
             // 
             // lblNombreMarca
             // 
@@ -212,11 +216,10 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 142F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.textBox7, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxNroCalle, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtCalle, 5, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtCiudad, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtProvincia, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txtEmail, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtTelefono, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblEmail, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblTelefono, 2, 0);
@@ -228,6 +231,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txtNombre, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnCrear, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnLimpiar, 5, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtEmail, 5, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(17, 30);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(13, 25, 13, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -239,25 +243,27 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1460, 142);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // textBox7
+            // textBoxNroCalle
             // 
-            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(227, 102);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(225, 32);
-            this.textBox7.TabIndex = 13;
+            this.textBoxNroCalle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxNroCalle.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNroCalle.Location = new System.Drawing.Point(227, 102);
+            this.textBoxNroCalle.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxNroCalle.Name = "textBoxNroCalle";
+            this.textBoxNroCalle.Size = new System.Drawing.Size(225, 32);
+            this.textBoxNroCalle.TabIndex = 13;
+            this.textBoxNroCalle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
             // 
             // txtCalle
             // 
             this.txtCalle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCalle.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCalle.Location = new System.Drawing.Point(1157, 54);
+            this.txtCalle.Location = new System.Drawing.Point(1192, 54);
             this.txtCalle.Margin = new System.Windows.Forms.Padding(4);
             this.txtCalle.Name = "txtCalle";
-            this.txtCalle.Size = new System.Drawing.Size(299, 32);
+            this.txtCalle.Size = new System.Drawing.Size(228, 32);
             this.txtCalle.TabIndex = 12;
+            this.txtCalle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCalle_KeyPress);
             // 
             // txtCiudad
             // 
@@ -268,6 +274,7 @@
             this.txtCiudad.Name = "txtCiudad";
             this.txtCiudad.Size = new System.Drawing.Size(298, 32);
             this.txtCiudad.TabIndex = 11;
+            this.txtCiudad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCiudad_KeyPress);
             // 
             // txtProvincia
             // 
@@ -278,16 +285,19 @@
             this.txtProvincia.Name = "txtProvincia";
             this.txtProvincia.Size = new System.Drawing.Size(298, 32);
             this.txtProvincia.TabIndex = 10;
+            this.txtProvincia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProvincia_KeyPress);
             // 
             // txtEmail
             // 
             this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(1157, 7);
+            this.txtEmail.Location = new System.Drawing.Point(1192, 7);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(299, 32);
+            this.txtEmail.Size = new System.Drawing.Size(229, 32);
             this.txtEmail.TabIndex = 9;
+            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // txtTelefono
             // 
@@ -298,6 +308,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(298, 32);
             this.txtTelefono.TabIndex = 8;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // lblEmail
             // 
@@ -392,6 +403,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(298, 32);
             this.txtNombre.TabIndex = 7;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // btnCrear
             // 
@@ -411,6 +423,7 @@
             // 
             this.btnLimpiar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLimpiar.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnLimpiar.CausesValidation = false;
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.Location = new System.Drawing.Point(1186, 99);
@@ -420,6 +433,7 @@
             this.btnLimpiar.TabIndex = 15;
             this.btnLimpiar.Text = "Limpiar campos";
             this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // TLPMain
             // 
@@ -534,6 +548,10 @@
             this.btnVerProveedores.Text = "Ver todos los proveedores";
             this.btnVerProveedores.UseVisualStyleBackColor = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FormFMP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -557,6 +575,7 @@
             this.TLPMain.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.gbxAcciones.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -574,7 +593,7 @@
         private System.Windows.Forms.GroupBox gbxProveedor;
         private System.Windows.Forms.Button btnEditarProveedor;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBoxNroCalle;
         private System.Windows.Forms.TextBox txtCalle;
         private System.Windows.Forms.TextBox txtCiudad;
         private System.Windows.Forms.TextBox txtProvincia;
@@ -598,5 +617,6 @@
         private System.Windows.Forms.Button btnComprar;
         private System.Windows.Forms.Button btnVerMarcas;
         private System.Windows.Forms.Button btnVerProveedores;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

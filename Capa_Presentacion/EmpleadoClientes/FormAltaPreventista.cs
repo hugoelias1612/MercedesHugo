@@ -67,6 +67,8 @@ namespace ArimaERP.EmpleadoClientes
             textBoxDNI.Text = "";
             textBoxDireccion.Text = "";
             errorProvider1.Clear();
+            comboBoxZona.SelectedIndex = -1;
+            limpiarPresionado = false;
         }
 
         private void textBoxContrasena_KeyPress(object sender, KeyPressEventArgs e)
@@ -207,6 +209,12 @@ namespace ArimaERP.EmpleadoClientes
                     errorProvider1.SetError(textBoxMail, "");
                 }
             }
+            //si esta vacío permitir avanzar o si se presionó cerrar (this.IsDisposed)
+            if (string.IsNullOrWhiteSpace(textBoxMail.Text) || this.IsDisposed)
+            {
+                errorProvider1.SetError(textBoxMail, "");
+            }
+
         }
 
         private void textBoxDireccion_KeyPress(object sender, KeyPressEventArgs e)
@@ -278,6 +286,16 @@ namespace ArimaERP.EmpleadoClientes
             }
             //si esta vacío permitir avanzar
             if (string.IsNullOrWhiteSpace(password))
+            {
+                errorProvider1.SetError(textBoxContrasena, "");
+            }
+            //si se presionó limpiar no validar
+            if (limpiarPresionado)
+            {
+                errorProvider1.SetError(textBoxContrasena, "");
+            }
+            //si se presionó cerrar (this.IsDisposed) no validar
+            if (this.IsDisposed)
             {
                 errorProvider1.SetError(textBoxContrasena, "");
             }

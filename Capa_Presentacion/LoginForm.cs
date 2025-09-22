@@ -75,6 +75,8 @@ namespace ArimaERP
                         FormClosedEventHandler valu = val1;
                         mdiPreventista.FormClosed += valu;
                         mdiPreventista.Show();
+                        TCorreo.Clear();
+                        TContrasena.Clear();
                         this.Hide();
                         break;
                     case 3:
@@ -85,6 +87,8 @@ namespace ArimaERP
                         FormClosedEventHandler val = value2;
                         mdiProductos.FormClosed += val;
                         mdiProductos.Show();
+                        TCorreo.Clear();
+                        TContrasena.Clear();
                         this.Hide();
                         break;
                     case 4:
@@ -94,6 +98,8 @@ namespace ArimaERP
                         FormClosedEventHandler va = value3;
                         mdiClientes.FormClosed += va;
                         mdiClientes.Show();
+                        TCorreo.Clear();
+                        TContrasena.Clear();
                         this.Hide();
                         break;
                     default:
