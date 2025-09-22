@@ -17,14 +17,14 @@ namespace ArimaERP.Administrador
             InitializeComponent();
         }
 
-        private void tableLayoutPanel6_Paint(object sender, PaintEventArgs e)
+        private void btnBuscarUsuario_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-
+            //activar btnModificar y btnBaja
+            btnModificar.Enabled = true;
+            btnBaja.Enabled = true;
+            btnCancelar.Enabled = true;
+            //desactivar btnNuevo
+            btnCrear.Enabled = false;
         }
     }
 }

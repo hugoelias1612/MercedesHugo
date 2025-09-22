@@ -137,6 +137,7 @@
             this.Accion2.TabIndex = 1;
             this.Accion2.Text = "Gestion de Roles";
             this.Accion2.UseVisualStyleBackColor = false;
+            this.Accion2.Click += new System.EventHandler(this.Accion2_Click);
             // 
             // Accion1
             // 
@@ -150,6 +151,7 @@
             this.Accion1.TabIndex = 0;
             this.Accion1.Text = "ABM Usuarios";
             this.Accion1.UseVisualStyleBackColor = false;
+            this.Accion1.Click += new System.EventHandler(this.Accion1_Click);
             // 
             // gbxMDIPreventista
             // 
@@ -180,6 +182,7 @@
             this.btnPreventista.TabIndex = 1;
             this.btnPreventista.Text = "Acceder";
             this.btnPreventista.UseVisualStyleBackColor = false;
+            this.btnPreventista.Click += new System.EventHandler(this.btnPreventista_Click);
             // 
             // gbxMDIProductos
             // 
@@ -210,6 +213,7 @@
             this.btnProductos.TabIndex = 1;
             this.btnProductos.Text = "Acceder";
             this.btnProductos.UseVisualStyleBackColor = false;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // gbxMDIiClientes
             // 

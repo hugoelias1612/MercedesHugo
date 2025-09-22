@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace ArimaERP.Administrador
 {
-    public partial class FormAgregarRol : BaseForm
+    public partial class FormAgregarRol : Form
     {
         public FormAgregarRol()
         {
             InitializeComponent();
+            this.Font = new Font("Segoe UI", 9F);
             ConfigurarDataGridView();
         }
 

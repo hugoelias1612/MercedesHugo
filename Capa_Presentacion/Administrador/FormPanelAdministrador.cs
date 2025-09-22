@@ -45,9 +45,62 @@ namespace ArimaERP.Administrador
         {
             //abrir formulario clientes
             MDIClientes mDIClientes = new MDIClientes();
-            mDIClientes.StartPosition = FormStartPosition.CenterScreen; 
+            mDIClientes.StartPosition = FormStartPosition.CenterScreen;
+            FormClosedEventHandler value1 = (s, args) => this.Show();
+            FormClosedEventHandler value = value1;
+            mDIClientes.FormClosed += value;
             mDIClientes.Show();
             this.Hide();
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            //abrir formulario productos
+            EmpleadoProducto.MDIProductos mDIProductos = new EmpleadoProducto.MDIProductos();
+            mDIProductos.StartPosition = FormStartPosition.CenterScreen;
+            FormClosedEventHandler value1 = (s, args) => this.Show();
+            FormClosedEventHandler value = value1;
+            mDIProductos.FormClosed += value;
+            mDIProductos.Show();
+            this.Hide();
+        }
+
+        private void btnPreventista_Click(object sender, EventArgs e)
+        {
+            //abrir formulario preventista
+            Preventista.MDIPreventista mDIPreventista = new Preventista.MDIPreventista();
+            mDIPreventista.StartPosition = FormStartPosition.CenterScreen;
+            FormClosedEventHandler value1 = (s, args) => this.Show();
+            FormClosedEventHandler value = value1;
+            mDIPreventista.FormClosed += value;
+            mDIPreventista.Show();
+            this.Hide();
+
+        }
+
+        private void Accion2_Click(object sender, EventArgs e)
+        {
+            //abrir formulario agregar rol
+            FormAgregarRol formAgregarRol = new FormAgregarRol();
+            formAgregarRol.StartPosition = FormStartPosition.CenterScreen;
+            FormClosedEventHandler value1 = (s, args) => this.Show();
+            FormClosedEventHandler value = value1;
+            formAgregarRol.FormClosed += value;
+            formAgregarRol.Show();
+            this.Hide();
+        }
+
+        private void Accion1_Click(object sender, EventArgs e)
+        {
+            //abrir formulario registrar usuario
+            FormRegistrarUsuario formRegistrarUsuario = new FormRegistrarUsuario();
+            formRegistrarUsuario.StartPosition = FormStartPosition.CenterScreen;
+            FormClosedEventHandler value1 = (s, args) => this.Show();
+            FormClosedEventHandler value = value1;
+            formRegistrarUsuario.FormClosed += value;
+            formRegistrarUsuario.Show();
+            this.Hide();
+
         }
     }
 }

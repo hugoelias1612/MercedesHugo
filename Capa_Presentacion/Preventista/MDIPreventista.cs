@@ -23,7 +23,7 @@ namespace ArimaERP.Preventista
         {
             //cargar fecha en lblFecha
             lblFecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            lblRol.Text = "ROL:Preventista";
+            lblRol.Text = "ROL: Preventista";
         }
 
         private void AbrirFormEnPanel(Form formHijo)
