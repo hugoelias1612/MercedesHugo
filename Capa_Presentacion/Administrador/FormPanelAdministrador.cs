@@ -20,7 +20,8 @@ namespace ArimaERP.Administrador
 
         private void FormPanelAdministrador_Load(object sender, EventArgs e)
         {
-
+            string fecha = DateTime.Now.ToString("dddd, dd 'de' MMMM 'de' yyyy - hh:mm tt", new System.Globalization.CultureInfo("es-ES"));
+            lblFECHA.Text = fecha;
         }
 
         private void label1_Click(object sender, EventArgs e)

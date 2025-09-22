@@ -13,6 +13,7 @@ namespace ArimaERP.EmpleadoClientes
 {
     public partial class FormAltaPreventista : Form
     {
+        private bool limpiarPresionado = false;
         public FormAltaPreventista()
         {
             InitializeComponent();
@@ -55,6 +56,7 @@ namespace ArimaERP.EmpleadoClientes
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            limpiarPresionado = true;
             //Limpiar todos los campos
             txtBoxUsuario.Text = "";
             textBoxContrasena.Text = "";

@@ -79,14 +79,14 @@
             this.pnlUSUARIO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlUSUARIO.Name = "pnlUSUARIO";
             this.pnlUSUARIO.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlUSUARIO.Size = new System.Drawing.Size(1685, 48);
+            this.pnlUSUARIO.Size = new System.Drawing.Size(1264, 48);
             this.pnlUSUARIO.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = global::ArimaERP.Properties.Resources.perfil;
-            this.pictureBox1.Location = new System.Drawing.Point(1350, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(929, 2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 5, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(55, 42);
@@ -100,7 +100,7 @@
             this.lblNombreUsuario.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblNombreUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreUsuario.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblNombreUsuario.Location = new System.Drawing.Point(1405, 2);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(984, 2);
             this.lblNombreUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 15, 0);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
             this.lblNombreUsuario.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -144,7 +144,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 48);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1685, 107);
+            this.panel1.Size = new System.Drawing.Size(1264, 107);
             this.panel1.TabIndex = 3;
             // 
             // btnVolverPanel
@@ -153,7 +153,7 @@
             this.btnVolverPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnVolverPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnVolverPanel.Image = ((System.Drawing.Image)(resources.GetObject("btnVolverPanel.Image")));
-            this.btnVolverPanel.Location = new System.Drawing.Point(1474, 0);
+            this.btnVolverPanel.Location = new System.Drawing.Point(1053, 0);
             this.btnVolverPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVolverPanel.Name = "btnVolverPanel";
             this.btnVolverPanel.Size = new System.Drawing.Size(112, 105);
@@ -165,7 +165,7 @@
             // 
             this.btnSalir.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSalir.Image = global::ArimaERP.Properties.Resources.salir_reducido;
-            this.btnSalir.Location = new System.Drawing.Point(1586, 0);
+            this.btnSalir.Location = new System.Drawing.Point(1165, 0);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(5);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(97, 105);
@@ -236,7 +236,7 @@
             this.pnlVista.Location = new System.Drawing.Point(0, 155);
             this.pnlVista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlVista.Name = "pnlVista";
-            this.pnlVista.Size = new System.Drawing.Size(1685, 683);
+            this.pnlVista.Size = new System.Drawing.Size(1264, 341);
             this.pnlVista.TabIndex = 4;
             // 
             // pnlVistaMenuSecundario
@@ -246,7 +246,7 @@
             this.pnlVistaMenuSecundario.Location = new System.Drawing.Point(695, 0);
             this.pnlVistaMenuSecundario.Margin = new System.Windows.Forms.Padding(5);
             this.pnlVistaMenuSecundario.Name = "pnlVistaMenuSecundario";
-            this.pnlVistaMenuSecundario.Size = new System.Drawing.Size(990, 683);
+            this.pnlVistaMenuSecundario.Size = new System.Drawing.Size(569, 341);
             this.pnlVistaMenuSecundario.TabIndex = 2;
             this.pnlVistaMenuSecundario.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlVistaMenuSecundario_Paint);
             // 
@@ -261,7 +261,7 @@
             this.pnlClientes.Location = new System.Drawing.Point(470, 0);
             this.pnlClientes.Margin = new System.Windows.Forms.Padding(5);
             this.pnlClientes.Name = "pnlClientes";
-            this.pnlClientes.Size = new System.Drawing.Size(225, 683);
+            this.pnlClientes.Size = new System.Drawing.Size(225, 341);
             this.pnlClientes.TabIndex = 0;
             this.pnlClientes.Visible = false;
             // 
@@ -326,7 +326,7 @@
             this.pnlPreventistas.Location = new System.Drawing.Point(224, 0);
             this.pnlPreventistas.Margin = new System.Windows.Forms.Padding(5);
             this.pnlPreventistas.Name = "pnlPreventistas";
-            this.pnlPreventistas.Size = new System.Drawing.Size(246, 683);
+            this.pnlPreventistas.Size = new System.Drawing.Size(246, 341);
             this.pnlPreventistas.TabIndex = 3;
             this.pnlPreventistas.Visible = false;
             // 
@@ -366,7 +366,7 @@
             this.pnlPedidos.Location = new System.Drawing.Point(0, 0);
             this.pnlPedidos.Margin = new System.Windows.Forms.Padding(5);
             this.pnlPedidos.Name = "pnlPedidos";
-            this.pnlPedidos.Size = new System.Drawing.Size(224, 683);
+            this.pnlPedidos.Size = new System.Drawing.Size(224, 341);
             this.pnlPedidos.TabIndex = 2;
             this.pnlPedidos.Visible = false;
             // 
@@ -413,7 +413,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1685, 838);
+            this.ClientSize = new System.Drawing.Size(1264, 496);
             this.Controls.Add(this.pnlVista);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlUSUARIO);
@@ -422,6 +422,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MDIClientes";
+            this.ShowIcon = false;
             this.Text = "Sección Clientes";
             this.Load += new System.EventHandler(this.MDIClientes_Load);
             this.pnlUSUARIO.ResumeLayout(false);

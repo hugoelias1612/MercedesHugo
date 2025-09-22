@@ -62,6 +62,9 @@ namespace ArimaERP
                         FormClosedEventHandler value = value1;
                         mdiAdmin.FormClosed += value;
                         mdiAdmin.Show();
+                        //limpiar login
+                        TCorreo.Clear();
+                        TContrasena.Clear();
                         this.Hide();
                         break;
                     case 2:
