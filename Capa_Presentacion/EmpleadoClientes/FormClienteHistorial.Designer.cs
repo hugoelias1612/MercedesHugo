@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.TLPHeader = new System.Windows.Forms.TableLayoutPanel();
+            this.lblHistorial = new System.Windows.Forms.Label();
             this.tableLayoutPanelCliente = new System.Windows.Forms.TableLayoutPanel();
             this.btnListarPagos = new System.Windows.Forms.Button();
             this.textBoxBUSCARGENERAL = new System.Windows.Forms.TextBox();
@@ -42,7 +43,6 @@
             this.lblLetraApellido = new System.Windows.Forms.Label();
             this.txtNombreApellido = new System.Windows.Forms.TextBox();
             this.btnListarPedidosPendientes = new System.Windows.Forms.Button();
-            this.lblHistorial = new System.Windows.Forms.Label();
             this.tableLayoutPanelClientes = new System.Windows.Forms.TableLayoutPanel();
             this.textBoxPreventistas = new System.Windows.Forms.TextBox();
             this.lblPreventistas = new System.Windows.Forms.Label();
@@ -110,6 +110,18 @@
             this.TLPHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.27586F));
             this.TLPHeader.Size = new System.Drawing.Size(1325, 58);
             this.TLPHeader.TabIndex = 2;
+            // 
+            // lblHistorial
+            // 
+            this.lblHistorial.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblHistorial.AutoSize = true;
+            this.lblHistorial.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHistorial.Location = new System.Drawing.Point(526, 2);
+            this.lblHistorial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHistorial.Name = "lblHistorial";
+            this.lblHistorial.Size = new System.Drawing.Size(273, 54);
+            this.lblHistorial.TabIndex = 7;
+            this.lblHistorial.Text = "Buscar Cliente";
             // 
             // tableLayoutPanelCliente
             // 
@@ -282,18 +294,6 @@
             this.btnListarPedidosPendientes.Text = "Pedidos Pendientes";
             this.btnListarPedidosPendientes.UseVisualStyleBackColor = true;
             this.btnListarPedidosPendientes.Click += new System.EventHandler(this.btnListarPedidosPendientes_Click);
-            // 
-            // lblHistorial
-            // 
-            this.lblHistorial.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblHistorial.AutoSize = true;
-            this.lblHistorial.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHistorial.Location = new System.Drawing.Point(526, 2);
-            this.lblHistorial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblHistorial.Name = "lblHistorial";
-            this.lblHistorial.Size = new System.Drawing.Size(273, 54);
-            this.lblHistorial.TabIndex = 7;
-            this.lblHistorial.Text = "Buscar Cliente";
             // 
             // tableLayoutPanelClientes
             // 
@@ -621,7 +621,7 @@
             this.Column8,
             this.Column9,
             this.dataGridViewTextBoxColumn10});
-            this.dgvClientes.Location = new System.Drawing.Point(12, 330);
+            this.dgvClientes.Location = new System.Drawing.Point(12, 407);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
             this.dgvClientes.RowHeadersWidth = 51;
@@ -729,7 +729,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(1024, 501);
+            this.btnSalir.Location = new System.Drawing.Point(1053, 672);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(164, 55);
             this.btnSalir.TabIndex = 43;
@@ -741,7 +741,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1325, 585);
+            this.ClientSize = new System.Drawing.Size(1325, 739);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.dataGridViewDetallePagos);
