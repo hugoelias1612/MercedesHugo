@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace ArimaERP
 {
@@ -36,6 +37,7 @@ namespace ArimaERP
 
         private void BIngresar_Click(object sender, EventArgs e)
         {
+            
             //convertir TCorreo a int
             int rol = int.Parse(TCorreo.Text);
             //validar campo vacios
@@ -51,10 +53,14 @@ namespace ArimaERP
                 switch (rol)
                 {
                     case 1:
+                        
                         //abrir formulario administrador
                         Administrador.FormPanelAdministrador mdiAdmin = new Administrador.FormPanelAdministrador();
                         //Centrar formulario
                         mdiAdmin.StartPosition = FormStartPosition.CenterScreen;
+                        FormClosedEventHandler value1 = (s, args) => this.Show();
+                        FormClosedEventHandler value = value1;
+                        mdiAdmin.FormClosed += value;
                         mdiAdmin.Show();
                         this.Hide();
                         break;
@@ -62,6 +68,9 @@ namespace ArimaERP
                         //abrir formulario preventista
                         Preventista.MDIPreventista mdiPreventista = new Preventista.MDIPreventista();
                         mdiPreventista.StartPosition = FormStartPosition.CenterScreen;
+                        FormClosedEventHandler val1 = (s, args) => this.Show();
+                        FormClosedEventHandler valu = val1;
+                        mdiPreventista.FormClosed += valu;
                         mdiPreventista.Show();
                         this.Hide();
                         break;
@@ -69,12 +78,18 @@ namespace ArimaERP
                         //abrir formulario empleado de productos
                         EmpleadoProducto.MDIProductos mdiProductos = new EmpleadoProducto.MDIProductos();
                         mdiProductos.StartPosition = FormStartPosition.CenterScreen;
+                        FormClosedEventHandler value2 = (s, args) => this.Show();
+                        FormClosedEventHandler val = value2;
+                        mdiProductos.FormClosed += val;
                         mdiProductos.Show();
                         this.Hide();
                         break;
                     case 4:
                         //abrir formulario empleado de clientes
                         EmpleadoClientes.MDIClientes mdiClientes = new EmpleadoClientes.MDIClientes();
+                        FormClosedEventHandler value3 = (s, args) => this.Show();
+                        FormClosedEventHandler va = value3;
+                        mdiClientes.FormClosed += va;
                         mdiClientes.Show();
                         this.Hide();
                         break;
@@ -84,5 +99,6 @@ namespace ArimaERP
                 }
             }
         }
+                
     }
 }

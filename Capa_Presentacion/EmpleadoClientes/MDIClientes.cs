@@ -15,8 +15,7 @@ namespace ArimaERP.EmpleadoClientes
     {
         public MDIClientes()
         {
-            InitializeComponent();
-            this.FormClosing += FormEditarCliente_FormClosing;
+            InitializeComponent();            
 
         }
 
@@ -161,8 +160,7 @@ namespace ArimaERP.EmpleadoClientes
         {
             //volver al login
             this.Close();
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
+         
         }
 
         private void pnlVistaMenuSecundario_Paint(object sender, PaintEventArgs e)
@@ -245,20 +243,7 @@ namespace ArimaERP.EmpleadoClientes
             pnlVistaMenuSecundario.Controls.Add(formHistorialClientes);
             formHistorialClientes.Show();
         }
-        //Volver al login al cerrar el MDI  
-        private void MDIClientes_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-
-        }
-        private void FormEditarCliente_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            // Mostrar el formulario de login al cerrar
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-        }
-
+        
 
     }
 }

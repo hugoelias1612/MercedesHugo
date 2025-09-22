@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ArimaERP.EmpleadoClientes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,28 @@ namespace ArimaERP.Administrador
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //volver al login
+            this.Close();
+          
+
+        }
+
+        private void gbxAdmin_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            //abrir formulario clientes
+            MDIClientes mDIClientes = new MDIClientes();
+            mDIClientes.StartPosition = FormStartPosition.CenterScreen; 
+            mDIClientes.Show();
+            this.Hide();
         }
     }
 }
