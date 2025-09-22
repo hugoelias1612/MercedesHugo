@@ -42,5 +42,43 @@ namespace ArimaERP.EmpleadoClientes
 
             }
         }
+
+        private void textBoxNumeroPedido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo números y teclas de control (como retroceso)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Ignorar el carácter si no es válido
+                errorProvider1.SetError(textBoxNumeroPedido, "Solo se permiten números.");
+            }
+            else
+            {
+                errorProvider1.SetError(textBoxNumeroPedido, ""); // Limpiar el error si la entrada es válida
+
+            }
+        }
+
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // permitir numeros decimales
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true; // Ignorar el carácter si no es válido
+                errorProvider1.SetError(textBox6, "Solo se permiten números y un punto decimal.");
+            }
+            else
+            {
+                // Verificar que solo haya un punto decimal
+                if (e.KeyChar == '.' && textBox6.Text.Contains('.'))
+                {
+                    e.Handled = true; // Ignorar el carácter si ya hay un punto decimal
+                    errorProvider1.SetError(textBox6, "Solo se permite un punto decimal.");
+                }
+                else
+                {
+                    errorProvider1.SetError(textBox6, ""); // Limpiar el error si la entrada es válida
+                }
+            }
+        }
     }
 }

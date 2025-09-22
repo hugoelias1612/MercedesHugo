@@ -26,7 +26,7 @@ namespace Capa_Datos
             {
                 ErroresValidacion.Clear();
                 foreach (var validationErrors in ex.EntityValidationErrors)
-                {                    
+                {
                     foreach (var error in validationErrors.ValidationErrors)
                     {
                         string mensaje = $"Entidad: {validationErrors.Entry.Entity.GetType().Name}, Campo: {error.PropertyName}, Error: {error.ErrorMessage}";
@@ -105,6 +105,58 @@ namespace Capa_Datos
                 return context.CLIENTE.Any(c => c.id_cliente == id);
             }
         }
+        //Buscar cliente por dni, previa conversion a int
+        public static CLIENTE BuscarClientePorDNI(string dni)
+        {
+            using (var context = new ArimaERPEntities1())
+            {
+                if (int.TryParse(dni, out int dniInt))
+                {
+                    return context.CLIENTE.FirstOrDefault(c => c.dni == dniInt);
+                }
+                return null; // Retorna null si la conversión falla
+            }
 
+        }
+        //existe cliente por dni, previa conversion a int
+        public static bool ExisteClientePorDNI(string dni)
+        {
+            using (var context = new ArimaERPEntities1())
+            {
+                if (int.TryParse(dni, out int dniInt))
+                {
+                    return context.CLIENTE.Any(c => c.dni == dniInt);
+                }
+                return false; // Retorna false si la conversión falla
+            }
+        }
+        //Existe cliente por cuit/cuil, previa conversion a long
+        public static bool ExisteClientePorCUIT_CUIL(string cuit_cuil)
+        {
+            using (var context = new ArimaERPEntities1())
+            {
+                if (long.TryParse(cuit_cuil, out long cuitCuilLong))
+                {
+                    return context.CLIENTE.Any(c => c.cuil_cuit == cuitCuilLong);
+                }
+                return false; // Retorna false si la conversión falla
+            }
+        }
+        //Existe cliente por email
+        public static bool ExisteClientePorEmail(string email)
+        {
+            using (var context = new ArimaERPEntities1())
+            {
+                return context.CLIENTE.Any(c => c.email == email);
+            }
+        }
+        //clientes por zona
+        public static List<CLIENTE> ClientesPorZona(int id_zona)
+        {
+            using (var context = new ArimaERPEntities1())
+            {
+                return context.CLIENTE.Where(c => c.id_zona == id_zona).ToList();
+            }
+        }
     }
 }

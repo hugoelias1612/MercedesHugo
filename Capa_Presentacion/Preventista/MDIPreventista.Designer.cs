@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MDIPreventista));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnVolverPanel = new System.Windows.Forms.Button();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.pnlVista = new System.Windows.Forms.Panel();
+            this.pnlContent = new System.Windows.Forms.Panel();
+            this.btnVolverPanel = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnFMP = new System.Windows.Forms.Button();
             this.btnABM = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
             this.btnAlerta = new System.Windows.Forms.Button();
-            this.pnlVista = new System.Windows.Forms.Panel();
-            this.pnlContent = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.pnlVista.SuspendLayout();
             this.SuspendLayout();
@@ -60,31 +60,19 @@
             this.panel1.Controls.Add(this.btnAlerta);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1264, 112);
+            this.panel1.Size = new System.Drawing.Size(1685, 137);
             this.panel1.TabIndex = 3;
-            // 
-            // btnVolverPanel
-            // 
-            this.btnVolverPanel.BackColor = System.Drawing.SystemColors.Window;
-            this.btnVolverPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnVolverPanel.Image = ((System.Drawing.Image)(resources.GetObject("btnVolverPanel.Image")));
-            this.btnVolverPanel.Location = new System.Drawing.Point(1038, 0);
-            this.btnVolverPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.btnVolverPanel.Name = "btnVolverPanel";
-            this.btnVolverPanel.Size = new System.Drawing.Size(112, 110);
-            this.btnVolverPanel.TabIndex = 10;
-            this.btnVolverPanel.UseVisualStyleBackColor = false;
-            this.btnVolverPanel.Visible = false;
             // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(706, 65);
+            this.lblFecha.Location = new System.Drawing.Point(941, 80);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(65, 25);
+            this.lblFecha.Size = new System.Drawing.Size(81, 32);
             this.lblFecha.TabIndex = 8;
             this.lblFecha.Text = "Fecha:";
             // 
@@ -92,9 +80,10 @@
             // 
             this.lblRol.AutoSize = true;
             this.lblRol.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRol.Location = new System.Drawing.Point(706, 40);
+            this.lblRol.Location = new System.Drawing.Point(941, 49);
+            this.lblRol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(42, 25);
+            this.lblRol.Size = new System.Drawing.Size(52, 32);
             this.lblRol.TabIndex = 7;
             this.lblRol.Text = "Rol:";
             this.lblRol.Click += new System.EventHandler(this.lblRol_Click);
@@ -103,33 +92,69 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(706, 15);
+            this.lblNombre.Location = new System.Drawing.Point(941, 18);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(85, 25);
+            this.lblNombre.Size = new System.Drawing.Size(107, 32);
             this.lblNombre.TabIndex = 6;
             this.lblNombre.Text = "Nombre:";
+            // 
+            // pnlVista
+            // 
+            this.pnlVista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(180)))));
+            this.pnlVista.Controls.Add(this.pnlContent);
+            this.pnlVista.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlVista.Location = new System.Drawing.Point(0, 137);
+            this.pnlVista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlVista.Name = "pnlVista";
+            this.pnlVista.Size = new System.Drawing.Size(1685, 701);
+            this.pnlVista.TabIndex = 4;
+            // 
+            // pnlContent
+            // 
+            this.pnlContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
+            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContent.Location = new System.Drawing.Point(0, 0);
+            this.pnlContent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlContent.Name = "pnlContent";
+            this.pnlContent.Size = new System.Drawing.Size(1685, 701);
+            this.pnlContent.TabIndex = 2;
+            // 
+            // btnVolverPanel
+            // 
+            this.btnVolverPanel.BackColor = System.Drawing.SystemColors.Window;
+            this.btnVolverPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnVolverPanel.Image = ((System.Drawing.Image)(resources.GetObject("btnVolverPanel.Image")));
+            this.btnVolverPanel.Location = new System.Drawing.Point(1385, 0);
+            this.btnVolverPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.btnVolverPanel.Name = "btnVolverPanel";
+            this.btnVolverPanel.Size = new System.Drawing.Size(149, 135);
+            this.btnVolverPanel.TabIndex = 10;
+            this.btnVolverPanel.UseVisualStyleBackColor = false;
+            this.btnVolverPanel.Visible = false;
             // 
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.SystemColors.Window;
             this.btnSalir.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSalir.Image = global::ArimaERP.Properties.Resources.salir_reducido;
-            this.btnSalir.Location = new System.Drawing.Point(1150, 0);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalir.Location = new System.Drawing.Point(1534, 0);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(112, 110);
+            this.btnSalir.Size = new System.Drawing.Size(149, 135);
             this.btnSalir.TabIndex = 5;
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnFMP
             // 
             this.btnFMP.BackColor = System.Drawing.SystemColors.Window;
             this.btnFMP.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnFMP.Image = ((System.Drawing.Image)(resources.GetObject("btnFMP.Image")));
-            this.btnFMP.Location = new System.Drawing.Point(336, 0);
-            this.btnFMP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnFMP.Image = global::ArimaERP.Properties.Resources.altacliente;
+            this.btnFMP.Location = new System.Drawing.Point(447, 0);
+            this.btnFMP.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnFMP.Name = "btnFMP";
-            this.btnFMP.Size = new System.Drawing.Size(112, 110);
+            this.btnFMP.Size = new System.Drawing.Size(149, 135);
             this.btnFMP.TabIndex = 3;
             this.btnFMP.UseVisualStyleBackColor = false;
             this.btnFMP.Click += new System.EventHandler(this.btnFMP_Click);
@@ -139,10 +164,10 @@
             this.btnABM.BackColor = System.Drawing.SystemColors.Window;
             this.btnABM.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnABM.Image = ((System.Drawing.Image)(resources.GetObject("btnABM.Image")));
-            this.btnABM.Location = new System.Drawing.Point(224, 0);
-            this.btnABM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnABM.Location = new System.Drawing.Point(298, 0);
+            this.btnABM.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnABM.Name = "btnABM";
-            this.btnABM.Size = new System.Drawing.Size(112, 110);
+            this.btnABM.Size = new System.Drawing.Size(149, 135);
             this.btnABM.TabIndex = 2;
             this.btnABM.UseVisualStyleBackColor = false;
             this.btnABM.Click += new System.EventHandler(this.btnABM_Click);
@@ -152,10 +177,10 @@
             this.btnStock.BackColor = System.Drawing.SystemColors.Window;
             this.btnStock.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnStock.Image = ((System.Drawing.Image)(resources.GetObject("btnStock.Image")));
-            this.btnStock.Location = new System.Drawing.Point(112, 0);
-            this.btnStock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnStock.Location = new System.Drawing.Point(149, 0);
+            this.btnStock.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnStock.Name = "btnStock";
-            this.btnStock.Size = new System.Drawing.Size(112, 110);
+            this.btnStock.Size = new System.Drawing.Size(149, 135);
             this.btnStock.TabIndex = 1;
             this.btnStock.UseVisualStyleBackColor = false;
             this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
@@ -168,42 +193,22 @@
             this.btnAlerta.Location = new System.Drawing.Point(0, 0);
             this.btnAlerta.Margin = new System.Windows.Forms.Padding(0);
             this.btnAlerta.Name = "btnAlerta";
-            this.btnAlerta.Size = new System.Drawing.Size(112, 110);
+            this.btnAlerta.Size = new System.Drawing.Size(149, 135);
             this.btnAlerta.TabIndex = 0;
             this.btnAlerta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAlerta.UseVisualStyleBackColor = false;
             this.btnAlerta.Click += new System.EventHandler(this.btnAlerta_Click);
             // 
-            // pnlVista
-            // 
-            this.pnlVista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(180)))));
-            this.pnlVista.Controls.Add(this.pnlContent);
-            this.pnlVista.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlVista.Location = new System.Drawing.Point(0, 112);
-            this.pnlVista.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlVista.Name = "pnlVista";
-            this.pnlVista.Size = new System.Drawing.Size(1264, 569);
-            this.pnlVista.TabIndex = 4;
-            // 
-            // pnlContent
-            // 
-            this.pnlContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
-            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContent.Location = new System.Drawing.Point(0, 0);
-            this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(1264, 569);
-            this.pnlContent.TabIndex = 2;
-            // 
             // MDIPreventista
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1685, 838);
             this.Controls.Add(this.pnlVista);
             this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MDIPreventista";

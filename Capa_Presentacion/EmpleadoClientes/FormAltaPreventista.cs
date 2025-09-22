@@ -181,13 +181,13 @@ namespace ArimaERP.EmpleadoClientes
 
         private void textBoxMail_Validated(object sender, EventArgs e)
         {
-            // Validar formato de correo electrónico
+            // Validar formato de email
             try
             {
                 var addr = new System.Net.Mail.MailAddress(textBoxMail.Text);
                 if (addr.Address != textBoxMail.Text)
                 {
-                    errorProvider1.SetError(textBoxMail, "Formato de correo electrónico inválido.");
+                    errorProvider1.SetError(textBoxMail, "Formato de email inválido.");
                 }
                 else
                 {
@@ -196,7 +196,14 @@ namespace ArimaERP.EmpleadoClientes
             }
             catch
             {
-                errorProvider1.SetError(textBoxMail, "Formato de correo electrónico inválido.");
+                if (!string.IsNullOrWhiteSpace(textBoxMail.Text))
+                {
+                    errorProvider1.SetError(textBoxMail, "Formato de email inválido.");
+                }
+                else
+                {
+                    errorProvider1.SetError(textBoxMail, "");
+                }
             }
         }
 
@@ -372,6 +379,19 @@ namespace ArimaERP.EmpleadoClientes
                 btnModificar.Enabled = false;
                 btnBaja.Enabled = false;
                 btnCancelar.Enabled = false;
+            }
+        }
+
+        private void textBoxDNI_Validated(object sender, EventArgs e)
+        {
+            // No permitir menos de 7 caracteres
+            if (textBoxDNI.Text.Length < 7)
+            {
+                errorProvider1.SetError(textBoxDNI, "El DNI debe tener entre 7 y 8 caracteres.");
+            }
+            else
+            {
+                errorProvider1.SetError(textBoxDNI, "");
             }
         }
     }

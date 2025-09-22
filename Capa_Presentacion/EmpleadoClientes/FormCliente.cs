@@ -1,4 +1,5 @@
-﻿using Capa_Logica;
+﻿using Capa_Entidades;
+using Capa_Logica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,10 +8,10 @@ using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Net;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Capa_Entidades;
 
 
 namespace ArimaERP.EmpleadoClientes
@@ -18,6 +19,8 @@ namespace ArimaERP.EmpleadoClientes
     public partial class FormCliente : Form
     {
         private ClassClienteLogica clienteLogica = new ClassClienteLogica();
+        private bool limpiarPresionado = false;
+
         public FormCliente()
         {
             InitializeComponent();
@@ -95,8 +98,9 @@ namespace ArimaERP.EmpleadoClientes
         // Validar longitud al perder el foco
         private void txtBoxDni_Validating(object sender, CancelEventArgs e)
         {
+
             // Permitir salir si el campo está vacío
-            if (string.IsNullOrWhiteSpace(txtBoxDni.Text))
+            if (string.IsNullOrWhiteSpace(txtBoxDni.Text)|| this.IsDisposed || limpiarPresionado)
             {
                 errorProvider1.SetError(txtBoxDni, "");
                 return;
@@ -139,7 +143,7 @@ namespace ArimaERP.EmpleadoClientes
         private void txtBoxCuil_Validating(object sender, CancelEventArgs e)
         {
             // Permitir salir si el campo está vacío
-            if (string.IsNullOrWhiteSpace(txtBoxCuil.Text))
+            if (string.IsNullOrWhiteSpace(txtBoxCuil.Text)|| this.IsDisposed || limpiarPresionado)
             {
                 errorProvider1.SetError(txtBoxCuil, "");
                 return;
@@ -179,10 +183,12 @@ namespace ArimaERP.EmpleadoClientes
 
         private void txtMail_Validating(object sender, CancelEventArgs e)
         {
-            //Permitir salir si el campo está vacío
-            if (string.IsNullOrWhiteSpace(txtMail.Text))
+            // Permitir salir si el campo está vacío o se presiono btnLimpiar o cerrar el formulario
+            // 
+            if (string.IsNullOrWhiteSpace(txtMail.Text)|| this.IsDisposed || limpiarPresionado)
             {
                 errorProvider1.SetError(txtMail, "");
+                limpiarPresionado = false;
                 return;
             }
             // Validar formato de email básico
@@ -268,7 +274,7 @@ namespace ArimaERP.EmpleadoClientes
         private void txtBoxNombre_Validating(object sender, CancelEventArgs e)
         {
             // Permitir salir si el campo está vacío
-            if (string.IsNullOrWhiteSpace(txtBoxNombre.Text))
+            if (string.IsNullOrWhiteSpace(txtBoxNombre.Text)|| this.IsDisposed || limpiarPresionado)
             {
                 errorProvider1.SetError(txtBoxNombre, "");
                 return;
@@ -287,8 +293,8 @@ namespace ArimaERP.EmpleadoClientes
 
         private void txtBoxApellido_Validating(object sender, CancelEventArgs e)
         {
-            // Permitir salir si el campo está vacío
-            if (string.IsNullOrWhiteSpace(txtBoxApellido.Text))
+                        // Permitir salir si el campo está vacío
+            if (string.IsNullOrWhiteSpace(txtBoxApellido.Text)|| this.IsDisposed || limpiarPresionado)
             {
                 errorProvider1.SetError(txtBoxApellido, "");
                 return;
@@ -308,7 +314,7 @@ namespace ArimaERP.EmpleadoClientes
         private void txtBoxCalle_Validating(object sender, CancelEventArgs e)
         {
             // Permitir salir si el campo está vacío
-            if (string.IsNullOrWhiteSpace(txtBoxCalle.Text))
+            if (string.IsNullOrWhiteSpace(txtBoxCalle.Text) || this.IsDisposed || limpiarPresionado)
             {
                 errorProvider1.SetError(txtBoxCalle, "");
                 return;
@@ -328,7 +334,7 @@ namespace ArimaERP.EmpleadoClientes
         private void txtBoxLocalidad_Validating(object sender, CancelEventArgs e)
         {
             // Permitir salir si el campo está vacío
-            if (string.IsNullOrWhiteSpace(txtBoxLocalidad.Text))
+            if (string.IsNullOrWhiteSpace(txtBoxLocalidad.Text) || this.IsDisposed || limpiarPresionado)
             {
                 errorProvider1.SetError(txtBoxLocalidad, "");
                 return;
@@ -372,7 +378,7 @@ namespace ArimaERP.EmpleadoClientes
         private void txtBoxProvincia_Validating(object sender, CancelEventArgs e)
         {
             // Permitir salir si el campo está vacío
-            if (string.IsNullOrWhiteSpace(txtBoxProvincia.Text))
+            if (string.IsNullOrWhiteSpace(txtBoxProvincia.Text) || this.IsDisposed || limpiarPresionado)
             {
                 errorProvider1.SetError(txtBoxProvincia, "");
                 return;
@@ -402,19 +408,46 @@ namespace ArimaERP.EmpleadoClientes
                 string.IsNullOrWhiteSpace(txtNumero.Text) ||
                 string.IsNullOrWhiteSpace(txtBoxLocalidad.Text) ||
                 string.IsNullOrWhiteSpace(txtBoxProvincia.Text) ||
-                string.IsNullOrWhiteSpace(comboBoxCondicionFrenteIVA.Text) ||
-                string.IsNullOrWhiteSpace(txtCodigoPostal.Text) ||
-                comboBoxSeleccionarTamano.SelectedIndex == 0 ||
-                comboBoxSeleccionarZona.SelectedIndex == 0 ||
+                string.IsNullOrWhiteSpace(txtCodigoPostal.Text)
+                )
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if((int)comboBoxSeleccionarTamano.SelectedValue == 0 ||
+                (int)comboBoxSeleccionarZona.SelectedValue == 0 ||
                 comboBoxCondicionFrenteIVA.SelectedIndex == 0 ||
                 dateTimePickerFechaAlta.Value.Date > DateTime.Now.Date)
             {
-                MessageBox.Show("Por favor, complete todos los campos obligatorios correctamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor seleccione una opción válida en los combobox y asegúrese que la fecha de alta no sea futura.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (clienteLogica.ExisteClientePorDni(txtBoxDni.Text))
+            {
+                MessageBox.Show("Ya existe un cliente con el DNI ingresado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (clienteLogica.ExisteClientePorCuitCuil(txtBoxCuil.Text))
+            {
+                MessageBox.Show("Ya existe un cliente con el CUIT/CUIL ingresado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (clienteLogica.ExisteClientePorEmail(txtMail.Text))
+            {
+                MessageBox.Show("Ya existe un cliente con el email ingresado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            string id_tamano = comboBoxSeleccionarTamano.SelectedValue.ToString();
+            string id_zona = comboBoxSeleccionarZona.SelectedValue.ToString();
+
+            if (id_tamano == null || id_zona == null)
+            {
+                MessageBox.Show("Por favor seleccione una opción válida en los combobox.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            
-             if(clienteLogica.AgregarCliente(txtBoxNombre.Text, txtBoxApellido.Text, "1", "1", dateTimePickerFechaAlta.Value, txtMail.Text, txtBoxMovil.Text, txtBoxDni.Text, txtBoxCuil.Text, txtBoxCalle.Text, txtNumero.Text, txtBoxLocalidad.Text, txtBoxProvincia.Text, txtRazonSocial.Text, checkBoxActivo.Checked, checkBoxConfiable.Checked, comboBoxCondicionFrenteIVA.Text, txtCodigoPostal.Text))
+
+            if (clienteLogica.AgregarCliente(txtBoxNombre.Text, txtBoxApellido.Text, id_tamano, id_zona, dateTimePickerFechaAlta.Value, txtMail.Text, txtBoxMovil.Text, txtBoxDni.Text, txtBoxCuil.Text, txtBoxCalle.Text, txtNumero.Text, txtBoxLocalidad.Text, txtBoxProvincia.Text, txtRazonSocial.Text, checkBoxActivo.Checked, checkBoxConfiable.Checked, comboBoxCondicionFrenteIVA.Text, txtCodigoPostal.Text))
              {
                 // Si todos los campos son válidos mostrar mensaje de éxito
                 MessageBox.Show("Cliente guardado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -467,7 +500,7 @@ namespace ArimaERP.EmpleadoClientes
         private void txtRazonSocial_Validating(object sender, CancelEventArgs e)
         {
             // Permitir salir si el campo está vacío
-            if (string.IsNullOrWhiteSpace(txtRazonSocial.Text))
+            if (string.IsNullOrWhiteSpace(txtRazonSocial.Text) || this.IsDisposed || limpiarPresionado)
             {
                 errorProvider1.SetError(txtRazonSocial, "");
                 return;
@@ -486,6 +519,7 @@ namespace ArimaERP.EmpleadoClientes
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            limpiarPresionado = true;
             // Limpiar todos los campos del formulario DEJANDO LOS COMBOBOX EN SU ESTADO INICIAL Y DATEPICKER EN LA FECHA ACTUAL
             txtBoxNombre.Clear();
             txtBoxApellido.Clear();
@@ -529,29 +563,43 @@ namespace ArimaERP.EmpleadoClientes
 
         private void FormCliente_Load(object sender, EventArgs e)
         {
-            //Cargar combobox desde base de datos
+            // Cargar tamaños
             var tamanos = clienteLogica.ObtenerTamanos();
-            comboBoxSeleccionarTamano.Items.Clear();
-            comboBoxSeleccionarTamano.Items.Add("Seleccione tamaño");
-            foreach (var tamano in tamanos)
-            {
-                string descripcion = $"{tamano.id_tamano} - {tamano.descripcion}";
-                comboBoxSeleccionarTamano.Items.Add(descripcion);
-            }
+            tamanos.Insert(0, new TAMAÑO_NEGOCIO { id_tamano = 0, descripcion = "Seleccione tamaño" });
+
+            comboBoxSeleccionarTamano.DataSource = tamanos;
+            comboBoxSeleccionarTamano.DisplayMember = "descripcion";
+            comboBoxSeleccionarTamano.ValueMember = "id_tamano";
             comboBoxSeleccionarTamano.SelectedIndex = 0;
 
+            // Cargar zonas
             var zonas = clienteLogica.ObtenerZonas();
-            comboBoxSeleccionarZona.Items.Clear();
-            comboBoxSeleccionarZona.Items.Add("Seleccione zona");
-            foreach (var zona in zonas)
-            {
-                string nombre = $"{zona.id_zona} - {zona.nombre}";
-                comboBoxSeleccionarZona.Items.Add(nombre);
-            }
-            comboBoxSeleccionarZona.SelectedIndex = 0;
+            zonas.Insert(0, new ZONA { id_zona = 0, nombre = "Seleccione zona" });
 
+            comboBoxSeleccionarZona.DataSource = zonas;
+            comboBoxSeleccionarZona.DisplayMember = "nombre";
+            comboBoxSeleccionarZona.ValueMember = "id_zona";
+            comboBoxSeleccionarZona.SelectedIndex = 0;
         }
 
-     }
+        private void txtCodigoPostal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo números y teclas de control (como borrar) y no mas de 8 caracteres
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                errorProvider1.SetError(txtCodigoPostal, "Solo se permiten números.");
+            }
+            else if (!char.IsControl(e.KeyChar) && txtCodigoPostal.Text.Length >= 8)
+            {
+                e.Handled = true;
+                errorProvider1.SetError(txtCodigoPostal, "El código postal no debe exceder los 8 dígitos.");
+            }
+            else
+            {
+                errorProvider1.SetError(txtCodigoPostal, "");
+            }
+        }
+    }
 }
 

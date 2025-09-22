@@ -54,13 +54,27 @@ namespace ArimaERP.EmpleadoClientes
                 comboBoxSeleccionarZona.DataSource = zonas;
                 comboBoxSeleccionarZona.DisplayMember = "nombre";
                 comboBoxSeleccionarZona.ValueMember = "id_zona";
-                comboBoxSeleccionarZona.SelectedValue = clienteActual.nombre;
-                comboBoxCondicionFrenteIVA.SelectedValue = clienteActual.condicion_frenteIVA;
+                comboBoxSeleccionarZona.SelectedValue = clienteActual.id_zona;
+                comboBoxCondicionFrenteIVA.SelectedItem = clienteActual.condicion_frenteIVA;
 
+                txtBoxNombre.ReadOnly = true;
+                txtBoxApellido.ReadOnly = true;
+                txtBoxDni.ReadOnly = true;
+                txtBoxCuil.ReadOnly = true;
 
             }
         }
 
+        private void btnGuardarCambios_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            // Cierra el formulario sin guardar cambios
+            this.Close();
+        }
     }
     }
 

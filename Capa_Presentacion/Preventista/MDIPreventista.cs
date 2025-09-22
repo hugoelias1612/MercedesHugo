@@ -16,11 +16,14 @@ namespace ArimaERP.Preventista
         public MDIPreventista()
         {
             InitializeComponent();
+            this.FormClosing += FormEditarCliente_FormClosing;
         }
 
         private void MDIProductos_Load(object sender, EventArgs e)
         {
- 
+            //cargar fecha en lblFecha
+            lblFecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            lblRol.Text = "ROL:Preventista";
         }
 
         private void AbrirFormEnPanel(Form formHijo)
@@ -54,8 +57,9 @@ namespace ArimaERP.Preventista
 
         private void btnABM_Click(object sender, EventArgs e)
         {
-       
-    }
+            //abrir crear pedido en panel pnlContent
+            AbrirFormEnPanel(new FormCrearPedido());
+        }
 
         private void btnComprar_Click(object sender, EventArgs e)
         {
@@ -68,6 +72,27 @@ namespace ArimaERP.Preventista
 
         private void btnStock_Click(object sender, EventArgs e)
         {
+        }
+        private void MDIClientes_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+
+        }
+        private void FormEditarCliente_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Mostrar el formulario de login al cerrar
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            // Cerrar el formulario actual
+            this.Close();
+            // Mostrar el formulario de login al cerrar
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
         }
     }
 }

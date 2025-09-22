@@ -12,7 +12,7 @@ namespace ArimaERP
 
         private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.ExitThread();
+           
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -53,18 +53,22 @@ namespace ArimaERP
                     case 1:
                         //abrir formulario administrador
                         Administrador.FormPanelAdministrador mdiAdmin = new Administrador.FormPanelAdministrador();
+                        //Centrar formulario
+                        mdiAdmin.StartPosition = FormStartPosition.CenterScreen;
                         mdiAdmin.Show();
                         this.Hide();
                         break;
                     case 2:
                         //abrir formulario preventista
                         Preventista.MDIPreventista mdiPreventista = new Preventista.MDIPreventista();
+                        mdiPreventista.StartPosition = FormStartPosition.CenterScreen;
                         mdiPreventista.Show();
                         this.Hide();
                         break;
                     case 3:
                         //abrir formulario empleado de productos
                         EmpleadoProducto.MDIProductos mdiProductos = new EmpleadoProducto.MDIProductos();
+                        mdiProductos.StartPosition = FormStartPosition.CenterScreen;
                         mdiProductos.Show();
                         this.Hide();
                         break;

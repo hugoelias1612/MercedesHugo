@@ -45,7 +45,6 @@
             this.pnlVista = new System.Windows.Forms.Panel();
             this.pnlVistaMenuSecundario = new System.Windows.Forms.Panel();
             this.pnlClientes = new System.Windows.Forms.Panel();
-            this.btnCuentaCorriente = new System.Windows.Forms.Button();
             this.btnHistorial = new System.Windows.Forms.Button();
             this.btnBaja = new System.Windows.Forms.Button();
             this.btnModificacion = new System.Windows.Forms.Button();
@@ -254,7 +253,6 @@
             // pnlClientes
             // 
             this.pnlClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
-            this.pnlClientes.Controls.Add(this.btnCuentaCorriente);
             this.pnlClientes.Controls.Add(this.btnHistorial);
             this.pnlClientes.Controls.Add(this.btnBaja);
             this.pnlClientes.Controls.Add(this.btnModificacion);
@@ -267,18 +265,6 @@
             this.pnlClientes.TabIndex = 0;
             this.pnlClientes.Visible = false;
             // 
-            // btnCuentaCorriente
-            // 
-            this.btnCuentaCorriente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCuentaCorriente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCuentaCorriente.Location = new System.Drawing.Point(0, 292);
-            this.btnCuentaCorriente.Margin = new System.Windows.Forms.Padding(4, 4, 40, 37);
-            this.btnCuentaCorriente.Name = "btnCuentaCorriente";
-            this.btnCuentaCorriente.Size = new System.Drawing.Size(225, 73);
-            this.btnCuentaCorriente.TabIndex = 1;
-            this.btnCuentaCorriente.Text = "Cuenta Corriente";
-            this.btnCuentaCorriente.UseVisualStyleBackColor = true;
-            // 
             // btnHistorial
             // 
             this.btnHistorial.Dock = System.Windows.Forms.DockStyle.Top;
@@ -290,6 +276,7 @@
             this.btnHistorial.TabIndex = 1;
             this.btnHistorial.Text = "Historial";
             this.btnHistorial.UseVisualStyleBackColor = true;
+            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
             // 
             // btnBaja
             // 
@@ -466,7 +453,6 @@
         private System.Windows.Forms.Panel pnlClientes;
         private System.Windows.Forms.Button btnModificacion;
         private System.Windows.Forms.Button btnAlta;
-        private System.Windows.Forms.Button btnCuentaCorriente;
         private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.Button btnBaja;
         private System.Windows.Forms.Panel pnlPedidos;

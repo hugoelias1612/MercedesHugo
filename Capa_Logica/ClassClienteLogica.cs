@@ -31,6 +31,28 @@ namespace Capa_Logica
         {
             return ClassCliente.ListarClientes();
         }
+        //devolver si existe un cliente por su dni
+        public bool ExisteClientePorDni(string dni)
+        {
+           return ClassCliente.ExisteClientePorDNI(dni);
+        }
+        //existe cliente por su cuit_cuil
+        public bool ExisteClientePorCuitCuil(string cuit_cuil)
+        {
+            return ClassCliente.ExisteClientePorCUIT_CUIL(cuit_cuil);
+        }
+        //Existe cliente por su email
+        public bool ExisteClientePorEmail(string email)
+        {
+            return ClassCliente.ExisteClientePorEmail(email);
+        }
+        //clientes por zona
+        public List<CLIENTE> ClientesPorZona(int id_zona)
+        {
+            return ClassCliente.ClientesPorZona(id_zona);
+        }
+
+
         public Boolean AgregarCliente(string nombre, string apellido, string id_tamano, string id_zona, DateTime fecha_alta, string email, string telefono, string dni, string cuit_cuil, string calle, string numero, string ciudad, string provincia, string razon_social, bool estado, bool confiable, string condicion_frenteIVA, string cod_postal)
         {
             try

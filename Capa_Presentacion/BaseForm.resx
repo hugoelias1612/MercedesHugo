@@ -117,41 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="preventista-reducido" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\preventista-reducido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BUSCAR_reducido" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BUSCAR_reducido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lupa_reducida" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lupa_reducida.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cobros-reducido" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cobros-reducido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BUSCAR_reducido20x20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BUSCAR_reducido20x20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pedido-reducido" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pedido-reducido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="perfil_reducido" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\perfil_reducido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="clientes-reducido" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\clientes-reducido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="perfil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\perfil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="salir_reducido" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\salir_reducido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="alerta_reducido" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alerta_reducido1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="altacliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\altacliente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

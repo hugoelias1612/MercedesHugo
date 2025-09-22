@@ -74,5 +74,6 @@ namespace ArimaERP.EmpleadoProducto
         {
             AbrirFormEnPanel(new FormStock());
         }
+
     }
 }
