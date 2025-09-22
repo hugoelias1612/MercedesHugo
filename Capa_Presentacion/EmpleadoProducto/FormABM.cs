@@ -95,5 +95,50 @@ namespace ArimaERP.EmpleadoProducto
             }
         }
 
+        private void textBoxCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //permitir solo numeros y teclas de control (como retroceso) y no mas de 10 caracteres
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se permiten números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (textBoxCodigo.Text.Length >= 10 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                errorProvider1.SetError(textBoxCodigo, "Máximo 10 caracteres.");
+            }
+
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // permitir solo letras, espacios y teclas de control (como retroceso) y no mas de 30 caracteres
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se permiten letras y espacios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (txtNombre.Text.Length >= 30 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                errorProvider1.SetError(txtNombre, "Máximo 30 caracteres.");
+            }
+        }
+
+        private void txtPrecioUnit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //permitir solo numeros, un punto y teclas de control (como retroceso) y no mas de 10 caracteres
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se permiten números y un punto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (txtPrecioUnit.Text.Length >= 10 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                errorProvider1.SetError(txtPrecioUnit, "Máximo 10 caracteres.");
+            }
+        }
     }
 }
