@@ -77,7 +77,7 @@ namespace ArimaERP.Preventista
 
         private void btnStock_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new FormRutas());
+            //AbrirFormEnPanel(new FormRutas());
         }
        
 

@@ -7,14 +7,14 @@ namespace ArimaERP.EmpleadoProducto
     public partial class FormABM : Form
     {
 
-        private ErrorProvider errorProvider1; // <-- Agregar esta línea
+        private ErrorProvider errorProvider2; // <-- Agregar esta línea
 
         public FormABM()
         {
             InitializeComponent();
-            errorProvider1 = new ErrorProvider();
-            errorProvider1.ContainerControl = this;
-            errorProvider1.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            errorProvider2 = new ErrorProvider();
+            errorProvider2.ContainerControl = this;
+            errorProvider2.BlinkStyle = ErrorBlinkStyle.NeverBlink;
          
         }
 
