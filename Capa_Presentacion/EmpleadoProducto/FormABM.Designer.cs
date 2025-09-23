@@ -921,13 +921,7 @@
             this.DGResultadosBaja.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DGResultadosBaja.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGResultadosBaja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGResultadosBaja.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Baja,
-            this.Precio,
-            this.Nombre,
-            this.Familia,
-            this.Marca,
-            this.Proveedor});
+          
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;

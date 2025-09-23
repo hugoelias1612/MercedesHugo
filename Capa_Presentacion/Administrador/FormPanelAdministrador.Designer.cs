@@ -44,8 +44,8 @@
             this.TLPHeader = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.lblFECHA = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.TLPFooter = new System.Windows.Forms.TableLayoutPanel();
             this.lblDerechos = new System.Windows.Forms.Label();
             this.lblSoporte = new System.Windows.Forms.Label();
@@ -124,6 +124,7 @@
             this.Accion3.TabIndex = 3;
             this.Accion3.Text = "Reportes";
             this.Accion3.UseVisualStyleBackColor = false;
+            this.Accion3.Click += new System.EventHandler(this.Accion3_Click);
             // 
             // Accion2
             // 
@@ -305,19 +306,6 @@
             this.lblFECHA.TabIndex = 2;
             this.lblFECHA.Text = "Martes, 16 de septiembre de 2025 - 10:34 AM";
             // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(767, 1);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(414, 42);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Optimizando tu gestión cada día";
-            // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -333,6 +321,19 @@
             this.button1.Text = "Volver al Login";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(767, 1);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(414, 42);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Optimizando tu gestión cada día";
             // 
             // TLPFooter
             // 

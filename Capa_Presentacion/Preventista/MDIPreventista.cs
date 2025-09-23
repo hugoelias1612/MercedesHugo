@@ -53,7 +53,7 @@ namespace ArimaERP.Preventista
 
         private void btnAlerta_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new FormCrearPedido());
+            AbrirFormEnPanel(new FormHistorialPedidos());
         }
 
         private void btnABM_Click(object sender, EventArgs e)
@@ -77,7 +77,7 @@ namespace ArimaERP.Preventista
 
         private void btnStock_Click(object sender, EventArgs e)
         {
-            //AbrirFormEnPanel(new FormRutas());
+            AbrirFormEnPanel(new FormRutas());
         }
        
 

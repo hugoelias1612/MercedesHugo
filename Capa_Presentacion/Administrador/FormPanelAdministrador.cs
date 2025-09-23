@@ -103,5 +103,17 @@ namespace ArimaERP.Administrador
             this.Hide();
 
         }
+
+        private void Accion3_Click(object sender, EventArgs e)
+        {
+            //abrir formulario FormReportes
+            FormReportes formReportes = new FormReportes();
+            formReportes.StartPosition = FormStartPosition.CenterScreen;
+            FormClosedEventHandler value1 = (s, args) => this.Show();
+            FormClosedEventHandler value = value1;
+            formReportes.FormClosed += value;
+            formReportes.Show();
+            this.Hide();
+        }
     }
 }

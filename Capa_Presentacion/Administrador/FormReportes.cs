@@ -19,8 +19,6 @@ namespace ArimaERP.Administrador
             InitializeComponent();
             ConfigurarTabs();
             ConfigurarCharts();
-            InitializeComponent();
-            ConfigurarCharts();
             ConfigurarGraficoVentasMes((Chart)tabGraficos.TabPages[0].Controls[0]);
             ConfigurarGraficoTopProductos((Chart)tabGraficos.TabPages[1].Controls[0]);
             ConfigurarGraficoComparativa((Chart)tabGraficos.TabPages[2].Controls[0]);
