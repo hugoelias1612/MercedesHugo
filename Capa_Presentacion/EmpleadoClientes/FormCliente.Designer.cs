@@ -92,11 +92,7 @@
             this.tableLayoutPanelAltaCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.825077F));
             this.tableLayoutPanelAltaCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.64257F));
             this.tableLayoutPanelAltaCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.9963F));
-<<<<<<< HEAD
-            this.tableLayoutPanelAltaCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 278F));
-=======
             this.tableLayoutPanelAltaCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 370F));
->>>>>>> a13b7b55071a60692e615a2e51b4b4ec793cb328
             this.tableLayoutPanelAltaCliente.Controls.Add(this.lblNbre, 1, 2);
             this.tableLayoutPanelAltaCliente.Controls.Add(this.lblApell, 1, 3);
             this.tableLayoutPanelAltaCliente.Controls.Add(this.lblDni, 1, 4);
@@ -200,36 +196,21 @@
             // 
             this.txtBoxNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxNombre.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.txtBoxNombre.Location = new System.Drawing.Point(246, 36);
-            this.txtBoxNombre.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBoxNombre.Name = "txtBoxNombre";
-            this.txtBoxNombre.Size = new System.Drawing.Size(120, 23);
-=======
+
             this.txtBoxNombre.Location = new System.Drawing.Point(328, 46);
             this.txtBoxNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBoxNombre.Name = "txtBoxNombre";
             this.txtBoxNombre.Size = new System.Drawing.Size(159, 27);
->>>>>>> a13b7b55071a60692e615a2e51b4b4ec793cb328
             this.txtBoxNombre.TabIndex = 4;
             this.txtBoxNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxNombre_KeyPress);
             this.txtBoxNombre.Validating += new System.ComponentModel.CancelEventHandler(this.txtBoxNombre_Validating);
             // 
             // txtBoxApellido
             // 
-            this.txtBoxApellido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxApellido.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.txtBoxApellido.Location = new System.Drawing.Point(246, 68);
-            this.txtBoxApellido.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBoxApellido.Name = "txtBoxApellido";
-            this.txtBoxApellido.Size = new System.Drawing.Size(120, 23);
-=======
             this.txtBoxApellido.Location = new System.Drawing.Point(328, 85);
             this.txtBoxApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBoxApellido.Name = "txtBoxApellido";
             this.txtBoxApellido.Size = new System.Drawing.Size(159, 27);
->>>>>>> a13b7b55071a60692e615a2e51b4b4ec793cb328
             this.txtBoxApellido.TabIndex = 5;
             this.txtBoxApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxApellido_KeyPress);
             this.txtBoxApellido.Validating += new System.ComponentModel.CancelEventHandler(this.txtBoxApellido_Validating);
