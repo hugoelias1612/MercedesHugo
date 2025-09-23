@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblPagos = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -56,7 +57,7 @@
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.MontoMaximo = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtBoxMontoMaximo = new System.Windows.Forms.TextBox();
             this.labelPreventista = new System.Windows.Forms.Label();
             this.Creacion = new System.Windows.Forms.Button();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
@@ -87,12 +88,14 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblMonto = new System.Windows.Forms.Label();
             this.lblMetodoPago = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnGenerarRecibo = new System.Windows.Forms.Button();
+            this.btnRegistrarNuevo = new System.Windows.Forms.Button();
+            this.textBoxCliente = new System.Windows.Forms.TextBox();
             this.comboBoxMetodoPago = new System.Windows.Forms.ComboBox();
+            this.lblFechaActual = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnNuevoPago = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -103,6 +106,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDetallePagos)).BeginInit();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanelRegistrarPago.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -111,7 +115,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.82879F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 86.17121F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 302F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 303F));
             this.tableLayoutPanel1.Controls.Add(this.lblPagos, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -144,7 +148,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 203F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 248F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 223F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 17F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
             this.tableLayoutPanel2.Controls.Add(this.comboBox3, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 7, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtBuscarCliente, 1, 0);
@@ -192,13 +196,13 @@
             this.tableLayoutPanel3.Controls.Add(this.button2, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.dateTimePicker2, 3, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(1350, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(1339, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(13, 33);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(24, 33);
             this.tableLayoutPanel3.TabIndex = 44;
             // 
             // label3
@@ -207,7 +211,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(-452, 0);
+            this.label3.Location = new System.Drawing.Point(-442, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(215, 39);
             this.label3.TabIndex = 40;
@@ -218,7 +222,7 @@
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(-231, 4);
+            this.textBox2.Location = new System.Drawing.Point(-221, 4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(185, 30);
             this.textBox2.TabIndex = 3;
@@ -227,7 +231,7 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(-665, 3);
+            this.comboBox1.Location = new System.Drawing.Point(-655, 3);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(164, 31);
             this.comboBox1.TabIndex = 10;
@@ -236,7 +240,7 @@
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(-593, 3);
+            this.button2.Location = new System.Drawing.Point(-586, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(1, 33);
             this.button2.TabIndex = 42;
@@ -248,7 +252,7 @@
             this.dateTimePicker2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(-817, 3);
+            this.dateTimePicker2.Location = new System.Drawing.Point(-807, 3);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(146, 30);
             this.dateTimePicker2.TabIndex = 43;
@@ -256,9 +260,9 @@
             // txtBuscarCliente
             // 
             this.txtBuscarCliente.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarCliente.Location = new System.Drawing.Point(182, 3);
+            this.txtBuscarCliente.Location = new System.Drawing.Point(178, 3);
             this.txtBuscarCliente.Name = "txtBuscarCliente";
-            this.txtBuscarCliente.Size = new System.Drawing.Size(169, 30);
+            this.txtBuscarCliente.Size = new System.Drawing.Size(165, 30);
             this.txtBuscarCliente.TabIndex = 7;
             // 
             // label2
@@ -267,7 +271,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(906, 0);
+            this.label2.Location = new System.Drawing.Point(895, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(215, 39);
             this.label2.TabIndex = 40;
@@ -278,10 +282,11 @@
             // 
             this.textBoxNumeroPedido.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxNumeroPedido.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNumeroPedido.Location = new System.Drawing.Point(1127, 4);
+            this.textBoxNumeroPedido.Location = new System.Drawing.Point(1116, 4);
             this.textBoxNumeroPedido.Name = "textBoxNumeroPedido";
             this.textBoxNumeroPedido.Size = new System.Drawing.Size(185, 30);
             this.textBoxNumeroPedido.TabIndex = 3;
+            this.textBoxNumeroPedido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeroPedido_KeyPress);
             // 
             // labelClientes
             // 
@@ -289,7 +294,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelClientes.AutoSize = true;
             this.labelClientes.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelClientes.Location = new System.Drawing.Point(52, 0);
+            this.labelClientes.Location = new System.Drawing.Point(48, 0);
             this.labelClientes.Name = "labelClientes";
             this.labelClientes.Size = new System.Drawing.Size(124, 39);
             this.labelClientes.TabIndex = 41;
@@ -299,9 +304,9 @@
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(357, 3);
+            this.button1.Location = new System.Drawing.Point(349, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 33);
+            this.button1.Size = new System.Drawing.Size(115, 33);
             this.button1.TabIndex = 42;
             this.button1.Text = "Fecha Entrega";
             this.button1.UseVisualStyleBackColor = true;
@@ -311,7 +316,7 @@
             this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(481, 3);
+            this.dateTimePicker1.Location = new System.Drawing.Point(470, 3);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(189, 30);
             this.dateTimePicker1.TabIndex = 43;
@@ -320,7 +325,7 @@
             // 
             this.comboBoxClienteZona.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxClienteZona.FormattingEnabled = true;
-            this.comboBoxClienteZona.Location = new System.Drawing.Point(676, 3);
+            this.comboBoxClienteZona.Location = new System.Drawing.Point(665, 3);
             this.comboBoxClienteZona.Name = "comboBoxClienteZona";
             this.comboBoxClienteZona.Size = new System.Drawing.Size(197, 31);
             this.comboBoxClienteZona.TabIndex = 10;
@@ -330,18 +335,18 @@
             // 
             this.tableLayoutPanel4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tableLayoutPanel4.ColumnCount = 8;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.73585F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.68763F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.57652F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 195F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 204F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 247F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 222F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.31343F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.46056F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.22601F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 192F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 213F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 240F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 229F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 7, 0);
             this.tableLayoutPanel4.Controls.Add(this.textBox5, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.MontoMaximo, 5, 0);
-            this.tableLayoutPanel4.Controls.Add(this.textBox6, 6, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txtBoxMontoMaximo, 6, 0);
             this.tableLayoutPanel4.Controls.Add(this.labelPreventista, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.Creacion, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.dateTimePicker4, 3, 0);
@@ -375,19 +380,19 @@
             this.tableLayoutPanel5.Controls.Add(this.button3, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.dateTimePicker3, 3, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(1348, 3);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(1346, 3);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(15, 33);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(17, 33);
             this.tableLayoutPanel5.TabIndex = 44;
             // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(-285, 3);
+            this.textBox3.Location = new System.Drawing.Point(-284, 3);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(1, 30);
             this.textBox3.TabIndex = 7;
@@ -398,7 +403,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(-451, 0);
+            this.label5.Location = new System.Drawing.Point(-449, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(215, 39);
             this.label5.TabIndex = 40;
@@ -409,7 +414,7 @@
             // 
             this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBox4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(-230, 4);
+            this.textBox4.Location = new System.Drawing.Point(-228, 4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(185, 30);
             this.textBox4.TabIndex = 3;
@@ -431,7 +436,7 @@
             // 
             this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(-664, 3);
+            this.comboBox2.Location = new System.Drawing.Point(-662, 3);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(164, 31);
             this.comboBox2.TabIndex = 10;
@@ -440,7 +445,7 @@
             // button3
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(-593, 3);
+            this.button3.Location = new System.Drawing.Point(-591, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(1, 33);
             this.button3.TabIndex = 42;
@@ -452,7 +457,7 @@
             this.dateTimePicker3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(-816, 3);
+            this.dateTimePicker3.Location = new System.Drawing.Point(-814, 3);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(146, 30);
             this.dateTimePicker3.TabIndex = 43;
@@ -460,9 +465,9 @@
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(183, 3);
+            this.textBox5.Location = new System.Drawing.Point(178, 3);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(169, 30);
+            this.textBox5.Size = new System.Drawing.Size(165, 30);
             this.textBox5.TabIndex = 7;
             // 
             // MontoMaximo
@@ -471,21 +476,22 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MontoMaximo.AutoSize = true;
             this.MontoMaximo.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MontoMaximo.Location = new System.Drawing.Point(932, 0);
+            this.MontoMaximo.Location = new System.Drawing.Point(923, 0);
             this.MontoMaximo.Name = "MontoMaximo";
             this.MontoMaximo.Size = new System.Drawing.Size(188, 39);
             this.MontoMaximo.TabIndex = 40;
             this.MontoMaximo.Text = "Ingrese Monto Máximo";
             this.MontoMaximo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox6
+            // txtBoxMontoMaximo
             // 
-            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(1126, 4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(185, 30);
-            this.textBox6.TabIndex = 3;
+            this.txtBoxMontoMaximo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtBoxMontoMaximo.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxMontoMaximo.Location = new System.Drawing.Point(1117, 4);
+            this.txtBoxMontoMaximo.Name = "txtBoxMontoMaximo";
+            this.txtBoxMontoMaximo.Size = new System.Drawing.Size(185, 30);
+            this.txtBoxMontoMaximo.TabIndex = 3;
+            this.txtBoxMontoMaximo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxMontoMaximo_KeyPress);
             // 
             // labelPreventista
             // 
@@ -493,7 +499,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPreventista.AutoSize = true;
             this.labelPreventista.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPreventista.Location = new System.Drawing.Point(22, 0);
+            this.labelPreventista.Location = new System.Drawing.Point(17, 0);
             this.labelPreventista.Name = "labelPreventista";
             this.labelPreventista.Size = new System.Drawing.Size(155, 39);
             this.labelPreventista.TabIndex = 41;
@@ -503,9 +509,9 @@
             // Creacion
             // 
             this.Creacion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Creacion.Location = new System.Drawing.Point(358, 3);
+            this.Creacion.Location = new System.Drawing.Point(349, 3);
             this.Creacion.Name = "Creacion";
-            this.Creacion.Size = new System.Drawing.Size(116, 33);
+            this.Creacion.Size = new System.Drawing.Size(117, 33);
             this.Creacion.TabIndex = 42;
             this.Creacion.Text = "Fecha Creación";
             this.Creacion.UseVisualStyleBackColor = true;
@@ -515,9 +521,9 @@
             this.dateTimePicker4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker4.Location = new System.Drawing.Point(480, 3);
+            this.dateTimePicker4.Location = new System.Drawing.Point(472, 3);
             this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(189, 30);
+            this.dateTimePicker4.Size = new System.Drawing.Size(186, 30);
             this.dateTimePicker4.TabIndex = 43;
             // 
             // dataGridViewModificarPedidos
@@ -544,6 +550,7 @@
             this.dataGridViewModificarPedidos.RowTemplate.Height = 24;
             this.dataGridViewModificarPedidos.Size = new System.Drawing.Size(1366, 126);
             this.dataGridViewModificarPedidos.TabIndex = 6;
+            this.dataGridViewModificarPedidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewModificarPedidos_CellContentClick);
             // 
             // Column1
             // 
@@ -667,6 +674,7 @@
             this.dataGridViewDetallePagos.RowTemplate.Height = 24;
             this.dataGridViewDetallePagos.Size = new System.Drawing.Size(1366, 108);
             this.dataGridViewDetallePagos.TabIndex = 8;
+            this.dataGridViewDetallePagos.Visible = false;
             // 
             // Column7
             // 
@@ -739,17 +747,17 @@
             this.tableLayoutPanelRegistrarPago.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.04385F));
             this.tableLayoutPanelRegistrarPago.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
             this.tableLayoutPanelRegistrarPago.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 289F));
-            this.tableLayoutPanelRegistrarPago.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 370F));
-            this.tableLayoutPanelRegistrarPago.Controls.Add(this.dateTimePicker5, 1, 1);
+            this.tableLayoutPanelRegistrarPago.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 377F));
             this.tableLayoutPanelRegistrarPago.Controls.Add(this.textBox8, 3, 0);
             this.tableLayoutPanelRegistrarPago.Controls.Add(this.lblCliente, 0, 0);
             this.tableLayoutPanelRegistrarPago.Controls.Add(this.lblFecha, 0, 1);
             this.tableLayoutPanelRegistrarPago.Controls.Add(this.lblMonto, 2, 0);
             this.tableLayoutPanelRegistrarPago.Controls.Add(this.lblMetodoPago, 2, 1);
-            this.tableLayoutPanelRegistrarPago.Controls.Add(this.button4, 4, 1);
-            this.tableLayoutPanelRegistrarPago.Controls.Add(this.button5, 4, 0);
-            this.tableLayoutPanelRegistrarPago.Controls.Add(this.textBox1, 1, 0);
+            this.tableLayoutPanelRegistrarPago.Controls.Add(this.btnGenerarRecibo, 4, 1);
+            this.tableLayoutPanelRegistrarPago.Controls.Add(this.btnRegistrarNuevo, 4, 0);
+            this.tableLayoutPanelRegistrarPago.Controls.Add(this.textBoxCliente, 1, 0);
             this.tableLayoutPanelRegistrarPago.Controls.Add(this.comboBoxMetodoPago, 3, 1);
+            this.tableLayoutPanelRegistrarPago.Controls.Add(this.lblFechaActual, 1, 1);
             this.tableLayoutPanelRegistrarPago.Location = new System.Drawing.Point(86, 504);
             this.tableLayoutPanelRegistrarPago.Name = "tableLayoutPanelRegistrarPago";
             this.tableLayoutPanelRegistrarPago.RowCount = 2;
@@ -757,22 +765,24 @@
             this.tableLayoutPanelRegistrarPago.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelRegistrarPago.Size = new System.Drawing.Size(1190, 100);
             this.tableLayoutPanelRegistrarPago.TabIndex = 10;
+            this.tableLayoutPanelRegistrarPago.Visible = false;
             // 
             // textBox8
             // 
             this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox8.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(553, 9);
+            this.textBox8.Location = new System.Drawing.Point(546, 9);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(243, 31);
             this.textBox8.TabIndex = 8;
+            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
             // lblCliente
             // 
             this.lblCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCliente.AutoSize = true;
             this.lblCliente.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCliente.Location = new System.Drawing.Point(27, 12);
+            this.lblCliente.Location = new System.Drawing.Point(25, 12);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(65, 25);
             this.lblCliente.TabIndex = 0;
@@ -783,7 +793,7 @@
             this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(31, 62);
+            this.lblFecha.Location = new System.Drawing.Point(29, 62);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(57, 25);
             this.lblFecha.TabIndex = 1;
@@ -794,7 +804,7 @@
             this.lblMonto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMonto.AutoSize = true;
             this.lblMonto.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMonto.Location = new System.Drawing.Point(412, 12);
+            this.lblMonto.Location = new System.Drawing.Point(405, 12);
             this.lblMonto.Name = "lblMonto";
             this.lblMonto.Size = new System.Drawing.Size(66, 25);
             this.lblMonto.TabIndex = 2;
@@ -805,52 +815,69 @@
             this.lblMetodoPago.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMetodoPago.AutoSize = true;
             this.lblMetodoPago.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMetodoPago.Location = new System.Drawing.Point(385, 62);
+            this.lblMetodoPago.Location = new System.Drawing.Point(378, 62);
             this.lblMetodoPago.Name = "lblMetodoPago";
             this.lblMetodoPago.Size = new System.Drawing.Size(121, 25);
             this.lblMetodoPago.TabIndex = 3;
             this.lblMetodoPago.Text = "Método Pago";
             // 
-            // button4
+            // btnGenerarRecibo
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(920, 56);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(168, 37);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Generar Recibo";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnGenerarRecibo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGenerarRecibo.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarRecibo.Location = new System.Drawing.Point(917, 56);
+            this.btnGenerarRecibo.Name = "btnGenerarRecibo";
+            this.btnGenerarRecibo.Size = new System.Drawing.Size(168, 37);
+            this.btnGenerarRecibo.TabIndex = 4;
+            this.btnGenerarRecibo.Text = "Generar Recibo";
+            this.btnGenerarRecibo.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnRegistrarNuevo
             // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(921, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(166, 44);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Registrar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnRegistrarNuevo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnRegistrarNuevo.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarNuevo.Location = new System.Drawing.Point(918, 3);
+            this.btnRegistrarNuevo.Name = "btnRegistrarNuevo";
+            this.btnRegistrarNuevo.Size = new System.Drawing.Size(166, 44);
+            this.btnRegistrarNuevo.TabIndex = 5;
+            this.btnRegistrarNuevo.Text = "Registrar";
+            this.btnRegistrarNuevo.UseVisualStyleBackColor = true;
+            this.btnRegistrarNuevo.Click += new System.EventHandler(this.btnRegistrarNuevo_Click);
             // 
-            // textBox1
+            // textBoxCliente
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(122, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(236, 31);
-            this.textBox1.TabIndex = 6;
+            this.textBoxCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxCliente.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCliente.Location = new System.Drawing.Point(119, 9);
+            this.textBoxCliente.Name = "textBoxCliente";
+            this.textBoxCliente.Size = new System.Drawing.Size(232, 31);
+            this.textBoxCliente.TabIndex = 6;
             // 
             // comboBoxMetodoPago
             // 
             this.comboBoxMetodoPago.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxMetodoPago.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxMetodoPago.FormattingEnabled = true;
-            this.comboBoxMetodoPago.Location = new System.Drawing.Point(554, 58);
+            this.comboBoxMetodoPago.Items.AddRange(new object[] {
+            "Efectivo",
+            "Transferencia",
+            "Tarjeta Débito",
+            "Tarjeta Crédito"});
+            this.comboBoxMetodoPago.Location = new System.Drawing.Point(547, 58);
             this.comboBoxMetodoPago.Name = "comboBoxMetodoPago";
             this.comboBoxMetodoPago.Size = new System.Drawing.Size(241, 33);
             this.comboBoxMetodoPago.TabIndex = 9;
+            this.comboBoxMetodoPago.Text = "Seleccione";
+            // 
+            // lblFechaActual
+            // 
+            this.lblFechaActual.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblFechaActual.AutoSize = true;
+            this.lblFechaActual.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaActual.Location = new System.Drawing.Point(235, 62);
+            this.lblFechaActual.Name = "lblFechaActual";
+            this.lblFechaActual.Size = new System.Drawing.Size(0, 25);
+            this.lblFechaActual.TabIndex = 10;
             // 
             // btnVolver
             // 
@@ -862,22 +889,30 @@
             this.btnVolver.TabIndex = 11;
             this.btnVolver.Text = "Salir";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // dateTimePicker5
+            // errorProvider1
             // 
-            this.dateTimePicker5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker5.Location = new System.Drawing.Point(122, 60);
-            this.dateTimePicker5.Name = "dateTimePicker5";
-            this.dateTimePicker5.Size = new System.Drawing.Size(236, 30);
-            this.dateTimePicker5.TabIndex = 44;
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // btnNuevoPago
+            // 
+            this.btnNuevoPago.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnNuevoPago.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoPago.Location = new System.Drawing.Point(26, 628);
+            this.btnNuevoPago.Name = "btnNuevoPago";
+            this.btnNuevoPago.Size = new System.Drawing.Size(134, 43);
+            this.btnNuevoPago.TabIndex = 12;
+            this.btnNuevoPago.Text = "Nuevo Pago";
+            this.btnNuevoPago.UseVisualStyleBackColor = true;
+            this.btnNuevoPago.Click += new System.EventHandler(this.btnNuevoPago_Click);
             // 
             // FormPagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1366, 731);
+            this.Controls.Add(this.btnNuevoPago);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.tableLayoutPanelRegistrarPago);
             this.Controls.Add(this.tableLayoutPanel7);
@@ -889,6 +924,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormPagos";
             this.Text = "Pagos";
+            this.Load += new System.EventHandler(this.FormPagos_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -907,6 +943,7 @@
             this.tableLayoutPanel7.PerformLayout();
             this.tableLayoutPanelRegistrarPago.ResumeLayout(false);
             this.tableLayoutPanelRegistrarPago.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -939,7 +976,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label MontoMaximo;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtBoxMontoMaximo;
         private System.Windows.Forms.Label labelPreventista;
         private System.Windows.Forms.Button Creacion;
         private System.Windows.Forms.DateTimePicker dateTimePicker4;
@@ -969,13 +1006,15 @@
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblMonto;
         private System.Windows.Forms.Label lblMetodoPago;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnGenerarRecibo;
+        private System.Windows.Forms.Button btnRegistrarNuevo;
         private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxCliente;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBoxMetodoPago;
         private System.Windows.Forms.Button btnVolver;
-        private System.Windows.Forms.DateTimePicker dateTimePicker5;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label lblFechaActual;
+        private System.Windows.Forms.Button btnNuevoPago;
     }
 }

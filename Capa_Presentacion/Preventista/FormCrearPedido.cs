@@ -21,5 +21,20 @@ namespace ArimaERP.Preventista
         {
 
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            // Cerrar el formulario actual
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //abrir formulario ModalSeleccionarCliente
+            ModalSeleccionarCliente modalSeleccionarCliente = new ModalSeleccionarCliente();
+            //centrar formulario
+            modalSeleccionarCliente.StartPosition = FormStartPosition.CenterParent;
+            modalSeleccionarCliente.ShowDialog();
+        }
     }
 }

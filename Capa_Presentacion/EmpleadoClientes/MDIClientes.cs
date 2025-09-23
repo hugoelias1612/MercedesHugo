@@ -15,7 +15,8 @@ namespace ArimaERP.EmpleadoClientes
     {
         public MDIClientes()
         {
-            InitializeComponent();
+            InitializeComponent();            
+
         }
 
         private void MDIClientes_Load(object sender, EventArgs e)
@@ -26,12 +27,12 @@ namespace ArimaERP.EmpleadoClientes
             // Establecer el tamaño y posición del formulario
             this.Location = areaTrabajo.Location;
             this.Size = areaTrabajo.Size;
-                    
+
             lblFecha.Text = lblFecha.Text + DateTime.Now.ToString("dd/MM/yyyy");
             lblHora.Text = lblHora.Text + DateTime.Now.ToString("HH:mm:ss");
         }
 
-        
+
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
@@ -95,7 +96,7 @@ namespace ArimaERP.EmpleadoClientes
 
         private void btnBajaPreventistas_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnBaja_Click(object sender, EventArgs e)
@@ -134,6 +135,10 @@ namespace ArimaERP.EmpleadoClientes
         {
             // Limpiar el panel antes de agregar nuevo contenido
             pnlVistaMenuSecundario.Controls.Clear();
+            //ocultar paneles de secciones
+            pnlPedidos.Visible = false;
+            pnlClientes.Visible = false;
+            pnlPreventistas.Visible = false;
             // Instanciar el formulario
             FormPagos formCobros = new FormPagos();
             // Configurar como control embebido
@@ -155,9 +160,8 @@ namespace ArimaERP.EmpleadoClientes
         {
             //volver al login
             this.Close();
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-            }
+         
+        }
 
         private void pnlVistaMenuSecundario_Paint(object sender, PaintEventArgs e)
         {
@@ -193,7 +197,7 @@ namespace ArimaERP.EmpleadoClientes
             // Agregar al panel y mostrar
             pnlVistaMenuSecundario.Controls.Add(formCancelarPedido);
             formCancelarPedido.Show();
-            }
+        }
 
         private void btnAltaPrevent_Click(object sender, EventArgs e)
         {
@@ -224,5 +228,22 @@ namespace ArimaERP.EmpleadoClientes
             pnlVistaMenuSecundario.Controls.Add(formHistorialPreventistas);
             formHistorialPreventistas.Show();
         }
+
+        private void btnHistorial_Click(object sender, EventArgs e)
+        {
+            // Limpiar el panel antes de agregar nuevo contenido
+            pnlVistaMenuSecundario.Controls.Clear();
+            // Instanciar el formulario
+            FormClienteHistorial formHistorialClientes = new FormClienteHistorial();
+            // Configurar como control embebido
+            formHistorialClientes.TopLevel = false;
+            formHistorialClientes.FormBorderStyle = FormBorderStyle.None;
+            formHistorialClientes.Dock = DockStyle.Fill;
+            // Agregar al panel y mostrar
+            pnlVistaMenuSecundario.Controls.Add(formHistorialClientes);
+            formHistorialClientes.Show();
+        }
+        
+
     }
 }

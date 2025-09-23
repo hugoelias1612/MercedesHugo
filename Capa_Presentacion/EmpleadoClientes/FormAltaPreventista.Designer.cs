@@ -71,10 +71,10 @@
             this.lblRegistrar = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlBuscar = new System.Windows.Forms.Panel();
+            this.comboBoxZona = new System.Windows.Forms.ComboBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnBuscarPreventista = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBoxZona = new System.Windows.Forms.ComboBox();
             this.TLPPreventista.SuspendLayout();
             this.TLPCampos.SuspendLayout();
             this.groupBoxDatosPreventista.SuspendLayout();
@@ -217,6 +217,7 @@
             this.textBoxDNI.TabIndex = 1;
             this.textBoxDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDNI_KeyPress);
             this.textBoxDNI.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxDNI_Validating);
+            this.textBoxDNI.Validated += new System.EventHandler(this.textBoxDNI_Validated);
             // 
             // tableLayoutPanel11
             // 
@@ -692,6 +693,16 @@
             this.pnlBuscar.Size = new System.Drawing.Size(1694, 54);
             this.pnlBuscar.TabIndex = 2;
             // 
+            // comboBoxZona
+            // 
+            this.comboBoxZona.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxZona.FormattingEnabled = true;
+            this.comboBoxZona.Location = new System.Drawing.Point(1428, 9);
+            this.comboBoxZona.Name = "comboBoxZona";
+            this.comboBoxZona.Size = new System.Drawing.Size(254, 36);
+            this.comboBoxZona.TabIndex = 5;
+            this.comboBoxZona.Text = "Seleccione zona";
+            // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -723,16 +734,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(375, 38);
             this.textBox1.TabIndex = 2;
-            // 
-            // comboBoxZona
-            // 
-            this.comboBoxZona.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxZona.FormattingEnabled = true;
-            this.comboBoxZona.Location = new System.Drawing.Point(1428, 9);
-            this.comboBoxZona.Name = "comboBoxZona";
-            this.comboBoxZona.Size = new System.Drawing.Size(254, 36);
-            this.comboBoxZona.TabIndex = 5;
-            this.comboBoxZona.Text = "Seleccione zona";
             // 
             // FormAltaPreventista
             // 

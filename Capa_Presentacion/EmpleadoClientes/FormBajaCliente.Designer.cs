@@ -55,6 +55,7 @@
             this.ColumnaZona = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnaPreventista = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnaModificar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -113,12 +114,12 @@
             this.tableLayoutPanel2.Controls.Add(this.txtBusacarEmail, 4, 1);
             this.tableLayoutPanel2.Controls.Add(this.comboBoxBuscarClienteZona, 5, 1);
             this.tableLayoutPanel2.Controls.Add(this.comboBoxBuscarClientePreventista, 6, 1);
-            this.tableLayoutPanel2.Controls.Add(this.btnBuscarTodosClientes, 7, 0);
             this.tableLayoutPanel2.Controls.Add(this.label1, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label3, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label4, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.label5, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.label6, 6, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnBuscarTodosClientes, 7, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 45);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
@@ -207,10 +208,17 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscarTodosClientes.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.btnBuscarTodosClientes.Location = new System.Drawing.Point(872, 2);
             this.btnBuscarTodosClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscarTodosClientes.Name = "btnBuscarTodosClientes";
             this.btnBuscarTodosClientes.Size = new System.Drawing.Size(134, 26);
+=======
+            this.btnBuscarTodosClientes.Location = new System.Drawing.Point(1163, 39);
+            this.btnBuscarTodosClientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscarTodosClientes.Name = "btnBuscarTodosClientes";
+            this.btnBuscarTodosClientes.Size = new System.Drawing.Size(178, 30);
+>>>>>>> a13b7b55071a60692e615a2e51b4b4ec793cb328
             this.btnBuscarTodosClientes.TabIndex = 30;
             this.btnBuscarTodosClientes.Text = "TODOS";
             this.btnBuscarTodosClientes.UseVisualStyleBackColor = true;
@@ -319,7 +327,6 @@
             // 
             // dataGridViewBajaCliente
             // 
-            this.dataGridViewBajaCliente.AllowUserToAddRows = false;
             this.dataGridViewBajaCliente.AllowUserToDeleteRows = false;
             this.dataGridViewBajaCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewBajaCliente.BackgroundColor = System.Drawing.SystemColors.Window;
@@ -331,7 +338,8 @@
             this.ColumnaEMAIL,
             this.ColumnaZona,
             this.ColumnaPreventista,
-            this.ColumnaModificar});
+            this.ColumnaModificar,
+            this.Column1});
             this.dataGridViewBajaCliente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewBajaCliente.GridColor = System.Drawing.SystemColors.Window;
             this.dataGridViewBajaCliente.Location = new System.Drawing.Point(0, 0);
@@ -391,10 +399,19 @@
             // 
             // ColumnaModificar
             // 
-            this.ColumnaModificar.HeaderText = "Acción";
+            this.ColumnaModificar.HeaderText = "Dar de Baja";
             this.ColumnaModificar.MinimumWidth = 6;
             this.ColumnaModificar.Name = "ColumnaModificar";
             this.ColumnaModificar.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Dar de Alta";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // FormBajaCliente
             // 
@@ -441,6 +458,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridViewBajaCliente;
+        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaDNI;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaCUIL;
@@ -448,6 +466,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaZona;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaPreventista;
         private System.Windows.Forms.DataGridViewButtonColumn ColumnaModificar;
-        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.DataGridViewButtonColumn Column1;
     }
 }

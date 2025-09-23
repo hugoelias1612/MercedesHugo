@@ -13,6 +13,7 @@ namespace ArimaERP.EmpleadoClientes
 {
     public partial class FormAltaPreventista : Form
     {
+        private bool limpiarPresionado = false;
         public FormAltaPreventista()
         {
             InitializeComponent();
@@ -55,6 +56,7 @@ namespace ArimaERP.EmpleadoClientes
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            limpiarPresionado = true;
             //Limpiar todos los campos
             txtBoxUsuario.Text = "";
             textBoxContrasena.Text = "";
@@ -65,6 +67,8 @@ namespace ArimaERP.EmpleadoClientes
             textBoxDNI.Text = "";
             textBoxDireccion.Text = "";
             errorProvider1.Clear();
+            comboBoxZona.SelectedIndex = -1;
+            limpiarPresionado = false;
         }
 
         private void textBoxContrasena_KeyPress(object sender, KeyPressEventArgs e)
@@ -181,13 +185,13 @@ namespace ArimaERP.EmpleadoClientes
 
         private void textBoxMail_Validated(object sender, EventArgs e)
         {
-            // Validar formato de correo electrónico
+            // Validar formato de email
             try
             {
                 var addr = new System.Net.Mail.MailAddress(textBoxMail.Text);
                 if (addr.Address != textBoxMail.Text)
                 {
-                    errorProvider1.SetError(textBoxMail, "Formato de correo electrónico inválido.");
+                    errorProvider1.SetError(textBoxMail, "Formato de email inválido.");
                 }
                 else
                 {
@@ -196,8 +200,21 @@ namespace ArimaERP.EmpleadoClientes
             }
             catch
             {
-                errorProvider1.SetError(textBoxMail, "Formato de correo electrónico inválido.");
+                if (!string.IsNullOrWhiteSpace(textBoxMail.Text))
+                {
+                    errorProvider1.SetError(textBoxMail, "Formato de email inválido.");
+                }
+                else
+                {
+                    errorProvider1.SetError(textBoxMail, "");
+                }
             }
+            //si esta vacío permitir avanzar o si se presionó cerrar (this.IsDisposed)
+            if (string.IsNullOrWhiteSpace(textBoxMail.Text) || this.IsDisposed)
+            {
+                errorProvider1.SetError(textBoxMail, "");
+            }
+
         }
 
         private void textBoxDireccion_KeyPress(object sender, KeyPressEventArgs e)
@@ -269,6 +286,16 @@ namespace ArimaERP.EmpleadoClientes
             }
             //si esta vacío permitir avanzar
             if (string.IsNullOrWhiteSpace(password))
+            {
+                errorProvider1.SetError(textBoxContrasena, "");
+            }
+            //si se presionó limpiar no validar
+            if (limpiarPresionado)
+            {
+                errorProvider1.SetError(textBoxContrasena, "");
+            }
+            //si se presionó cerrar (this.IsDisposed) no validar
+            if (this.IsDisposed)
             {
                 errorProvider1.SetError(textBoxContrasena, "");
             }
@@ -372,6 +399,19 @@ namespace ArimaERP.EmpleadoClientes
                 btnModificar.Enabled = false;
                 btnBaja.Enabled = false;
                 btnCancelar.Enabled = false;
+            }
+        }
+
+        private void textBoxDNI_Validated(object sender, EventArgs e)
+        {
+            // No permitir menos de 7 caracteres
+            if (textBoxDNI.Text.Length < 7)
+            {
+                errorProvider1.SetError(textBoxDNI, "El DNI debe tener entre 7 y 8 caracteres.");
+            }
+            else
+            {
+                errorProvider1.SetError(textBoxDNI, "");
             }
         }
     }

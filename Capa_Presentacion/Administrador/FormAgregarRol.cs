@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace ArimaERP.Administrador
 {
-    public partial class FormAgregarRol : BaseForm
+    public partial class FormAgregarRol : Form
     {
         public FormAgregarRol()
         {
             InitializeComponent();
+            this.Font = new Font("Segoe UI", 9F);
             ConfigurarDataGridView();
         }
 
@@ -95,6 +96,58 @@ namespace ArimaERP.Administrador
             colDescripcion.DataPropertyName = "descripcion";
             colDescripcion.FillWeight = 80;
             dgvRoles.Columns.Add(colDescripcion);
+        }
+
+        private void textBoxDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo letras, espacios y teclas de control (como retroceso) y no mas de 25 caracteres
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar)
+                && !char.IsWhiteSpace(e.KeyChar) || textBoxDescripcion.Text.Length >= 25)
+            {
+                e.Handled = true;
+                errorProvider1.SetError(textBoxDescripcion, "Solo se permiten letras y espacios. Máximo 25 caracteres.");
+            }
+        }
+
+        private void btnAgregarRol_Click(object sender, EventArgs e)
+        {
+            //validar que el campo no este vacio
+            if (string.IsNullOrWhiteSpace(textBoxDescripcion.Text))
+            {
+                MessageBox.Show("El campo Descripción no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+                        
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            //limpiar textBoxDescripcion
+            textBoxDescripcion.Clear();
+            errorProvider1.Clear();
+            textBoxDescripcion.Focus();
+        }
+
+        private void btnEliminar_Click_1(object sender, EventArgs e)
+        {
+            //si selecciono una fila
+            if (dgvRoles.SelectedRows.Count > 0)
+            {
+                //preguntar si esta seguro de eliminar
+                DialogResult result = MessageBox.Show("¿Está seguro de eliminar el rol seleccionado?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    //eliminar rol
+                    int idRol = Convert.ToInt32(dgvRoles.SelectedRows[0].Cells["id_rol"].Value);
+                    //llamar al metodo eliminar rol
+                    //EliminarRol(idRol);
+                    MessageBox.Show("Rol eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un rol para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

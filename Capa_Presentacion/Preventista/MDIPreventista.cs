@@ -16,11 +16,14 @@ namespace ArimaERP.Preventista
         public MDIPreventista()
         {
             InitializeComponent();
+            
         }
 
         private void MDIProductos_Load(object sender, EventArgs e)
         {
- 
+            //cargar fecha en lblFecha
+            lblFecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            lblRol.Text = "ROL: Preventista";
         }
 
         private void AbrirFormEnPanel(Form formHijo)
@@ -55,7 +58,11 @@ namespace ArimaERP.Preventista
 
         private void btnABM_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new FormHistorialPedidos());
+
+            //AbrirFormEnPanel(new FormHistorialPedidos());
+
+            //abrir crear pedido en panel pnlContent
+            AbrirFormEnPanel(new FormCrearPedido());
         }
 
         private void btnComprar_Click(object sender, EventArgs e)
@@ -72,15 +79,13 @@ namespace ArimaERP.Preventista
         {
             AbrirFormEnPanel(new FormRutas());
         }
+       
 
-
-
-
-
-
-
-
-
-
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            // Cerrar el formulario actual
+            this.Close();
+          
+        }
     }
 }

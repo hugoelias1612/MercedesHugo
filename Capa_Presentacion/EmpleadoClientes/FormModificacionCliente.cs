@@ -46,13 +46,13 @@ namespace ArimaERP.EmpleadoClientes
                     ciudad = fila.Cells["ciudad"].Value?.ToString(),
                     provincia = fila.Cells["provincia"].Value?.ToString(),
                     cod_postal = Convert.ToInt32(fila.Cells["cod_postal"].Value),
-                    id_tamano = clienteLogica.ObtenerTamanos()
-        .FirstOrDefault(t => t.descripcion == fila.Cells["id_tamano"].Value?.ToString())?.id_tamano ?? 0,
-                    id_zona = clienteLogica.ObtenerZonas()
-        .FirstOrDefault(z => z.nombre == fila.Cells["id_zona"].Value?.ToString())?.id_zona ?? 0
-               
+                    id_zona = Convert.ToInt32(fila.Cells["id_zona"].Value),
+                    id_tamano = Convert.ToInt32(fila.Cells["id_tamano"].Value),
+                    
 
-            };
+
+
+                };
 
                 FormEditarCliente formEditarCliente = new FormEditarCliente(clienteSeleccionado);
                 formEditarCliente.ShowDialog();
@@ -101,8 +101,14 @@ namespace ArimaERP.EmpleadoClientes
             dataGridListarClientes.Columns.Add("ciudad", "Ciudad");
             dataGridListarClientes.Columns.Add("provincia", "Provincia");
             dataGridListarClientes.Columns.Add("cod_postal", "Código Postal");
-            dataGridListarClientes.Columns.Add("id_tamano", "Tamaño");
-            dataGridListarClientes.Columns.Add("id_zona", "Zona");
+            dataGridListarClientes.Columns.Add("tamano", "Tamaño");
+            dataGridListarClientes.Columns.Add("zona", "Zona");
+            dataGridListarClientes.Columns.Add("id_tamano", "ID Tamaño");
+            dataGridListarClientes.Columns["id_tamano"].Visible = false;
+            dataGridListarClientes.Columns.Add("id_zona", "ID Zona");
+            dataGridListarClientes.Columns["id_zona"].Visible = false;
+            
+
             dataGridListarClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridListarClientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridListarClientes.MultiSelect = false;
@@ -122,21 +128,16 @@ namespace ArimaERP.EmpleadoClientes
 
                 // Buscar nombre de tamaño
                 string nombreTamano = tamanos.FirstOrDefault(t => t.id_tamano == cliente.id_tamano)?.descripcion ?? "Tamaño desconocido";
-                dataGridListarClientes.Rows.Add(cliente.id_cliente, cliente.dni, cliente.nombre, cliente.apellido, cliente.telefono, cliente.email, cliente.razon_social, cliente.cuil_cuit, cliente.fecha_alta, estadoTexto, confiableTexto, cliente.condicion_frenteIVA, cliente.calle, cliente.numero, cliente.ciudad, cliente.provincia, cliente.cod_postal, nombreTamano, nombreZona);
+                dataGridListarClientes.Rows.Add(cliente.id_cliente, cliente.dni, cliente.nombre, cliente.apellido, cliente.telefono, cliente.email, cliente.razon_social, cliente.cuil_cuit, cliente.fecha_alta, estadoTexto, confiableTexto, cliente.condicion_frenteIVA, cliente.calle, cliente.numero, cliente.ciudad, cliente.provincia, cliente.cod_postal, nombreTamano, nombreZona, cliente.id_tamano, cliente.id_zona);
             }
             //CARGAR COMBOBOX ZONA
-            
-            comboBoxBuscarClienteZona.Items.Clear();
-            comboBoxBuscarClienteZona.Items.Add("Seleccione zona");
-            foreach (var zona in zonas)
-            {
-                string nombre = $"{zona.id_zona} - {zona.nombre}";
-                comboBoxBuscarClienteZona.Items.Add(nombre);
-            }
+
+            zonas.Insert(0, new ZONA { id_zona = 0, nombre = "Seleccione zona" });
+
+            comboBoxBuscarClienteZona.DataSource = zonas;
+            comboBoxBuscarClienteZona.DisplayMember = "nombre";
+            comboBoxBuscarClienteZona.ValueMember = "id_zona";
             comboBoxBuscarClienteZona.SelectedIndex = 0;
-
-
-
         }
 
         private void txtNombreApellido_KeyDown(object sender, KeyEventArgs e)
@@ -226,32 +227,63 @@ namespace ArimaERP.EmpleadoClientes
 
         private void comboBoxBuscarClienteZona_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //validar una seleccion de la tabla zona
-            if (comboBoxBuscarClienteZona.SelectedIndex > 0)
+
             {
-                string selectedZona = comboBoxBuscarClienteZona.SelectedItem.ToString();
-                int idZona = int.Parse(selectedZona.Split('-')[0].Trim());
-                foreach (DataGridViewRow row in dataGridListarClientes.Rows)
+                // Limpiar las filas actuales del DataGridView
+                dataGridListarClientes.Rows.Clear();
+
+                // Obtener zonas y tamaños para enriquecer los datos
+                var zonas = clienteLogica.ObtenerZonas();
+                var tamanos = clienteLogica.ObtenerTamanos();
+
+                List<CLIENTE> listaClientes;
+
+                if (comboBoxBuscarClienteZona.SelectedValue is int idZona && idZona > 0)
                 {
-                    if (row.Cells["id_zona"].Value != null && (int)row.Cells["id_zona"].Value == idZona)
-                    {
-                        row.Visible = true;
-                    }
-                    else
-                    {
-                        row.Visible = false;
-                    }
+                    listaClientes = clienteLogica.ClientesPorZona(idZona);
                 }
-            }
-            else
-            {
-                // Si se selecciona "Seleccione zona", mostrar todas las filas
-                foreach (DataGridViewRow row in dataGridListarClientes.Rows)
+                else
                 {
-                    row.Visible = true;
+                    listaClientes = clienteLogica.ObtenerClientes();
+                }
+
+                foreach (var cliente in listaClientes)
+                {
+                    string estadoTexto = cliente.estado ? "Activo" : "Inactivo";
+                    string confiableTexto = cliente.confiable ? "Si" : "No";
+
+                    string nombreZona = zonas.FirstOrDefault(z => z.id_zona == cliente.id_zona)?.nombre ?? "Zona desconocida";
+                    string nombreTamano = tamanos.FirstOrDefault(t => t.id_tamano == cliente.id_tamano)?.descripcion ?? "Tamaño desconocido";
+
+                    dataGridListarClientes.Rows.Add(
+                        cliente.id_cliente,
+                        cliente.dni,
+                        cliente.nombre,
+                        cliente.apellido,
+                        cliente.telefono,
+                        cliente.email,
+                        cliente.razon_social,
+                        cliente.cuil_cuit,
+                        cliente.fecha_alta,
+                        estadoTexto,
+                        confiableTexto,
+                        cliente.condicion_frenteIVA,
+                        cliente.calle,
+                        cliente.numero,
+                        cliente.ciudad,
+                        cliente.provincia,
+                        cliente.cod_postal,
+                        nombreTamano,
+                        nombreZona,
+                         cliente.id_tamano, cliente.id_zona
+                    );
+
                 }
             }
         }
+
+
+
 
         private void textBoxBUSCARGENERAL_TextChanged(object sender, EventArgs e)
         {

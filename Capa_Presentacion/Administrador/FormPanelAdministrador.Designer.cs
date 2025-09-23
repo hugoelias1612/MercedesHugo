@@ -43,7 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TLPHeader = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblFECHA = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.TLPFooter = new System.Windows.Forms.TableLayoutPanel();
@@ -61,7 +61,7 @@
             // TLPMAIN
             // 
             this.TLPMAIN.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TLPMAIN.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.TLPMAIN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
             this.TLPMAIN.ColumnCount = 2;
             this.TLPMAIN.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TLPMAIN.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -69,7 +69,7 @@
             this.TLPMAIN.Controls.Add(this.gbxMDIPreventista, 0, 1);
             this.TLPMAIN.Controls.Add(this.gbxMDIProductos, 1, 0);
             this.TLPMAIN.Controls.Add(this.gbxMDIiClientes, 0, 0);
-            this.TLPMAIN.Location = new System.Drawing.Point(175, 171);
+            this.TLPMAIN.Location = new System.Drawing.Point(13, 171);
             this.TLPMAIN.Margin = new System.Windows.Forms.Padding(0);
             this.TLPMAIN.Name = "TLPMAIN";
             this.TLPMAIN.RowCount = 2;
@@ -81,7 +81,7 @@
             // gbxAdmin
             // 
             this.gbxAdmin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.gbxAdmin.BackColor = System.Drawing.Color.LightSlateGray;
+            this.gbxAdmin.BackColor = System.Drawing.Color.LightSteelBlue;
             this.gbxAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.gbxAdmin.Controls.Add(this.Accion4);
             this.gbxAdmin.Controls.Add(this.Accion3);
@@ -90,21 +90,22 @@
             this.gbxAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxAdmin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gbxAdmin.Location = new System.Drawing.Point(761, 284);
-            this.gbxAdmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxAdmin.Margin = new System.Windows.Forms.Padding(4);
             this.gbxAdmin.Name = "gbxAdmin";
-            this.gbxAdmin.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxAdmin.Padding = new System.Windows.Forms.Padding(4);
             this.gbxAdmin.Size = new System.Drawing.Size(476, 268);
             this.gbxAdmin.TabIndex = 4;
             this.gbxAdmin.TabStop = false;
             this.gbxAdmin.Text = "Funciones Administrador";
+            this.gbxAdmin.Enter += new System.EventHandler(this.gbxAdmin_Enter);
             // 
             // Accion4
             // 
-            this.Accion4.BackColor = System.Drawing.Color.DarkCyan;
+            this.Accion4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
             this.Accion4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Accion4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Accion4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Accion4.Location = new System.Drawing.Point(49, 189);
-            this.Accion4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Accion4.Margin = new System.Windows.Forms.Padding(4);
             this.Accion4.Name = "Accion4";
             this.Accion4.Size = new System.Drawing.Size(385, 43);
             this.Accion4.TabIndex = 4;
@@ -113,11 +114,11 @@
             // 
             // Accion3
             // 
-            this.Accion3.BackColor = System.Drawing.Color.DarkCyan;
+            this.Accion3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
             this.Accion3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Accion3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Accion3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Accion3.Location = new System.Drawing.Point(49, 138);
-            this.Accion3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Accion3.Margin = new System.Windows.Forms.Padding(4);
             this.Accion3.Name = "Accion3";
             this.Accion3.Size = new System.Drawing.Size(385, 43);
             this.Accion3.TabIndex = 3;
@@ -126,29 +127,31 @@
             // 
             // Accion2
             // 
-            this.Accion2.BackColor = System.Drawing.Color.DarkCyan;
+            this.Accion2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
             this.Accion2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Accion2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Accion2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Accion2.Location = new System.Drawing.Point(49, 87);
-            this.Accion2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Accion2.Margin = new System.Windows.Forms.Padding(4);
             this.Accion2.Name = "Accion2";
             this.Accion2.Size = new System.Drawing.Size(385, 43);
             this.Accion2.TabIndex = 1;
             this.Accion2.Text = "Gestion de Roles";
             this.Accion2.UseVisualStyleBackColor = false;
+            this.Accion2.Click += new System.EventHandler(this.Accion2_Click);
             // 
             // Accion1
             // 
-            this.Accion1.BackColor = System.Drawing.Color.DarkCyan;
+            this.Accion1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
             this.Accion1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Accion1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Accion1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Accion1.Location = new System.Drawing.Point(49, 37);
-            this.Accion1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Accion1.Margin = new System.Windows.Forms.Padding(4);
             this.Accion1.Name = "Accion1";
             this.Accion1.Size = new System.Drawing.Size(385, 43);
             this.Accion1.TabIndex = 0;
             this.Accion1.Text = "ABM Usuarios";
             this.Accion1.UseVisualStyleBackColor = false;
+            this.Accion1.Click += new System.EventHandler(this.Accion1_Click);
             // 
             // gbxMDIPreventista
             // 
@@ -159,26 +162,27 @@
             this.gbxMDIPreventista.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxMDIPreventista.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gbxMDIPreventista.Location = new System.Drawing.Point(95, 305);
-            this.gbxMDIPreventista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxMDIPreventista.Margin = new System.Windows.Forms.Padding(4);
             this.gbxMDIPreventista.Name = "gbxMDIPreventista";
-            this.gbxMDIPreventista.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxMDIPreventista.Padding = new System.Windows.Forms.Padding(4);
             this.gbxMDIPreventista.Size = new System.Drawing.Size(476, 226);
             this.gbxMDIPreventista.TabIndex = 3;
             this.gbxMDIPreventista.TabStop = false;
-            this.gbxMDIPreventista.Text = "Ir a MDI Preventista";
+            this.gbxMDIPreventista.Text = "Ir a Sección Preventista";
             // 
             // btnPreventista
             // 
-            this.btnPreventista.BackColor = System.Drawing.Color.Navy;
+            this.btnPreventista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
             this.btnPreventista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPreventista.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnPreventista.Location = new System.Drawing.Point(136, 76);
-            this.btnPreventista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPreventista.Margin = new System.Windows.Forms.Padding(4);
             this.btnPreventista.Name = "btnPreventista";
             this.btnPreventista.Size = new System.Drawing.Size(203, 75);
             this.btnPreventista.TabIndex = 1;
             this.btnPreventista.Text = "Acceder";
             this.btnPreventista.UseVisualStyleBackColor = false;
+            this.btnPreventista.Click += new System.EventHandler(this.btnPreventista_Click);
             // 
             // gbxMDIProductos
             // 
@@ -189,26 +193,27 @@
             this.gbxMDIProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxMDIProductos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gbxMDIProductos.Location = new System.Drawing.Point(761, 26);
-            this.gbxMDIProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxMDIProductos.Margin = new System.Windows.Forms.Padding(4);
             this.gbxMDIProductos.Name = "gbxMDIProductos";
-            this.gbxMDIProductos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxMDIProductos.Padding = new System.Windows.Forms.Padding(4);
             this.gbxMDIProductos.Size = new System.Drawing.Size(476, 226);
             this.gbxMDIProductos.TabIndex = 3;
             this.gbxMDIProductos.TabStop = false;
-            this.gbxMDIProductos.Text = "Ir a MDI Productos";
+            this.gbxMDIProductos.Text = "Ir a Sección Productos";
             // 
             // btnProductos
             // 
-            this.btnProductos.BackColor = System.Drawing.Color.Navy;
+            this.btnProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
             this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProductos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnProductos.Location = new System.Drawing.Point(136, 76);
-            this.btnProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnProductos.Margin = new System.Windows.Forms.Padding(4);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(203, 75);
             this.btnProductos.TabIndex = 1;
             this.btnProductos.Text = "Acceder";
             this.btnProductos.UseVisualStyleBackColor = false;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // gbxMDIiClientes
             // 
@@ -219,32 +224,34 @@
             this.gbxMDIiClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxMDIiClientes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gbxMDIiClientes.Location = new System.Drawing.Point(95, 26);
-            this.gbxMDIiClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxMDIiClientes.Margin = new System.Windows.Forms.Padding(4);
             this.gbxMDIiClientes.Name = "gbxMDIiClientes";
-            this.gbxMDIiClientes.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxMDIiClientes.Padding = new System.Windows.Forms.Padding(4);
             this.gbxMDIiClientes.Size = new System.Drawing.Size(476, 226);
             this.gbxMDIiClientes.TabIndex = 2;
             this.gbxMDIiClientes.TabStop = false;
-            this.gbxMDIiClientes.Text = "Ir a MDI Clientes";
+            this.gbxMDIiClientes.Text = "Ir a Sección Clientes";
             // 
             // btnClientes
             // 
-            this.btnClientes.BackColor = System.Drawing.Color.Navy;
+            this.btnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnClientes.Location = new System.Drawing.Point(135, 80);
-            this.btnClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClientes.Margin = new System.Windows.Forms.Padding(4);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(203, 75);
             this.btnClientes.TabIndex = 0;
             this.btnClientes.Text = "Acceder";
             this.btnClientes.UseVisualStyleBackColor = false;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(575, 105);
+            this.label1.Location = new System.Drawing.Point(419, 104);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(506, 54);
@@ -255,21 +262,21 @@
             // 
             // TLPHeader
             // 
-            this.TLPHeader.BackColor = System.Drawing.Color.Beige;
+            this.TLPHeader.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TLPHeader.ColumnCount = 2;
-            this.TLPHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TLPHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TLPHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.51039F));
+            this.TLPHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.48961F));
             this.TLPHeader.Controls.Add(this.label2, 0, 1);
-            this.TLPHeader.Controls.Add(this.label4, 1, 1);
-            this.TLPHeader.Controls.Add(this.label3, 1, 0);
+            this.TLPHeader.Controls.Add(this.lblFECHA, 1, 1);
             this.TLPHeader.Controls.Add(this.button1, 0, 0);
+            this.TLPHeader.Controls.Add(this.label3, 1, 0);
             this.TLPHeader.Location = new System.Drawing.Point(0, 0);
-            this.TLPHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TLPHeader.Margin = new System.Windows.Forms.Padding(4);
             this.TLPHeader.Name = "TLPHeader";
             this.TLPHeader.RowCount = 2;
             this.TLPHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TLPHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TLPHeader.Size = new System.Drawing.Size(1687, 90);
+            this.TLPHeader.Size = new System.Drawing.Size(1348, 90);
             this.TLPHeader.TabIndex = 4;
             // 
             // label2
@@ -277,26 +284,26 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(4, 49);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(4, 48);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(552, 36);
+            this.label2.Size = new System.Drawing.Size(515, 38);
             this.label2.TabIndex = 0;
             this.label2.Text = "Bienvenido, Administrador (ID: admin01)";
             // 
-            // label4
+            // lblFECHA
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(954, 49);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(622, 36);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Martes, 16 de septiembre de 2025 - 10:34 AM";
+            this.lblFECHA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblFECHA.AutoSize = true;
+            this.lblFECHA.BackColor = System.Drawing.Color.Transparent;
+            this.lblFECHA.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFECHA.Location = new System.Drawing.Point(663, 49);
+            this.lblFECHA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFECHA.Name = "lblFECHA";
+            this.lblFECHA.Size = new System.Drawing.Size(622, 36);
+            this.lblFECHA.TabIndex = 2;
+            this.lblFECHA.Text = "Martes, 16 de septiembre de 2025 - 10:34 AM";
             // 
             // label3
             // 
@@ -304,7 +311,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1058, 1);
+            this.label3.Location = new System.Drawing.Point(767, 1);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(414, 42);
@@ -314,7 +321,7 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button1.BackColor = System.Drawing.Color.Teal;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -325,33 +332,34 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Volver al Login";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // TLPFooter
             // 
-            this.TLPFooter.BackColor = System.Drawing.Color.Beige;
+            this.TLPFooter.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TLPFooter.ColumnCount = 2;
-            this.TLPFooter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TLPFooter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TLPFooter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.81328F));
+            this.TLPFooter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.18672F));
             this.TLPFooter.Controls.Add(this.lblDerechos, 0, 0);
             this.TLPFooter.Controls.Add(this.lblSoporte, 1, 0);
             this.TLPFooter.Location = new System.Drawing.Point(0, 791);
-            this.TLPFooter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TLPFooter.Margin = new System.Windows.Forms.Padding(4);
             this.TLPFooter.Name = "TLPFooter";
             this.TLPFooter.RowCount = 1;
             this.TLPFooter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TLPFooter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.TLPFooter.Size = new System.Drawing.Size(1687, 49);
+            this.TLPFooter.Size = new System.Drawing.Size(1346, 49);
             this.TLPFooter.TabIndex = 5;
             // 
             // lblDerechos
             // 
             this.lblDerechos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDerechos.AutoSize = true;
-            this.lblDerechos.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDerechos.Location = new System.Drawing.Point(70, 6);
+            this.lblDerechos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDerechos.Location = new System.Drawing.Point(70, 12);
             this.lblDerechos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDerechos.Name = "lblDerechos";
-            this.lblDerechos.Size = new System.Drawing.Size(703, 36);
+            this.lblDerechos.Size = new System.Drawing.Size(462, 25);
             this.lblDerechos.TabIndex = 3;
             this.lblDerechos.Text = "© 2025 ArimaERP - Todos los derechos reservados";
             // 
@@ -360,12 +368,12 @@
             this.lblSoporte.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSoporte.AutoSize = true;
             this.lblSoporte.BackColor = System.Drawing.Color.Transparent;
-            this.lblSoporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSoporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSoporte.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSoporte.Location = new System.Drawing.Point(904, 9);
+            this.lblSoporte.Location = new System.Drawing.Point(712, 12);
             this.lblSoporte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSoporte.Name = "lblSoporte";
-            this.lblSoporte.Size = new System.Drawing.Size(721, 31);
+            this.lblSoporte.Size = new System.Drawing.Size(524, 25);
             this.lblSoporte.TabIndex = 4;
             this.lblSoporte.Text = "Soporte técnico: soporte@arimaerp.com | (011) 4444-5555";
             // 
@@ -374,12 +382,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1685, 838);
+            this.ClientSize = new System.Drawing.Size(1361, 838);
             this.Controls.Add(this.TLPFooter);
             this.Controls.Add(this.TLPHeader);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TLPMAIN);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FormPanelAdministrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -419,7 +427,7 @@
         private System.Windows.Forms.Label lblDerechos;
         private System.Windows.Forms.Label lblSoporte;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblFECHA;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
     }

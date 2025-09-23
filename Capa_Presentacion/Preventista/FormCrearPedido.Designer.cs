@@ -36,6 +36,7 @@
             this.lblCliente = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAgregarProductos = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -117,7 +118,12 @@
             this.button1.Size = new System.Drawing.Size(222, 31);
             this.button1.TabIndex = 1;
             this.button1.Text = "Seleccionar Cliente";
+<<<<<<< HEAD
             this.button1.UseVisualStyleBackColor = false;
+=======
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+>>>>>>> a13b7b55071a60692e615a2e51b4b4ec793cb328
             // 
             // tableLayoutPanel1
             // 
@@ -130,6 +136,7 @@
             this.tableLayoutPanel1.Controls.Add(this.lblCliente, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnSalir, 3, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 25);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -187,6 +194,16 @@
             this.label2.Text = "Confiable:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(933, 3);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(181, 33);
+            this.btnSalir.TabIndex = 5;
+            this.btnSalir.Text = "Cancelar";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -226,6 +243,7 @@
             // 
             // dgvCarrito
             // 
+            this.dgvCarrito.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCarrito.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Producto,
@@ -529,5 +547,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

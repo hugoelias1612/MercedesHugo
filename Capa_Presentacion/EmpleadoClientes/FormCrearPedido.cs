@@ -49,10 +49,12 @@ namespace ArimaERP.EmpleadoClientes
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Ir a FormCliente
+            
+            // Instanciar el formulario
             FormCliente formCliente = new FormCliente();
-            formCliente.Show();
-
+            //Ubicar en el centro de pnlVistaMenuSecundario como showDialog
+            formCliente.StartPosition = FormStartPosition.CenterParent;
+            formCliente.ShowDialog();
         }
 
         private void btnCancelarPedido_Click(object sender, EventArgs e)

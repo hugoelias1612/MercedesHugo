@@ -85,9 +85,6 @@
     <Compile Include="Administrador\FormRegistrarUsuario.Designer.cs">
       <DependentUpon>FormRegistrarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaseForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="EmpleadoClientes\FormAltaPreventista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +108,12 @@
     </Compile>
     <Compile Include="EmpleadoClientes\FormCliente.Designer.cs">
       <DependentUpon>FormCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormClienteHistorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadoClientes\FormClienteHistorial.Designer.cs">
+      <DependentUpon>FormClienteHistorial.cs</DependentUpon>
     </Compile>
     <Compile Include="EmpleadoClientes\FormCrearPedido.cs">
       <SubType>Form</SubType>
@@ -268,6 +271,9 @@
     <EmbeddedResource Include="EmpleadoClientes\FormCliente.resx">
       <DependentUpon>FormCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadoClientes\FormClienteHistorial.resx">
+      <DependentUpon>FormClienteHistorial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmpleadoClientes\FormCrearPedido.resx">
       <DependentUpon>FormCrearPedido.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,7 +341,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\perfil_reducido.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Capa_Entidades\Capa_Entidades.csproj">
       <Project>{e672c138-029e-42ad-83df-e070f114482b}</Project>
@@ -389,6 +397,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BUSCAR_reducido20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\altacliente.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

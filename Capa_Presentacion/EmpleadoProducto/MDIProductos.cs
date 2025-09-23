@@ -74,5 +74,11 @@ namespace ArimaERP.EmpleadoProducto
         {
             AbrirFormEnPanel(new FormStock());
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            // cerrar formulario MDIProductos
+            this.Close();
+        }
     }
 }
