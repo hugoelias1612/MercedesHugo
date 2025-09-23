@@ -30,6 +30,9 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TLPMain = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -399,26 +402,16 @@
             this.DGResultadosBaja.Size = new System.Drawing.Size(840, 278);
             this.DGResultadosBaja.TabIndex = 1;
             this.DGResultadosBaja.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Baja
-            // 
-            this.Baja.HeaderText = "Dar de baja";
-            this.Baja.MinimumWidth = 6;
-            this.Baja.Name = "Baja";
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio unitario";
-            this.Precio.MinimumWidth = 6;
-            this.Precio.Name = "Precio";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            // 
-            // Familia
+
+            this.lblPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.Location = new System.Drawing.Point(529, 217);
+            this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(187, 44);
+            this.lblPrecio.TabIndex = 21;
+            this.lblPrecio.Text = "Precio unit.";
             // 
             // lblMarca
             // 
@@ -623,6 +616,7 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.UnidadesBulto});
+
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -631,6 +625,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+//>>>>>>> a13b7b55071a60692e615a2e51b4b4ec793cb328
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.Location = new System.Drawing.Point(177, 5);
@@ -933,8 +928,12 @@
             this.Familia,
             this.Marca,
             this.Proveedor});
-           
-        
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGResultadosBaja.DefaultCellStyle = dataGridViewCellStyle8;
             this.DGResultadosBaja.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.DGResultadosBaja.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DGResultadosBaja.Location = new System.Drawing.Point(273, 5);
@@ -1073,6 +1072,18 @@
             // 
             // lblMarcaBaja
             // 
+            this.btnCrear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCrear.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrear.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCrear.Location = new System.Drawing.Point(401, 337);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(133, 36);
+            this.btnCrear.TabIndex = 61;
+            this.btnCrear.TabStop = false;
+            this.btnCrear.Text = "Crear producto";
+            this.btnCrear.UseVisualStyleBackColor = false;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrearProducto_Click);
             this.lblMarcaBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMarcaBaja.AutoSize = true;
             this.lblMarcaBaja.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1084,6 +1095,18 @@
             // 
             // lblFamiliaBaja
             // 
+            this.btnLimpiar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLimpiar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnLimpiar.Location = new System.Drawing.Point(713, 337);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(133, 36);
+            this.btnLimpiar.TabIndex = 62;
+            this.btnLimpiar.TabStop = false;
+            this.btnLimpiar.Text = "Limpiar campos";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
             this.lblFamiliaBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFamiliaBaja.AutoSize = true;
             this.lblFamiliaBaja.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1116,33 +1139,26 @@
             // 
             // pnlBoton
             // 
-            this.btnCrear.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCrear.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrear.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCrear.Location = new System.Drawing.Point(401, 337);
-            this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(133, 36);
-            this.btnCrear.TabIndex = 61;
-            this.btnCrear.TabStop = false;
-            this.btnCrear.Text = "Crear producto";
-            this.btnCrear.UseVisualStyleBackColor = false;
-            this.btnCrear.Click += new System.EventHandler(this.btnCrearProducto_Click);
+            this.pnlBoton.Controls.Add(this.btnBuscarBaja);
+            this.pnlBoton.Location = new System.Drawing.Point(808, 28);
+            this.pnlBoton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlBoton.Name = "pnlBoton";
+            this.pnlBoton.Size = new System.Drawing.Size(85, 34);
+            this.pnlBoton.TabIndex = 13;
             // 
             // btnBuscarBaja
             // 
-            this.btnLimpiar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLimpiar.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnLimpiar.Location = new System.Drawing.Point(713, 337);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(133, 36);
-            this.btnLimpiar.TabIndex = 62;
-            this.btnLimpiar.TabStop = false;
-            this.btnLimpiar.Text = "Limpiar campos";
-            this.btnLimpiar.UseVisualStyleBackColor = false;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
+            this.btnBuscarBaja.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnBuscarBaja.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnBuscarBaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarBaja.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBuscarBaja.Location = new System.Drawing.Point(0, 0);
+            this.btnBuscarBaja.Margin = new System.Windows.Forms.Padding(1);
+            this.btnBuscarBaja.Name = "btnBuscarBaja";
+            this.btnBuscarBaja.Size = new System.Drawing.Size(85, 34);
+            this.btnBuscarBaja.TabIndex = 0;
+            this.btnBuscarBaja.Text = "Buscar";
+            this.btnBuscarBaja.UseVisualStyleBackColor = false;
             // 
             // pnlFooter
             // 

@@ -6,21 +6,23 @@ namespace ArimaERP.EmpleadoProducto
 {
     public partial class FormABM : Form
     {
-
-        private ErrorProvider errorProvider2; // <-- Agregar esta línea
+        private ErrorProvider errorProvider;
 
         public FormABM()
         {
             InitializeComponent();
-            errorProvider2 = new ErrorProvider();
-            errorProvider2.ContainerControl = this;
-            errorProvider2.BlinkStyle = ErrorBlinkStyle.NeverBlink;
-         
+
+            // Inicialización del ErrorProvider
+            errorProvider = new ErrorProvider
+            {
+                ContainerControl = this,
+                BlinkStyle = ErrorBlinkStyle.NeverBlink
+            };
         }
 
         private void FormABM_Load(object sender, EventArgs e)
         {
-            // Inicializar ComboBox con un valor por defecto
+            // Inicializar ComboBoxes
             cbxFamilia.Items.Insert(0, "Seleccione familia");
             cbxFamilia.SelectedIndex = 0;
 
@@ -30,16 +32,18 @@ namespace ArimaERP.EmpleadoProducto
             cbxMarca.Items.Insert(0, "Seleccione marca");
             cbxMarca.SelectedIndex = 0;
 
+            // Inicializar NumericUpDown
             nudUPB.Value = 0;
             nudBultosIniciales.Value = 0;
             nudUnidadesIniciales.Value = 0;
 
+            // Mostrar panel Alta por defecto
             PAlta.Visible = true;
             PBaja.Visible = false;
             PModificacion.Visible = false;
         }
 
-        // KeyPress para Nombre: solo letras y espacios, mayúscula inicial
+        // Validar que Nombre solo contenga letras y espacios
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (txtNombre.Text.Length == 0 && char.IsLower(e.KeyChar))
@@ -70,7 +74,7 @@ namespace ArimaERP.EmpleadoProducto
             }
             else if (txtNombre.Text.Length < 2)
             {
-                errorProvider1.SetError(txtNombre, "El nombre debe tener al menos 2 caracteres.");
+                errorProvider1.SetError(txtNombre, "Debe tener al menos 2 caracteres.");
                 e.Cancel = true;
             }
             else
@@ -79,13 +83,17 @@ namespace ArimaERP.EmpleadoProducto
             }
         }
 
-        // KeyPress para Precio Unit: solo números y coma decimal
         private void txtPrecioUnit_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
             {
                 e.Handled = true;
                 errorProvider1.SetError(txtPrecioUnit, "Solo se permiten números y coma decimal.");
+            }
+            else if (txtPrecioUnit.Text.Length >= 10 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                errorProvider1.SetError(txtPrecioUnit, "Máximo 10 caracteres.");
             }
             else
             {
@@ -121,7 +129,6 @@ namespace ArimaERP.EmpleadoProducto
 
         private void btnCrearProducto_Click(object sender, EventArgs e)
         {
-            // Validar campos obligatorios
             if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
                 cbxFamilia.SelectedIndex == 0 ||
                 cbxProveedor.SelectedIndex == 0 ||
@@ -133,8 +140,7 @@ namespace ArimaERP.EmpleadoProducto
                 return;
             }
 
-            // Si pasa todas las validaciones
-            MessageBox.Show("Producto validado correctamente. Todos los campos obligatorios están completos.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Producto validado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnLimpiarCampos_Click(object sender, EventArgs e)
@@ -155,7 +161,6 @@ namespace ArimaERP.EmpleadoProducto
 
         private void btnAlta_Click(object sender, EventArgs e)
         {
-            // Mostrar panel de Alta y ocultar los otros
             PAlta.Visible = true;
             PBaja.Visible = false;
             PModificacion.Visible = false;
@@ -163,7 +168,6 @@ namespace ArimaERP.EmpleadoProducto
 
         private void btnBaja_Click(object sender, EventArgs e)
         {
-            // Mostrar panel de Baja y ocultar los otros
             PAlta.Visible = false;
             PBaja.Visible = true;
             PModificacion.Visible = false;
@@ -171,7 +175,6 @@ namespace ArimaERP.EmpleadoProducto
 
         private void btnModificacion_Click(object sender, EventArgs e)
         {
-            // Mostrar panel de Modificación y ocultar los otros
             PAlta.Visible = false;
             PBaja.Visible = false;
             PModificacion.Visible = true;
@@ -179,14 +182,32 @@ namespace ArimaERP.EmpleadoProducto
 
         private void txtBuscarDni_KeyDown(object sender, KeyEventArgs e)
         {
+            // Lógica para búsqueda por DNI
         }
 
         private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
         {
+            // Lógica adicional si se necesita
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Acción al hacer clic en una celda
+        }
+
+        private void textBoxCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se permiten números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            if (textBoxCodigo.Text.Length >= 10 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                errorProvider1.SetError(textBoxCodigo, "Máximo 10 caracteres.");
+            }
         }
     }
 }

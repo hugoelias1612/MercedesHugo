@@ -35,12 +35,11 @@
             this.lblRol = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
-
             this.btnAltaCliente = new System.Windows.Forms.Button();
-            this.btnHistorial = new System.Windows.Forms.Button();
-            this.btnRutas = new System.Windows.Forms.Button();
 
+            this.btnRutas = new System.Windows.Forms.Button();
             this.btnAlerta = new System.Windows.Forms.Button();
+            this.btnHistorial = new System.Windows.Forms.Button();
             this.pnlVista = new System.Windows.Forms.Panel();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -56,7 +55,6 @@
             this.panel1.Controls.Add(this.lblRol);
             this.panel1.Controls.Add(this.lblNombre);
             this.panel1.Controls.Add(this.btnSalir);
-
             this.panel1.Controls.Add(this.btnAltaCliente);
             this.panel1.Controls.Add(this.btnHistorial);
             this.panel1.Controls.Add(this.btnRutas);
@@ -141,11 +139,10 @@
             this.btnAltaCliente.TabIndex = 3;
             this.btnAltaCliente.UseVisualStyleBackColor = false;
             this.btnAltaCliente.Click += new System.EventHandler(this.btnFMP_Click);
-
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnHistorial
             // 
-
             this.btnHistorial.BackColor = System.Drawing.SystemColors.Window;
             this.btnHistorial.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnHistorial.Image = ((System.Drawing.Image)(resources.GetObject("btnHistorial.Image")));
@@ -156,7 +153,6 @@
             this.btnHistorial.TabIndex = 2;
             this.btnHistorial.UseVisualStyleBackColor = false;
             this.btnHistorial.Click += new System.EventHandler(this.btnABM_Click);
-
             // 
             // btnRutas
             // 
@@ -233,11 +229,9 @@
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAlerta;
-
         private System.Windows.Forms.Button btnAltaCliente;
         private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.Button btnRutas;
-
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Panel pnlVista;
         private System.Windows.Forms.Panel pnlContent;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ArimaERP.EmpleadoClientes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ArimaERP.Preventista;
 
 namespace ArimaERP.Preventista
 {
@@ -20,6 +22,21 @@ namespace ArimaERP.Preventista
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Crear instancia del formulario hijo que querés abrir
+            FormCrearPedido formCargar = new FormCrearPedido();
+
+            // Acceder al formulario padre MDI y llamar a AbrirFormEnPanel
+            MDIPreventista mdi = this.MdiParent as MDIPreventista;
+            if (mdi != null)
+            {
+                mdi.AbrirFormEnPanel(formCargar);
+            }
         }
     }
 }
