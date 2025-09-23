@@ -74,6 +74,7 @@
             // 
             // TLPPrincipal
             // 
+            this.TLPPrincipal.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.TLPPrincipal.ColumnCount = 1;
             this.TLPPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TLPPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -94,6 +95,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.tableLayoutPanel1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -107,13 +109,15 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(509, 110);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(222, 31);
             this.button1.TabIndex = 1;
             this.button1.Text = "Seleccionar Cliente";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel1
             // 
@@ -140,9 +144,9 @@
             this.lblZona.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblZona.AutoSize = true;
             this.lblZona.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZona.Location = new System.Drawing.Point(738, 3);
+            this.lblZona.Location = new System.Drawing.Point(745, 7);
             this.lblZona.Name = "lblZona";
-            this.lblZona.Size = new System.Drawing.Size(73, 32);
+            this.lblZona.Size = new System.Drawing.Size(59, 25);
             this.lblZona.TabIndex = 2;
             this.lblZona.Text = "Zona:";
             this.lblZona.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -152,9 +156,9 @@
             this.lblCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCliente.AutoSize = true;
             this.lblCliente.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCliente.Location = new System.Drawing.Point(108, 3);
+            this.lblCliente.Location = new System.Drawing.Point(117, 7);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(94, 32);
+            this.lblCliente.Size = new System.Drawing.Size(75, 25);
             this.lblCliente.TabIndex = 0;
             this.lblCliente.Text = "Cliente:";
             this.lblCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -164,9 +168,9 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(99, 43);
+            this.label1.Location = new System.Drawing.Point(111, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 32);
+            this.label1.Size = new System.Drawing.Size(88, 25);
             this.label1.TabIndex = 3;
             this.label1.Text = "Telefono:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -176,15 +180,16 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(714, 43);
+            this.label2.Location = new System.Drawing.Point(726, 46);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 32);
+            this.label2.Size = new System.Drawing.Size(97, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "Confiable:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.flowLayoutPanel1.Controls.Add(this.btnAgregarProductos);
             this.flowLayoutPanel1.Controls.Add(this.button3);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -196,23 +201,27 @@
             // btnAgregarProductos
             // 
             this.btnAgregarProductos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAgregarProductos.BackColor = System.Drawing.Color.Lavender;
+            this.btnAgregarProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarProductos.Location = new System.Drawing.Point(270, 3);
             this.btnAgregarProductos.Margin = new System.Windows.Forms.Padding(270, 3, 3, 3);
             this.btnAgregarProductos.Name = "btnAgregarProductos";
             this.btnAgregarProductos.Size = new System.Drawing.Size(350, 30);
             this.btnAgregarProductos.TabIndex = 0;
             this.btnAgregarProductos.Text = "Agregar Productos";
-            this.btnAgregarProductos.UseVisualStyleBackColor = true;
+            this.btnAgregarProductos.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button3.BackColor = System.Drawing.Color.Lavender;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(626, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(350, 30);
             this.button3.TabIndex = 1;
             this.button3.Text = "Duplicar pedido anterior";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dgvCarrito
@@ -291,6 +300,7 @@
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -313,13 +323,15 @@
             // button4
             // 
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button4.BackColor = System.Drawing.Color.RoyalBlue;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.Location = new System.Drawing.Point(510, 46);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(222, 31);
             this.button4.TabIndex = 9;
             this.button4.Text = "Guardar Borrador";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel5
             // 
@@ -340,9 +352,9 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 1);
+            this.label6.Location = new System.Drawing.Point(27, 5);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(204, 32);
+            this.label6.Size = new System.Drawing.Size(161, 25);
             this.label6.TabIndex = 5;
             this.label6.Text = "Fecha de entrega:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -351,9 +363,9 @@
             // 
             this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(219, 6);
+            this.dateTimePicker1.Location = new System.Drawing.Point(219, 7);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(186, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(186, 20);
             this.dateTimePicker1.TabIndex = 6;
             // 
             // tableLayoutPanel4
@@ -375,9 +387,9 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(21, 1);
+            this.label5.Location = new System.Drawing.Point(45, 5);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(239, 32);
+            this.label5.Size = new System.Drawing.Size(191, 25);
             this.label5.TabIndex = 6;
             this.label5.Text = "¿Es cuenta corriente?";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -386,9 +398,9 @@
             // 
             this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(316, 3);
+            this.checkBox1.Location = new System.Drawing.Point(321, 5);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(57, 29);
+            this.checkBox1.Size = new System.Drawing.Size(46, 24);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Si.";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -398,9 +410,9 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(46, 4);
+            this.label3.Location = new System.Drawing.Point(80, 8);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(322, 32);
+            this.label3.Size = new System.Drawing.Size(254, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "Total del pedido: $**********-";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -424,9 +436,9 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(8, 1);
+            this.label4.Location = new System.Drawing.Point(30, 5);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(199, 32);
+            this.label4.Size = new System.Drawing.Size(156, 25);
             this.label4.TabIndex = 5;
             this.label4.Text = "Metodo de pago:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -437,23 +449,25 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(224, 3);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(175, 33);
+            this.comboBox1.Size = new System.Drawing.Size(175, 28);
             this.comboBox1.TabIndex = 6;
             // 
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.BackColor = System.Drawing.Color.RoyalBlue;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Location = new System.Drawing.Point(924, 46);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(222, 31);
             this.button2.TabIndex = 8;
             this.button2.Text = "Generar Pedido";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // FormCrearPedido
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1248, 530);
             this.Controls.Add(this.TLPPrincipal);

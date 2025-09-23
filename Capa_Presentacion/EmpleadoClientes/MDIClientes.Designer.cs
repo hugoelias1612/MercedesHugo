@@ -77,20 +77,20 @@
             this.pnlUSUARIO.Controls.Add(this.lblFecha);
             this.pnlUSUARIO.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlUSUARIO.Location = new System.Drawing.Point(0, 0);
-            this.pnlUSUARIO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlUSUARIO.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlUSUARIO.Name = "pnlUSUARIO";
-            this.pnlUSUARIO.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlUSUARIO.Size = new System.Drawing.Size(1685, 48);
+            this.pnlUSUARIO.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlUSUARIO.Size = new System.Drawing.Size(1264, 39);
             this.pnlUSUARIO.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = global::ArimaERP.Properties.Resources.perfil;
-            this.pictureBox1.Location = new System.Drawing.Point(1350, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 5, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(998, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 42);
+            this.pictureBox1.Size = new System.Drawing.Size(41, 33);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -101,11 +101,11 @@
             this.lblNombreUsuario.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblNombreUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreUsuario.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblNombreUsuario.Location = new System.Drawing.Point(1405, 2);
-            this.lblNombreUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 15, 0);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(1039, 2);
+            this.lblNombreUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 11, 0);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
-            this.lblNombreUsuario.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.lblNombreUsuario.Size = new System.Drawing.Size(275, 38);
+            this.lblNombreUsuario.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
+            this.lblNombreUsuario.Size = new System.Drawing.Size(221, 29);
             this.lblNombreUsuario.TabIndex = 3;
             this.lblNombreUsuario.Text = "Usuario Mercedes Fernandez";
             // 
@@ -114,9 +114,10 @@
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblHora.Location = new System.Drawing.Point(410, 15);
+            this.lblHora.Location = new System.Drawing.Point(308, 12);
+            this.lblHora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(59, 25);
+            this.lblHora.Size = new System.Drawing.Size(47, 20);
             this.lblHora.TabIndex = 2;
             this.lblHora.Text = "Hora:";
             // 
@@ -125,9 +126,10 @@
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblFecha.Location = new System.Drawing.Point(145, 15);
+            this.lblFecha.Location = new System.Drawing.Point(109, 12);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(66, 25);
+            this.lblFecha.Size = new System.Drawing.Size(53, 20);
             this.lblFecha.TabIndex = 1;
             this.lblFecha.Text = "Fecha:";
             // 
@@ -142,10 +144,10 @@
             this.panel1.Controls.Add(this.btnPreventista);
             this.panel1.Controls.Add(this.btnPedidos);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 48);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(0, 39);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1685, 107);
+            this.panel1.Size = new System.Drawing.Size(1264, 87);
             this.panel1.TabIndex = 3;
             // 
             // btnVolverPanel
@@ -154,10 +156,10 @@
             this.btnVolverPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnVolverPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnVolverPanel.Image = ((System.Drawing.Image)(resources.GetObject("btnVolverPanel.Image")));
-            this.btnVolverPanel.Location = new System.Drawing.Point(1474, 0);
-            this.btnVolverPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVolverPanel.Location = new System.Drawing.Point(1105, 0);
+            this.btnVolverPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVolverPanel.Name = "btnVolverPanel";
-            this.btnVolverPanel.Size = new System.Drawing.Size(112, 105);
+            this.btnVolverPanel.Size = new System.Drawing.Size(84, 85);
             this.btnVolverPanel.TabIndex = 11;
             this.btnVolverPanel.UseVisualStyleBackColor = false;
             this.btnVolverPanel.Visible = false;
@@ -166,10 +168,10 @@
             // 
             this.btnSalir.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSalir.Image = global::ArimaERP.Properties.Resources.salir_reducido;
-            this.btnSalir.Location = new System.Drawing.Point(1586, 0);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(5);
+            this.btnSalir.Location = new System.Drawing.Point(1189, 0);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(97, 105);
+            this.btnSalir.Size = new System.Drawing.Size(73, 85);
             this.btnSalir.TabIndex = 5;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -178,10 +180,10 @@
             // 
             this.btnCobros.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnCobros.Image = global::ArimaERP.Properties.Resources.cobros_reducido;
-            this.btnCobros.Location = new System.Drawing.Point(336, 0);
-            this.btnCobros.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnCobros.Location = new System.Drawing.Point(252, 0);
+            this.btnCobros.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCobros.Name = "btnCobros";
-            this.btnCobros.Size = new System.Drawing.Size(112, 105);
+            this.btnCobros.Size = new System.Drawing.Size(84, 85);
             this.btnCobros.TabIndex = 3;
             this.toolTip1.SetToolTip(this.btnCobros, "Pagos");
             this.btnCobros.UseVisualStyleBackColor = true;
@@ -191,10 +193,10 @@
             // 
             this.btnClientes.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnClientes.Image = global::ArimaERP.Properties.Resources.clientes_reducido;
-            this.btnClientes.Location = new System.Drawing.Point(224, 0);
-            this.btnClientes.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnClientes.Location = new System.Drawing.Point(168, 0);
+            this.btnClientes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(112, 105);
+            this.btnClientes.Size = new System.Drawing.Size(84, 85);
             this.btnClientes.TabIndex = 2;
             this.toolTip1.SetToolTip(this.btnClientes, "Clientes");
             this.btnClientes.UseVisualStyleBackColor = true;
@@ -204,10 +206,10 @@
             // 
             this.btnPreventista.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnPreventista.Image = global::ArimaERP.Properties.Resources.preventista_reducido;
-            this.btnPreventista.Location = new System.Drawing.Point(112, 0);
-            this.btnPreventista.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnPreventista.Location = new System.Drawing.Point(84, 0);
+            this.btnPreventista.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPreventista.Name = "btnPreventista";
-            this.btnPreventista.Size = new System.Drawing.Size(112, 105);
+            this.btnPreventista.Size = new System.Drawing.Size(84, 85);
             this.btnPreventista.TabIndex = 1;
             this.toolTip1.SetToolTip(this.btnPreventista, "Preventistas");
             this.btnPreventista.UseVisualStyleBackColor = true;
@@ -218,9 +220,9 @@
             this.btnPedidos.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnPedidos.Image = global::ArimaERP.Properties.Resources.pedido_reducido;
             this.btnPedidos.Location = new System.Drawing.Point(0, 0);
-            this.btnPedidos.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnPedidos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPedidos.Name = "btnPedidos";
-            this.btnPedidos.Size = new System.Drawing.Size(112, 105);
+            this.btnPedidos.Size = new System.Drawing.Size(84, 85);
             this.btnPedidos.TabIndex = 0;
             this.toolTip1.SetToolTip(this.btnPedidos, "Pedidos");
             this.btnPedidos.UseVisualStyleBackColor = true;
@@ -234,20 +236,20 @@
             this.pnlVista.Controls.Add(this.pnlPreventistas);
             this.pnlVista.Controls.Add(this.pnlPedidos);
             this.pnlVista.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlVista.Location = new System.Drawing.Point(0, 155);
-            this.pnlVista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlVista.Location = new System.Drawing.Point(0, 126);
+            this.pnlVista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlVista.Name = "pnlVista";
-            this.pnlVista.Size = new System.Drawing.Size(1685, 683);
+            this.pnlVista.Size = new System.Drawing.Size(1264, 555);
             this.pnlVista.TabIndex = 4;
             // 
             // pnlVistaMenuSecundario
             // 
             this.pnlVistaMenuSecundario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
             this.pnlVistaMenuSecundario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlVistaMenuSecundario.Location = new System.Drawing.Point(695, 0);
-            this.pnlVistaMenuSecundario.Margin = new System.Windows.Forms.Padding(5);
+            this.pnlVistaMenuSecundario.Location = new System.Drawing.Point(521, 0);
+            this.pnlVistaMenuSecundario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlVistaMenuSecundario.Name = "pnlVistaMenuSecundario";
-            this.pnlVistaMenuSecundario.Size = new System.Drawing.Size(990, 683);
+            this.pnlVistaMenuSecundario.Size = new System.Drawing.Size(743, 555);
             this.pnlVistaMenuSecundario.TabIndex = 2;
             this.pnlVistaMenuSecundario.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlVistaMenuSecundario_Paint);
             // 
@@ -260,10 +262,10 @@
             this.pnlClientes.Controls.Add(this.btnModificacion);
             this.pnlClientes.Controls.Add(this.btnAlta);
             this.pnlClientes.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlClientes.Location = new System.Drawing.Point(470, 0);
-            this.pnlClientes.Margin = new System.Windows.Forms.Padding(5);
+            this.pnlClientes.Location = new System.Drawing.Point(352, 0);
+            this.pnlClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlClientes.Name = "pnlClientes";
-            this.pnlClientes.Size = new System.Drawing.Size(225, 683);
+            this.pnlClientes.Size = new System.Drawing.Size(169, 555);
             this.pnlClientes.TabIndex = 0;
             this.pnlClientes.Visible = false;
             // 
@@ -271,10 +273,10 @@
             // 
             this.btnCuentaCorriente.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCuentaCorriente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCuentaCorriente.Location = new System.Drawing.Point(0, 292);
-            this.btnCuentaCorriente.Margin = new System.Windows.Forms.Padding(4, 4, 40, 37);
+            this.btnCuentaCorriente.Location = new System.Drawing.Point(0, 236);
+            this.btnCuentaCorriente.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
             this.btnCuentaCorriente.Name = "btnCuentaCorriente";
-            this.btnCuentaCorriente.Size = new System.Drawing.Size(225, 73);
+            this.btnCuentaCorriente.Size = new System.Drawing.Size(169, 59);
             this.btnCuentaCorriente.TabIndex = 1;
             this.btnCuentaCorriente.Text = "Cuenta Corriente";
             this.btnCuentaCorriente.UseVisualStyleBackColor = true;
@@ -283,10 +285,10 @@
             // 
             this.btnHistorial.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHistorial.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistorial.Location = new System.Drawing.Point(0, 219);
-            this.btnHistorial.Margin = new System.Windows.Forms.Padding(4, 4, 40, 37);
+            this.btnHistorial.Location = new System.Drawing.Point(0, 177);
+            this.btnHistorial.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
             this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Size = new System.Drawing.Size(225, 73);
+            this.btnHistorial.Size = new System.Drawing.Size(169, 59);
             this.btnHistorial.TabIndex = 1;
             this.btnHistorial.Text = "Historial";
             this.btnHistorial.UseVisualStyleBackColor = true;
@@ -295,10 +297,10 @@
             // 
             this.btnBaja.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBaja.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBaja.Location = new System.Drawing.Point(0, 146);
-            this.btnBaja.Margin = new System.Windows.Forms.Padding(4, 4, 40, 37);
+            this.btnBaja.Location = new System.Drawing.Point(0, 118);
+            this.btnBaja.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
             this.btnBaja.Name = "btnBaja";
-            this.btnBaja.Size = new System.Drawing.Size(225, 73);
+            this.btnBaja.Size = new System.Drawing.Size(169, 59);
             this.btnBaja.TabIndex = 1;
             this.btnBaja.Text = "Baja";
             this.btnBaja.UseVisualStyleBackColor = true;
@@ -308,10 +310,10 @@
             // 
             this.btnModificacion.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnModificacion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificacion.Location = new System.Drawing.Point(0, 73);
-            this.btnModificacion.Margin = new System.Windows.Forms.Padding(4, 4, 40, 37);
+            this.btnModificacion.Location = new System.Drawing.Point(0, 59);
+            this.btnModificacion.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
             this.btnModificacion.Name = "btnModificacion";
-            this.btnModificacion.Size = new System.Drawing.Size(225, 73);
+            this.btnModificacion.Size = new System.Drawing.Size(169, 59);
             this.btnModificacion.TabIndex = 1;
             this.btnModificacion.Text = "Modificación";
             this.btnModificacion.UseVisualStyleBackColor = true;
@@ -322,9 +324,9 @@
             this.btnAlta.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAlta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlta.Location = new System.Drawing.Point(0, 0);
-            this.btnAlta.Margin = new System.Windows.Forms.Padding(4, 4, 40, 37);
+            this.btnAlta.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
             this.btnAlta.Name = "btnAlta";
-            this.btnAlta.Size = new System.Drawing.Size(225, 73);
+            this.btnAlta.Size = new System.Drawing.Size(169, 59);
             this.btnAlta.TabIndex = 1;
             this.btnAlta.Text = "Alta";
             this.btnAlta.UseVisualStyleBackColor = true;
@@ -336,10 +338,10 @@
             this.pnlPreventistas.Controls.Add(this.btnHistorialPreventistas);
             this.pnlPreventistas.Controls.Add(this.btnAltaPrevent);
             this.pnlPreventistas.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlPreventistas.Location = new System.Drawing.Point(224, 0);
-            this.pnlPreventistas.Margin = new System.Windows.Forms.Padding(5);
+            this.pnlPreventistas.Location = new System.Drawing.Point(168, 0);
+            this.pnlPreventistas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlPreventistas.Name = "pnlPreventistas";
-            this.pnlPreventistas.Size = new System.Drawing.Size(246, 683);
+            this.pnlPreventistas.Size = new System.Drawing.Size(184, 555);
             this.pnlPreventistas.TabIndex = 3;
             this.pnlPreventistas.Visible = false;
             // 
@@ -347,10 +349,10 @@
             // 
             this.btnHistorialPreventistas.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHistorialPreventistas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistorialPreventistas.Location = new System.Drawing.Point(0, 73);
-            this.btnHistorialPreventistas.Margin = new System.Windows.Forms.Padding(4, 4, 40, 37);
+            this.btnHistorialPreventistas.Location = new System.Drawing.Point(0, 59);
+            this.btnHistorialPreventistas.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
             this.btnHistorialPreventistas.Name = "btnHistorialPreventistas";
-            this.btnHistorialPreventistas.Size = new System.Drawing.Size(246, 73);
+            this.btnHistorialPreventistas.Size = new System.Drawing.Size(184, 59);
             this.btnHistorialPreventistas.TabIndex = 2;
             this.btnHistorialPreventistas.Text = "Historial";
             this.btnHistorialPreventistas.UseVisualStyleBackColor = true;
@@ -361,9 +363,9 @@
             this.btnAltaPrevent.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAltaPrevent.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAltaPrevent.Location = new System.Drawing.Point(0, 0);
-            this.btnAltaPrevent.Margin = new System.Windows.Forms.Padding(4, 4, 40, 37);
+            this.btnAltaPrevent.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
             this.btnAltaPrevent.Name = "btnAltaPrevent";
-            this.btnAltaPrevent.Size = new System.Drawing.Size(246, 73);
+            this.btnAltaPrevent.Size = new System.Drawing.Size(184, 59);
             this.btnAltaPrevent.TabIndex = 1;
             this.btnAltaPrevent.Text = "Alta_Modificación_Baja";
             this.btnAltaPrevent.UseVisualStyleBackColor = true;
@@ -377,9 +379,9 @@
             this.pnlPedidos.Controls.Add(this.btnCrearPedido);
             this.pnlPedidos.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlPedidos.Location = new System.Drawing.Point(0, 0);
-            this.pnlPedidos.Margin = new System.Windows.Forms.Padding(5);
+            this.pnlPedidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlPedidos.Name = "pnlPedidos";
-            this.pnlPedidos.Size = new System.Drawing.Size(224, 683);
+            this.pnlPedidos.Size = new System.Drawing.Size(168, 555);
             this.pnlPedidos.TabIndex = 2;
             this.pnlPedidos.Visible = false;
             // 
@@ -387,10 +389,10 @@
             // 
             this.btnCancPedido.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCancPedido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancPedido.Location = new System.Drawing.Point(0, 146);
-            this.btnCancPedido.Margin = new System.Windows.Forms.Padding(4, 4, 40, 37);
+            this.btnCancPedido.Location = new System.Drawing.Point(0, 118);
+            this.btnCancPedido.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
             this.btnCancPedido.Name = "btnCancPedido";
-            this.btnCancPedido.Size = new System.Drawing.Size(224, 73);
+            this.btnCancPedido.Size = new System.Drawing.Size(168, 59);
             this.btnCancPedido.TabIndex = 2;
             this.btnCancPedido.Text = "Cancelar";
             this.btnCancPedido.UseVisualStyleBackColor = true;
@@ -400,10 +402,10 @@
             // 
             this.btnModificarPedido.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnModificarPedido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarPedido.Location = new System.Drawing.Point(0, 73);
-            this.btnModificarPedido.Margin = new System.Windows.Forms.Padding(4, 4, 40, 37);
+            this.btnModificarPedido.Location = new System.Drawing.Point(0, 59);
+            this.btnModificarPedido.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
             this.btnModificarPedido.Name = "btnModificarPedido";
-            this.btnModificarPedido.Size = new System.Drawing.Size(224, 73);
+            this.btnModificarPedido.Size = new System.Drawing.Size(168, 59);
             this.btnModificarPedido.TabIndex = 1;
             this.btnModificarPedido.Text = "Modificar";
             this.btnModificarPedido.UseVisualStyleBackColor = true;
@@ -414,9 +416,9 @@
             this.btnCrearPedido.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCrearPedido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearPedido.Location = new System.Drawing.Point(0, 0);
-            this.btnCrearPedido.Margin = new System.Windows.Forms.Padding(4, 4, 40, 37);
+            this.btnCrearPedido.Margin = new System.Windows.Forms.Padding(3, 3, 30, 30);
             this.btnCrearPedido.Name = "btnCrearPedido";
-            this.btnCrearPedido.Size = new System.Drawing.Size(224, 73);
+            this.btnCrearPedido.Size = new System.Drawing.Size(168, 59);
             this.btnCrearPedido.TabIndex = 1;
             this.btnCrearPedido.Text = "Crear";
             this.btnCrearPedido.UseVisualStyleBackColor = true;
@@ -424,14 +426,14 @@
             // 
             // MDIClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1685, 838);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.pnlVista);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlUSUARIO);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MDIClientes";
