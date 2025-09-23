@@ -39,18 +39,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblLetraApellido = new System.Windows.Forms.Label();
             this.textBoxBUSCARGENERAL = new System.Windows.Forms.TextBox();
+            this.pictureBoxBuscar = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtIndicaciones = new System.Windows.Forms.TextBox();
             this.dataGridListarClientes = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtIndicacionesFila = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.pictureBoxBuscar = new System.Windows.Forms.PictureBox();
             this.TLPHeader.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridListarClientes)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBuscar)).BeginInit();
             this.SuspendLayout();
             // 
             // TLPHeader
@@ -109,7 +109,7 @@
             // 
             this.txtBusacarEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBusacarEmail.Location = new System.Drawing.Point(420, 34);
-            this.txtBusacarEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBusacarEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtBusacarEmail.Name = "txtBusacarEmail";
             this.txtBusacarEmail.Size = new System.Drawing.Size(123, 20);
             this.txtBusacarEmail.TabIndex = 25;
@@ -120,7 +120,7 @@
             this.comboBoxBuscarClienteZona.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxBuscarClienteZona.FormattingEnabled = true;
             this.comboBoxBuscarClienteZona.Location = new System.Drawing.Point(547, 33);
-            this.comboBoxBuscarClienteZona.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxBuscarClienteZona.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxBuscarClienteZona.Name = "comboBoxBuscarClienteZona";
             this.comboBoxBuscarClienteZona.Size = new System.Drawing.Size(123, 21);
             this.comboBoxBuscarClienteZona.TabIndex = 27;
@@ -204,6 +204,17 @@
             this.textBoxBUSCARGENERAL.TabIndex = 37;
             this.textBoxBUSCARGENERAL.TextChanged += new System.EventHandler(this.textBoxBUSCARGENERAL_TextChanged);
             // 
+            // pictureBoxBuscar
+            // 
+            this.pictureBoxBuscar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBoxBuscar.Image = global::ArimaERP.Properties.Resources.BUSCAR_reducido20x20;
+            this.pictureBoxBuscar.Location = new System.Drawing.Point(767, 33);
+            this.pictureBoxBuscar.Name = "pictureBoxBuscar";
+            this.pictureBoxBuscar.Size = new System.Drawing.Size(29, 21);
+            this.pictureBoxBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxBuscar.TabIndex = 38;
+            this.pictureBoxBuscar.TabStop = false;
+            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -255,7 +266,7 @@
             this.panel1.Controls.Add(this.txtIndicaciones);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 403);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(967, 84);
             this.panel1.TabIndex = 3;
@@ -280,17 +291,6 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // pictureBoxBuscar
-            // 
-            this.pictureBoxBuscar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBoxBuscar.Image = global::ArimaERP.Properties.Resources.BUSCAR_reducido20x20;
-            this.pictureBoxBuscar.Location = new System.Drawing.Point(767, 33);
-            this.pictureBoxBuscar.Name = "pictureBoxBuscar";
-            this.pictureBoxBuscar.Size = new System.Drawing.Size(29, 21);
-            this.pictureBoxBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBoxBuscar.TabIndex = 38;
-            this.pictureBoxBuscar.TabStop = false;
-            // 
             // FormModificacionCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,7 +299,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridListarClientes);
             this.Controls.Add(this.TLPHeader);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormModificacionCliente";
             this.Text = "FormModificacionCliente";
             this.Load += new System.EventHandler(this.FormModificacionCliente_Load);
@@ -307,10 +307,10 @@
             this.TLPHeader.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridListarClientes)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBuscar)).EndInit();
             this.ResumeLayout(false);
 
         }
