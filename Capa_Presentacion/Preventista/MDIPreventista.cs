@@ -26,7 +26,7 @@ namespace ArimaERP.Preventista
             lblRol.Text = "ROL: Preventista";
         }
 
-        private void AbrirFormEnPanel(Form formHijo)
+        public void AbrirFormEnPanel(Form formHijo)
         {
             // Si ya hay controles dentro del panel, los limpio
             pnlContent.Controls.Clear();

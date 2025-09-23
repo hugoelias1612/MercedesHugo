@@ -59,6 +59,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -84,6 +86,12 @@
     </Compile>
     <Compile Include="Administrador\FormRegistrarUsuario.Designer.cs">
       <DependentUpon>FormRegistrarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\FormReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\FormReportes.Designer.cs">
+      <DependentUpon>FormReportes.cs</DependentUpon>
     </Compile>
     <Compile Include="EmpleadoClientes\FormAltaPreventista.cs">
       <SubType>Form</SubType>
@@ -223,6 +231,18 @@
     <Compile Include="Preventista\FormCrearPedido.Designer.cs">
       <DependentUpon>FormCrearPedido.cs</DependentUpon>
     </Compile>
+    <Compile Include="Preventista\FormHistorialPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preventista\FormHistorialPedidos.Designer.cs">
+      <DependentUpon>FormHistorialPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Preventista\FormRutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preventista\FormRutas.Designer.cs">
+      <DependentUpon>FormRutas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Preventista\MDIPreventista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -258,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\FormRegistrarUsuario.resx">
       <DependentUpon>FormRegistrarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\FormReportes.resx">
+      <DependentUpon>FormReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmpleadoClientes\FormAltaPreventista.resx">
       <DependentUpon>FormAltaPreventista.cs</DependentUpon>
@@ -300,6 +323,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmpleadoProducto\FormABM.resx">
       <DependentUpon>FormABM.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="EmpleadoProducto\FormAlerta.resx">
       <DependentUpon>FormAlerta.cs</DependentUpon>
@@ -327,6 +351,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Preventista\FormCrearPedido.resx">
       <DependentUpon>FormCrearPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preventista\FormHistorialPedidos.resx">
+      <DependentUpon>FormHistorialPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preventista\FormRutas.resx">
+      <DependentUpon>FormRutas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Preventista\MDIPreventista.resx">
       <DependentUpon>MDIPreventista.cs</DependentUpon>
