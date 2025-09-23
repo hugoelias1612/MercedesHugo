@@ -35,15 +35,11 @@
             this.lblRol = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
-<<<<<<< HEAD
             this.btnAltaCliente = new System.Windows.Forms.Button();
-            this.btnHistorial = new System.Windows.Forms.Button();
+
             this.btnRutas = new System.Windows.Forms.Button();
-=======
-            this.btnABM = new System.Windows.Forms.Button();
-            this.btnStock = new System.Windows.Forms.Button();
->>>>>>> a13b7b55071a60692e615a2e51b4b4ec793cb328
             this.btnAlerta = new System.Windows.Forms.Button();
+            this.btnHistorial = new System.Windows.Forms.Button();
             this.pnlVista = new System.Windows.Forms.Panel();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -59,14 +55,10 @@
             this.panel1.Controls.Add(this.lblRol);
             this.panel1.Controls.Add(this.lblNombre);
             this.panel1.Controls.Add(this.btnSalir);
-<<<<<<< HEAD
             this.panel1.Controls.Add(this.btnAltaCliente);
             this.panel1.Controls.Add(this.btnHistorial);
             this.panel1.Controls.Add(this.btnRutas);
-=======
-            this.panel1.Controls.Add(this.btnABM);
-            this.panel1.Controls.Add(this.btnStock);
->>>>>>> a13b7b55071a60692e615a2e51b4b4ec793cb328
+
             this.panel1.Controls.Add(this.btnAlerta);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -133,7 +125,7 @@
             this.btnSalir.Size = new System.Drawing.Size(149, 135);
             this.btnSalir.TabIndex = 5;
             this.btnSalir.UseVisualStyleBackColor = false;
-<<<<<<< HEAD
+
             // 
             // btnAltaCliente
             // 
@@ -147,13 +139,10 @@
             this.btnAltaCliente.TabIndex = 3;
             this.btnAltaCliente.UseVisualStyleBackColor = false;
             this.btnAltaCliente.Click += new System.EventHandler(this.btnFMP_Click);
-=======
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
->>>>>>> a13b7b55071a60692e615a2e51b4b4ec793cb328
             // 
             // btnHistorial
             // 
-<<<<<<< HEAD
             this.btnHistorial.BackColor = System.Drawing.SystemColors.Window;
             this.btnHistorial.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnHistorial.Image = ((System.Drawing.Image)(resources.GetObject("btnHistorial.Image")));
@@ -164,22 +153,10 @@
             this.btnHistorial.TabIndex = 2;
             this.btnHistorial.UseVisualStyleBackColor = false;
             this.btnHistorial.Click += new System.EventHandler(this.btnABM_Click);
-=======
-            this.btnABM.BackColor = System.Drawing.SystemColors.Window;
-            this.btnABM.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnABM.Image = ((System.Drawing.Image)(resources.GetObject("btnABM.Image")));
-            this.btnABM.Location = new System.Drawing.Point(298, 0);
-            this.btnABM.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.btnABM.Name = "btnABM";
-            this.btnABM.Size = new System.Drawing.Size(149, 135);
-            this.btnABM.TabIndex = 2;
-            this.btnABM.UseVisualStyleBackColor = false;
-            this.btnABM.Click += new System.EventHandler(this.btnABM_Click);
->>>>>>> a13b7b55071a60692e615a2e51b4b4ec793cb328
             // 
             // btnRutas
             // 
-<<<<<<< HEAD
+
             this.btnRutas.BackColor = System.Drawing.SystemColors.Window;
             this.btnRutas.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnRutas.Image = ((System.Drawing.Image)(resources.GetObject("btnRutas.Image")));
@@ -190,18 +167,7 @@
             this.btnRutas.TabIndex = 1;
             this.btnRutas.UseVisualStyleBackColor = false;
             this.btnRutas.Click += new System.EventHandler(this.btnStock_Click);
-=======
-            this.btnStock.BackColor = System.Drawing.SystemColors.Window;
-            this.btnStock.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnStock.Image = ((System.Drawing.Image)(resources.GetObject("btnStock.Image")));
-            this.btnStock.Location = new System.Drawing.Point(149, 0);
-            this.btnStock.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.btnStock.Name = "btnStock";
-            this.btnStock.Size = new System.Drawing.Size(149, 135);
-            this.btnStock.TabIndex = 1;
-            this.btnStock.UseVisualStyleBackColor = false;
-            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
->>>>>>> a13b7b55071a60692e615a2e51b4b4ec793cb328
+
             // 
             // btnAlerta
             // 
@@ -263,14 +229,9 @@
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAlerta;
-<<<<<<< HEAD
         private System.Windows.Forms.Button btnAltaCliente;
         private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.Button btnRutas;
-=======
-        private System.Windows.Forms.Button btnABM;
-        private System.Windows.Forms.Button btnStock;
->>>>>>> a13b7b55071a60692e615a2e51b4b4ec793cb328
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Panel pnlVista;
         private System.Windows.Forms.Panel pnlContent;

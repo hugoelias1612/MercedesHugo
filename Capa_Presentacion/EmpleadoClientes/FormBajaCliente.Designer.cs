@@ -208,17 +208,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscarTodosClientes.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.btnBuscarTodosClientes.Location = new System.Drawing.Point(872, 2);
-            this.btnBuscarTodosClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnBuscarTodosClientes.Name = "btnBuscarTodosClientes";
-            this.btnBuscarTodosClientes.Size = new System.Drawing.Size(134, 26);
-=======
+
             this.btnBuscarTodosClientes.Location = new System.Drawing.Point(1163, 39);
             this.btnBuscarTodosClientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscarTodosClientes.Name = "btnBuscarTodosClientes";
             this.btnBuscarTodosClientes.Size = new System.Drawing.Size(178, 30);
->>>>>>> a13b7b55071a60692e615a2e51b4b4ec793cb328
             this.btnBuscarTodosClientes.TabIndex = 30;
             this.btnBuscarTodosClientes.Text = "TODOS";
             this.btnBuscarTodosClientes.UseVisualStyleBackColor = true;
