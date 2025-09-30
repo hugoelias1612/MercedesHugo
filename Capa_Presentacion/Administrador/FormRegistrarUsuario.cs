@@ -12,7 +12,7 @@ namespace ArimaERP.Administrador
 {
     public partial class FormRegistrarUsuario : Form
     {
-        private bool limpiarPresionado = false;
+        
         public FormRegistrarUsuario()
         {
             InitializeComponent();
@@ -298,7 +298,7 @@ namespace ArimaERP.Administrador
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            limpiarPresionado = true;
+            
             //limpiar todos los campos y reiniciar comboBox
             textBoxUsuario.Clear(); 
             textBoxContrasena.Clear();

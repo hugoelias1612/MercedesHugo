@@ -55,10 +55,15 @@ namespace ArimaERP.EmpleadoClientes
                 };
 
                 FormEditarCliente formEditarCliente = new FormEditarCliente(clienteSeleccionado);
+                // Suscribirse al evento               
                 formEditarCliente.ShowDialog();
+                // Después de cerrar el formulario de edición, recargar los datos
+                FormModificacionCliente_Load(this, EventArgs.Empty);
+                    
+
+
             }
         }
-
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex >= 0)
@@ -142,32 +147,51 @@ namespace ArimaERP.EmpleadoClientes
 
         private void txtNombreApellido_KeyDown(object sender, KeyEventArgs e)
         {
-            //validar que se ingresaron letras y espacios
-            if (e.KeyCode != Keys.Back && e.KeyCode != Keys.Enter && !char.IsLetter((char)e.KeyValue) && e.KeyCode != Keys.Space)
-            {
-                MessageBox.Show("Por favor, ingrese solo letras y espacios para el nombre o apellido.", "Entrada inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                e.SuppressKeyPress = true; // evita que el carácter no válido se ingrese en el TextBox
-                return;
-            }
+            
             //al presionar enter buscar por nombre o por apellido
             if (e.KeyCode == Keys.Enter)
             {
                 //
                 string filtro = txtNombreApellido.Text.ToLower();
-                foreach (DataGridViewRow row in dataGridListarClientes.Rows)
+               //buscar por nombre o apellido en tabla CLIENTE de base de datos
+                // Limpiar las filas actuales del DataGridView
+                dataGridListarClientes.Rows.Clear();
+                List<CLIENTE> listaClientes = clienteLogica.ObtenerClientes();
+                var clientesFiltrados = listaClientes.Where(cliente =>
+                    (cliente.nombre != null && cliente.nombre.ToLower().Contains(filtro)) ||
+                    (cliente.apellido != null && cliente.apellido.ToLower().Contains(filtro))
+                ).ToList();
+                var zonas = clienteLogica.ObtenerZonas();
+                var tamanos = clienteLogica.ObtenerTamanos();
+                foreach (var cliente in clientesFiltrados)
                 {
-                    string nombre = row.Cells["nombre"].Value?.ToString().ToLower() ?? "";
-                    string apellido = row.Cells["apellido"].Value?.ToString().ToLower() ?? "";
-                    if (nombre.Contains(filtro) || apellido.Contains(filtro))
-                    {
-                        row.Visible = true;
-                    }
-                    else
-                    {
-                        row.Visible = false;
-                    }
+                    string estadoTexto = cliente.estado ? "Activo" : "Inactivo";
+                    string confiableTexto = cliente.confiable ? "Si" : "No";
+                    string nombreZona = zonas.FirstOrDefault(z => z.id_zona == cliente.id_zona)?.nombre ?? "Zona desconocida";
+                    string nombreTamano = tamanos.FirstOrDefault(t => t.id_tamano == cliente.id_tamano)?.descripcion ?? "Tamaño desconocido";
+                    dataGridListarClientes.Rows.Add(
+                        cliente.id_cliente,
+                        cliente.dni,
+                        cliente.nombre,
+                        cliente.apellido,
+                        cliente.telefono,
+                        cliente.email,
+                        cliente.razon_social,
+                        cliente.cuil_cuit,
+                        cliente.fecha_alta,
+                        estadoTexto,
+                        confiableTexto,
+                        cliente.condicion_frenteIVA,
+                        cliente.calle,
+                        cliente.numero,
+                        cliente.ciudad,
+                        cliente.provincia,
+                        cliente.cod_postal,
+                        nombreTamano,
+                        nombreZona,
+                         cliente.id_tamano, cliente.id_zona
+                    );
                 }
-                e.SuppressKeyPress = true; // evita el sonido de alerta
             }
         }
 
@@ -186,43 +210,87 @@ namespace ArimaERP.EmpleadoClientes
                     }
                 }
                 string filtro = txtBuscarDni.Text.ToLower();
-                foreach (DataGridViewRow row in dataGridListarClientes.Rows)
+                //buscar por dni en tabla CLIENTE de base de datos
+                // Limpiar las filas actuales del DataGridView
+                dataGridListarClientes.Rows.Clear();
+                List<CLIENTE> listaClientes = clienteLogica.ObtenerClientes();
+                var clientesFiltrados = listaClientes.Where(cliente =>
+                    cliente.dni.ToString().ToLower().Contains(filtro)
+                ).ToList();
+                var zonas = clienteLogica.ObtenerZonas();
+                var tamanos = clienteLogica.ObtenerTamanos();
+                foreach (var cliente in clientesFiltrados)
                 {
-                    string dni = row.Cells["dni"].Value?.ToString().ToLower() ?? "";
-                    if (dni.Contains(filtro))
-                    {
-                        row.Visible = true;
-                    }
-                    else
-                    {
-                        row.Visible = false;
-                    }
+                    string estadoTexto = cliente.estado ? "Activo" : "Inactivo";
+                    string confiableTexto = cliente.confiable ? "Si" : "No";
+                    string nombreZona = zonas.FirstOrDefault(z => z.id_zona == cliente.id_zona)?.nombre ?? "Zona desconocida";
+                    string nombreTamano = tamanos.FirstOrDefault(t => t.id_tamano == cliente.id_tamano)?.descripcion ?? "Tamaño desconocido";
+                    dataGridListarClientes.Rows.Add(
+                        cliente.id_cliente,
+                        cliente.dni,
+                        cliente.nombre,
+                        cliente.apellido,
+                        cliente.telefono,
+                        cliente.email,
+                        cliente.razon_social,
+                        cliente.cuil_cuit,
+                        cliente.fecha_alta,
+                        estadoTexto,
+                        confiableTexto,
+                        cliente.condicion_frenteIVA,
+                        cliente.calle,
+                        cliente.numero,
+                        cliente.ciudad,
+                        cliente.provincia,
+                        cliente.cod_postal,
+                        nombreTamano,
+                        nombreZona,
+                         cliente.id_tamano, cliente.id_zona
+                    );
                 }
-                e.SuppressKeyPress = true; // evita el sonido de alerta
             }
-
         }
 
         private void txtBusacarEmail_KeyDown(object sender, KeyEventArgs e)
-        {
-            //validar que se ingresa un email
-            if (e.KeyCode == Keys.Enter)
+        {   //buscar por email en tabla CLIENTE de base de datos
+            // Limpiar las filas actuales del DataGridView
+            dataGridListarClientes.Rows.Clear();
+            List<CLIENTE> listaClientes = clienteLogica.ObtenerClientes();
+            string filtro = txtBusacarEmail.Text.ToLower();
+            var clientesFiltrados = listaClientes.Where(cliente =>
+                (cliente.email != null && cliente.email.ToLower().Contains(filtro))
+            ).ToList();
+            foreach (var cliente in clientesFiltrados)
             {
-                string filtro = txtBusacarEmail.Text.ToLower();
-                foreach (DataGridViewRow row in dataGridListarClientes.Rows)
-                {
-                    string email = row.Cells["email"].Value?.ToString().ToLower() ?? "";
-                    if (email.Contains(filtro))
-                    {
-                        row.Visible = true;
-                    }
-                    else
-                    {
-                        row.Visible = false;
-                    }
-                }
-                e.SuppressKeyPress = true; // evita el sonido de alerta
-            }
+                string estadoTexto = cliente.estado ? "Activo" : "Inactivo";
+                string confiableTexto = cliente.confiable ? "Si" : "No";
+                var zonas = clienteLogica.ObtenerZonas();
+                var tamanos = clienteLogica.ObtenerTamanos();
+                string nombreZona = zonas.FirstOrDefault(z => z.id_zona == cliente.id_zona)?.nombre ?? "Zona desconocida";
+                string nombreTamano = tamanos.FirstOrDefault(t => t.id_tamano == cliente.id_tamano)?.descripcion ?? "Tamaño desconocido";
+                dataGridListarClientes.Rows.Add(
+                    cliente.id_cliente,
+                    cliente.dni,
+                    cliente.nombre,
+                    cliente.apellido,
+                    cliente.telefono,
+                    cliente.email,
+                    cliente.razon_social,
+                    cliente.cuil_cuit,
+                    cliente.fecha_alta,
+                    estadoTexto,
+                    confiableTexto,
+                    cliente.condicion_frenteIVA,
+                    cliente.calle,
+                    cliente.numero,
+                    cliente.ciudad,
+                    cliente.provincia,
+                    cliente.cod_postal,
+                    nombreTamano,
+                    nombreZona,
+                     cliente.id_tamano, cliente.id_zona
+                );
+            }           
         }
 
         private void comboBoxBuscarClienteZona_SelectedIndexChanged(object sender, EventArgs e)
@@ -287,27 +355,82 @@ namespace ArimaERP.EmpleadoClientes
 
         private void textBoxBUSCARGENERAL_TextChanged(object sender, EventArgs e)
         {
-            //busqueda general en todas las columnas
+            //busqueda general en todas las columnas de la tabla cliente
+            var zonas = clienteLogica.ObtenerZonas();
+            var tamanos = clienteLogica.ObtenerTamanos();
+
+            List<CLIENTE> listaClientes = clienteLogica.ObtenerClientes();
             string filtro = textBoxBUSCARGENERAL.Text.ToLower();
-            foreach (DataGridViewRow row in dataGridListarClientes.Rows)
-            {
-                bool filaVisible = false;
-                foreach (DataGridViewCell cell in row.Cells)
-                {
-                    if (cell.Value != null && cell.Value.ToString().ToLower().Contains(filtro))
-                    {
-                        filaVisible = true;
-                        break;
-                    }
-                }
-                row.Visible = filaVisible;
+            if (string.IsNullOrEmpty(filtro)) {
+                return;
             }
+            var clientesFiltrados = listaClientes.Where(cliente =>
+                (cliente.nombre != null && cliente.nombre.ToLower().Contains(filtro)) ||
+                (cliente.apellido != null && cliente.apellido.ToLower().Contains(filtro)) ||
+                (cliente.dni.ToString().ToLower().Contains(filtro)) ||
+                (cliente.email != null && cliente.email.ToLower().Contains(filtro)) ||
+                (cliente.razon_social != null && cliente.razon_social.ToLower().Contains(filtro)) ||
+                (cliente.cuil_cuit.ToString().ToLower().Contains(filtro)) ||
+                (cliente.fecha_alta.ToString("dd/MM/yyyy").ToLower().Contains(filtro)) ||
+                (cliente.estado ? "activo" : "inactivo").Contains(filtro) ||
+                (cliente.confiable ? "si" : "no").Contains(filtro) ||
+                (cliente.condicion_frenteIVA != null && cliente.condicion_frenteIVA.ToLower().Contains(filtro)) ||
+                (cliente.calle != null && cliente.calle.ToLower().Contains(filtro)) ||
+                (cliente.numero.ToString().ToLower().Contains(filtro)) ||
+                (cliente.ciudad != null && cliente.ciudad.ToLower().Contains(filtro)) ||
+                (cliente.provincia != null && cliente.provincia.ToLower().Contains(filtro)) ||
+                (cliente.cod_postal.ToString().ToLower().Contains(filtro)) ||
+                (tamanos.FirstOrDefault(t => t.id_tamano == cliente.id_tamano)?.descripcion.ToLower().Contains(filtro) ?? false) ||
+                (zonas.FirstOrDefault(z => z.id_zona == cliente.id_zona)?.nombre.ToLower().Contains(filtro) ?? false)
+            ).ToList();
+            // Limpiar las filas actuales del DataGridView
+            dataGridListarClientes.Rows.Clear();
+            foreach (var cliente in clientesFiltrados)
+            {
+                string estadoTexto = cliente.estado ? "Activo" : "Inactivo";
+                string confiableTexto = cliente.confiable ? "Si" : "No";
+                string nombreZona = zonas.FirstOrDefault(z => z.id_zona == cliente.id_zona)?.nombre ?? "Zona desconocida";
+                string nombreTamano = tamanos.FirstOrDefault(t => t.id_tamano == cliente.id_tamano)?.descripcion ?? "Tamaño desconocido";
+                dataGridListarClientes.Rows.Add(
+                    cliente.id_cliente,
+                    cliente.dni,
+                    cliente.nombre,
+                    cliente.apellido,
+                    cliente.telefono,
+                    cliente.email,
+                    cliente.razon_social,
+                    cliente.cuil_cuit,
+                    cliente.fecha_alta,
+                    estadoTexto,
+                    confiableTexto,
+                    cliente.condicion_frenteIVA,
+                    cliente.calle,
+                    cliente.numero,
+                    cliente.ciudad,
+                    cliente.provincia,
+                    cliente.cod_postal,
+                    nombreTamano,
+                    nombreZona,
+                     cliente.id_tamano, cliente.id_zona
+                );
+            }
+
         }
+
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             //salir del form
             Close();
         }
-    }
+
+        private void txtNombreApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {       
+            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                MessageBox.Show("Por favor, ingrese solo letras y espacios para el nombre o apellido.", "Entrada inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Handled = true; // evita que el carácter no válido se ingrese en el TextBox
+            }      
+        }
+}
 }

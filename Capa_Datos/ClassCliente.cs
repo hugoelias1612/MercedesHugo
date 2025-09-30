@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Capa_Entidades;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Capa_Entidades;
 
 
 namespace Capa_Datos
@@ -158,5 +159,15 @@ namespace Capa_Datos
                 return context.CLIENTE.Where(c => c.id_zona == id_zona).ToList();
             }
         }
+        //existe mail de otro cliente
+        public static bool ExisteEmailDeOtroCliente(int id_cliente, string email)
+        {
+            using (var context = new ArimaERPEntities1())
+            {
+                return context.CLIENTE.Any(c => c.email == email && c.id_cliente != id_cliente);
+            }
+        }
+        //
+
     }
 }

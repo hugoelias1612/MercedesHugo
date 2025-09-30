@@ -58,8 +58,8 @@
             this.TLPHeader.BackColor = System.Drawing.Color.LightSteelBlue;
             this.TLPHeader.ColumnCount = 1;
             this.TLPHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TLPHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.TLPHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.TLPHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.TLPHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.TLPHeader.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.TLPHeader.Controls.Add(this.label2, 0, 0);
             this.TLPHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -69,7 +69,7 @@
             this.TLPHeader.RowCount = 2;
             this.TLPHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.27586F));
             this.TLPHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.72414F));
-            this.TLPHeader.Size = new System.Drawing.Size(967, 111);
+            this.TLPHeader.Size = new System.Drawing.Size(1289, 137);
             this.TLPHeader.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -96,22 +96,22 @@
             this.tableLayoutPanel2.Controls.Add(this.textBoxBUSCARGENERAL, 7, 1);
             this.tableLayoutPanel2.Controls.Add(this.pictureBoxBuscar, 6, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 53);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 66);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.26087F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.73913F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(967, 58);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1289, 71);
             this.tableLayoutPanel2.TabIndex = 6;
             // 
             // txtBusacarEmail
             // 
             this.txtBusacarEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBusacarEmail.Location = new System.Drawing.Point(420, 34);
-            this.txtBusacarEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBusacarEmail.Location = new System.Drawing.Point(561, 43);
+            this.txtBusacarEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBusacarEmail.Name = "txtBusacarEmail";
-            this.txtBusacarEmail.Size = new System.Drawing.Size(123, 20);
+            this.txtBusacarEmail.Size = new System.Drawing.Size(163, 22);
             this.txtBusacarEmail.TabIndex = 25;
             this.txtBusacarEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBusacarEmail_KeyDown);
             // 
@@ -119,10 +119,10 @@
             // 
             this.comboBoxBuscarClienteZona.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxBuscarClienteZona.FormattingEnabled = true;
-            this.comboBoxBuscarClienteZona.Location = new System.Drawing.Point(547, 33);
-            this.comboBoxBuscarClienteZona.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxBuscarClienteZona.Location = new System.Drawing.Point(730, 42);
+            this.comboBoxBuscarClienteZona.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxBuscarClienteZona.Name = "comboBoxBuscarClienteZona";
-            this.comboBoxBuscarClienteZona.Size = new System.Drawing.Size(123, 21);
+            this.comboBoxBuscarClienteZona.Size = new System.Drawing.Size(163, 24);
             this.comboBoxBuscarClienteZona.TabIndex = 27;
             this.comboBoxBuscarClienteZona.SelectedIndexChanged += new System.EventHandler(this.comboBoxBuscarClienteZona_SelectedIndexChanged);
             // 
@@ -131,10 +131,9 @@
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(420, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(561, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 30);
+            this.label4.Size = new System.Drawing.Size(163, 37);
             this.label4.TabIndex = 33;
             this.label4.Text = "EMAIL";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -144,10 +143,9 @@
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(547, 0);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(730, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(123, 30);
+            this.label5.Size = new System.Drawing.Size(163, 37);
             this.label5.TabIndex = 34;
             this.label5.Text = "ZONA";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -155,29 +153,33 @@
             // txtBuscarDni
             // 
             this.txtBuscarDni.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBuscarDni.Location = new System.Drawing.Point(294, 34);
+            this.txtBuscarDni.Location = new System.Drawing.Point(393, 43);
+            this.txtBuscarDni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBuscarDni.Name = "txtBuscarDni";
-            this.txtBuscarDni.Size = new System.Drawing.Size(121, 20);
+            this.txtBuscarDni.Size = new System.Drawing.Size(161, 22);
             this.txtBuscarDni.TabIndex = 21;
             this.txtBuscarDni.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscarDni_KeyDown);
             // 
             // txtNombreApellido
             // 
             this.txtNombreApellido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNombreApellido.Location = new System.Drawing.Point(167, 34);
+            this.txtNombreApellido.Location = new System.Drawing.Point(224, 43);
+            this.txtNombreApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombreApellido.Name = "txtNombreApellido";
-            this.txtNombreApellido.Size = new System.Drawing.Size(121, 20);
+            this.txtNombreApellido.Size = new System.Drawing.Size(161, 22);
             this.txtNombreApellido.TabIndex = 36;
             this.txtNombreApellido.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombreApellido_KeyDown);
+            this.txtNombreApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreApellido_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(294, 0);
+            this.label1.Location = new System.Drawing.Point(393, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 30);
+            this.label1.Size = new System.Drawing.Size(161, 37);
             this.label1.TabIndex = 31;
             this.label1.Text = "DNI";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -187,9 +189,10 @@
             this.lblLetraApellido.AutoSize = true;
             this.lblLetraApellido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblLetraApellido.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLetraApellido.Location = new System.Drawing.Point(167, 0);
+            this.lblLetraApellido.Location = new System.Drawing.Point(224, 0);
+            this.lblLetraApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLetraApellido.Name = "lblLetraApellido";
-            this.lblLetraApellido.Size = new System.Drawing.Size(121, 30);
+            this.lblLetraApellido.Size = new System.Drawing.Size(161, 37);
             this.lblLetraApellido.TabIndex = 4;
             this.lblLetraApellido.Text = "Nombre o Apellido";
             this.lblLetraApellido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -198,9 +201,10 @@
             // 
             this.textBoxBUSCARGENERAL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxBUSCARGENERAL.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBUSCARGENERAL.Location = new System.Drawing.Point(802, 33);
+            this.textBoxBUSCARGENERAL.Location = new System.Drawing.Point(1069, 41);
+            this.textBoxBUSCARGENERAL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxBUSCARGENERAL.Name = "textBoxBUSCARGENERAL";
-            this.textBoxBUSCARGENERAL.Size = new System.Drawing.Size(121, 23);
+            this.textBoxBUSCARGENERAL.Size = new System.Drawing.Size(161, 27);
             this.textBoxBUSCARGENERAL.TabIndex = 37;
             this.textBoxBUSCARGENERAL.TextChanged += new System.EventHandler(this.textBoxBUSCARGENERAL_TextChanged);
             // 
@@ -208,9 +212,10 @@
             // 
             this.pictureBoxBuscar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBoxBuscar.Image = global::ArimaERP.Properties.Resources.BUSCAR_reducido20x20;
-            this.pictureBoxBuscar.Location = new System.Drawing.Point(767, 33);
+            this.pictureBoxBuscar.Location = new System.Drawing.Point(1022, 41);
+            this.pictureBoxBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBoxBuscar.Name = "pictureBoxBuscar";
-            this.pictureBoxBuscar.Size = new System.Drawing.Size(29, 21);
+            this.pictureBoxBuscar.Size = new System.Drawing.Size(39, 26);
             this.pictureBoxBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxBuscar.TabIndex = 38;
             this.pictureBoxBuscar.TabStop = false;
@@ -220,18 +225,20 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(366, 4);
+            this.label2.Location = new System.Drawing.Point(499, 6);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(234, 45);
+            this.label2.Size = new System.Drawing.Size(290, 54);
             this.label2.TabIndex = 7;
             this.label2.Text = "Buscar Clientes";
             // 
             // txtIndicaciones
             // 
             this.txtIndicaciones.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIndicaciones.Location = new System.Drawing.Point(12, 13);
+            this.txtIndicaciones.Location = new System.Drawing.Point(16, 16);
+            this.txtIndicaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIndicaciones.Name = "txtIndicaciones";
-            this.txtIndicaciones.Size = new System.Drawing.Size(227, 21);
+            this.txtIndicaciones.Size = new System.Drawing.Size(301, 25);
             this.txtIndicaciones.TabIndex = 1;
             this.txtIndicaciones.Text = "Presione Enter para iniciar búsqueda";
             // 
@@ -244,7 +251,8 @@
             this.dataGridListarClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridListarClientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridListarClientes.GridColor = System.Drawing.SystemColors.Window;
-            this.dataGridListarClientes.Location = new System.Drawing.Point(0, 111);
+            this.dataGridListarClientes.Location = new System.Drawing.Point(0, 137);
+            this.dataGridListarClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridListarClientes.MultiSelect = false;
             this.dataGridListarClientes.Name = "dataGridListarClientes";
             this.dataGridListarClientes.ReadOnly = true;
@@ -253,7 +261,7 @@
             this.dataGridListarClientes.RowTemplate.Height = 24;
             this.dataGridListarClientes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridListarClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridListarClientes.Size = new System.Drawing.Size(967, 376);
+            this.dataGridListarClientes.Size = new System.Drawing.Size(1289, 462);
             this.dataGridListarClientes.TabIndex = 2;
             this.dataGridListarClientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridListarClientes.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
@@ -265,27 +273,29 @@
             this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.txtIndicaciones);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 403);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(0, 496);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(967, 84);
+            this.panel1.Size = new System.Drawing.Size(1289, 103);
             this.panel1.TabIndex = 3;
             // 
             // txtIndicacionesFila
             // 
             this.txtIndicacionesFila.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIndicacionesFila.Location = new System.Drawing.Point(12, 44);
+            this.txtIndicacionesFila.Location = new System.Drawing.Point(16, 54);
+            this.txtIndicacionesFila.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIndicacionesFila.Name = "txtIndicacionesFila";
-            this.txtIndicacionesFila.Size = new System.Drawing.Size(227, 21);
+            this.txtIndicacionesFila.Size = new System.Drawing.Size(301, 25);
             this.txtIndicacionesFila.TabIndex = 2;
             this.txtIndicacionesFila.Text = "Presione Enter para Seleccionar Fila";
             // 
             // btnCancelar
             // 
             this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnCancelar.Location = new System.Drawing.Point(1049, 26);
+            this.btnCancelar.Location = new System.Drawing.Point(1399, 32);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(147, 51);
+            this.btnCancelar.Size = new System.Drawing.Size(196, 63);
             this.btnCancelar.TabIndex = 0;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -293,13 +303,13 @@
             // 
             // FormModificacionCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(967, 487);
+            this.ClientSize = new System.Drawing.Size(1289, 599);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridListarClientes);
             this.Controls.Add(this.TLPHeader);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormModificacionCliente";
             this.Text = "FormModificacionCliente";
             this.Load += new System.EventHandler(this.FormModificacionCliente_Load);
