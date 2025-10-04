@@ -22,11 +22,6 @@ namespace Capa_Entidades
     
         public int id_producto { get; set; }
         public string nombre { get; set; }
-        public decimal precioLista { get; set; }
-        public int stockActual { get; set; }
-        public int umbralStock { get; set; }
-        public int unidadesBulto { get; set; }
-        public bool activo { get; set; }
         public int id_familia { get; set; }
         public int id_marca { get; set; }
     

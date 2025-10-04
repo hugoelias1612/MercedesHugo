@@ -12,19 +12,22 @@ namespace Capa_Entidades
     using System;
     using System.Collections.Generic;
     
-    public partial class ROL
+    public partial class compra
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ROL()
+        public compra()
         {
-            this.USUARIOS = new HashSet<USUARIOS>();
+            this.detalle_compra = new HashSet<detalle_compra>();
         }
     
-        public int id_rol { get; set; }
-        public string descripcion { get; set; }
-        public bool estado { get; set; }
+        public int compra_id { get; set; }
+        public System.DateTime fecha { get; set; }
+        public decimal monto { get; set; }
+        public int nro_factura { get; set; }
+        public int id_proveedor { get; set; }
     
+        public virtual PROVEEDOR PROVEEDOR { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<USUARIOS> USUARIOS { get; set; }
+        public virtual ICollection<detalle_compra> detalle_compra { get; set; }
     }
 }

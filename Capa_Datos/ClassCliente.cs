@@ -16,7 +16,7 @@ namespace Capa_Datos
         {
             try
             {
-                using (var context = new ArimaERPEntities1())
+                using (var context = new ArimaERPEntities())
                 {
                     context.CLIENTE.Add(cliente);
                     context.SaveChanges();
@@ -41,7 +41,7 @@ namespace Capa_Datos
         //Devuelve lista de clientes
         public static List<CLIENTE> ListarClientes()
         {
-            using (var context = new ArimaERPEntities1())
+            using (var context = new ArimaERPEntities())
             {
                 return context.CLIENTE.ToList();
             }
@@ -49,7 +49,7 @@ namespace Capa_Datos
         // Obtiene un cliente por su ID
         public static CLIENTE ObtenerClientePorId(int id)
         {
-            using (var context = new ArimaERPEntities1())
+            using (var context = new ArimaERPEntities())
             {
                 return context.CLIENTE.FirstOrDefault(c => c.id_cliente == id);
             }
@@ -57,7 +57,7 @@ namespace Capa_Datos
         // Actualiza un cliente existente
         public static CLIENTE UpdateCliente(CLIENTE cliente)
         {
-            using (var context = new ArimaERPEntities1())
+            using (var context = new ArimaERPEntities())
             {
                 var existingCliente = context.CLIENTE.Find(cliente.id_cliente);
                 if (existingCliente != null)
@@ -71,7 +71,7 @@ namespace Capa_Datos
         //Inactiva un cliente
         public static bool InactivarCliente(int id)
         {
-            using (var context = new ArimaERPEntities1())
+            using (var context = new ArimaERPEntities())
             {
                 var cliente = context.CLIENTE.Find(id);
                 if (cliente != null)
@@ -86,7 +86,7 @@ namespace Capa_Datos
         //Activa un cliente
         public static bool ActivarCliente(int id)
         {
-            using (var context = new ArimaERPEntities1())
+            using (var context = new ArimaERPEntities())
             {
                 var cliente = context.CLIENTE.Find(id);
                 if (cliente != null)
@@ -101,7 +101,7 @@ namespace Capa_Datos
         //Existe un cliente por su id
         public static bool ExisteCliente(int id)
         {
-            using (var context = new ArimaERPEntities1())
+            using (var context = new ArimaERPEntities())
             {
                 return context.CLIENTE.Any(c => c.id_cliente == id);
             }
@@ -109,7 +109,7 @@ namespace Capa_Datos
         //Buscar cliente por dni, previa conversion a int
         public static CLIENTE BuscarClientePorDNI(string dni)
         {
-            using (var context = new ArimaERPEntities1())
+            using (var context = new ArimaERPEntities())
             {
                 if (int.TryParse(dni, out int dniInt))
                 {
@@ -122,7 +122,7 @@ namespace Capa_Datos
         //existe cliente por dni, previa conversion a int
         public static bool ExisteClientePorDNI(string dni)
         {
-            using (var context = new ArimaERPEntities1())
+            using (var context = new ArimaERPEntities())
             {
                 if (int.TryParse(dni, out int dniInt))
                 {
@@ -134,7 +134,7 @@ namespace Capa_Datos
         //Existe cliente por cuit/cuil, previa conversion a long
         public static bool ExisteClientePorCUIT_CUIL(string cuit_cuil)
         {
-            using (var context = new ArimaERPEntities1())
+            using (var context = new ArimaERPEntities())
             {
                 if (long.TryParse(cuit_cuil, out long cuitCuilLong))
                 {
@@ -146,7 +146,7 @@ namespace Capa_Datos
         //Existe cliente por email
         public static bool ExisteClientePorEmail(string email)
         {
-            using (var context = new ArimaERPEntities1())
+            using (var context = new ArimaERPEntities())
             {
                 return context.CLIENTE.Any(c => c.email == email);
             }
@@ -154,7 +154,7 @@ namespace Capa_Datos
         //clientes por zona
         public static List<CLIENTE> ClientesPorZona(int id_zona)
         {
-            using (var context = new ArimaERPEntities1())
+            using (var context = new ArimaERPEntities())
             {
                 return context.CLIENTE.Where(c => c.id_zona == id_zona).ToList();
             }
@@ -162,7 +162,7 @@ namespace Capa_Datos
         //existe mail de otro cliente
         public static bool ExisteEmailDeOtroCliente(int id_cliente, string email)
         {
-            using (var context = new ArimaERPEntities1())
+            using (var context = new ArimaERPEntities())
             {
                 return context.CLIENTE.Any(c => c.email == email && c.id_cliente != id_cliente);
             }

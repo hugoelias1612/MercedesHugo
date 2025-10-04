@@ -26,5 +26,20 @@ namespace ArimaERP.EmpleadoClientes
         {
 
         }
+
+        private void textBoxApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //permitir solo letras, control y espacio
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+                errorProvider1.SetError(textBoxApellido, "Solo se permiten letras");
+            }
+            else
+            {
+                e.Handled = false;
+                errorProvider1.SetError(textBoxApellido, "");
+            }
+        }
     }
 }

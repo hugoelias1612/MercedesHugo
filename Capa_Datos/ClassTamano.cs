@@ -12,7 +12,7 @@ namespace Capa_Datos
         //Devuelve lista de tamaños
         public static List<TAMAÑO_NEGOCIO> ListarTamanos()
         {
-            using (var context = new ArimaERPEntities1())
+            using (var context = new ArimaERPEntities())
             {
                 return context.TAMAÑO_NEGOCIO.ToList();
             }
@@ -20,7 +20,7 @@ namespace Capa_Datos
         // Obtiene un tamaño por su ID
         public static TAMAÑO_NEGOCIO ObtenerTamanoPorId(int id)
         {
-            using (var context = new ArimaERPEntities1())
+            using (var context = new ArimaERPEntities())
             {
                 return context.TAMAÑO_NEGOCIO.FirstOrDefault(t => t.id_tamano == id);
             }
@@ -28,7 +28,7 @@ namespace Capa_Datos
         // Actualiza un tamaño existente
         public static TAMAÑO_NEGOCIO UpdateTamano(TAMAÑO_NEGOCIO tamano)
         {
-            using (var context = new ArimaERPEntities1())
+            using (var context = new ArimaERPEntities())
             {
                 var existingTamano = context.TAMAÑO_NEGOCIO.Find(tamano.id_tamano);
                 if (existingTamano != null)
@@ -44,7 +44,7 @@ namespace Capa_Datos
         {
             try
             {
-                using (var context = new ArimaERPEntities1())
+                using (var context = new ArimaERPEntities())
                 {
                     context.TAMAÑO_NEGOCIO.Add(tamano);
                     context.SaveChanges();

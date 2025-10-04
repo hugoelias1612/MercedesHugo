@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c2d4d71e64014632948cc7b4a201543f" Name="Diagram1">
+        <EntityTypeShape EntityType="ArimaERPModel1.ACCION" Width="1.5" PointX="1.5" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.AUDITORIA" Width="1.5" PointX="3.75" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.CLIENTE" Width="1.5" PointX="3" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.compra" Width="1.5" PointX="5.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.CUENTA_CORRIENTE" Width="1.5" PointX="5.25" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.detalle_compra" Width="1.5" PointX="7.5" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.DETALLE_PEDIDO" Width="1.5" PointX="7.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.Empleado" Width="1.5" PointX="3" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.entidad" Width="1.5" PointX="1.5" PointY="36.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.ESTADO_PEDIDO" Width="1.5" PointX="3" PointY="31.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.FAMILIA" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.MARCA" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.METODO_PAGO" Width="1.5" PointX="6" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.PAGO" Width="1.5" PointX="8.25" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.PEDIDO" Width="1.5" PointX="5.25" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.pedido_pago" Width="1.5" PointX="10.5" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.PRESENTACION" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.PRODUCTO" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.producto_presentacion" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.PROVEEDOR" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.ROL" Width="1.5" PointX="1.5" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.stock" Width="1.5" PointX="7.5" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.TAMAÑO_NEGOCIO" Width="1.5" PointX="0.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.USUARIOS" Width="1.5" PointX="1.5" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArimaERPModel1.ZONA" Width="1.5" PointX="0.75" PointY="17.5" IsExpanded="true" />
+        <AssociationConnector Association="ArimaERPModel1.FK_ID_ACCION" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.fk_auditoria_entidad" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.fk_auditoria_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.fk_cliente_zona" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.FK_ID_CLIENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.FK_ID_CLIENTE_cuenta" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.fk_id_cliente_pago" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.FK_ID_TAMANO" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.fk_compra_proveedor" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.fk_detalle_compra" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.fk_detalle_producto_presentacion" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.FK_PEDIDO_producto" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.FK_PRODUCTO_PRESENTACION" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.fk_nombre_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.fk_pedido_vendedor" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.FK_ID_ESTADO_pedido" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.FK_ID_FAMILIA" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.FK_ID_marca_producto" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.FK_ID_METODO" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.FK_PAGO" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.FK_PEDIDO" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.FK_PRESENTACION" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.FK_PRODUCTO" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.fk_stock_producto_presentacion" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.FK_id_rol" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.fk_zona_preventista" ManuallyRouted="false" />
+        <AssociationConnector Association="ArimaERPModel1.marca_proveedor" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

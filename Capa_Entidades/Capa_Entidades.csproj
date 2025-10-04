@@ -42,83 +42,98 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ACCION.cs">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
     </Compile>
     <Compile Include="AUDITORIA.cs">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
     </Compile>
     <Compile Include="CLIENTE.cs">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="compra.cs">
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
     </Compile>
     <Compile Include="CUENTA_CORRIENTE.cs">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="detalle_compra.cs">
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
     </Compile>
     <Compile Include="DETALLE_PEDIDO.cs">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
     </Compile>
     <Compile Include="Empleado.cs">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
     </Compile>
-    <Compile Include="ESTADO_PAGO.cs">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
+    <Compile Include="entidad.cs">
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
     </Compile>
     <Compile Include="ESTADO_PEDIDO.cs">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
     </Compile>
     <Compile Include="FAMILIA.cs">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
     </Compile>
     <Compile Include="MARCA.cs">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
     </Compile>
     <Compile Include="METODO_PAGO.cs">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelProyecto.cs">
+    <Compile Include="ModelProyecto1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
     </Compile>
     <Compile Include="PAGO.cs">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
     </Compile>
     <Compile Include="PEDIDO.cs">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pedido_pago.cs">
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
     </Compile>
     <Compile Include="PRESENTACION.cs">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
     </Compile>
     <Compile Include="PRODUCTO.cs">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
     </Compile>
     <Compile Include="producto_presentacion.cs">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PROVEEDOR.cs">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
     </Compile>
     <Compile Include="ROL.cs">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="stock.cs">
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
     </Compile>
     <Compile Include="TAMAÑO_NEGOCIO.cs">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
     </Compile>
     <Compile Include="USUARIOS.cs">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
     </Compile>
     <Compile Include="ZONA.cs">
-      <DependentUpon>ModelProyecto.tt</DependentUpon>
+      <DependentUpon>ModelProyecto1.tt</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ModelProyecto.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ModelProyecto.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModelProyecto1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelProyecto1.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

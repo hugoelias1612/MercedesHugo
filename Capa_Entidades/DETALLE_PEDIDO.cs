@@ -14,12 +14,14 @@ namespace Capa_Entidades
     
     public partial class DETALLE_PEDIDO
     {
-        public int cantidad { get; set; }
+        public Nullable<int> cantidad { get; set; }
         public decimal descuento { get; set; }
         public int ID_detalle_pedido { get; set; }
         public int id_pedido { get; set; }
         public int id_producto { get; set; }
         public int ID_presentacion { get; set; }
+        public Nullable<int> cantidad_bultos { get; set; }
+        public decimal precio_unitario { get; set; }
     
         public virtual PEDIDO PEDIDO { get; set; }
         public virtual producto_presentacion producto_presentacion { get; set; }

@@ -18,15 +18,14 @@ namespace Capa_Entidades
         public ZONA()
         {
             this.CLIENTE = new HashSet<CLIENTE>();
-            this.USUARIOS = new HashSet<USUARIOS>();
         }
     
         public int id_zona { get; set; }
         public string nombre { get; set; }
+        public string preventista { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CLIENTE> CLIENTE { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<USUARIOS> USUARIOS { get; set; }
+        public virtual USUARIOS USUARIOS { get; set; }
     }
 }

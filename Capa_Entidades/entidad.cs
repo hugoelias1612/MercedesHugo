@@ -12,19 +12,18 @@ namespace Capa_Entidades
     using System;
     using System.Collections.Generic;
     
-    public partial class ROL
+    public partial class entidad
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ROL()
+        public entidad()
         {
-            this.USUARIOS = new HashSet<USUARIOS>();
+            this.AUDITORIA = new HashSet<AUDITORIA>();
         }
     
-        public int id_rol { get; set; }
-        public string descripcion { get; set; }
-        public bool estado { get; set; }
+        public int entidad_id { get; set; }
+        public string nombre { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<USUARIOS> USUARIOS { get; set; }
+        public virtual ICollection<AUDITORIA> AUDITORIA { get; set; }
     }
 }

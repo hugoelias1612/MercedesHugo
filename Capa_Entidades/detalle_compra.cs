@@ -12,18 +12,16 @@ namespace Capa_Entidades
     using System;
     using System.Collections.Generic;
     
-    public partial class AUDITORIA
+    public partial class detalle_compra
     {
-        public int ID_auditoria { get; set; }
-        public System.DateTime fecha_hora { get; set; }
-        public string valor_nuevo { get; set; }
-        public string valor_anterior { get; set; }
-        public int ID_accion { get; set; }
-        public int entidad_id { get; set; }
-        public string usuario { get; set; }
+        public int compra_id { get; set; }
+        public int detalle_compra_id { get; set; }
+        public int cantidad_bulto { get; set; }
+        public decimal precio_unitario { get; set; }
+        public int id_producto { get; set; }
+        public int ID_presentacion { get; set; }
     
-        public virtual ACCION ACCION { get; set; }
-        public virtual entidad entidad { get; set; }
-        public virtual USUARIOS USUARIOS { get; set; }
+        public virtual compra compra { get; set; }
+        public virtual producto_presentacion producto_presentacion { get; set; }
     }
 }

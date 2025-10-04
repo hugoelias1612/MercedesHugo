@@ -62,29 +62,30 @@
     <Compile Include="ClassPedido.cs" />
     <Compile Include="ClassProducto.cs" />
     <Compile Include="ClassProveedor.cs" />
+    <Compile Include="ClassRol.cs" />
     <Compile Include="ClassTamano.cs" />
-    <Compile Include="ClassUsuariocs.cs" />
+    <Compile Include="ClassUsuarios.cs" />
     <Compile Include="ClassZona.cs" />
-    <Compile Include="ModelProyecto.Context.cs">
+    <Compile Include="ModelProyecto1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelProyecto.Context.tt</DependentUpon>
+      <DependentUpon>ModelProyecto1.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelProyecto.Designer.cs">
+    <Compile Include="ModelProyecto1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelProyecto.edmx</DependentUpon>
+      <DependentUpon>ModelProyecto1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="ModelProyecto.edmx">
+    <EntityDeploy Include="ModelProyecto1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelProyecto.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelProyecto1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ModelProyecto.edmx.diagram">
-      <DependentUpon>ModelProyecto.edmx</DependentUpon>
+    <None Include="ModelProyecto1.edmx.diagram">
+      <DependentUpon>ModelProyecto1.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -92,11 +93,10 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ModelProyecto.Context.tt">
+    <Content Include="ModelProyecto1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelProyecto.edmx</DependentUpon>
-      <LastGenOutput>ModelProyecto.Context.cs</LastGenOutput>
-      <CustomToolNamespace>Capa_Entidades</CustomToolNamespace>
+      <DependentUpon>ModelProyecto1.edmx</DependentUpon>
+      <LastGenOutput>ModelProyecto1.Context.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

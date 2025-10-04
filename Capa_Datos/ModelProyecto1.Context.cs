@@ -6,17 +6,17 @@
 //     Los cambios manuales en este archivo se sobrescribirán si se regenera el código.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-namespace Capa_Entidades
+using Capa_Entidades;
+namespace Capa_Datos
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ArimaERPEntities1 : DbContext
+    public partial class ArimaERPEntities : DbContext
     {
-        public ArimaERPEntities1()
-            : base("name=ArimaERPEntities1")
+        public ArimaERPEntities()
+            : base("name=ArimaERPEntities")
         {
         }
     
@@ -28,21 +28,26 @@ namespace Capa_Entidades
         public virtual DbSet<ACCION> ACCION { get; set; }
         public virtual DbSet<AUDITORIA> AUDITORIA { get; set; }
         public virtual DbSet<CLIENTE> CLIENTE { get; set; }
+        public virtual DbSet<compra> compra { get; set; }
         public virtual DbSet<CUENTA_CORRIENTE> CUENTA_CORRIENTE { get; set; }
+        public virtual DbSet<detalle_compra> detalle_compra { get; set; }
         public virtual DbSet<DETALLE_PEDIDO> DETALLE_PEDIDO { get; set; }
         public virtual DbSet<Empleado> Empleado { get; set; }
-        public virtual DbSet<ESTADO_PAGO> ESTADO_PAGO { get; set; }
+        public virtual DbSet<entidad> entidad { get; set; }
         public virtual DbSet<ESTADO_PEDIDO> ESTADO_PEDIDO { get; set; }
         public virtual DbSet<FAMILIA> FAMILIA { get; set; }
         public virtual DbSet<MARCA> MARCA { get; set; }
         public virtual DbSet<METODO_PAGO> METODO_PAGO { get; set; }
         public virtual DbSet<PAGO> PAGO { get; set; }
         public virtual DbSet<PEDIDO> PEDIDO { get; set; }
+        public virtual DbSet<pedido_pago> pedido_pago { get; set; }
         public virtual DbSet<PRESENTACION> PRESENTACION { get; set; }
         public virtual DbSet<PRODUCTO> PRODUCTO { get; set; }
         public virtual DbSet<producto_presentacion> producto_presentacion { get; set; }
         public virtual DbSet<PROVEEDOR> PROVEEDOR { get; set; }
         public virtual DbSet<ROL> ROL { get; set; }
+        public virtual DbSet<stock> stock { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TAMAÑO_NEGOCIO> TAMAÑO_NEGOCIO { get; set; }
         public virtual DbSet<USUARIOS> USUARIOS { get; set; }
         public virtual DbSet<ZONA> ZONA { get; set; }

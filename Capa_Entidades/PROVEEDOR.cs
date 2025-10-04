@@ -17,6 +17,7 @@ namespace Capa_Entidades
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PROVEEDOR()
         {
+            this.compra = new HashSet<compra>();
             this.MARCA = new HashSet<MARCA>();
         }
     
@@ -29,7 +30,11 @@ namespace Capa_Entidades
         public string calle { get; set; }
         public int numero { get; set; }
         public int cod_postal { get; set; }
+        public long cuit { get; set; }
+        public string razon_social { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<compra> compra { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MARCA> MARCA { get; set; }
     }

@@ -12,7 +12,7 @@ namespace Capa_Datos
         //Devuelve lista de zonas
         public static List<ZONA> ListarZonas()
         {
-            using (var context = new ArimaERPEntities1())
+            using (var context = new ArimaERPEntities())
             {
                 return context.ZONA.ToList();
             }
@@ -21,7 +21,7 @@ namespace Capa_Datos
         // Obtiene una zona por su ID
         public static ZONA ObtenerZonaPorId(int id)
         {
-            using (var context = new ArimaERPEntities1())
+            using (var context = new ArimaERPEntities())
             {
                 return context.ZONA.FirstOrDefault(z => z.id_zona == id);
             }
@@ -29,7 +29,7 @@ namespace Capa_Datos
         // Actualiza una zona existente
         public static ZONA UpdateZona(ZONA zona)
         {
-            using (var context = new ArimaERPEntities1())
+            using (var context = new ArimaERPEntities())
             {
                 var existingZona = context.ZONA.Find(zona.id_zona);
                 if (existingZona != null)
@@ -45,7 +45,7 @@ namespace Capa_Datos
         {
             try
             {
-                using (var context = new ArimaERPEntities1())
+                using (var context = new ArimaERPEntities())
                 {
                     context.ZONA.Add(zona);
                     context.SaveChanges();
@@ -61,7 +61,7 @@ namespace Capa_Datos
         // Eliminar una zona por su ID
         public static bool EliminarZona(int id)
         {
-            using (var context = new ArimaERPEntities1())
+            using (var context = new ArimaERPEntities())
             {
                 var zona = context.ZONA.Find(id);
                 if (zona != null)
@@ -76,7 +76,7 @@ namespace Capa_Datos
         //Existe zona por ID
         public static bool ExisteZona(int id)
         {
-            using (var context = new ArimaERPEntities1())
+            using (var context = new ArimaERPEntities())
             {
                 return context.ZONA.Any(z => z.id_zona == id);
             }

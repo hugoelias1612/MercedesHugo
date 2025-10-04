@@ -12,18 +12,12 @@ namespace Capa_Entidades
     using System;
     using System.Collections.Generic;
     
-    public partial class AUDITORIA
+    public partial class sysdiagrams
     {
-        public int ID_auditoria { get; set; }
-        public System.DateTime fecha_hora { get; set; }
-        public string valor_nuevo { get; set; }
-        public string valor_anterior { get; set; }
-        public int ID_accion { get; set; }
-        public int entidad_id { get; set; }
-        public string usuario { get; set; }
-    
-        public virtual ACCION ACCION { get; set; }
-        public virtual entidad entidad { get; set; }
-        public virtual USUARIOS USUARIOS { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

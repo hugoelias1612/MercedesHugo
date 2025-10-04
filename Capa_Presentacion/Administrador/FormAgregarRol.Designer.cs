@@ -38,19 +38,19 @@
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlpBotonesAlcance = new System.Windows.Forms.TableLayoutPanel();
-            this.btnVerUsuarios = new System.Windows.Forms.Button();
+            this.btnGuardarCAmbios = new System.Windows.Forms.Button();
             this.btnAlcance = new System.Windows.Forms.Button();
             this.gbxGestion = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.gbxEliminar = new System.Windows.Forms.GroupBox();
+            this.btnVerUsuarios = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxCargarRoles = new System.Windows.Forms.ComboBox();
             this.tlpGestion = new System.Windows.Forms.TableLayoutPanel();
             this.textBoxDescripcion = new System.Windows.Forms.TextBox();
             this.lblIdRol = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxIdROL = new System.Windows.Forms.TextBox();
             this.btnAgregarRol = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -82,7 +82,7 @@
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(932, 475);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1217, 475);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // gbxListaRoles
@@ -95,7 +95,7 @@
             this.gbxListaRoles.Margin = new System.Windows.Forms.Padding(4);
             this.gbxListaRoles.Name = "gbxListaRoles";
             this.gbxListaRoles.Padding = new System.Windows.Forms.Padding(4);
-            this.gbxListaRoles.Size = new System.Drawing.Size(504, 467);
+            this.gbxListaRoles.Size = new System.Drawing.Size(661, 467);
             this.gbxListaRoles.TabIndex = 0;
             this.gbxListaRoles.TabStop = false;
             this.gbxListaRoles.Text = "Lista de Roles";
@@ -114,7 +114,7 @@
             this.tlpDataAcciones.RowCount = 2;
             this.tlpDataAcciones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpDataAcciones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
-            this.tlpDataAcciones.Size = new System.Drawing.Size(496, 436);
+            this.tlpDataAcciones.Size = new System.Drawing.Size(653, 436);
             this.tlpDataAcciones.TabIndex = 0;
             // 
             // dgvRoles
@@ -132,7 +132,7 @@
             this.dgvRoles.Margin = new System.Windows.Forms.Padding(4);
             this.dgvRoles.Name = "dgvRoles";
             this.dgvRoles.RowHeadersWidth = 51;
-            this.dgvRoles.Size = new System.Drawing.Size(488, 362);
+            this.dgvRoles.Size = new System.Drawing.Size(645, 362);
             this.dgvRoles.TabIndex = 0;
             // 
             // id_rol
@@ -159,9 +159,9 @@
             // tlpBotonesAlcance
             // 
             this.tlpBotonesAlcance.ColumnCount = 2;
-            this.tlpBotonesAlcance.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.16393F));
-            this.tlpBotonesAlcance.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.83607F));
-            this.tlpBotonesAlcance.Controls.Add(this.btnVerUsuarios, 1, 0);
+            this.tlpBotonesAlcance.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.3876F));
+            this.tlpBotonesAlcance.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.6124F));
+            this.tlpBotonesAlcance.Controls.Add(this.btnGuardarCAmbios, 1, 0);
             this.tlpBotonesAlcance.Controls.Add(this.btnAlcance, 0, 0);
             this.tlpBotonesAlcance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpBotonesAlcance.Location = new System.Drawing.Point(4, 374);
@@ -170,23 +170,24 @@
             this.tlpBotonesAlcance.RowCount = 1;
             this.tlpBotonesAlcance.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpBotonesAlcance.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
-            this.tlpBotonesAlcance.Size = new System.Drawing.Size(488, 58);
+            this.tlpBotonesAlcance.Size = new System.Drawing.Size(645, 58);
             this.tlpBotonesAlcance.TabIndex = 1;
             // 
-            // btnVerUsuarios
+            // btnGuardarCAmbios
             // 
-            this.btnVerUsuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnVerUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
-            this.btnVerUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerUsuarios.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnVerUsuarios.Location = new System.Drawing.Point(213, 7);
-            this.btnVerUsuarios.Margin = new System.Windows.Forms.Padding(4);
-            this.btnVerUsuarios.Name = "btnVerUsuarios";
-            this.btnVerUsuarios.Size = new System.Drawing.Size(257, 43);
-            this.btnVerUsuarios.TabIndex = 1;
-            this.btnVerUsuarios.Text = "Ver Usuarios con este Rol";
-            this.btnVerUsuarios.UseVisualStyleBackColor = false;
+            this.btnGuardarCAmbios.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGuardarCAmbios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
+            this.btnGuardarCAmbios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarCAmbios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarCAmbios.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnGuardarCAmbios.Location = new System.Drawing.Point(329, 7);
+            this.btnGuardarCAmbios.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardarCAmbios.Name = "btnGuardarCAmbios";
+            this.btnGuardarCAmbios.Size = new System.Drawing.Size(312, 43);
+            this.btnGuardarCAmbios.TabIndex = 2;
+            this.btnGuardarCAmbios.Text = "Guardar Cambios.";
+            this.btnGuardarCAmbios.UseVisualStyleBackColor = false;
+            this.btnGuardarCAmbios.Click += new System.EventHandler(this.btnGuardarCAmbios_Click);
             // 
             // btnAlcance
             // 
@@ -195,10 +196,10 @@
             this.btnAlcance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlcance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlcance.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnAlcance.Location = new System.Drawing.Point(4, 7);
+            this.btnAlcance.Location = new System.Drawing.Point(10, 7);
             this.btnAlcance.Margin = new System.Windows.Forms.Padding(4);
             this.btnAlcance.Name = "btnAlcance";
-            this.btnAlcance.Size = new System.Drawing.Size(187, 43);
+            this.btnAlcance.Size = new System.Drawing.Size(305, 43);
             this.btnAlcance.TabIndex = 0;
             this.btnAlcance.Text = "Ver Alcance";
             this.btnAlcance.UseVisualStyleBackColor = false;
@@ -209,49 +210,50 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbxGestion.BackColor = System.Drawing.Color.LightBlue;
-            this.gbxGestion.Controls.Add(this.button1);
             this.gbxGestion.Controls.Add(this.gbxEliminar);
             this.gbxGestion.Controls.Add(this.tlpGestion);
             this.gbxGestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxGestion.Location = new System.Drawing.Point(516, 4);
+            this.gbxGestion.Location = new System.Drawing.Point(673, 4);
             this.gbxGestion.Margin = new System.Windows.Forms.Padding(4);
             this.gbxGestion.Name = "gbxGestion";
             this.gbxGestion.Padding = new System.Windows.Forms.Padding(4);
-            this.gbxGestion.Size = new System.Drawing.Size(412, 467);
+            this.gbxGestion.Size = new System.Drawing.Size(540, 467);
             this.gbxGestion.TabIndex = 1;
             this.gbxGestion.TabStop = false;
             this.gbxGestion.Text = "Gestion de Roles";
             // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(85, 422);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(257, 34);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Guardar Cambios.";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // gbxEliminar
             // 
             this.gbxEliminar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.gbxEliminar.Controls.Add(this.btnVerUsuarios);
             this.gbxEliminar.Controls.Add(this.btnEliminar);
             this.gbxEliminar.Controls.Add(this.label1);
-            this.gbxEliminar.Controls.Add(this.comboBox1);
+            this.gbxEliminar.Controls.Add(this.comboBoxCargarRoles);
             this.gbxEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxEliminar.Location = new System.Drawing.Point(0, 217);
             this.gbxEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.gbxEliminar.Name = "gbxEliminar";
             this.gbxEliminar.Padding = new System.Windows.Forms.Padding(4);
-            this.gbxEliminar.Size = new System.Drawing.Size(432, 191);
+            this.gbxEliminar.Size = new System.Drawing.Size(540, 191);
             this.gbxEliminar.TabIndex = 1;
             this.gbxEliminar.TabStop = false;
             this.gbxEliminar.Text = "Eliminar Rol Existente";
+            // 
+            // btnVerUsuarios
+            // 
+            this.btnVerUsuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnVerUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
+            this.btnVerUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerUsuarios.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnVerUsuarios.Location = new System.Drawing.Point(13, 142);
+            this.btnVerUsuarios.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVerUsuarios.Name = "btnVerUsuarios";
+            this.btnVerUsuarios.Size = new System.Drawing.Size(257, 43);
+            this.btnVerUsuarios.TabIndex = 6;
+            this.btnVerUsuarios.Text = "Ver Usuarios con este Rol";
+            this.btnVerUsuarios.UseVisualStyleBackColor = false;
+            this.btnVerUsuarios.Click += new System.EventHandler(this.btnVerUsuarios_Click_1);
             // 
             // btnEliminar
             // 
@@ -260,10 +262,10 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEliminar.Location = new System.Drawing.Point(101, 143);
+            this.btnEliminar.Location = new System.Drawing.Point(285, 142);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(211, 34);
+            this.btnEliminar.Size = new System.Drawing.Size(247, 41);
             this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "Eliminar Rol";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -274,22 +276,22 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(80, 41);
+            this.label1.Location = new System.Drawing.Point(150, 40);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(249, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Seleccione el rol a eliminar:";
             // 
-            // comboBox1
+            // comboBoxCargarRoles
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(124, 86);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(160, 32);
-            this.comboBox1.TabIndex = 0;
+            this.comboBoxCargarRoles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCargarRoles.FormattingEnabled = true;
+            this.comboBoxCargarRoles.Location = new System.Drawing.Point(129, 86);
+            this.comboBoxCargarRoles.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxCargarRoles.Name = "comboBoxCargarRoles";
+            this.comboBoxCargarRoles.Size = new System.Drawing.Size(303, 32);
+            this.comboBoxCargarRoles.TabIndex = 0;
             // 
             // tlpGestion
             // 
@@ -300,10 +302,10 @@
             this.tlpGestion.Controls.Add(this.textBoxDescripcion, 1, 1);
             this.tlpGestion.Controls.Add(this.lblIdRol, 0, 0);
             this.tlpGestion.Controls.Add(this.lblDescripcion, 0, 1);
-            this.tlpGestion.Controls.Add(this.textBox1, 1, 0);
+            this.tlpGestion.Controls.Add(this.textBoxIdROL, 1, 0);
             this.tlpGestion.Controls.Add(this.btnAgregarRol, 1, 3);
             this.tlpGestion.Controls.Add(this.btnLimpiar, 0, 3);
-            this.tlpGestion.Location = new System.Drawing.Point(8, 31);
+            this.tlpGestion.Location = new System.Drawing.Point(72, 31);
             this.tlpGestion.Margin = new System.Windows.Forms.Padding(4);
             this.tlpGestion.Name = "tlpGestion";
             this.tlpGestion.RowCount = 4;
@@ -348,15 +350,15 @@
             this.lblDescripcion.TabIndex = 1;
             this.lblDescripcion.Text = "Descripcion";
             // 
-            // textBox1
+            // textBoxIdROL
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(213, 8);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 26);
-            this.textBox1.TabIndex = 2;
+            this.textBoxIdROL.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxIdROL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxIdROL.Location = new System.Drawing.Point(213, 8);
+            this.textBoxIdROL.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxIdROL.Name = "textBoxIdROL";
+            this.textBoxIdROL.Size = new System.Drawing.Size(147, 26);
+            this.textBoxIdROL.TabIndex = 2;
             // 
             // btnAgregarRol
             // 
@@ -395,7 +397,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(932, 475);
+            this.ClientSize = new System.Drawing.Size(1217, 475);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
@@ -425,7 +427,6 @@
         private System.Windows.Forms.TableLayoutPanel tlpDataAcciones;
         private System.Windows.Forms.DataGridView dgvRoles;
         private System.Windows.Forms.TableLayoutPanel tlpBotonesAlcance;
-        private System.Windows.Forms.Button btnVerUsuarios;
         private System.Windows.Forms.Button btnAlcance;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_rol;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
@@ -436,12 +437,13 @@
         private System.Windows.Forms.TextBox textBoxDescripcion;
         private System.Windows.Forms.Label lblIdRol;
         private System.Windows.Forms.Label lblDescripcion;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxIdROL;
         private System.Windows.Forms.Button btnAgregarRol;
         private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGuardarCAmbios;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxCargarRoles;
+        private System.Windows.Forms.Button btnVerUsuarios;
     }
 }

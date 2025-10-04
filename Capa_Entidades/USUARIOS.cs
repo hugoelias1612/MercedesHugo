@@ -18,21 +18,19 @@ namespace Capa_Entidades
         public USUARIOS()
         {
             this.AUDITORIA = new HashSet<AUDITORIA>();
-            this.PEDIDO = new HashSet<PEDIDO>();
+            this.ZONA = new HashSet<ZONA>();
         }
     
-        public int dni { get; set; }
         public string contraseña { get; set; }
         public bool estado { get; set; }
         public int id_rol { get; set; }
-        public Nullable<int> id_zona { get; set; }
+        public string nombre { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AUDITORIA> AUDITORIA { get; set; }
         public virtual Empleado Empleado { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PEDIDO> PEDIDO { get; set; }
         public virtual ROL ROL { get; set; }
-        public virtual ZONA ZONA { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ZONA> ZONA { get; set; }
     }
 }

@@ -12,18 +12,13 @@ namespace Capa_Entidades
     using System;
     using System.Collections.Generic;
     
-    public partial class ESTADO_PAGO
+    public partial class pedido_pago
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ESTADO_PAGO()
-        {
-            this.PAGO = new HashSet<PAGO>();
-        }
+        public int id_pedido { get; set; }
+        public int id_pago { get; set; }
+        public decimal saldo { get; set; }
     
-        public int id_estado { get; set; }
-        public string descripcion { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PAGO> PAGO { get; set; }
+        public virtual PAGO PAGO { get; set; }
+        public virtual PEDIDO PEDIDO { get; set; }
     }
 }

@@ -18,25 +18,24 @@ namespace Capa_Entidades
         public PEDIDO()
         {
             this.DETALLE_PEDIDO = new HashSet<DETALLE_PEDIDO>();
-            this.PAGO = new HashSet<PAGO>();
+            this.pedido_pago = new HashSet<pedido_pago>();
         }
     
         public int id_pedido { get; set; }
         public System.DateTime fecha_creacion { get; set; }
         public System.DateTime fecha_entrega { get; set; }
-        public bool fuera_de_zona { get; set; }
-        public Nullable<int> motivo_reasignacion { get; set; }
         public int id_cliente { get; set; }
         public int id_estado { get; set; }
-        public int dni { get; set; }
         public decimal total { get; set; }
+        public Nullable<int> numero_factura { get; set; }
+        public string vendedor { get; set; }
     
         public virtual CLIENTE CLIENTE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DETALLE_PEDIDO> DETALLE_PEDIDO { get; set; }
+        public virtual Empleado Empleado { get; set; }
         public virtual ESTADO_PEDIDO ESTADO_PEDIDO { get; set; }
-        public virtual USUARIOS USUARIOS { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PAGO> PAGO { get; set; }
+        public virtual ICollection<pedido_pago> pedido_pago { get; set; }
     }
 }

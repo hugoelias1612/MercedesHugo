@@ -17,19 +17,18 @@ namespace Capa_Entidades
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PAGO()
         {
-            this.PEDIDO = new HashSet<PEDIDO>();
+            this.pedido_pago = new HashSet<pedido_pago>();
         }
     
         public int id_pago { get; set; }
         public decimal monto { get; set; }
         public System.DateTime fecha { get; set; }
-        public string motivo_rechazo { get; set; }
-        public int id_estado { get; set; }
         public int id_metodo { get; set; }
+        public int id_cliente { get; set; }
     
-        public virtual ESTADO_PAGO ESTADO_PAGO { get; set; }
+        public virtual CLIENTE CLIENTE { get; set; }
         public virtual METODO_PAGO METODO_PAGO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PEDIDO> PEDIDO { get; set; }
+        public virtual ICollection<pedido_pago> pedido_pago { get; set; }
     }
 }

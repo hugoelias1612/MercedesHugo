@@ -18,6 +18,7 @@ namespace Capa_Entidades
         public CLIENTE()
         {
             this.PEDIDO = new HashSet<PEDIDO>();
+            this.PAGO = new HashSet<PAGO>();
         }
     
         public int id_cliente { get; set; }
@@ -40,10 +41,12 @@ namespace Capa_Entidades
         public int id_zona { get; set; }
         public int id_tamano { get; set; }
     
+        public virtual ZONA ZONA { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PEDIDO> PEDIDO { get; set; }
         public virtual CUENTA_CORRIENTE CUENTA_CORRIENTE { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PAGO> PAGO { get; set; }
         public virtual TAMAÑO_NEGOCIO TAMAÑO_NEGOCIO { get; set; }
-        public virtual ZONA ZONA { get; set; }
     }
 }

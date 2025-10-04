@@ -12,18 +12,14 @@ namespace Capa_Entidades
     using System;
     using System.Collections.Generic;
     
-    public partial class AUDITORIA
+    public partial class stock
     {
-        public int ID_auditoria { get; set; }
-        public System.DateTime fecha_hora { get; set; }
-        public string valor_nuevo { get; set; }
-        public string valor_anterior { get; set; }
-        public int ID_accion { get; set; }
-        public int entidad_id { get; set; }
-        public string usuario { get; set; }
+        public int stock_id { get; set; }
+        public int stock_actual { get; set; }
+        public int umbral_stock { get; set; }
+        public int id_producto { get; set; }
+        public int ID_presentacion { get; set; }
     
-        public virtual ACCION ACCION { get; set; }
-        public virtual entidad entidad { get; set; }
-        public virtual USUARIOS USUARIOS { get; set; }
+        public virtual producto_presentacion producto_presentacion { get; set; }
     }
 }

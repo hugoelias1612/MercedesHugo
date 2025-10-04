@@ -154,7 +154,7 @@
             // 
             this.txtBuscarDni.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBuscarDni.Location = new System.Drawing.Point(393, 43);
-            this.txtBuscarDni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBuscarDni.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscarDni.Name = "txtBuscarDni";
             this.txtBuscarDni.Size = new System.Drawing.Size(161, 22);
             this.txtBuscarDni.TabIndex = 21;
@@ -164,7 +164,7 @@
             // 
             this.txtNombreApellido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombreApellido.Location = new System.Drawing.Point(224, 43);
-            this.txtNombreApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreApellido.Name = "txtNombreApellido";
             this.txtNombreApellido.Size = new System.Drawing.Size(161, 22);
             this.txtNombreApellido.TabIndex = 36;
@@ -202,7 +202,7 @@
             this.textBoxBUSCARGENERAL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxBUSCARGENERAL.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxBUSCARGENERAL.Location = new System.Drawing.Point(1069, 41);
-            this.textBoxBUSCARGENERAL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxBUSCARGENERAL.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxBUSCARGENERAL.Name = "textBoxBUSCARGENERAL";
             this.textBoxBUSCARGENERAL.Size = new System.Drawing.Size(161, 27);
             this.textBoxBUSCARGENERAL.TabIndex = 37;
@@ -213,7 +213,7 @@
             this.pictureBoxBuscar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBoxBuscar.Image = global::ArimaERP.Properties.Resources.BUSCAR_reducido20x20;
             this.pictureBoxBuscar.Location = new System.Drawing.Point(1022, 41);
-            this.pictureBoxBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBoxBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxBuscar.Name = "pictureBoxBuscar";
             this.pictureBoxBuscar.Size = new System.Drawing.Size(39, 26);
             this.pictureBoxBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -236,7 +236,7 @@
             // 
             this.txtIndicaciones.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndicaciones.Location = new System.Drawing.Point(16, 16);
-            this.txtIndicaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIndicaciones.Margin = new System.Windows.Forms.Padding(4);
             this.txtIndicaciones.Name = "txtIndicaciones";
             this.txtIndicaciones.Size = new System.Drawing.Size(301, 25);
             this.txtIndicaciones.TabIndex = 1;
@@ -252,7 +252,7 @@
             this.dataGridListarClientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridListarClientes.GridColor = System.Drawing.SystemColors.Window;
             this.dataGridListarClientes.Location = new System.Drawing.Point(0, 137);
-            this.dataGridListarClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridListarClientes.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridListarClientes.MultiSelect = false;
             this.dataGridListarClientes.Name = "dataGridListarClientes";
             this.dataGridListarClientes.ReadOnly = true;
@@ -283,7 +283,7 @@
             // 
             this.txtIndicacionesFila.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndicacionesFila.Location = new System.Drawing.Point(16, 54);
-            this.txtIndicacionesFila.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIndicacionesFila.Margin = new System.Windows.Forms.Padding(4);
             this.txtIndicacionesFila.Name = "txtIndicacionesFila";
             this.txtIndicacionesFila.Size = new System.Drawing.Size(301, 25);
             this.txtIndicacionesFila.TabIndex = 2;
@@ -293,7 +293,7 @@
             // 
             this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnCancelar.Location = new System.Drawing.Point(1399, 32);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(196, 63);
             this.btnCancelar.TabIndex = 0;

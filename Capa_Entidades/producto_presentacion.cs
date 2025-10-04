@@ -17,15 +17,25 @@ namespace Capa_Entidades
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public producto_presentacion()
         {
+            this.detalle_compra = new HashSet<detalle_compra>();
             this.DETALLE_PEDIDO = new HashSet<DETALLE_PEDIDO>();
+            this.stock = new HashSet<stock>();
         }
     
         public int id_producto { get; set; }
         public int ID_presentacion { get; set; }
+        public int cod_producto { get; set; }
+        public decimal precioLista { get; set; }
+        public int unidades_bulto { get; set; }
+        public bool activo { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<detalle_compra> detalle_compra { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DETALLE_PEDIDO> DETALLE_PEDIDO { get; set; }
         public virtual PRESENTACION PRESENTACION { get; set; }
         public virtual PRODUCTO PRODUCTO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<stock> stock { get; set; }
     }
 }
