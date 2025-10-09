@@ -58,11 +58,10 @@ namespace ArimaERP.EmpleadoClientes
                 comboBoxSeleccionarZona.SelectedValue = clienteActual.id_zona;
                 comboBoxCondicionFrenteIVA.SelectedItem = clienteActual.condicion_frenteIVA;
 
-                txtBoxNombre.ReadOnly = true;
-                txtBoxApellido.ReadOnly = true;
-                txtBoxDni.ReadOnly = true;
-                txtBoxCuil.ReadOnly = true;
-
+                txtBoxNombre.ReadOnly = false;
+                txtBoxApellido.ReadOnly = false;
+                txtBoxDni.ReadOnly = false;
+                txtBoxCuil.ReadOnly = false;
             }
         }
       

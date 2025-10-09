@@ -124,6 +124,39 @@ namespace Capa_Logica
                 return null;
             }
         }
+        //inactivar cliente
+        public bool InactivarCliente(int id_cliente)
+        {
+            try
+            {
+                return ClassCliente.InactivarCliente(id_cliente);
+            }
+            catch (Exception ex)
+            {
+                client.ErroresValidacion.Clear();
+                client.ErroresValidacion.Add("Error al inactivar el cliente: " + ex.Message);
+                return false;
+            }
+        }
+        //activar cliente
+        public bool ActivarCliente(int id_cliente)
+        {
+            try
+            {
+                return ClassCliente.ActivarCliente(id_cliente);
+            }
+            catch (Exception ex)
+            {
+                client.ErroresValidacion.Clear();
+                client.ErroresValidacion.Add("Error al activar el cliente: " + ex.Message);
+                return false;
+            }
+        }
+        //obtener solo clientes inactivos
+        public List<CLIENTE> ObtenerClientesInactivos()
+        {
+            return ClassCliente.ObtenerClientesInactivos();
+        }
     }
 }
 

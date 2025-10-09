@@ -52,8 +52,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassClienteLogica.cs" />
+    <Compile Include="ClassEmpleadoLogica.cs" />
     <Compile Include="ClassRolLogica.cs" />
     <Compile Include="ClassUsuarioLogica.cs" />
+    <Compile Include="ClassZonaLogica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +70,10 @@
     <ProjectReference Include="..\Capa_Entidades\Capa_Entidades.csproj">
       <Project>{e672c138-029e-42ad-83df-e070f114482b}</Project>
       <Name>Capa_Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Capa_Utilidades\Capa_Utilidades.csproj">
+      <Project>{cabd5b59-a68f-4c48-86c0-db5f5a3d63e0}</Project>
+      <Name>Capa_Utilidades</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

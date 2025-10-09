@@ -167,7 +167,13 @@ namespace Capa_Datos
                 return context.CLIENTE.Any(c => c.email == email && c.id_cliente != id_cliente);
             }
         }
-        //
-
+        //obtener solo clientes inactivos
+        public static List<CLIENTE> ObtenerClientesInactivos()
+        {
+            using (var context = new ArimaERPEntities())
+            {
+                return context.CLIENTE.Where(c => c.estado == false).ToList();
+            }
+        }
     }
 }

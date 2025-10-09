@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TLPHeader = new System.Windows.Forms.TableLayoutPanel();
             this.lblHistorial = new System.Windows.Forms.Label();
             this.tableLayoutPanelCliente = new System.Windows.Forms.TableLayoutPanel();
@@ -35,7 +36,7 @@
             this.textBoxBUSCARGENERAL = new System.Windows.Forms.TextBox();
             this.pictureBoxBuscar = new System.Windows.Forms.PictureBox();
             this.lblMail = new System.Windows.Forms.Label();
-            this.txtBusacarEmail = new System.Windows.Forms.TextBox();
+            this.txtBuscarEmail = new System.Windows.Forms.TextBox();
             this.btnListarSaldosPendientes = new System.Windows.Forms.Button();
             this.txtBuscarDni = new System.Windows.Forms.TextBox();
             this.btnPedidosEntregados = new System.Windows.Forms.Button();
@@ -71,19 +72,8 @@
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.TLPHeader.SuspendLayout();
             this.tableLayoutPanelCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBuscar)).BeginInit();
@@ -91,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVerPedidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDetallePagos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // TLPHeader
@@ -140,7 +131,7 @@
             this.tableLayoutPanelCliente.Controls.Add(this.textBoxBUSCARGENERAL, 7, 1);
             this.tableLayoutPanelCliente.Controls.Add(this.pictureBoxBuscar, 6, 1);
             this.tableLayoutPanelCliente.Controls.Add(this.lblMail, 5, 0);
-            this.tableLayoutPanelCliente.Controls.Add(this.txtBusacarEmail, 5, 1);
+            this.tableLayoutPanelCliente.Controls.Add(this.txtBuscarEmail, 5, 1);
             this.tableLayoutPanelCliente.Controls.Add(this.btnListarSaldosPendientes, 1, 1);
             this.tableLayoutPanelCliente.Controls.Add(this.txtBuscarDni, 4, 1);
             this.tableLayoutPanelCliente.Controls.Add(this.btnPedidosEntregados, 2, 1);
@@ -194,25 +185,27 @@
             // 
             // lblMail
             // 
-            this.lblMail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblMail.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblMail.AutoSize = true;
             this.lblMail.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMail.Location = new System.Drawing.Point(912, 9);
+            this.lblMail.Location = new System.Drawing.Point(856, 9);
             this.lblMail.Name = "lblMail";
             this.lblMail.Size = new System.Drawing.Size(62, 25);
             this.lblMail.TabIndex = 33;
             this.lblMail.Text = "EMAIL";
             this.lblMail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtBusacarEmail
+            // txtBuscarEmail
             // 
-            this.txtBusacarEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBusacarEmail.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusacarEmail.Location = new System.Drawing.Point(856, 51);
-            this.txtBusacarEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtBusacarEmail.Name = "txtBusacarEmail";
-            this.txtBusacarEmail.Size = new System.Drawing.Size(174, 31);
-            this.txtBusacarEmail.TabIndex = 25;
+            this.txtBuscarEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBuscarEmail.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarEmail.Location = new System.Drawing.Point(856, 51);
+            this.txtBuscarEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBuscarEmail.Name = "txtBuscarEmail";
+            this.txtBuscarEmail.Size = new System.Drawing.Size(174, 31);
+            this.txtBuscarEmail.TabIndex = 25;
+            this.txtBuscarEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscarEmail_KeyDown);
+            this.txtBuscarEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusacarEmail_KeyPress);
             // 
             // btnListarSaldosPendientes
             // 
@@ -228,12 +221,14 @@
             // 
             // txtBuscarDni
             // 
-            this.txtBuscarDni.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBuscarDni.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtBuscarDni.Location = new System.Drawing.Point(672, 51);
             this.txtBuscarDni.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscarDni.Name = "txtBuscarDni";
             this.txtBuscarDni.Size = new System.Drawing.Size(177, 31);
             this.txtBuscarDni.TabIndex = 21;
+            this.txtBuscarDni.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscarDni_KeyDown);
+            this.txtBuscarDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscarDni_KeyPress);
             // 
             // btnPedidosEntregados
             // 
@@ -249,10 +244,10 @@
             // 
             // lblDNI
             // 
-            this.lblDNI.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblDNI.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblDNI.AutoSize = true;
             this.lblDNI.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDNI.Location = new System.Drawing.Point(739, 9);
+            this.lblDNI.Location = new System.Drawing.Point(672, 9);
             this.lblDNI.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDNI.Name = "lblDNI";
             this.lblDNI.Size = new System.Drawing.Size(43, 25);
@@ -262,10 +257,10 @@
             // 
             // lblLetraApellido
             // 
-            this.lblLetraApellido.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblLetraApellido.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblLetraApellido.AutoSize = true;
             this.lblLetraApellido.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLetraApellido.Location = new System.Drawing.Point(487, 9);
+            this.lblLetraApellido.Location = new System.Drawing.Point(475, 9);
             this.lblLetraApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLetraApellido.Name = "lblLetraApellido";
             this.lblLetraApellido.Size = new System.Drawing.Size(165, 25);
@@ -275,13 +270,15 @@
             // 
             // txtNombreApellido
             // 
-            this.txtNombreApellido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNombreApellido.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtNombreApellido.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreApellido.Location = new System.Drawing.Point(475, 51);
             this.txtNombreApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreApellido.Name = "txtNombreApellido";
             this.txtNombreApellido.Size = new System.Drawing.Size(189, 31);
             this.txtNombreApellido.TabIndex = 36;
+            this.txtNombreApellido.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombreApellido_KeyDown);
+            this.txtNombreApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreApellido_KeyPress);
             // 
             // btnListarPedidosPendientes
             // 
@@ -320,7 +317,7 @@
             this.tableLayoutPanelClientes.Controls.Add(this.comboBoxZona, 3, 1);
             this.tableLayoutPanelClientes.Controls.Add(this.comboBoxEstado, 5, 1);
             this.tableLayoutPanelClientes.Controls.Add(this.comboBoxTamano, 6, 1);
-            this.tableLayoutPanelClientes.Location = new System.Drawing.Point(49, 180);
+            this.tableLayoutPanelClientes.Location = new System.Drawing.Point(49, 170);
             this.tableLayoutPanelClientes.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanelClientes.Name = "tableLayoutPanelClientes";
             this.tableLayoutPanelClientes.RowCount = 2;
@@ -464,7 +461,8 @@
             // 
             // dataGridViewVerPedidos
             // 
-            this.dataGridViewVerPedidos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dataGridViewVerPedidos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewVerPedidos.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewVerPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewVerPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -477,12 +475,12 @@
             this.Column6,
             this.Column10});
             this.dataGridViewVerPedidos.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dataGridViewVerPedidos.Location = new System.Drawing.Point(13, 291);
+            this.dataGridViewVerPedidos.Location = new System.Drawing.Point(12, 395);
             this.dataGridViewVerPedidos.Name = "dataGridViewVerPedidos";
             this.dataGridViewVerPedidos.RowHeadersVisible = false;
             this.dataGridViewVerPedidos.RowHeadersWidth = 51;
             this.dataGridViewVerPedidos.RowTemplate.Height = 24;
-            this.dataGridViewVerPedidos.Size = new System.Drawing.Size(1300, 204);
+            this.dataGridViewVerPedidos.Size = new System.Drawing.Size(1294, 157);
             this.dataGridViewVerPedidos.TabIndex = 40;
             this.dataGridViewVerPedidos.Visible = false;
             // 
@@ -558,11 +556,11 @@
             this.Column13,
             this.Column14});
             this.dataGridViewDetallePagos.GridColor = System.Drawing.SystemColors.Window;
-            this.dataGridViewDetallePagos.Location = new System.Drawing.Point(27, 291);
+            this.dataGridViewDetallePagos.Location = new System.Drawing.Point(12, 569);
             this.dataGridViewDetallePagos.Name = "dataGridViewDetallePagos";
             this.dataGridViewDetallePagos.RowHeadersWidth = 51;
             this.dataGridViewDetallePagos.RowTemplate.Height = 24;
-            this.dataGridViewDetallePagos.Size = new System.Drawing.Size(1266, 59);
+            this.dataGridViewDetallePagos.Size = new System.Drawing.Size(1294, 158);
             this.dataGridViewDetallePagos.TabIndex = 41;
             this.dataGridViewDetallePagos.Visible = false;
             // 
@@ -605,23 +603,11 @@
             // 
             this.dgvClientes.AllowUserToAddRows = false;
             this.dgvClientes.AllowUserToDeleteRows = false;
-            this.dgvClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvClientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvClientes.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.Column8,
-            this.Column9,
-            this.dataGridViewTextBoxColumn10});
-            this.dgvClientes.Location = new System.Drawing.Point(12, 407);
+            this.dgvClientes.Location = new System.Drawing.Point(12, 273);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
             this.dgvClientes.RowHeadersWidth = 51;
@@ -631,111 +617,20 @@
             this.dgvClientes.Visible = false;
             this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResultados_CellContentClick);
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Apellido";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Zona";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "DNI";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Teléfono";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Email";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "Ciudad";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Provincia";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "Categoria";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Width = 125;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Calle";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 125;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Número";
-            this.Column9.MinimumWidth = 6;
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "Cgo Postal";
-            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            this.dataGridViewTextBoxColumn10.Width = 125;
-            // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(1053, 672);
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.Location = new System.Drawing.Point(1106, 646);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(164, 55);
             this.btnSalir.TabIndex = 43;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // FormClienteHistorial
             // 
@@ -751,6 +646,7 @@
             this.Controls.Add(this.TLPHeader);
             this.Name = "FormClienteHistorial";
             this.Text = "Historial de Clientes";
+            this.Load += new System.EventHandler(this.FormClienteHistorial_Load);
             this.TLPHeader.ResumeLayout(false);
             this.TLPHeader.PerformLayout();
             this.tableLayoutPanelCliente.ResumeLayout(false);
@@ -761,6 +657,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVerPedidos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDetallePagos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -769,7 +666,7 @@
 
         private System.Windows.Forms.TableLayoutPanel TLPHeader;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelCliente;
-        private System.Windows.Forms.TextBox txtBusacarEmail;
+        private System.Windows.Forms.TextBox txtBuscarEmail;
         private System.Windows.Forms.Label lblMail;
         private System.Windows.Forms.TextBox txtBuscarDni;
         private System.Windows.Forms.TextBox txtNombreApellido;
@@ -810,18 +707,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridView dgvClientes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

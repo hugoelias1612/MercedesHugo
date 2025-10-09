@@ -9,6 +9,7 @@ namespace Capa_Datos
 {
     public class ClassZona
     {
+        public List<string> ErroresValidacion { get; private set; } = new List<string>();
         //Devuelve lista de zonas
         public static List<ZONA> ListarZonas()
         {
@@ -82,6 +83,20 @@ namespace Capa_Datos
             }
 
 
+        }
+        //buscar zona según preventista
+        public int BuscarZonaPorPreventista(string nombre_usuario)
+        {
+            using (var context = new ArimaERPEntities())
+            {
+                //devolver id_zona
+                var zona = context.ZONA.FirstOrDefault(z => z.preventista == nombre_usuario);
+                if (zona != null)
+                {
+                    return zona.id_zona;
+                }
+                return 0; // Retorna 0 si no se encuentra la zona
+            }
         }
     }
 }

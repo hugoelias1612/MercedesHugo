@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,9 @@ namespace ArimaERP.Administrador
     public partial class FormUsuarios : Form
     {       
         private ClassUsuarioLogica usuarioLog = new ClassUsuarioLogica();
+        //obtener todos los roles
+        private ClassRolLogica rolLogica = new ClassRolLogica();        
+
         private int rolActual;
         public FormUsuarios(int id_rol)
         {
@@ -24,33 +28,46 @@ namespace ArimaERP.Administrador
 
         private void FormUsuarios_Load(object sender, EventArgs e)
         {
-            // Cargar los usuarios con el rol actual en el listViewUsuarios
+            
             CargarUsuarios();
         }
-       //cargar usuarios si hay usuarios
         private void CargarUsuarios()
         {
-            listViewUsuarios.Items.Clear();
-
-            List<USUARIOS> usuarios = usuarioLog.ObtenerUsuariosPorRol(rolActual);
-
-            // Si no hay usuarios, no mostrar mensaje (ya se validó antes de abrir el formulario)
-            if (usuarios == null || usuarios.Count == 0)
-                return;
-
-            foreach (var usuario in usuarios)
+            // Cargar los usuarios con el rolActual en el dataGridViewUsuariosRol
+            try
             {
-                var item = new ListViewItem(usuario.nombre ?? "Sin nombre");
+                // Obtener la lista de usuarios con el rol actual
+                List<USUARIOS> listaUsuarios = usuarioLog.ObtenerUsuariosPorRol(rolActual);
+                
+                // Limpiar el DataGridView antes de cargar nuevos datos
+                dataGridViewUsuariosRol.Rows.Clear();
+                dataGridViewUsuariosRol.Columns.Clear();
 
-                item.SubItems.Add(usuario.estado ? "Activo" : "Inactivo");
+                // Configurar columnas (puede ajustarse según tus propiedades)
+                dataGridViewUsuariosRol.Columns.Add("Nombre", "Nombre");
+                dataGridViewUsuariosRol.Columns.Add("Estado", "Estado");
+                dataGridViewUsuariosRol.Columns.Add("Rol", "Rol");
 
-                string descripcionRol = usuario.ROL?.descripcion ?? "N/A";
-                item.SubItems.Add(descripcionRol);
+                List<ROL> roles = ClassRolLogica.ListarRoles();
+                // Cargar los datos
+                foreach (var usuario in listaUsuarios)
+                {
+                    string nombre = usuario.nombre;
+                    string estado = usuario.estado ? "Activo" : "Inactivo";
+                    // traer descripcion de cada rol en el dataGrid
+                    string  descripcionRol = roles.FirstOrDefault(r => r.id_rol == usuario.id_rol)?.descripcion ?? "Rol desconocido";
 
-                listViewUsuarios.Items.Add(item);
+                    dataGridViewUsuariosRol.Rows.Add(usuario.nombre, estado, descripcionRol);
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar usuarios: " + ex.Message);
+            }
+
         }
-        private void btnCerrar_Click(object sender, EventArgs e)
+
+        private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Close();
         }

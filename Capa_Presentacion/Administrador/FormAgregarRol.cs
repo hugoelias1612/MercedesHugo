@@ -267,6 +267,8 @@ namespace ArimaERP.Administrador
 
                 // Si hay usuarios, abrir el formulario
                 FormUsuarios formUsuarios = new FormUsuarios(idRol);
+                //centrar formulario 
+                formUsuarios.StartPosition = FormStartPosition.CenterScreen;
                 formUsuarios.ShowDialog();
                 
             }

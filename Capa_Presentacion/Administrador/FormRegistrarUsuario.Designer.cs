@@ -31,12 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.TLPMain = new System.Windows.Forms.TableLayoutPanel();
             this.pnlBuscar = new System.Windows.Forms.Panel();
-            this.comboBoxRol = new System.Windows.Forms.ComboBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnBuscarUsuario = new System.Windows.Forms.Button();
             this.textBoxBusqueda = new System.Windows.Forms.TextBox();
             this.TLPCampos = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnCrearEmpleado = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
@@ -59,20 +61,21 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.gbxCamposUsuario = new System.Windows.Forms.GroupBox();
+            this.checkBoxEstado = new System.Windows.Forms.CheckBox();
+            this.btnModificarUsuario = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblContraseña = new System.Windows.Forms.Label();
-            this.textBoxContrasena = new System.Windows.Forms.TextBox();
-            this.lblRol = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblContraseña = new System.Windows.Forms.Label();
             this.textBoxUsuario = new System.Windows.Forms.TextBox();
-            this.gbxAcciones = new System.Windows.Forms.GroupBox();
-            this.btnBaja = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.lblRol = new System.Windows.Forms.Label();
+            this.textBoxContrasena = new System.Windows.Forms.TextBox();
+            this.comboBoxRol = new System.Windows.Forms.ComboBox();
             this.btnCrear = new System.Windows.Forms.Button();
+            this.gbxAcciones = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnBaja = new System.Windows.Forms.Button();
             this.TLPMain.SuspendLayout();
             this.pnlBuscar.SuspendLayout();
             this.TLPCampos.SuspendLayout();
@@ -121,29 +124,13 @@
             this.pnlBuscar.Size = new System.Drawing.Size(1386, 54);
             this.pnlBuscar.TabIndex = 5;
             // 
-            // comboBoxRol
-            // 
-            this.comboBoxRol.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBoxRol.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxRol.FormattingEnabled = true;
-            this.comboBoxRol.Items.AddRange(new object[] {
-            "Administrador",
-            "Preventista",
-            "Empledo(Producto)",
-            "Empleado(Cliente)"});
-            this.comboBoxRol.Location = new System.Drawing.Point(1075, 17);
-            this.comboBoxRol.Name = "comboBoxRol";
-            this.comboBoxRol.Size = new System.Drawing.Size(254, 36);
-            this.comboBoxRol.TabIndex = 5;
-            this.comboBoxRol.Text = "Seleccione Rol";
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Enabled = false;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(989, 9);
+            this.btnCancelar.Location = new System.Drawing.Point(1067, 9);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(299, 35);
+            this.btnCancelar.Size = new System.Drawing.Size(290, 35);
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -189,6 +176,10 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox1.Controls.Add(this.btnBaja);
+            this.groupBox1.Controls.Add(this.btnLimpiar);
+            this.groupBox1.Controls.Add(this.btnCrearEmpleado);
+            this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.tableLayoutPanel9);
             this.groupBox1.Controls.Add(this.tableLayoutPanel5);
@@ -202,6 +193,52 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Rellene los campos del Empleado";
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnLimpiar.Location = new System.Drawing.Point(42, 324);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(276, 44);
+            this.btnLimpiar.TabIndex = 1;
+            this.btnLimpiar.Text = "Limpiar Campos";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // btnCrearEmpleado
+            // 
+            this.btnCrearEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
+            this.btnCrearEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrearEmpleado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearEmpleado.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCrearEmpleado.Location = new System.Drawing.Point(1049, 324);
+            this.btnCrearEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCrearEmpleado.Name = "btnCrearEmpleado";
+            this.btnCrearEmpleado.Size = new System.Drawing.Size(307, 44);
+            this.btnCrearEmpleado.TabIndex = 8;
+            this.btnCrearEmpleado.Text = "Crear Empleado";
+            this.btnCrearEmpleado.UseVisualStyleBackColor = false;
+            this.btnCrearEmpleado.Click += new System.EventHandler(this.btnCrearEmpleado_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
+            this.btnModificar.Enabled = false;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Location = new System.Drawing.Point(672, 324);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(335, 44);
+            this.btnModificar.TabIndex = 6;
+            this.btnModificar.Text = "Modificar Empleado";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // label3
             // 
@@ -266,7 +303,7 @@
             // 
             this.textBoxDNI.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDNI.Location = new System.Drawing.Point(151, 14);
+            this.textBoxDNI.Location = new System.Drawing.Point(152, 14);
             this.textBoxDNI.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDNI.Name = "textBoxDNI";
             this.textBoxDNI.Size = new System.Drawing.Size(255, 34);
@@ -500,8 +537,11 @@
             // gbxCamposUsuario
             // 
             this.gbxCamposUsuario.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.gbxCamposUsuario.Controls.Add(this.checkBoxEstado);
+            this.gbxCamposUsuario.Controls.Add(this.btnModificarUsuario);
             this.gbxCamposUsuario.Controls.Add(this.label2);
             this.gbxCamposUsuario.Controls.Add(this.tableLayoutPanel1);
+            this.gbxCamposUsuario.Controls.Add(this.btnCrear);
             this.gbxCamposUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbxCamposUsuario.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxCamposUsuario.Location = new System.Drawing.Point(4, 4);
@@ -513,11 +553,36 @@
             this.gbxCamposUsuario.TabStop = false;
             this.gbxCamposUsuario.Text = "Rellene los campos del Usuario";
             // 
+            // checkBoxEstado
+            // 
+            this.checkBoxEstado.AutoSize = true;
+            this.checkBoxEstado.Location = new System.Drawing.Point(257, 124);
+            this.checkBoxEstado.Name = "checkBoxEstado";
+            this.checkBoxEstado.Size = new System.Drawing.Size(100, 35);
+            this.checkBoxEstado.TabIndex = 3;
+            this.checkBoxEstado.Text = "Activo";
+            this.checkBoxEstado.UseVisualStyleBackColor = true;
+            // 
+            // btnModificarUsuario
+            // 
+            this.btnModificarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
+            this.btnModificarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarUsuario.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarUsuario.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnModificarUsuario.Location = new System.Drawing.Point(619, 116);
+            this.btnModificarUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificarUsuario.Name = "btnModificarUsuario";
+            this.btnModificarUsuario.Size = new System.Drawing.Size(290, 44);
+            this.btnModificarUsuario.TabIndex = 2;
+            this.btnModificarUsuario.Text = "Modificar Usuario";
+            this.btnModificarUsuario.UseVisualStyleBackColor = false;
+            this.btnModificarUsuario.Click += new System.EventHandler(this.btnModificarUsuario_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label2.Location = new System.Drawing.Point(3, 153);
+            this.label2.Location = new System.Drawing.Point(3, 182);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(1177, 31);
@@ -540,47 +605,13 @@
             this.tableLayoutPanel1.Controls.Add(this.lblRol, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBoxContrasena, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.comboBoxRol, 5, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 59);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 36);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1355, 71);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // lblContraseña
-            // 
-            this.lblContraseña.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblContraseña.AutoSize = true;
-            this.lblContraseña.Location = new System.Drawing.Point(517, 20);
-            this.lblContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(129, 31);
-            this.lblContraseña.TabIndex = 0;
-            this.lblContraseña.Text = "Contraseña";
-            this.lblContraseña.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBoxContrasena
-            // 
-            this.textBoxContrasena.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxContrasena.Location = new System.Drawing.Point(680, 18);
-            this.textBoxContrasena.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxContrasena.Name = "textBoxContrasena";
-            this.textBoxContrasena.Size = new System.Drawing.Size(245, 34);
-            this.textBoxContrasena.TabIndex = 1;
-            this.textBoxContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
-            // 
-            // lblRol
-            // 
-            this.lblRol.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblRol.AutoSize = true;
-            this.lblRol.Location = new System.Drawing.Point(961, 20);
-            this.lblRol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(57, 31);
-            this.lblRol.TabIndex = 0;
-            this.lblRol.Text = "Rol: ";
             // 
             // lblUsuario
             // 
@@ -594,6 +625,18 @@
             this.lblUsuario.Text = "Usuario";
             this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblContraseña
+            // 
+            this.lblContraseña.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblContraseña.AutoSize = true;
+            this.lblContraseña.Location = new System.Drawing.Point(517, 20);
+            this.lblContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblContraseña.Name = "lblContraseña";
+            this.lblContraseña.Size = new System.Drawing.Size(129, 31);
+            this.lblContraseña.TabIndex = 0;
+            this.lblContraseña.Text = "Contraseña";
+            this.lblContraseña.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // textBoxUsuario
             // 
             this.textBoxUsuario.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -605,14 +648,63 @@
             this.textBoxUsuario.TabIndex = 1;
             this.textBoxUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxUsuario_KeyPress);
             // 
+            // lblRol
+            // 
+            this.lblRol.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblRol.AutoSize = true;
+            this.lblRol.Location = new System.Drawing.Point(961, 20);
+            this.lblRol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(57, 31);
+            this.lblRol.TabIndex = 0;
+            this.lblRol.Text = "Rol: ";
+            // 
+            // textBoxContrasena
+            // 
+            this.textBoxContrasena.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxContrasena.Location = new System.Drawing.Point(680, 18);
+            this.textBoxContrasena.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxContrasena.Name = "textBoxContrasena";
+            this.textBoxContrasena.Size = new System.Drawing.Size(245, 34);
+            this.textBoxContrasena.TabIndex = 1;
+            this.textBoxContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            // 
+            // comboBoxRol
+            // 
+            this.comboBoxRol.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxRol.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxRol.FormattingEnabled = true;
+            this.comboBoxRol.Items.AddRange(new object[] {
+            "Administrador",
+            "Preventista",
+            "Empledo(Producto)",
+            "Empleado(Cliente)"});
+            this.comboBoxRol.Location = new System.Drawing.Point(1075, 17);
+            this.comboBoxRol.Name = "comboBoxRol";
+            this.comboBoxRol.Size = new System.Drawing.Size(254, 36);
+            this.comboBoxRol.TabIndex = 5;
+            this.comboBoxRol.Text = "Seleccione Rol";
+            // 
+            // btnCrear
+            // 
+            this.btnCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
+            this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrear.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrear.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCrear.Location = new System.Drawing.Point(1060, 115);
+            this.btnCrear.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(290, 44);
+            this.btnCrear.TabIndex = 0;
+            this.btnCrear.Text = "Crear Usuario";
+            this.btnCrear.UseVisualStyleBackColor = false;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
+            // 
             // gbxAcciones
             // 
             this.gbxAcciones.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.gbxAcciones.Controls.Add(this.btnBaja);
-            this.gbxAcciones.Controls.Add(this.btnModificar);
             this.gbxAcciones.Controls.Add(this.button1);
-            this.gbxAcciones.Controls.Add(this.btnLimpiar);
-            this.gbxAcciones.Controls.Add(this.btnCrear);
             this.gbxAcciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.gbxAcciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxAcciones.Location = new System.Drawing.Point(4, 695);
@@ -624,44 +716,13 @@
             this.gbxAcciones.TabStop = false;
             this.gbxAcciones.Text = "Acciones";
             // 
-            // btnBaja
-            // 
-            this.btnBaja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
-            this.btnBaja.Enabled = false;
-            this.btnBaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBaja.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBaja.ForeColor = System.Drawing.Color.White;
-            this.btnBaja.Location = new System.Drawing.Point(1103, 38);
-            this.btnBaja.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBaja.Name = "btnBaja";
-            this.btnBaja.Size = new System.Drawing.Size(253, 44);
-            this.btnBaja.TabIndex = 7;
-            this.btnBaja.Text = "Dar de Baja";
-            this.btnBaja.UseVisualStyleBackColor = false;
-            this.btnBaja.Click += new System.EventHandler(this.btnBaja_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
-            this.btnModificar.Enabled = false;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(832, 38);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(259, 44);
-            this.btnModificar.TabIndex = 6;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = false;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(553, 38);
+            this.button1.Location = new System.Drawing.Point(522, 38);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(266, 44);
@@ -670,39 +731,25 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
-            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnLimpiar.Location = new System.Drawing.Point(280, 38);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(259, 44);
-            this.btnLimpiar.TabIndex = 1;
-            this.btnLimpiar.Text = "Limpiar Campos";
-            this.btnLimpiar.UseVisualStyleBackColor = false;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
-            // 
-            // btnCrear
-            // 
-            this.btnCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
-            this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrear.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrear.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCrear.Location = new System.Drawing.Point(21, 38);
-            this.btnCrear.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(243, 44);
-            this.btnCrear.TabIndex = 0;
-            this.btnCrear.Text = "Crear Usuario";
-            this.btnCrear.UseVisualStyleBackColor = false;
-            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // btnBaja
+            // 
+            this.btnBaja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(160)))));
+            this.btnBaja.Enabled = false;
+            this.btnBaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBaja.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaja.ForeColor = System.Drawing.Color.White;
+            this.btnBaja.Location = new System.Drawing.Point(365, 324);
+            this.btnBaja.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBaja.Name = "btnBaja";
+            this.btnBaja.Size = new System.Drawing.Size(263, 44);
+            this.btnBaja.TabIndex = 7;
+            this.btnBaja.Text = "Dar de Baja";
+            this.btnBaja.UseVisualStyleBackColor = false;
+            this.btnBaja.Click += new System.EventHandler(this.btnBaja_Click);
             // 
             // FormRegistrarUsuario
             // 
@@ -717,6 +764,7 @@
             this.Name = "FormRegistrarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ADMINISTRADOR";
+            this.Load += new System.EventHandler(this.FormRegistrarUsuario_Load);
             this.TLPMain.ResumeLayout(false);
             this.pnlBuscar.ResumeLayout(false);
             this.pnlBuscar.PerformLayout();
@@ -791,7 +839,10 @@
         private System.Windows.Forms.Button btnBuscarUsuario;
         private System.Windows.Forms.TextBox textBoxBusqueda;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnBaja;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button btnCrearEmpleado;
+        private System.Windows.Forms.Button btnModificarUsuario;
+        private System.Windows.Forms.CheckBox checkBoxEstado;
+        private System.Windows.Forms.Button btnBaja;
     }
 }
