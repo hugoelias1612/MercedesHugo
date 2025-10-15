@@ -119,6 +119,7 @@
     <Compile Include="TAMAÑO_NEGOCIO.cs">
       <DependentUpon>ModelProyecto1.tt</DependentUpon>
     </Compile>
+    <Compile Include="USUARIO.cs" />
     <Compile Include="USUARIOS.cs">
       <DependentUpon>ModelProyecto1.tt</DependentUpon>
     </Compile>

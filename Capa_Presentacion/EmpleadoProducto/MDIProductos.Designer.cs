@@ -242,7 +242,6 @@
             this.MinimizeBox = false;
             this.Name = "MDIProductos";
             this.Text = "MDIProductos";
-            this.Load += new System.EventHandler(this.MDIProductos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnlVista.ResumeLayout(false);

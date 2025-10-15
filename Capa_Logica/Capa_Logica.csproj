@@ -53,10 +53,16 @@
   <ItemGroup>
     <Compile Include="ClassClienteLogica.cs" />
     <Compile Include="ClassEmpleadoLogica.cs" />
+    <Compile Include="ClassFamiliaLogica.cs" />
+    <Compile Include="ClassMarcaLogica.cs" />
+    <Compile Include="ClassPedidoLogica.cs" />
+    <Compile Include="ClassProductoLogica.cs" />
+    <Compile Include="ClassProveedorLogica.cs" />
     <Compile Include="ClassRolLogica.cs" />
     <Compile Include="ClassUsuarioLogica.cs" />
     <Compile Include="ClassZonaLogica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioLogica.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

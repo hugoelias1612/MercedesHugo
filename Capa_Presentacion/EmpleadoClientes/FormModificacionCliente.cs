@@ -350,9 +350,6 @@ namespace ArimaERP.EmpleadoClientes
             }
         }
 
-
-
-
         private void textBoxBUSCARGENERAL_TextChanged(object sender, EventArgs e)
         {
             //busqueda general en todas las columnas de la tabla cliente
@@ -431,6 +428,6 @@ namespace ArimaERP.EmpleadoClientes
                 MessageBox.Show("Por favor, ingrese solo letras y espacios para el nombre o apellido.", "Entrada inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 e.Handled = true; // evita que el carácter no válido se ingrese en el TextBox
             }      
-        }
-}
+        }               
+    }
 }

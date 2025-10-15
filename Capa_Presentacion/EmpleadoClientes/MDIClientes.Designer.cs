@@ -248,7 +248,6 @@
             this.pnlVistaMenuSecundario.Name = "pnlVistaMenuSecundario";
             this.pnlVistaMenuSecundario.Size = new System.Drawing.Size(991, 683);
             this.pnlVistaMenuSecundario.TabIndex = 2;
-            this.pnlVistaMenuSecundario.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlVistaMenuSecundario_Paint);
             // 
             // pnlClientes
             // 

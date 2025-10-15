@@ -175,5 +175,38 @@ namespace Capa_Datos
                 return context.CLIENTE.Where(c => c.estado == false).ToList();
             }
         }
+        //obtener solo clientes activos
+        public static List<CLIENTE> ObtenerClientesActivos()
+        {
+            using (var context = new ArimaERPEntities())
+            {
+                return context.CLIENTE.Where(c => c.estado == true).ToList();
+            }
+        }
+        //obtener clientes por tamaño
+        public static List<CLIENTE> ObtenerClientesPorTamanio(int tamanio)
+        {
+            using (var context = new ArimaERPEntities())
+            {
+                return context.CLIENTE.Where(c => c.id_tamano== tamanio).ToList();
+            }
+        }
+        //obtener solo clientes confiables
+        public static List<CLIENTE> ObtenerClientesConfiables()
+            {
+            using (var context = new ArimaERPEntities())
+            {
+                return context.CLIENTE.Where(c => c.confiable == true).ToList();
+            }
+        }
+        //obtener solo clientes no confiables
+        public static List<CLIENTE> ObtenerClientesNoConfiables()
+        {
+            using (var context = new ArimaERPEntities())
+            {
+                return context.CLIENTE.Where(c => c.confiable == false).ToList();
+            }
+        }
+        
     }
 }

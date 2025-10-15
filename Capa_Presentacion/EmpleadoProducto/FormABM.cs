@@ -209,5 +209,10 @@ namespace ArimaERP.EmpleadoProducto
                 errorProvider1.SetError(textBoxCodigo, "Máximo 10 caracteres.");
             }
         }
+
+        private void textBoxCodigo_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }

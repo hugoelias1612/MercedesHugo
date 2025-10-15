@@ -6,13 +6,14 @@
 //     Los cambios manuales en este archivo se sobrescribirán si se regenera el código.
 // </auto-generated>
 //------------------------------------------------------------------------------
-using Capa_Entidades;
+
 namespace Capa_Datos
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+    using Capa_Entidades;
+
     public partial class ArimaERPEntities : DbContext
     {
         public ArimaERPEntities()

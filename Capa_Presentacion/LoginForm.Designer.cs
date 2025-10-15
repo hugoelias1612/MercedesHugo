@@ -91,7 +91,6 @@
             this.LSubtitulo.Size = new System.Drawing.Size(461, 25);
             this.LSubtitulo.TabIndex = 1;
             this.LSubtitulo.Text = "Los datos de tu empresa, ordenados de la mejor manera";
-            this.LSubtitulo.Click += new System.EventHandler(this.LSubtitulo_Click);
             // 
             // LTitulo
             // 
@@ -105,7 +104,6 @@
             this.LTitulo.Size = new System.Drawing.Size(204, 54);
             this.LTitulo.TabIndex = 0;
             this.LTitulo.Text = "Arima ERP";
-            this.LTitulo.Click += new System.EventHandler(this.label1_Click);
             // 
             // TLPBody
             // 
@@ -180,7 +178,6 @@
             this.TCorreo.Name = "TCorreo";
             this.TCorreo.Size = new System.Drawing.Size(285, 22);
             this.TCorreo.TabIndex = 1;
-            this.TCorreo.TextChanged += new System.EventHandler(this.TCorreo_TextChanged);
             // 
             // LCorreo
             // 
@@ -226,7 +223,7 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Arima ERP - Login";
-            this.Load += new System.EventHandler(this.LoginForm_Load);
+            this.Shown += new System.EventHandler(this.LoginForm_Shown);
             this.TLPBase.ResumeLayout(false);
             this.PHeader.ResumeLayout(false);
             this.PHeader.PerformLayout();

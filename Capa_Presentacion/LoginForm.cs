@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using Capa_Logica;
+using Capa_Entidades;
+
+
 
 namespace ArimaERP
 {
@@ -11,103 +15,54 @@ namespace ArimaERP
             InitializeComponent();
         }
 
-        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-           
-        }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LSubtitulo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TCorreo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void BIngresar_Click(object sender, EventArgs e)
         {
-            
-            //convertir TCorreo a int
-            int rol = int.Parse(TCorreo.Text);
-            //validar campo vacios
-            if (string.IsNullOrEmpty(TCorreo.Text) || string.IsNullOrEmpty(TContrasena.Text))
+
+            string nombre = TCorreo.Text.Trim();
+            string clave = TContrasena.Text.Trim();
+
+            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(clave))
             {
                 MessageBox.Show("Por favor, complete todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
+
+            UsuarioLogica logica = new UsuarioLogica();
+            USUARIO usuario = logica.AutenticarUsuario(nombre, clave);
+
+            if (usuario != null)
+            {
+                UsuarioSesion.IniciarSesion(usuario.nombre, usuario.id_rol, usuario.rol_descripcion);
+                Form mdiForm = null;
+                switch (usuario.id_rol)
+                {
+                    case 5: mdiForm = new Preventista.MDIPreventista();break;
+                    case 6: mdiForm = new EmpleadoClientes.MDIClientes(); break;
+                    case 7: mdiForm = new EmpleadoProducto.MDIProductos(); break;
+                    case 8: mdiForm = new Administrador.FormPanelAdministrador(); break;
+                    default:
+                        MessageBox.Show("Rol no reconocido."); return;
+                }
+                mdiForm.StartPosition = FormStartPosition.CenterScreen;
+                mdiForm.FormClosed += (s, args) => this.Show(); // Mostrar login al cerrar MDI
+                mdiForm.Show();
+                TCorreo.Clear();
+                TContrasena.Clear();
+                this.Hide();           
+
 
             }
             else
             {
-                //switch case para abrir el formulario segun el rol del TCorreo
-                switch (rol)
-                {
-                    case 1:
-                        
-                        //abrir formulario administrador
-                        Administrador.FormPanelAdministrador mdiAdmin = new Administrador.FormPanelAdministrador();
-                        //Centrar formulario
-                        mdiAdmin.StartPosition = FormStartPosition.CenterScreen;
-                        FormClosedEventHandler value1 = (s, args) => this.Show();
-                        FormClosedEventHandler value = value1;
-                        mdiAdmin.FormClosed += value;
-                        mdiAdmin.Show();
-                        //limpiar login
-                        TCorreo.Clear();
-                        TContrasena.Clear();
-                        this.Hide();
-                        break;
-                    case 2:
-                        //abrir formulario preventista
-                        Preventista.MDIPreventista mdiPreventista = new Preventista.MDIPreventista();
-                        mdiPreventista.StartPosition = FormStartPosition.CenterScreen;
-                        FormClosedEventHandler val1 = (s, args) => this.Show();
-                        FormClosedEventHandler valu = val1;
-                        mdiPreventista.FormClosed += valu;
-                        mdiPreventista.Show();
-                        TCorreo.Clear();
-                        TContrasena.Clear();
-                        this.Hide();
-                        break;
-                    case 3:
-                        //abrir formulario empleado de productos
-                        EmpleadoProducto.MDIProductos mdiProductos = new EmpleadoProducto.MDIProductos();
-                        mdiProductos.StartPosition = FormStartPosition.CenterScreen;
-                        FormClosedEventHandler value2 = (s, args) => this.Show();
-                        FormClosedEventHandler val = value2;
-                        mdiProductos.FormClosed += val;
-                        mdiProductos.Show();
-                        TCorreo.Clear();
-                        TContrasena.Clear();
-                        this.Hide();
-                        break;
-                    case 4:
-                        //abrir formulario empleado de clientes
-                        EmpleadoClientes.MDIClientes mdiClientes = new EmpleadoClientes.MDIClientes();
-                        FormClosedEventHandler value3 = (s, args) => this.Show();
-                        FormClosedEventHandler va = value3;
-                        mdiClientes.FormClosed += va;
-                        mdiClientes.Show();
-                        TCorreo.Clear();
-                        TContrasena.Clear();
-                        this.Hide();
-                        break;
-                    default:
-                        MessageBox.Show("Rol no válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        break;
-                }
+                MessageBox.Show("Credenciales inválidas o usuario inactivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-                
+
+        private void LoginForm_Shown(object sender, EventArgs e)
+        {
+            TCorreo.Text = string.Empty;
+            TContrasena.Text = string.Empty;
+            TCorreo.Focus();
+        }
     }
 }

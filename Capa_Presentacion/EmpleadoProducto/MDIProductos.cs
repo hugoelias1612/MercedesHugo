@@ -18,10 +18,7 @@ namespace ArimaERP.EmpleadoProducto
             InitializeComponent();
         }
 
-        private void MDIProductos_Load(object sender, EventArgs e)
-        {
- 
-        }
+      
 
         private void AbrirFormEnPanel(Form formHijo)
         {

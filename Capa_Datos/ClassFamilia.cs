@@ -7,24 +7,24 @@ using Capa_Entidades;
 
 namespace Capa_Datos
 {
-    public class ClassProveedor
-    {
+    public class ClassFamilia
+    {        
         public List<string> ErroresValidacion { get; private set; } = new List<string>();
-        //obtener todos los proveedores
-        public List<PROVEEDOR> ObtenerTodosLosProveedores()
+        //obtener todas las familias
+        public List<FAMILIA> ObtenerTodasLasFamilias()
         {
             try
             {
                 using (var context = new ArimaERPEntities())
                 {
-                    return context.PROVEEDOR.ToList();
+                    return context.FAMILIA.ToList();
                 }
             }
             catch (Exception ex)
             {
                 ErroresValidacion.Clear();
-                ErroresValidacion.Add("Error al obtener los proveedores: " + ex.Message);
-                return new List<PROVEEDOR>();
+                ErroresValidacion.Add("Error al obtener las familias: " + ex.Message);
+                return new List<FAMILIA>();
             }
         }
     }

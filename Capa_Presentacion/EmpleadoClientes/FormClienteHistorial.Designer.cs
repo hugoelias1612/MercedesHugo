@@ -45,10 +45,8 @@
             this.txtNombreApellido = new System.Windows.Forms.TextBox();
             this.btnListarPedidosPendientes = new System.Windows.Forms.Button();
             this.tableLayoutPanelClientes = new System.Windows.Forms.TableLayoutPanel();
-            this.textBoxPreventistas = new System.Windows.Forms.TextBox();
             this.lblPreventistas = new System.Windows.Forms.Label();
             this.lblZONA = new System.Windows.Forms.Label();
-            this.btnBuscarClientes = new System.Windows.Forms.Button();
             this.lblTipo = new System.Windows.Forms.Label();
             this.comboBoxTipo = new System.Windows.Forms.ComboBox();
             this.lblEstado = new System.Windows.Forms.Label();
@@ -56,21 +54,9 @@
             this.comboBoxZona = new System.Windows.Forms.ComboBox();
             this.comboBoxEstado = new System.Windows.Forms.ComboBox();
             this.comboBoxTamano = new System.Windows.Forms.ComboBox();
+            this.comboBoxPreventista = new System.Windows.Forms.ComboBox();
             this.dataGridViewVerPedidos = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Preventista = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewDetallePagos = new System.Windows.Forms.DataGridView();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.btnSalir = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -170,6 +156,7 @@
             this.textBoxBUSCARGENERAL.Name = "textBoxBUSCARGENERAL";
             this.textBoxBUSCARGENERAL.Size = new System.Drawing.Size(166, 31);
             this.textBoxBUSCARGENERAL.TabIndex = 37;
+            this.textBoxBUSCARGENERAL.TextChanged += new System.EventHandler(this.textBoxBUSCARGENERAL_TextChanged);
             // 
             // pictureBoxBuscar
             // 
@@ -297,19 +284,17 @@
             this.tableLayoutPanelClientes.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tableLayoutPanelClientes.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tableLayoutPanelClientes.ColumnCount = 9;
-            this.tableLayoutPanelClientes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.0093F));
-            this.tableLayoutPanelClientes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.07116F));
-            this.tableLayoutPanelClientes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.15262F));
+            this.tableLayoutPanelClientes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.903537F));
+            this.tableLayoutPanelClientes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.25402F));
+            this.tableLayoutPanelClientes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.90675F));
             this.tableLayoutPanelClientes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.15262F));
             this.tableLayoutPanelClientes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.15262F));
             this.tableLayoutPanelClientes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.15262F));
             this.tableLayoutPanelClientes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.15262F));
             this.tableLayoutPanelClientes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.15262F));
             this.tableLayoutPanelClientes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.00384F));
-            this.tableLayoutPanelClientes.Controls.Add(this.textBoxPreventistas, 4, 1);
             this.tableLayoutPanelClientes.Controls.Add(this.lblPreventistas, 4, 0);
             this.tableLayoutPanelClientes.Controls.Add(this.lblZONA, 3, 0);
-            this.tableLayoutPanelClientes.Controls.Add(this.btnBuscarClientes, 1, 1);
             this.tableLayoutPanelClientes.Controls.Add(this.lblTipo, 2, 0);
             this.tableLayoutPanelClientes.Controls.Add(this.comboBoxTipo, 2, 1);
             this.tableLayoutPanelClientes.Controls.Add(this.lblEstado, 5, 0);
@@ -317,6 +302,7 @@
             this.tableLayoutPanelClientes.Controls.Add(this.comboBoxZona, 3, 1);
             this.tableLayoutPanelClientes.Controls.Add(this.comboBoxEstado, 5, 1);
             this.tableLayoutPanelClientes.Controls.Add(this.comboBoxTamano, 6, 1);
+            this.tableLayoutPanelClientes.Controls.Add(this.comboBoxPreventista, 4, 1);
             this.tableLayoutPanelClientes.Location = new System.Drawing.Point(49, 170);
             this.tableLayoutPanelClientes.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanelClientes.Name = "tableLayoutPanelClientes";
@@ -325,16 +311,6 @@
             this.tableLayoutPanelClientes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 14F));
             this.tableLayoutPanelClientes.Size = new System.Drawing.Size(1244, 84);
             this.tableLayoutPanelClientes.TabIndex = 39;
-            // 
-            // textBoxPreventistas
-            // 
-            this.textBoxPreventistas.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxPreventistas.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPreventistas.Location = new System.Drawing.Point(540, 47);
-            this.textBoxPreventistas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxPreventistas.Name = "textBoxPreventistas";
-            this.textBoxPreventistas.Size = new System.Drawing.Size(157, 31);
-            this.textBoxPreventistas.TabIndex = 25;
             // 
             // lblPreventistas
             // 
@@ -361,23 +337,12 @@
             this.lblZONA.Text = "Zona";
             this.lblZONA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnBuscarClientes
-            // 
-            this.btnBuscarClientes.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarClientes.Location = new System.Drawing.Point(15, 45);
-            this.btnBuscarClientes.Name = "btnBuscarClientes";
-            this.btnBuscarClientes.Size = new System.Drawing.Size(193, 36);
-            this.btnBuscarClientes.TabIndex = 44;
-            this.btnBuscarClientes.Text = "Buscar Todos";
-            this.btnBuscarClientes.UseVisualStyleBackColor = true;
-            this.btnBuscarClientes.Click += new System.EventHandler(this.btnBuscarClientes_Click);
-            // 
             // lblTipo
             // 
             this.lblTipo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTipo.AutoSize = true;
             this.lblTipo.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipo.Location = new System.Drawing.Point(240, 8);
+            this.lblTipo.Location = new System.Drawing.Point(235, 8);
             this.lblTipo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(105, 25);
@@ -387,16 +352,20 @@
             // 
             // comboBoxTipo
             // 
-            this.comboBoxTipo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxTipo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxTipo.AutoCompleteCustomSource.AddRange(new string[] {
+            "Contado",
+            "Cuenta Corriente"});
             this.comboBoxTipo.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTipo.FormattingEnabled = true;
             this.comboBoxTipo.Items.AddRange(new object[] {
             "Contado",
             "Cuenta Corriente"});
-            this.comboBoxTipo.Location = new System.Drawing.Point(218, 46);
+            this.comboBoxTipo.Location = new System.Drawing.Point(204, 46);
             this.comboBoxTipo.Name = "comboBoxTipo";
-            this.comboBoxTipo.Size = new System.Drawing.Size(148, 33);
+            this.comboBoxTipo.Size = new System.Drawing.Size(167, 33);
             this.comboBoxTipo.TabIndex = 46;
+            this.comboBoxTipo.SelectedIndexChanged += new System.EventHandler(this.comboBoxTipo_SelectedIndexChanged);
             // 
             // lblEstado
             // 
@@ -424,17 +393,18 @@
             // 
             // comboBoxZona
             // 
-            this.comboBoxZona.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxZona.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxZona.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxZona.FormattingEnabled = true;
-            this.comboBoxZona.Location = new System.Drawing.Point(379, 46);
+            this.comboBoxZona.Location = new System.Drawing.Point(377, 46);
             this.comboBoxZona.Name = "comboBoxZona";
-            this.comboBoxZona.Size = new System.Drawing.Size(153, 33);
+            this.comboBoxZona.Size = new System.Drawing.Size(157, 33);
             this.comboBoxZona.TabIndex = 49;
+            this.comboBoxZona.SelectedIndexChanged += new System.EventHandler(this.comboBoxZona_SelectedIndexChanged);
             // 
             // comboBoxEstado
             // 
-            this.comboBoxEstado.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxEstado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxEstado.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEstado.FormattingEnabled = true;
             this.comboBoxEstado.Items.AddRange(new object[] {
@@ -444,10 +414,11 @@
             this.comboBoxEstado.Name = "comboBoxEstado";
             this.comboBoxEstado.Size = new System.Drawing.Size(157, 33);
             this.comboBoxEstado.TabIndex = 50;
+            this.comboBoxEstado.SelectedIndexChanged += new System.EventHandler(this.comboBoxEstado_SelectedIndexChanged);
             // 
             // comboBoxTamano
             // 
-            this.comboBoxTamano.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxTamano.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxTamano.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTamano.FormattingEnabled = true;
             this.comboBoxTamano.Items.AddRange(new object[] {
@@ -459,145 +430,44 @@
             this.comboBoxTamano.Size = new System.Drawing.Size(157, 33);
             this.comboBoxTamano.TabIndex = 51;
             // 
+            // comboBoxPreventista
+            // 
+            this.comboBoxPreventista.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxPreventista.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxPreventista.FormattingEnabled = true;
+            this.comboBoxPreventista.Location = new System.Drawing.Point(540, 46);
+            this.comboBoxPreventista.Name = "comboBoxPreventista";
+            this.comboBoxPreventista.Size = new System.Drawing.Size(157, 33);
+            this.comboBoxPreventista.TabIndex = 52;
+            this.comboBoxPreventista.SelectedIndexChanged += new System.EventHandler(this.comboBoxPreventista_SelectedIndexChanged);
+            // 
             // dataGridViewVerPedidos
             // 
             this.dataGridViewVerPedidos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewVerPedidos.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewVerPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewVerPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Preventista,
-            this.Column5,
-            this.Column6,
-            this.Column10});
             this.dataGridViewVerPedidos.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dataGridViewVerPedidos.Location = new System.Drawing.Point(12, 395);
+            this.dataGridViewVerPedidos.Location = new System.Drawing.Point(252, 409);
             this.dataGridViewVerPedidos.Name = "dataGridViewVerPedidos";
             this.dataGridViewVerPedidos.RowHeadersVisible = false;
             this.dataGridViewVerPedidos.RowHeadersWidth = 51;
             this.dataGridViewVerPedidos.RowTemplate.Height = 24;
-            this.dataGridViewVerPedidos.Size = new System.Drawing.Size(1294, 157);
+            this.dataGridViewVerPedidos.Size = new System.Drawing.Size(812, 159);
             this.dataGridViewVerPedidos.TabIndex = 40;
-            this.dataGridViewVerPedidos.Visible = false;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Pedido N°";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Cliente";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Fecha Entrega";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Fecha Creación";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Preventista
-            // 
-            this.Preventista.HeaderText = "Preventista";
-            this.Preventista.MinimumWidth = 6;
-            this.Preventista.Name = "Preventista";
-            this.Preventista.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Estado";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column5.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Monto Total";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Saldo";
-            this.Column10.MinimumWidth = 6;
-            this.Column10.Name = "Column10";
-            this.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column10.Width = 125;
             // 
             // dataGridViewDetallePagos
             // 
             this.dataGridViewDetallePagos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dataGridViewDetallePagos.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewDetallePagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDetallePagos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column7,
-            this.Column11,
-            this.Column12,
-            this.Column13,
-            this.Column14});
             this.dataGridViewDetallePagos.GridColor = System.Drawing.SystemColors.Window;
-            this.dataGridViewDetallePagos.Location = new System.Drawing.Point(12, 569);
+            this.dataGridViewDetallePagos.Location = new System.Drawing.Point(12, 574);
             this.dataGridViewDetallePagos.Name = "dataGridViewDetallePagos";
             this.dataGridViewDetallePagos.RowHeadersWidth = 51;
             this.dataGridViewDetallePagos.RowTemplate.Height = 24;
-            this.dataGridViewDetallePagos.Size = new System.Drawing.Size(1294, 158);
+            this.dataGridViewDetallePagos.Size = new System.Drawing.Size(1294, 163);
             this.dataGridViewDetallePagos.TabIndex = 41;
-            this.dataGridViewDetallePagos.Visible = false;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Cliente";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 125;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Fecha";
-            this.Column11.MinimumWidth = 6;
-            this.Column11.Name = "Column11";
-            this.Column11.Width = 125;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Monto";
-            this.Column12.MinimumWidth = 6;
-            this.Column12.Name = "Column12";
-            this.Column12.Width = 125;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Método Pago";
-            this.Column13.MinimumWidth = 6;
-            this.Column13.Name = "Column13";
-            this.Column13.Width = 125;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "N° Pedido";
-            this.Column14.MinimumWidth = 6;
-            this.Column14.Name = "Column14";
-            this.Column14.Width = 125;
             // 
             // dgvClientes
             // 
@@ -612,10 +482,8 @@
             this.dgvClientes.ReadOnly = true;
             this.dgvClientes.RowHeadersWidth = 51;
             this.dgvClientes.RowTemplate.Height = 24;
-            this.dgvClientes.Size = new System.Drawing.Size(1294, 104);
+            this.dgvClientes.Size = new System.Drawing.Size(1294, 130);
             this.dgvClientes.TabIndex = 42;
-            this.dgvClientes.Visible = false;
-            this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResultados_CellContentClick);
             // 
             // btnSalir
             // 
@@ -676,14 +544,12 @@
         private System.Windows.Forms.PictureBox pictureBoxBuscar;
         private System.Windows.Forms.Label lblHistorial;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelClientes;
-        private System.Windows.Forms.TextBox textBoxPreventistas;
         private System.Windows.Forms.Label lblPreventistas;
         private System.Windows.Forms.Label lblZONA;
         private System.Windows.Forms.Button btnListarPagos;
         private System.Windows.Forms.Button btnListarPedidosPendientes;
         private System.Windows.Forms.Button btnPedidosEntregados;
         private System.Windows.Forms.Button btnListarSaldosPendientes;
-        private System.Windows.Forms.Button btnBuscarClientes;
         private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.ComboBox comboBoxTipo;
         private System.Windows.Forms.Label lblEstado;
@@ -692,22 +558,10 @@
         private System.Windows.Forms.ComboBox comboBoxEstado;
         private System.Windows.Forms.ComboBox comboBoxTamano;
         private System.Windows.Forms.DataGridView dataGridViewVerPedidos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Preventista;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridView dataGridViewDetallePagos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ComboBox comboBoxPreventista;
     }
 }

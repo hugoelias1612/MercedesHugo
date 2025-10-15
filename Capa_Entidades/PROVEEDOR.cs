@@ -23,7 +23,7 @@ namespace Capa_Entidades
     
         public int id_proveedor { get; set; }
         public string nombre { get; set; }
-        public int telefono { get; set; }
+        public long telefono { get; set; }
         public string email { get; set; }
         public string provincia { get; set; }
         public string ciudad { get; set; }

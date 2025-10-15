@@ -93,11 +93,7 @@ namespace ArimaERP.EmpleadoClientes
             pnlVistaMenuSecundario.Controls.Add(formModificacionCliente);
             formModificacionCliente.Show();
         }
-
-        private void btnBajaPreventistas_Click(object sender, EventArgs e)
-        {
-
-        }
+               
 
         private void btnBaja_Click(object sender, EventArgs e)
         {
@@ -162,11 +158,7 @@ namespace ArimaERP.EmpleadoClientes
             this.Close();
          
         }
-
-        private void pnlVistaMenuSecundario_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+                
 
         private void btnModificarPedido_Click(object sender, EventArgs e)
         {

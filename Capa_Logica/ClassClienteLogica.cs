@@ -157,6 +157,37 @@ namespace Capa_Logica
         {
             return ClassCliente.ObtenerClientesInactivos();
         }
+        //obtener clientes confiables
+        public List<CLIENTE> ObtenerClientesConfiables()
+        {
+            return ClassCliente.ObtenerClientesConfiables();
+        }
+        //obtener clientes no confiables
+        public List<CLIENTE> ObtenerClientesNoConfiables()
+        {
+            return ClassCliente.ObtenerClientesNoConfiables();
+        }
+        //obtener clientes activos
+        public List<CLIENTE> ObtenerClientesActivos()
+        {
+            return ClassCliente.ObtenerClientesActivos();
+        }
+        //obtener clientes por tamaño
+        public List<CLIENTE> ObtenerClientesPorTamanio(int tamanio)
+        {
+            return ClassCliente.ObtenerClientesPorTamanio(tamanio);
+        }
+        //obtener cliente por id
+        public CLIENTE ObtenerClientePorId(int id_cliente)
+        {
+            return ClassCliente.ObtenerClientePorId(id_cliente);
+        }
+        //obtener cliente por dni
+        public CLIENTE ObtenerClientePorDni(string dni)
+            {
+            return ClassCliente.BuscarClientePorDNI(dni);
+        }
+
     }
 }
 
