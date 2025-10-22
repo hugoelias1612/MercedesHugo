@@ -9,41 +9,48 @@ using System.Threading.Tasks;
 using System.Windows.Forms.DataVisualization.Charting;
 using Capa_Utilidades;
 
-
 namespace Capa_Datos
 {
     public class UsuarioDatos
     {
-        private string connectionString = "Data Source=MECHITA23\\SQLEXPRESS;Initial Catalog=ArimaERP;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;MultipleActiveResultSets=True;";
+        private readonly string connectionString = ConfigurationManager.ConnectionStrings["ArimaERP"]?.ConnectionString
+            ?? throw new InvalidOperationException("Falta la cadena de conexión 'ArimaERP' en App.config.");
 
         public USUARIO ObtenerUsuarioPorNombre(string nombre)
         {
             USUARIO usuario = null;
+            string query = @"SELECT u.nombre, u.contraseña, u.estado, u.id_rol, r.descripcion 
+                             FROM USUARIOS u 
+                             JOIN ROL r ON u.id_rol = r.id_rol 
+                             WHERE u.nombre = @nombre AND u.estado = 1";
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            try
             {
-                string query = @"SELECT u.nombre, u.contraseña, u.estado, u.id_rol, r.descripcion 
-                                 FROM USUARIOS u 
-                                 JOIN ROL r ON u.id_rol = r.id_rol 
-                                 WHERE u.nombre = @nombre AND u.estado = 1";
-
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@nombre", nombre);
-
-                conn.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                if (reader.Read())
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    usuario = new USUARIO
+                    cmd.Parameters.AddWithValue("@nombre", nombre);
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        nombre = reader["nombre"].ToString(),
-                        contraseña = reader["contraseña"].ToString(),
-                        estado = Convert.ToBoolean(reader["estado"]),
-                        id_rol = Convert.ToInt32(reader["id_rol"]),
-                        rol_descripcion = reader["descripcion"].ToString()
-                    };
+                        if (reader.Read())
+                        {
+                            usuario = new USUARIO
+                            {
+                                nombre = reader["nombre"].ToString(),
+                                contraseña = reader["contraseña"].ToString(),
+                                estado = Convert.ToBoolean(reader["estado"]),
+                                id_rol = Convert.ToInt32(reader["id_rol"]),
+                                rol_descripcion = reader["descripcion"].ToString()
+                            };
+                        }
+                    }
                 }
+            }
+            catch (SqlException)
+            {
+                // Loguear ex.Number / ex.Message aquí según tu logger y rethrow o manejar.
+                throw;
             }
 
             return usuario;

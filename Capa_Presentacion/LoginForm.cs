@@ -64,5 +64,23 @@ namespace ArimaERP
             TContrasena.Text = string.Empty;
             TCorreo.Focus();
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CMostrar_CheckedChanged(object sender, EventArgs e)
+        {
+            //cambiar de contraseña oculta a visible
+            if (CMostrar.Checked)
+            {
+                TContrasena.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                TContrasena.UseSystemPasswordChar = true;
+            }
+        }
     }
 }
