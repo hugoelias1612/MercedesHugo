@@ -36,6 +36,13 @@ namespace Capa_Logica
             return presentacion;
         }
 
+        public List<PRESENTACION> ObtenerPresentacionesPorRango(int idDesde, int idHasta)
+        {
+            var presentaciones = classProducto.ObtenerPresentacionesPorRango(idDesde, idHasta);
+            ErroresValidacion = classProducto.ErroresValidacion;
+            return presentaciones;
+        }
+
         //obtener objeto stock por id_producto y id_presentacion
         public stock ObtenerStockPorProductoYPresentacion(int id_producto, int id_presentacion)
         {

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Capa_Entidades;
+using Capa_Logica;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;
 
@@ -7,6 +10,21 @@ namespace ArimaERP.EmpleadoProducto
     public partial class FormABM : Form
     {
         private ErrorProvider errorProvider;
+
+        private readonly ClassFamiliaLogica _familiaLogica = new ClassFamiliaLogica();
+        private readonly ClassProductoLogica _productoLogica = new ClassProductoLogica();
+
+        private readonly Dictionary<int, (int desde, int hasta)> _rangosPresentacion =
+    new Dictionary<int, (int desde, int hasta)>
+    {
+        [3] = (1, 10),   // Lácteos
+        [2] = (11, 20),  // Bebidas
+        [5] = (21, 30),  // Bebidas alcohólicas
+        [1] = (31, 40),  // Comidas/Alimentos
+        [7] = (41, 50),  // Pilas-Velas-Encendedores
+        [4] = (51, 60),  // Higiene personal
+        [6] = (61, 70),  // Cuidado doméstico
+    };
 
         public FormABM()
         {
@@ -18,16 +36,19 @@ namespace ArimaERP.EmpleadoProducto
                 ContainerControl = this,
                 BlinkStyle = ErrorBlinkStyle.NeverBlink
             };
+
         }
 
         private void FormABM_Load(object sender, EventArgs e)
         {
             // Inicializar ComboBoxes
-            cbxFamilia.Items.Insert(0, "Seleccione familia");
-            cbxFamilia.SelectedIndex = 0;
-
-            cbxProveedor.Items.Insert(0, "Seleccione proveedor");
-            cbxProveedor.SelectedIndex = 0;
+            var familias = _familiaLogica.ObtenerTodasLasFamilias();
+            cbxFamilia.DataSource = familias;
+            cbxFamilia.DisplayMember = nameof(FAMILIA.descripcion);
+            cbxFamilia.ValueMember = nameof(FAMILIA.id_familia);
+            cbxFamilia.SelectedIndex = 0; // muestra vacío hasta que el usuario elija
+            cbxPresentacion.Enabled = false;
+            cbxFamilia.SelectedIndexChanged += cbxFamilia_SelectedValueChanged;
 
             cbxMarca.Items.Insert(0, "Seleccione marca");
             cbxMarca.SelectedIndex = 0;
@@ -213,6 +234,24 @@ namespace ArimaERP.EmpleadoProducto
         private void textBoxCodigo_KeyPress_1(object sender, KeyPressEventArgs e)
         {
 
+        }
+
+        private void cbxFamilia_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cbxFamilia.SelectedValue is int familiaId &&
+                _rangosPresentacion.TryGetValue(familiaId, out var rango))
+            {
+                var presentaciones = _productoLogica.ObtenerPresentacionesPorRango(rango.desde, rango.hasta);
+                cbxPresentacion.DataSource = presentaciones;
+                cbxPresentacion.DisplayMember = nameof(PRESENTACION.descripcion);
+                cbxPresentacion.ValueMember = nameof(PRESENTACION.ID_presentacion);
+                cbxPresentacion.Enabled = true;
+            }
+            else
+            {
+                cbxPresentacion.DataSource = null;
+                cbxPresentacion.Enabled = false;
+            }
         }
     }
 }

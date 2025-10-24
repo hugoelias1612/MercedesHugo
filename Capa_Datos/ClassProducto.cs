@@ -602,5 +602,26 @@ namespace Capa_Datos
                 return new List<ProductoVentaDto>();
             }
         }
+
+        public List<PRESENTACION> ObtenerPresentacionesPorRango(int desde, int hasta)
+        {
+            try
+            {
+                using (var context = new ArimaERPEntities())
+                {
+                    ErroresValidacion.Clear();
+                    return context.PRESENTACION
+                                  .Where(p => p.ID_presentacion >= desde && p.ID_presentacion <= hasta)
+                                  .OrderBy(p => p.ID_presentacion)
+                                  .ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                ErroresValidacion.Clear();
+                ErroresValidacion.Add("Error al obtener las presentaciones: " + ex.Message);
+                return new List<PRESENTACION>();
+            }
+        }
     }
 }
