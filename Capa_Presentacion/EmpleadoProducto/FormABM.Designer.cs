@@ -262,8 +262,8 @@
             // pnlContenido
             // 
             this.pnlContenido.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.pnlContenido.Controls.Add(this.PAlta);
             this.pnlContenido.Controls.Add(this.PBaja);
+            this.pnlContenido.Controls.Add(this.PAlta);
             this.pnlContenido.Controls.Add(this.PModificacion);
             this.pnlContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenido.Location = new System.Drawing.Point(0, 102);

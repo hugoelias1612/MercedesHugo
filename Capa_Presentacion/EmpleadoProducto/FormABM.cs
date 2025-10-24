@@ -2,10 +2,10 @@
 using Capa_Logica;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
+using System.Globalization;
+using System.Windows.Forms;
 using System.IO;
 using System.Linq;
-using System.Windows.Forms;
 
 namespace ArimaERP.EmpleadoProducto
 {
@@ -14,6 +14,8 @@ namespace ArimaERP.EmpleadoProducto
         private ErrorProvider errorProvider;
         private readonly ClassFamiliaLogica _familiaLogica = new ClassFamiliaLogica();
         private readonly ClassProductoLogica _productoLogica = new ClassProductoLogica();
+        private readonly ClassProveedorLogica _proveedorLogica = new ClassProveedorLogica();
+        private readonly ClassMarcaLogica _marcaLogica = new ClassMarcaLogica();
         private readonly Dictionary<int, (int desde, int hasta)> _rangosPresentacion =
             new Dictionary<int, (int desde, int hasta)>
             {
@@ -43,13 +45,8 @@ namespace ArimaERP.EmpleadoProducto
         private void FormABM_Load(object sender, EventArgs e)
         {
             CargarFamilias();
-
-            // Inicializar ComboBoxes que aún no se integran con la base
-            cbxProveedor.Items.Insert(0, "Seleccione proveedor");
-            cbxProveedor.SelectedIndex = 0;
-
-            cbxMarca.Items.Insert(0, "Seleccione marca");
-            cbxMarca.SelectedIndex = 0;
+            CargarProveedores();
+            CargarMarcas();
 
             LimpiarPresentaciones();
 
@@ -78,173 +75,350 @@ namespace ArimaERP.EmpleadoProducto
             else if (!char.IsControl(e.KeyChar) && txtNombre.Text.Length >= 30)
             {
                 e.Handled = true;
-                errorProvider1.SetError(nudUPB, "");
-    }
-}
+                errorProvider1.SetError(txtNombre, "Máximo 30 caracteres.");
+            }
+            else
+            {
+                errorProvider1.SetError(txtNombre, string.Empty);
+            }
+        }
 
-private void btnCrearProducto_Click(object sender, EventArgs e)
-{
-    if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
-        cbxFamilia.SelectedIndex == 0 ||
-        cbxProveedor.SelectedIndex == 0 ||
-        cbxMarca.SelectedIndex == 0 ||
-        string.IsNullOrWhiteSpace(txtPrecioUnit.Text) ||
-        nudUPB.Value <= 0)
-    {
-        MessageBox.Show("Por favor, complete todos los campos obligatorios correctamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        return;
-    }
+        private void btnCrearProducto_Click(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
 
-    MessageBox.Show("Producto validado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-}
+            var mensajesError = new List<string>();
 
-private void btnLimpiarCampos_Click(object sender, EventArgs e)
-{
-    txtNombre.Clear();
-    txtPrecioUnit.Clear();
+            string nombre = txtNombre.Text.Trim();
+            if (string.IsNullOrWhiteSpace(nombre))
+            {
+                mensajesError.Add("El nombre del producto es obligatorio.");
+                errorProvider1.SetError(txtNombre, "Ingrese el nombre del producto.");
+            }
 
-    if (cbxFamilia.Items.Count > 0)
-    {
-        cbxFamilia.SelectedIndex = 0;
-    }
-    cbxProveedor.SelectedIndex = 0;
-    cbxMarca.SelectedIndex = 0;
+            int familiaId = cbxFamilia.SelectedValue is int idFamilia ? idFamilia : 0;
+            if (familiaId == 0)
+            {
+                mensajesError.Add("Debe seleccionar una familia.");
+                errorProvider1.SetError(cbxFamilia, "Seleccione una familia.");
+            }
+            else
+            {
+                errorProvider1.SetError(cbxFamilia, string.Empty);
+            }
 
-    LimpiarPresentaciones();
+            int proveedorId = cbxProveedor.SelectedValue is int idProveedor ? idProveedor : 0;
+            if (proveedorId == 0)
+            {
+                mensajesError.Add("Debe seleccionar un proveedor.");
+                errorProvider1.SetError(cbxProveedor, "Seleccione un proveedor.");
+            }
+            else
+            {
+                errorProvider1.SetError(cbxProveedor, string.Empty);
+            }
 
-    nudUPB.Value = 0;
-    nudBultosIniciales.Value = 0;
-    nudUnidadesIniciales.Value = 0;
+            int marcaId = cbxMarca.SelectedValue is int idMarca ? idMarca : 0;
+            if (marcaId == 0)
+            {
+                mensajesError.Add("Debe seleccionar una marca.");
+                errorProvider1.SetError(cbxMarca, "Seleccione una marca.");
+            }
+            else
+            {
+                errorProvider1.SetError(cbxMarca, string.Empty);
+            }
 
-    errorProvider1.Clear();
-}
+            int presentacionId = cbxPresentacion.SelectedValue is int idPresentacion ? idPresentacion : 0;
+            if (presentacionId == 0)
+            {
+                mensajesError.Add("Debe seleccionar una presentación.");
+                errorProvider1.SetError(cbxPresentacion, "Seleccione una presentación.");
+            }
+            else
+            {
+                errorProvider1.SetError(cbxPresentacion, string.Empty);
+            }
 
-private void btnAlta_Click(object sender, EventArgs e)
-{
-    PAlta.Visible = true;
-    PBaja.Visible = false;
-    PModificacion.Visible = false;
-}
+            if (!int.TryParse(textBoxCodigo.Text, out int codigoProducto) || codigoProducto <= 0)
+            {
+                mensajesError.Add("El código del producto debe ser un número entero mayor a cero.");
+                errorProvider1.SetError(textBoxCodigo, "Ingrese un código numérico válido.");
+            }
+            else if (!_productoLogica.EsCodigoDeProductoDisponible(codigoProducto))
+            {
+                mensajesError.Add("El código de producto ingresado ya está en uso.");
+                errorProvider1.SetError(textBoxCodigo, "El código de producto ya está en uso.");
+            }
+            else
+            {
+                errorProvider1.SetError(textBoxCodigo, string.Empty);
+            }
 
-private void btnBaja_Click(object sender, EventArgs e)
-{
-    PAlta.Visible = false;
-    PBaja.Visible = true;
-    PModificacion.Visible = false;
-}
+            if (!decimal.TryParse(txtPrecioUnit.Text, NumberStyles.Number, CultureInfo.CurrentCulture, out decimal precioLista) || precioLista <= 0)
+            {
+                mensajesError.Add("El precio unitario debe ser un número mayor a cero.");
+                errorProvider1.SetError(txtPrecioUnit, "Ingrese un precio válido.");
+            }
+            else
+            {
+                errorProvider1.SetError(txtPrecioUnit, string.Empty);
+            }
 
-private void btnModificacion_Click(object sender, EventArgs e)
-{
-    PAlta.Visible = false;
-    PBaja.Visible = false;
-}
+            int unidadesPorBulto = (int)nudUPB.Value;
+            if (unidadesPorBulto <= 0)
+            {
+                mensajesError.Add("Las unidades por bulto deben ser mayores a cero.");
+                errorProvider1.SetError(nudUPB, "Ingrese un valor mayor a cero.");
+            }
+            else
+            {
+                errorProvider1.SetError(nudUPB, string.Empty);
+            }
 
+            int bultosIniciales = (int)nudBultosIniciales.Value;
+            if (bultosIniciales < 0)
+            {
+                mensajesError.Add("Los bultos iniciales no pueden ser negativos.");
+                errorProvider1.SetError(nudBultosIniciales, "Ingrese un valor válido.");
+            }
+            else
+            {
+                errorProvider1.SetError(nudBultosIniciales, string.Empty);
+            }
+
+            int unidadesIniciales = (int)nudUnidadesIniciales.Value;
+            if (unidadesIniciales < 0)
+            {
+                mensajesError.Add("Las unidades iniciales no pueden ser negativas.");
+                errorProvider1.SetError(nudUnidadesIniciales, "Ingrese un valor válido.");
+            }
+            else
+            {
+                errorProvider1.SetError(nudUnidadesIniciales, string.Empty);
+            }
+
+            if (mensajesError.Any())
+            {
+                MessageBox.Show(string.Join(Environment.NewLine, mensajesError), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            int stockInicial = (bultosIniciales * unidadesPorBulto) + unidadesIniciales;
+            int umbralStock = unidadesPorBulto > 0 ? unidadesPorBulto : 0;
+
+            bool creado = _productoLogica.CrearProducto(nombre, familiaId, marcaId, codigoProducto, precioLista, unidadesPorBulto, presentacionId, stockInicial, umbralStock);
+
+            if (!creado)
+            {
+                string mensajeError = _productoLogica.ErroresValidacion.Any()
+                    ? string.Join(Environment.NewLine, _productoLogica.ErroresValidacion)
+                    : "No se pudo crear el producto. Intente nuevamente.";
+
+                MessageBox.Show(mensajeError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            MessageBox.Show("Producto creado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            btnLimpiarCampos_Click(sender, e);
+        }
+
+        private void btnLimpiarCampos_Click(object sender, EventArgs e)
+        {
+            txtNombre.Clear();
+            txtPrecioUnit.Clear();
+            textBoxCodigo.Clear();
+
+            if (cbxFamilia.Items.Count > 0)
+            {
+                cbxFamilia.SelectedIndex = 0;
+            }
+
+            cbxProveedor.SelectedIndex = 0;
+            cbxMarca.SelectedIndex = 0;
+
+            LimpiarPresentaciones();
+
+            nudUPB.Value = 0;
+            nudBultosIniciales.Value = 0;
+            nudUnidadesIniciales.Value = 0;
+
+            errorProvider1.Clear();
+        }
+
+        private void btnAlta_Click(object sender, EventArgs e)
+        {
+            PAlta.Visible = true;
+            PBaja.Visible = false;
+            PModificacion.Visible = false;
+        }
+
+        private void btnBaja_Click(object sender, EventArgs e)
+        {
+            PAlta.Visible = false;
+            PBaja.Visible = true;
+            PModificacion.Visible = false;
+        }
+
+        private void btnModificacion_Click(object sender, EventArgs e)
+        {
+            PAlta.Visible = false;
+            PBaja.Visible = false;
+        }
 
         private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
-{
-    // Lógica adicional si se necesita
-}
+        {
+            // Lógica adicional si se necesita
+        }
 
-private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-{
-    // Acción al hacer clic en una celda
-}
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Acción al hacer clic en una celda
+        }
 
-private void textBoxCodigo_KeyPress(object sender, KeyPressEventArgs e)
-{
-    if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
-    {
-        e.Handled = true;
-        MessageBox.Show("Solo se permiten números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-    }
+        private void textBoxCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se permiten números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
-    if (textBoxCodigo.Text.Length >= 10 && !char.IsControl(e.KeyChar))
-    {
-        e.Handled = true;
-        errorProvider1.SetError(textBoxCodigo, "Máximo 10 caracteres.");
-    }
-}
+            if (textBoxCodigo.Text.Length >= 10 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                errorProvider1.SetError(textBoxCodigo, "Máximo 10 caracteres.");
+            }
+        }
 
-private void CargarFamilias()
-{
-    var familias = _familiaLogica.ObtenerTodasLasFamilias() ?? new List<FAMILIA>();
+        private void CargarFamilias()
+        {
+            var familias = _familiaLogica.ObtenerTodasLasFamilias() ?? new List<FAMILIA>();
 
-    if (familias.Count == 0 && _familiaLogica.ErroresValidacion.Any())
-    {
-        MessageBox.Show(
-            string.Join(Environment.NewLine, _familiaLogica.ErroresValidacion),
-            "Error al cargar familias",
-            MessageBoxButtons.OK,
-            MessageBoxIcon.Error);
-    }
+            if (familias.Count == 0 && _familiaLogica.ErroresValidacion.Any())
+            {
+                MessageBox.Show(
+                    string.Join(Environment.NewLine, _familiaLogica.ErroresValidacion),
+                    "Error al cargar familias",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
 
-    var familiasConPlaceholder = new List<FAMILIA>
+            var familiasConPlaceholder = new List<FAMILIA>
             {
                 new FAMILIA { id_familia = 0, descripcion = "Seleccione familia" }
             };
-    familiasConPlaceholder.AddRange(familias.OrderBy(f => f.descripcion));
+            familiasConPlaceholder.AddRange(familias.OrderBy(f => f.descripcion));
 
-    cbxFamilia.SelectedIndexChanged -= cbxFamilia_SelectedIndexChanged;
-    cbxFamilia.DataSource = familiasConPlaceholder;
-    cbxFamilia.DisplayMember = nameof(FAMILIA.descripcion);
-    cbxFamilia.ValueMember = nameof(FAMILIA.id_familia);
-    cbxFamilia.SelectedIndex = 0;
-    cbxFamilia.SelectedIndexChanged += cbxFamilia_SelectedIndexChanged;
-}
+            cbxFamilia.SelectedIndexChanged -= cbxFamilia_SelectedIndexChanged;
+            cbxFamilia.DataSource = familiasConPlaceholder;
+            cbxFamilia.DisplayMember = nameof(FAMILIA.descripcion);
+            cbxFamilia.ValueMember = nameof(FAMILIA.id_familia);
+            cbxFamilia.SelectedIndex = 0;
+            cbxFamilia.SelectedIndexChanged += cbxFamilia_SelectedIndexChanged;
+        }
 
-private void cbxFamilia_SelectedIndexChanged(object sender, EventArgs e)
-{
-    if (!(cbxFamilia.SelectedValue is int familiaId) || familiaId == 0)
-    {
-        LimpiarPresentaciones();
-        return;
-    }
+        private void CargarProveedores()
+        {
+            var proveedores = _proveedorLogica.ObtenerTodosLosProveedores() ?? new List<PROVEEDOR>();
 
-    if (!_rangosPresentacion.TryGetValue(familiaId, out var rango))
-    {
-        LimpiarPresentaciones();
-        return;
-    }
+            if (proveedores.Count == 0 && _proveedorLogica.ErroresValidacion.Any())
+            {
+                MessageBox.Show(
+                    string.Join(Environment.NewLine, _proveedorLogica.ErroresValidacion),
+                    "Error al cargar proveedores",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
 
-    var presentaciones = _productoLogica.ObtenerPresentacionesPorRango(rango.desde, rango.hasta) ?? new List<PRESENTACION>();
+            var proveedoresConPlaceholder = new List<PROVEEDOR>
+            {
+                new PROVEEDOR { id_proveedor = 0, nombre = "Seleccione proveedor" }
+            };
+            proveedoresConPlaceholder.AddRange(proveedores.OrderBy(p => p.nombre));
 
-    if (presentaciones.Count == 0 && _productoLogica.ErroresValidacion.Any())
-    {
-        MessageBox.Show(
-            string.Join(Environment.NewLine, _productoLogica.ErroresValidacion),
-            "Error al cargar presentaciones",
-            MessageBoxButtons.OK,
-            MessageBoxIcon.Error);
-        LimpiarPresentaciones();
-        return;
-    }
+            cbxProveedor.DataSource = proveedoresConPlaceholder;
+            cbxProveedor.DisplayMember = nameof(PROVEEDOR.nombre);
+            cbxProveedor.ValueMember = nameof(PROVEEDOR.id_proveedor);
+            cbxProveedor.SelectedIndex = 0;
+        }
 
-    var presentacionesConPlaceholder = new List<PRESENTACION>
+        private void CargarMarcas()
+        {
+            var marcas = _marcaLogica.ObtenerTodasLasMarcas() ?? new List<MARCA>();
+
+            if (marcas.Count == 0 && _marcaLogica.ErroresValidacion.Any())
+            {
+                MessageBox.Show(
+                    string.Join(Environment.NewLine, _marcaLogica.ErroresValidacion),
+                    "Error al cargar marcas",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+
+            var marcasConPlaceholder = new List<MARCA>
+            {
+                new MARCA { id_marca = 0, nombre = "Seleccione marca" }
+            };
+            marcasConPlaceholder.AddRange(marcas.OrderBy(m => m.nombre));
+
+            cbxMarca.DataSource = marcasConPlaceholder;
+            cbxMarca.DisplayMember = nameof(MARCA.nombre);
+            cbxMarca.ValueMember = nameof(MARCA.id_marca);
+            cbxMarca.SelectedIndex = 0;
+        }
+
+        private void cbxFamilia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!(cbxFamilia.SelectedValue is int familiaId) || familiaId == 0)
+            {
+                LimpiarPresentaciones();
+                return;
+            }
+
+            if (!_rangosPresentacion.TryGetValue(familiaId, out var rango))
+            {
+                LimpiarPresentaciones();
+                return;
+            }
+
+            var presentaciones = _productoLogica.ObtenerPresentacionesPorRango(rango.desde, rango.hasta) ?? new List<PRESENTACION>();
+
+            if (presentaciones.Count == 0 && _productoLogica.ErroresValidacion.Any())
+            {
+                MessageBox.Show(
+                    string.Join(Environment.NewLine, _productoLogica.ErroresValidacion),
+                    "Error al cargar presentaciones",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                LimpiarPresentaciones();
+                return;
+            }
+
+            var presentacionesConPlaceholder = new List<PRESENTACION>
             {
                 new PRESENTACION { ID_presentacion = 0, descripcion = "Seleccione presentación" }
             };
-    presentacionesConPlaceholder.AddRange(presentaciones.OrderBy(p => p.descripcion));
+            presentacionesConPlaceholder.AddRange(presentaciones.OrderBy(p => p.descripcion));
 
-    cbxPresentacion.DataSource = presentacionesConPlaceholder;
-    cbxPresentacion.DisplayMember = nameof(PRESENTACION.descripcion);
-    cbxPresentacion.ValueMember = nameof(PRESENTACION.ID_presentacion);
-    cbxPresentacion.SelectedIndex = 0;
-    cbxPresentacion.Enabled = true;
-}
+            cbxPresentacion.DataSource = presentacionesConPlaceholder;
+            cbxPresentacion.DisplayMember = nameof(PRESENTACION.descripcion);
+            cbxPresentacion.ValueMember = nameof(PRESENTACION.ID_presentacion);
+            cbxPresentacion.SelectedIndex = 0;
+            cbxPresentacion.Enabled = true;
+        }
 
-private void LimpiarPresentaciones()
-{
-    cbxPresentacion.DataSource = null;
-    cbxPresentacion.Items.Clear();
-    cbxPresentacion.Items.Insert(0, "Seleccione presentación");
-    cbxPresentacion.SelectedIndex = 0;
-    cbxPresentacion.Enabled = false;
-}
+        private void LimpiarPresentaciones()
+        {
+            cbxPresentacion.DataSource = null;
+            cbxPresentacion.Items.Clear();
+            cbxPresentacion.Items.Insert(0, "Seleccione presentación");
+            cbxPresentacion.SelectedIndex = 0;
+            cbxPresentacion.Enabled = false;
+        }
 
-private void textBoxCodigo_KeyPress_1(object sender, KeyPressEventArgs e)
-{
-
-}
+        private void textBoxCodigo_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+        }
     }
 }
-
