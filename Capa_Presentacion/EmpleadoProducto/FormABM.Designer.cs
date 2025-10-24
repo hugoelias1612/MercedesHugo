@@ -42,10 +42,6 @@
             this.pnlContenido = new System.Windows.Forms.Panel();
             this.PAlta = new System.Windows.Forms.Panel();
             this.tlpAlta = new System.Windows.Forms.TableLayoutPanel();
-            this.lblUnidadesIniciales = new System.Windows.Forms.Label();
-            this.lblBultosIniciales = new System.Windows.Forms.Label();
-            this.lblUPB = new System.Windows.Forms.Label();
-            this.lblPrecio = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
             this.lblProveedor = new System.Windows.Forms.Label();
             this.lblFamilia = new System.Windows.Forms.Label();
@@ -53,15 +49,21 @@
             this.cbxFamilia = new System.Windows.Forms.ComboBox();
             this.cbxProveedor = new System.Windows.Forms.ComboBox();
             this.cbxMarca = new System.Windows.Forms.ComboBox();
-            this.nudUPB = new System.Windows.Forms.NumericUpDown();
-            this.nudBultosIniciales = new System.Windows.Forms.NumericUpDown();
-            this.nudUnidadesIniciales = new System.Windows.Forms.NumericUpDown();
-            this.txtPrecioUnit = new System.Windows.Forms.TextBox();
             this.btnCrear = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.textBoxCodigo = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblUnidadesIniciales = new System.Windows.Forms.Label();
+            this.nudUnidadesIniciales = new System.Windows.Forms.NumericUpDown();
+            this.nudBultosIniciales = new System.Windows.Forms.NumericUpDown();
+            this.nudUPB = new System.Windows.Forms.NumericUpDown();
+            this.lblBultosIniciales = new System.Windows.Forms.Label();
+            this.lblUPB = new System.Windows.Forms.Label();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.txtPrecioUnit = new System.Windows.Forms.TextBox();
+            this.lblPresentacion = new System.Windows.Forms.Label();
+            this.cbxPresentacion = new System.Windows.Forms.ComboBox();
             this.PBaja = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tlpBotonesBV = new System.Windows.Forms.TableLayoutPanel();
@@ -110,8 +112,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lblPresentacion = new System.Windows.Forms.Label();
-            this.cbxPresentacion = new System.Windows.Forms.ComboBox();
             this.TLPMain.SuspendLayout();
             this.panel1.SuspendLayout();
             this.PNav.SuspendLayout();
@@ -119,9 +119,9 @@
             this.pnlContenido.SuspendLayout();
             this.PAlta.SuspendLayout();
             this.tlpAlta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudUPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBultosIniciales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudUnidadesIniciales)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBultosIniciales)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudUPB)).BeginInit();
             this.PBaja.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tlpBotonesBV.SuspendLayout();
@@ -269,7 +269,7 @@
             this.pnlContenido.Location = new System.Drawing.Point(0, 102);
             this.pnlContenido.Margin = new System.Windows.Forms.Padding(0);
             this.pnlContenido.Name = "pnlContenido";
-            this.pnlContenido.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.pnlContenido.Padding = new System.Windows.Forms.Padding(8);
             this.pnlContenido.Size = new System.Drawing.Size(1144, 414);
             this.pnlContenido.TabIndex = 2;
             // 
@@ -332,50 +332,6 @@
             this.tlpAlta.Size = new System.Drawing.Size(1128, 398);
             this.tlpAlta.TabIndex = 1;
             // 
-            // lblUnidadesIniciales
-            // 
-            this.lblUnidadesIniciales.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblUnidadesIniciales.AutoSize = true;
-            this.lblUnidadesIniciales.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnidadesIniciales.Location = new System.Drawing.Point(308, 321);
-            this.lblUnidadesIniciales.Name = "lblUnidadesIniciales";
-            this.lblUnidadesIniciales.Size = new System.Drawing.Size(230, 36);
-            this.lblUnidadesIniciales.TabIndex = 52;
-            this.lblUnidadesIniciales.Text = "Unidades Iniciales";
-            // 
-            // lblBultosIniciales
-            // 
-            this.lblBultosIniciales.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblBultosIniciales.AutoSize = true;
-            this.lblBultosIniciales.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBultosIniciales.Location = new System.Drawing.Point(327, 285);
-            this.lblBultosIniciales.Name = "lblBultosIniciales";
-            this.lblBultosIniciales.Size = new System.Drawing.Size(191, 36);
-            this.lblBultosIniciales.TabIndex = 29;
-            this.lblBultosIniciales.Text = "Bultos Iniciales";
-            // 
-            // lblUPB
-            // 
-            this.lblUPB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblUPB.AutoSize = true;
-            this.lblUPB.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUPB.Location = new System.Drawing.Point(299, 249);
-            this.lblUPB.Name = "lblUPB";
-            this.lblUPB.Size = new System.Drawing.Size(247, 36);
-            this.lblUPB.TabIndex = 25;
-            this.lblUPB.Text = "Unidades por bulto";
-            // 
-            // lblPrecio
-            // 
-            this.lblPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(348, 213);
-            this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(149, 36);
-            this.lblPrecio.TabIndex = 21;
-            this.lblPrecio.Text = "Precio unit.";
-            // 
             // lblMarca
             // 
             this.lblMarca.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -429,6 +385,7 @@
             this.cbxFamilia.Name = "cbxFamilia";
             this.cbxFamilia.Size = new System.Drawing.Size(174, 21);
             this.cbxFamilia.TabIndex = 54;
+            this.cbxFamilia.SelectedIndexChanged += new System.EventHandler(this.cbxFamilia_SelectedIndexChanged);
             // 
             // cbxProveedor
             // 
@@ -449,40 +406,6 @@
             this.cbxMarca.Name = "cbxMarca";
             this.cbxMarca.Size = new System.Drawing.Size(178, 21);
             this.cbxMarca.TabIndex = 56;
-            // 
-            // nudUPB
-            // 
-            this.nudUPB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nudUPB.Location = new System.Drawing.Point(645, 257);
-            this.nudUPB.Name = "nudUPB";
-            this.nudUPB.Size = new System.Drawing.Size(120, 20);
-            this.nudUPB.TabIndex = 57;
-            // 
-            // nudBultosIniciales
-            // 
-            this.nudBultosIniciales.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nudBultosIniciales.Location = new System.Drawing.Point(645, 293);
-            this.nudBultosIniciales.Name = "nudBultosIniciales";
-            this.nudBultosIniciales.Size = new System.Drawing.Size(120, 20);
-            this.nudBultosIniciales.TabIndex = 59;
-            // 
-            // nudUnidadesIniciales
-            // 
-            this.nudUnidadesIniciales.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nudUnidadesIniciales.Location = new System.Drawing.Point(645, 329);
-            this.nudUnidadesIniciales.Name = "nudUnidadesIniciales";
-            this.nudUnidadesIniciales.Size = new System.Drawing.Size(120, 20);
-            this.nudUnidadesIniciales.TabIndex = 58;
-            // 
-            // txtPrecioUnit
-            // 
-            this.txtPrecioUnit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPrecioUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioUnit.Location = new System.Drawing.Point(655, 218);
-            this.txtPrecioUnit.Name = "txtPrecioUnit";
-            this.txtPrecioUnit.Size = new System.Drawing.Size(100, 26);
-            this.txtPrecioUnit.TabIndex = 60;
-            this.txtPrecioUnit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioUnit_KeyPress);
             // 
             // btnCrear
             // 
@@ -547,6 +470,104 @@
             this.txtNombre.TabIndex = 53;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
+            // lblUnidadesIniciales
+            // 
+            this.lblUnidadesIniciales.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblUnidadesIniciales.AutoSize = true;
+            this.lblUnidadesIniciales.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUnidadesIniciales.Location = new System.Drawing.Point(308, 321);
+            this.lblUnidadesIniciales.Name = "lblUnidadesIniciales";
+            this.lblUnidadesIniciales.Size = new System.Drawing.Size(230, 36);
+            this.lblUnidadesIniciales.TabIndex = 52;
+            this.lblUnidadesIniciales.Text = "Unidades Iniciales";
+            // 
+            // nudUnidadesIniciales
+            // 
+            this.nudUnidadesIniciales.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudUnidadesIniciales.Location = new System.Drawing.Point(645, 329);
+            this.nudUnidadesIniciales.Name = "nudUnidadesIniciales";
+            this.nudUnidadesIniciales.Size = new System.Drawing.Size(120, 20);
+            this.nudUnidadesIniciales.TabIndex = 58;
+            // 
+            // nudBultosIniciales
+            // 
+            this.nudBultosIniciales.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudBultosIniciales.Location = new System.Drawing.Point(645, 293);
+            this.nudBultosIniciales.Name = "nudBultosIniciales";
+            this.nudBultosIniciales.Size = new System.Drawing.Size(120, 20);
+            this.nudBultosIniciales.TabIndex = 59;
+            // 
+            // nudUPB
+            // 
+            this.nudUPB.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudUPB.Location = new System.Drawing.Point(645, 257);
+            this.nudUPB.Name = "nudUPB";
+            this.nudUPB.Size = new System.Drawing.Size(120, 20);
+            this.nudUPB.TabIndex = 57;
+            // 
+            // lblBultosIniciales
+            // 
+            this.lblBultosIniciales.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblBultosIniciales.AutoSize = true;
+            this.lblBultosIniciales.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBultosIniciales.Location = new System.Drawing.Point(327, 285);
+            this.lblBultosIniciales.Name = "lblBultosIniciales";
+            this.lblBultosIniciales.Size = new System.Drawing.Size(191, 36);
+            this.lblBultosIniciales.TabIndex = 29;
+            this.lblBultosIniciales.Text = "Bultos Iniciales";
+            // 
+            // lblUPB
+            // 
+            this.lblUPB.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblUPB.AutoSize = true;
+            this.lblUPB.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUPB.Location = new System.Drawing.Point(299, 249);
+            this.lblUPB.Name = "lblUPB";
+            this.lblUPB.Size = new System.Drawing.Size(247, 36);
+            this.lblUPB.TabIndex = 25;
+            this.lblUPB.Text = "Unidades por bulto";
+            // 
+            // lblPrecio
+            // 
+            this.lblPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.Location = new System.Drawing.Point(348, 213);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(149, 36);
+            this.lblPrecio.TabIndex = 21;
+            this.lblPrecio.Text = "Precio unit.";
+            // 
+            // txtPrecioUnit
+            // 
+            this.txtPrecioUnit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPrecioUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecioUnit.Location = new System.Drawing.Point(655, 218);
+            this.txtPrecioUnit.Name = "txtPrecioUnit";
+            this.txtPrecioUnit.Size = new System.Drawing.Size(100, 26);
+            this.txtPrecioUnit.TabIndex = 60;
+            // 
+            // lblPresentacion
+            // 
+            this.lblPresentacion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblPresentacion.AutoSize = true;
+            this.lblPresentacion.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPresentacion.Location = new System.Drawing.Point(339, 177);
+            this.lblPresentacion.Name = "lblPresentacion";
+            this.lblPresentacion.Size = new System.Drawing.Size(168, 36);
+            this.lblPresentacion.TabIndex = 65;
+            this.lblPresentacion.Text = "Presentacion";
+            // 
+            // cbxPresentacion
+            // 
+            this.cbxPresentacion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbxPresentacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxPresentacion.FormattingEnabled = true;
+            this.cbxPresentacion.Location = new System.Drawing.Point(616, 184);
+            this.cbxPresentacion.Name = "cbxPresentacion";
+            this.cbxPresentacion.Size = new System.Drawing.Size(178, 21);
+            this.cbxPresentacion.TabIndex = 66;
+            // 
             // PBaja
             // 
             this.PBaja.Controls.Add(this.tableLayoutPanel2);
@@ -585,7 +606,7 @@
             this.tlpBotonesBV.Controls.Add(this.btnVerBajas, 1, 0);
             this.tlpBotonesBV.Controls.Add(this.btnConfirmarBaja, 0, 0);
             this.tlpBotonesBV.Location = new System.Drawing.Point(311, 286);
-            this.tlpBotonesBV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tlpBotonesBV.Margin = new System.Windows.Forms.Padding(2);
             this.tlpBotonesBV.Name = "tlpBotonesBV";
             this.tlpBotonesBV.RowCount = 1;
             this.tlpBotonesBV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -743,7 +764,7 @@
             this.cbxProveedorBaja.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProveedorBaja.FormattingEnabled = true;
             this.cbxProveedorBaja.Location = new System.Drawing.Point(476, 27);
-            this.cbxProveedorBaja.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxProveedorBaja.Margin = new System.Windows.Forms.Padding(2);
             this.cbxProveedorBaja.Name = "cbxProveedorBaja";
             this.cbxProveedorBaja.Size = new System.Drawing.Size(120, 21);
             this.cbxProveedorBaja.TabIndex = 11;
@@ -754,7 +775,7 @@
             this.cbxMarcaBaja.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxMarcaBaja.FormattingEnabled = true;
             this.cbxMarcaBaja.Location = new System.Drawing.Point(208, 27);
-            this.cbxMarcaBaja.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxMarcaBaja.Margin = new System.Windows.Forms.Padding(2);
             this.cbxMarcaBaja.Name = "cbxMarcaBaja";
             this.cbxMarcaBaja.Size = new System.Drawing.Size(120, 21);
             this.cbxMarcaBaja.TabIndex = 9;
@@ -813,7 +834,7 @@
             this.cbxFamiliaBaja.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxFamiliaBaja.FormattingEnabled = true;
             this.cbxFamiliaBaja.Location = new System.Drawing.Point(81, 27);
-            this.cbxFamiliaBaja.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxFamiliaBaja.Margin = new System.Windows.Forms.Padding(2);
             this.cbxFamiliaBaja.Name = "cbxFamiliaBaja";
             this.cbxFamiliaBaja.Size = new System.Drawing.Size(106, 21);
             this.cbxFamiliaBaja.TabIndex = 5;
@@ -823,7 +844,7 @@
             this.txtNombreBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombreBaja.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreBaja.Location = new System.Drawing.Point(346, 26);
-            this.txtNombreBaja.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombreBaja.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreBaja.Name = "txtNombreBaja";
             this.txtNombreBaja.Size = new System.Drawing.Size(112, 23);
             this.txtNombreBaja.TabIndex = 12;
@@ -832,7 +853,7 @@
             // 
             this.pnlBoton.Controls.Add(this.btnBuscarBaja);
             this.pnlBoton.Location = new System.Drawing.Point(605, 23);
-            this.pnlBoton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlBoton.Margin = new System.Windows.Forms.Padding(2);
             this.pnlBoton.Name = "pnlBoton";
             this.pnlBoton.Size = new System.Drawing.Size(64, 28);
             this.pnlBoton.TabIndex = 13;
@@ -1007,7 +1028,7 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(516, 27);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(120, 21);
             this.comboBox1.TabIndex = 11;
@@ -1018,7 +1039,7 @@
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(228, 27);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(120, 21);
             this.comboBox2.TabIndex = 9;
@@ -1077,7 +1098,7 @@
             this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(91, 27);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(106, 21);
             this.comboBox3.TabIndex = 5;
@@ -1087,17 +1108,16 @@
             this.txtBuscarDni.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBuscarDni.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscarDni.Location = new System.Drawing.Point(376, 26);
-            this.txtBuscarDni.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscarDni.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscarDni.Name = "txtBuscarDni";
             this.txtBuscarDni.Size = new System.Drawing.Size(112, 23);
             this.txtBuscarDni.TabIndex = 12;
-            this.txtBuscarDni.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscarDni_KeyDown);
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.button3);
             this.panel3.Location = new System.Drawing.Point(650, 23);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(64, 28);
             this.panel3.TabIndex = 13;
@@ -1129,27 +1149,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // lblPresentacion
-            // 
-            this.lblPresentacion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblPresentacion.AutoSize = true;
-            this.lblPresentacion.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPresentacion.Location = new System.Drawing.Point(339, 177);
-            this.lblPresentacion.Name = "lblPresentacion";
-            this.lblPresentacion.Size = new System.Drawing.Size(168, 36);
-            this.lblPresentacion.TabIndex = 65;
-            this.lblPresentacion.Text = "Presentacion";
-            // 
-            // cbxPresentacion
-            // 
-            this.cbxPresentacion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbxPresentacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxPresentacion.FormattingEnabled = true;
-            this.cbxPresentacion.Location = new System.Drawing.Point(616, 184);
-            this.cbxPresentacion.Name = "cbxPresentacion";
-            this.cbxPresentacion.Size = new System.Drawing.Size(178, 21);
-            this.cbxPresentacion.TabIndex = 66;
-            // 
             // FormABM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1170,9 +1169,9 @@
             this.PAlta.ResumeLayout(false);
             this.tlpAlta.ResumeLayout(false);
             this.tlpAlta.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudUPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBultosIniciales)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudUnidadesIniciales)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBultosIniciales)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudUPB)).EndInit();
             this.PBaja.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tlpBotonesBV.ResumeLayout(false);

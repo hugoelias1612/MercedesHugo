@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.14.36414.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capa_Presentacion", "Capa_Presentacion.csproj", "{2B7C2D2C-50CD-4C50-8E11-FDAABE9B3C9F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ED3E9AE6-3431-4C91-B2D8-F33DAC9487FE} = {ED3E9AE6-3431-4C91-B2D8-F33DAC9487FE}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capa_Datos", "..\Capa_Datos\Capa_Datos.csproj", "{ED3E9AE6-3431-4C91-B2D8-F33DAC9487FE}"
 EndProject
