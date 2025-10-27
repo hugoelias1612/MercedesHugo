@@ -44,6 +44,7 @@ namespace ArimaERP.EmpleadoProducto
             btnConfirmarBaja.Click += btnConfirmarBaja_Click;
             DGResultadosBaja.CurrentCellDirtyStateChanged += DGResultadosBaja_CurrentCellDirtyStateChanged;
             DGResultadosBaja.CellContentClick += DGResultadosBaja_CellContentClick;
+            btnVerBajas.Click += btnVerBajas_Click;
 
             InicializarGrillaBaja();
         }
@@ -642,6 +643,15 @@ namespace ArimaERP.EmpleadoProducto
                 DGResultadosBaja.EndEdit();
             }
         }
+
+        private void btnVerBajas_Click(object sender, EventArgs e)
+        {
+            using (var form = new FormVerProductosDadosDeBaja())
+            {
+                form.ShowDialog(this);
+            }
+        }
+
 
     }
 }

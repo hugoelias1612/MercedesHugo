@@ -383,6 +383,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Preventista\FormRutas.resx">
       <DependentUpon>FormRutas.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Preventista\MDIPreventista.resx">
       <DependentUpon>MDIPreventista.cs</DependentUpon>
