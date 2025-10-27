@@ -172,9 +172,9 @@ namespace Capa_Logica
         }
 
         //buscar productos con filtros
-        public List<ProductoCatalogoDto> BuscarCatalogoProductos(string termino, int? idFamilia, int? idMarca, bool? activo)
+        public List<ProductoCatalogoDto> BuscarCatalogoProductos(string termino, int? idFamilia, int? idMarca, int? idProveedor, bool? activo)
         {
-            var productos = classProducto.BuscarCatalogoProductos(termino, idFamilia, idMarca, activo);
+            var productos = classProducto.BuscarCatalogoProductos(termino, idFamilia, idMarca, idProveedor, activo);
             ErroresValidacion = classProducto.ErroresValidacion;
             return productos;
         }

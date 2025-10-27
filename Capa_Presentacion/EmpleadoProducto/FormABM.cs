@@ -1,11 +1,11 @@
 ﻿using Capa_Entidades;
+using Capa_Entidades.DTOs;
 using Capa_Logica;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Windows.Forms;
-using System.IO;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace ArimaERP.EmpleadoProducto
 {
@@ -40,6 +40,12 @@ namespace ArimaERP.EmpleadoProducto
             };
             this.Load += new System.EventHandler(this.FormABM_Load);
             cbxFamilia.SelectedIndexChanged += cbxFamilia_SelectedIndexChanged;
+            btnBuscarBaja.Click += btnBuscarBaja_Click;
+            btnConfirmarBaja.Click += btnConfirmarBaja_Click;
+            DGResultadosBaja.CurrentCellDirtyStateChanged += DGResultadosBaja_CurrentCellDirtyStateChanged;
+            DGResultadosBaja.CellContentClick += DGResultadosBaja_CellContentClick;
+
+            InicializarGrillaBaja();
         }
 
         private void FormABM_Load(object sender, EventArgs e)
@@ -47,6 +53,7 @@ namespace ArimaERP.EmpleadoProducto
             CargarFamilias();
             CargarProveedores();
             CargarMarcas();
+            CargarFiltrosBaja();
 
             LimpiarPresentaciones();
 
@@ -258,6 +265,11 @@ namespace ArimaERP.EmpleadoProducto
             PAlta.Visible = false;
             PBaja.Visible = true;
             PModificacion.Visible = false;
+
+            if (!DGResultadosBaja.Rows.Cast<DataGridViewRow>().Any(r => !r.IsNewRow))
+            {
+                EjecutarBusquedaBaja();
+            }
         }
 
         private void btnModificacion_Click(object sender, EventArgs e)
@@ -420,5 +432,212 @@ namespace ArimaERP.EmpleadoProducto
         private void textBoxCodigo_KeyPress_1(object sender, KeyPressEventArgs e)
         {
         }
+
+        private void InicializarGrillaBaja()
+        {
+            DGResultadosBaja.AutoGenerateColumns = false;
+            DGResultadosBaja.DataSource = null;
+            DGResultadosBaja.Rows.Clear();
+            DGResultadosBaja.AllowUserToAddRows = false;
+
+            if (DGResultadosBaja.Columns["Precio"] != null)
+            {
+                DGResultadosBaja.Columns["Precio"].DefaultCellStyle.Format = "C2";
+                DGResultadosBaja.Columns["Precio"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            }
+        }
+
+        private void CargarFiltrosBaja()
+        {
+            CargarFamiliasBaja();
+            CargarMarcasBaja();
+            CargarProveedoresBaja();
+        }
+
+        private void CargarFamiliasBaja()
+        {
+            var familias = _familiaLogica.ObtenerTodasLasFamilias() ?? new List<FAMILIA>();
+
+            if (familias.Count == 0 && _familiaLogica.ErroresValidacion.Any())
+            {
+                MessageBox.Show(
+                    string.Join(Environment.NewLine, _familiaLogica.ErroresValidacion),
+                    "Error al cargar familias",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+
+            var familiasConOpcionTodas = new List<FAMILIA>
+            {
+                new FAMILIA { id_familia = 0, descripcion = "Todas" }
+            };
+            familiasConOpcionTodas.AddRange(familias.OrderBy(f => f.descripcion));
+
+            cbxFamiliaBaja.DataSource = familiasConOpcionTodas;
+            cbxFamiliaBaja.DisplayMember = nameof(FAMILIA.descripcion);
+            cbxFamiliaBaja.ValueMember = nameof(FAMILIA.id_familia);
+            cbxFamiliaBaja.SelectedIndex = 0;
+        }
+
+        private void CargarMarcasBaja()
+        {
+            var marcas = _marcaLogica.ObtenerTodasLasMarcas() ?? new List<MARCA>();
+
+            if (marcas.Count == 0 && _marcaLogica.ErroresValidacion.Any())
+            {
+                MessageBox.Show(
+                    string.Join(Environment.NewLine, _marcaLogica.ErroresValidacion),
+                    "Error al cargar marcas",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+
+            var marcasConOpcionTodas = new List<MARCA>
+            {
+                new MARCA { id_marca = 0, nombre = "Todas" }
+            };
+            marcasConOpcionTodas.AddRange(marcas.OrderBy(m => m.nombre));
+
+            cbxMarcaBaja.DataSource = marcasConOpcionTodas;
+            cbxMarcaBaja.DisplayMember = nameof(MARCA.nombre);
+            cbxMarcaBaja.ValueMember = nameof(MARCA.id_marca);
+            cbxMarcaBaja.SelectedIndex = 0;
+        }
+
+        private void CargarProveedoresBaja()
+        {
+            var proveedores = _proveedorLogica.ObtenerTodosLosProveedores() ?? new List<PROVEEDOR>();
+
+            if (proveedores.Count == 0 && _proveedorLogica.ErroresValidacion.Any())
+            {
+                MessageBox.Show(
+                    string.Join(Environment.NewLine, _proveedorLogica.ErroresValidacion),
+                    "Error al cargar proveedores",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+
+            var proveedoresConOpcionTodos = new List<PROVEEDOR>
+            {
+                new PROVEEDOR { id_proveedor = 0, nombre = "Todos" }
+            };
+            proveedoresConOpcionTodos.AddRange(proveedores.OrderBy(p => p.nombre));
+
+            cbxProveedorBaja.DataSource = proveedoresConOpcionTodos;
+            cbxProveedorBaja.DisplayMember = nameof(PROVEEDOR.nombre);
+            cbxProveedorBaja.ValueMember = nameof(PROVEEDOR.id_proveedor);
+            cbxProveedorBaja.SelectedIndex = 0;
+        }
+
+        private void btnBuscarBaja_Click(object sender, EventArgs e)
+        {
+            EjecutarBusquedaBaja();
+        }
+
+        private void EjecutarBusquedaBaja()
+        {
+            string termino = txtNombreBaja.Text.Trim();
+            int? familiaId = cbxFamiliaBaja.SelectedValue is int idFamilia && idFamilia != 0 ? idFamilia : (int?)null;
+            int? marcaId = cbxMarcaBaja.SelectedValue is int idMarca && idMarca != 0 ? idMarca : (int?)null;
+            int? proveedorId = cbxProveedorBaja.SelectedValue is int idProveedor && idProveedor != 0 ? idProveedor : (int?)null;
+
+            var productos = _productoLogica.BuscarCatalogoProductos(termino, familiaId, marcaId, proveedorId, true);
+
+            if (_productoLogica.ErroresValidacion.Any())
+            {
+                MessageBox.Show(
+                    string.Join(Environment.NewLine, _productoLogica.ErroresValidacion),
+                    "Error al buscar productos",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
+
+            ActualizarResultadosBaja(productos);
+        }
+
+        private void ActualizarResultadosBaja(IEnumerable<ProductoCatalogoDto> productos)
+        {
+            DGResultadosBaja.EndEdit();
+            DGResultadosBaja.Rows.Clear();
+
+            foreach (var producto in productos)
+            {
+                int index = DGResultadosBaja.Rows.Add(false, producto.PrecioLista, producto.Nombre, producto.Familia, producto.Marca, producto.Proveedor);
+                DGResultadosBaja.Rows[index].Tag = producto;
+            }
+
+            if (!DGResultadosBaja.Rows.Cast<DataGridViewRow>().Any(r => !r.IsNewRow))
+            {
+                MessageBox.Show("No se encontraron productos con los filtros seleccionados.", "Sin resultados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnConfirmarBaja_Click(object sender, EventArgs e)
+        {
+            DGResultadosBaja.EndEdit();
+
+            var seleccionados = DGResultadosBaja.Rows
+                .Cast<DataGridViewRow>()
+                .Where(r => !r.IsNewRow && Convert.ToBoolean(r.Cells["Baja"].Value ?? false))
+                .Select(r => r.Tag as ProductoCatalogoDto)
+                .Where(p => p != null)
+                .ToList();
+
+            if (!seleccionados.Any())
+            {
+                MessageBox.Show("Seleccione al menos un producto para dar de baja.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            var errores = new List<string>();
+
+            foreach (var producto in seleccionados)
+            {
+                bool resultado = _productoLogica.CambiarEstadoProducto(producto.IdProducto, producto.IdPresentacion, false);
+
+                if (!resultado)
+                {
+                    string mensajeError = _productoLogica.ErroresValidacion.Any()
+                        ? string.Join(Environment.NewLine, _productoLogica.ErroresValidacion)
+                        : $"No se pudo dar de baja el producto {producto.Nombre}.";
+
+                    errores.Add(mensajeError);
+                }
+            }
+
+            if (errores.Any())
+            {
+                MessageBox.Show(string.Join(Environment.NewLine, errores.Distinct()), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Los productos seleccionados se dieron de baja correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            EjecutarBusquedaBaja();
+        }
+
+        private void DGResultadosBaja_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        {
+            if (DGResultadosBaja.IsCurrentCellDirty)
+            {
+                DGResultadosBaja.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            }
+        }
+
+        private void DGResultadosBaja_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.ColumnIndex < 0)
+            {
+                return;
+            }
+
+            if (DGResultadosBaja.Columns[e.ColumnIndex].Name == "Baja")
+            {
+                DGResultadosBaja.EndEdit();
+            }
+        }
+
     }
 }

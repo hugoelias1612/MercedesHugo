@@ -16,6 +16,7 @@ namespace Capa_Entidades.DTOs
         public bool Activo { get; set; }
         public int StockActual { get; set; }
         public int UmbralStock { get; set; }
+        public string Proveedor { get; set; }
 
         public bool StockPorDebajoDelUmbral => StockActual <= UmbralStock;
     }

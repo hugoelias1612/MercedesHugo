@@ -70,7 +70,7 @@
             this.btnVerBajas = new System.Windows.Forms.Button();
             this.btnConfirmarBaja = new System.Windows.Forms.Button();
             this.DGResultadosBaja = new System.Windows.Forms.DataGridView();
-            this.Baja = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Baja = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Familia = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -676,40 +676,48 @@
             this.DGResultadosBaja.RowTemplate.Height = 24;
             this.DGResultadosBaja.Size = new System.Drawing.Size(840, 278);
             this.DGResultadosBaja.TabIndex = 1;
-            this.DGResultadosBaja.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+
             // 
             // Baja
             // 
+            this.Baja.DataPropertyName = "Seleccionado";
             this.Baja.HeaderText = "Dar de baja";
             this.Baja.MinimumWidth = 6;
             this.Baja.Name = "Baja";
+            this.Baja.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Baja.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Precio
             // 
+            this.Precio.DataPropertyName = "PrecioLista";
             this.Precio.HeaderText = "Precio unitario";
             this.Precio.MinimumWidth = 6;
             this.Precio.Name = "Precio";
             // 
             // Nombre
             // 
+            this.Nombre.DataPropertyName = "Nombre";
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.MinimumWidth = 6;
             this.Nombre.Name = "Nombre";
             // 
             // Familia
             // 
+            this.Familia.DataPropertyName = "Familia";
             this.Familia.HeaderText = "Familia";
             this.Familia.MinimumWidth = 6;
             this.Familia.Name = "Familia";
             // 
             // Marca
             // 
+            this.Marca.DataPropertyName = "Marca";
             this.Marca.HeaderText = "Marca";
             this.Marca.MinimumWidth = 6;
             this.Marca.Name = "Marca";
             // 
             // Proveedor
             // 
+            this.Proveedor.DataPropertyName = "Proveedor";
             this.Proveedor.HeaderText = "Proveedor";
             this.Proveedor.MinimumWidth = 6;
             this.Proveedor.Name = "Proveedor";
@@ -1248,7 +1256,7 @@
         private System.Windows.Forms.Button btnVerBajas;
         private System.Windows.Forms.Button btnConfirmarBaja;
         private System.Windows.Forms.DataGridView DGResultadosBaja;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Baja;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Baja;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Familia;

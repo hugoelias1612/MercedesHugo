@@ -402,7 +402,7 @@ namespace Capa_Datos
         }
 
         //buscar productos con filtros flexibles
-        public List<ProductoCatalogoDto> BuscarCatalogoProductos(string termino, int? idFamilia, int? idMarca, bool? activo)
+        public List<ProductoCatalogoDto> BuscarCatalogoProductos(string termino, int? idFamilia, int? idMarca, int? idProveedor, bool? activo)
         {
             try
             {
@@ -417,7 +417,8 @@ namespace Capa_Datos
                                 join presentacion in context.PRESENTACION on pp.ID_presentacion equals presentacion.ID_presentacion
                                 join stockRegistro in context.stock on new { pp.id_producto, pp.ID_presentacion } equals new { stockRegistro.id_producto, stockRegistro.ID_presentacion } into stockJoin
                                 from stockRegistro in stockJoin.DefaultIfEmpty()
-                                select new { pp, producto, familia, marca, presentacion, stockRegistro };
+                                from proveedor in marca.PROVEEDOR.DefaultIfEmpty()
+                                select new { pp, producto, familia, marca, presentacion, stockRegistro, proveedor };
 
                     if (activo.HasValue)
                     {
@@ -435,6 +436,12 @@ namespace Capa_Datos
                     {
                         int marcaId = idMarca.Value;
                         query = query.Where(x => x.producto.id_marca == marcaId);
+                    }
+
+                    if (idProveedor.HasValue)
+                    {
+                        int proveedorId = idProveedor.Value;
+                        query = query.Where(x => x.proveedor != null && x.proveedor.id_proveedor == proveedorId);
                     }
 
                     if (!string.IsNullOrWhiteSpace(termino))
@@ -467,7 +474,16 @@ namespace Capa_Datos
                             UnidadesPorBulto = x.pp.unidades_bulto,
                             Activo = x.pp.activo,
                             StockActual = x.stockRegistro != null ? x.stockRegistro.stock_actual : 0,
-                            UmbralStock = x.stockRegistro != null ? x.stockRegistro.umbral_stock : 0
+                            UmbralStock = x.stockRegistro != null ? x.stockRegistro.umbral_stock : 0,
+                            Proveedor = x.proveedor != null ? x.proveedor.nombre : string.Empty
+                        })
+                        .AsEnumerable()
+                        .GroupBy(p => new { p.IdProducto, p.IdPresentacion })
+                        .Select(g =>
+                        {
+                            var producto = g.First();
+                            producto.Proveedor = g.Select(x => x.Proveedor).FirstOrDefault(nombre => !string.IsNullOrWhiteSpace(nombre)) ?? string.Empty;
+                            return producto;
                         })
                         .ToList();
                 }
@@ -483,7 +499,7 @@ namespace Capa_Datos
         //obtener catálogo completo o solo activos
         public List<ProductoCatalogoDto> ObtenerCatalogoProductos(bool incluirInactivos = false)
         {
-            return BuscarCatalogoProductos(null, null, null, incluirInactivos ? (bool?)null : true);
+            return BuscarCatalogoProductos(null, null, null, null, incluirInactivos ? (bool?)null : true);
         }
 
         //obtener productos con stock crítico
