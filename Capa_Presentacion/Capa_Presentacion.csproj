@@ -220,6 +220,12 @@
     <Compile Include="EmpleadoProducto\FormStock.Designer.cs">
       <DependentUpon>FormStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmpleadoProducto\FormVerProductosDadosDeBaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadoProducto\FormVerProductosDadosDeBaja.Designer.cs">
+      <DependentUpon>FormVerProductosDadosDeBaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmpleadoProducto\MDIProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -356,6 +362,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmpleadoProducto\FormStock.resx">
       <DependentUpon>FormStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadoProducto\FormVerProductosDadosDeBaja.resx">
+      <DependentUpon>FormVerProductosDadosDeBaja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmpleadoProducto\MDIProductos.resx">
       <DependentUpon>MDIProductos.cs</DependentUpon>

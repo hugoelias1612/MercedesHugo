@@ -40,6 +40,22 @@
             this.btnBaja = new System.Windows.Forms.Button();
             this.btnAlta = new System.Windows.Forms.Button();
             this.pnlContenido = new System.Windows.Forms.Panel();
+            this.PBaja = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpBotonesBV = new System.Windows.Forms.TableLayoutPanel();
+            this.btnVerBajas = new System.Windows.Forms.Button();
+            this.btnConfirmarBaja = new System.Windows.Forms.Button();
+            this.DGResultadosBaja = new System.Windows.Forms.DataGridView();
+            this.TLPBaja = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpBuscarBaja = new System.Windows.Forms.TableLayoutPanel();
+            this.cbxMarcaBaja = new System.Windows.Forms.ComboBox();
+            this.lblNombreBaja = new System.Windows.Forms.Label();
+            this.lblMarcaBaja = new System.Windows.Forms.Label();
+            this.lblFamiliaBaja = new System.Windows.Forms.Label();
+            this.cbxFamiliaBaja = new System.Windows.Forms.ComboBox();
+            this.txtNombreBaja = new System.Windows.Forms.TextBox();
+            this.pnlBoton = new System.Windows.Forms.Panel();
+            this.btnBuscarBaja = new System.Windows.Forms.Button();
             this.PAlta = new System.Windows.Forms.Panel();
             this.tlpAlta = new System.Windows.Forms.TableLayoutPanel();
             this.lblMarca = new System.Windows.Forms.Label();
@@ -64,30 +80,6 @@
             this.txtPrecioUnit = new System.Windows.Forms.TextBox();
             this.lblPresentacion = new System.Windows.Forms.Label();
             this.cbxPresentacion = new System.Windows.Forms.ComboBox();
-            this.PBaja = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tlpBotonesBV = new System.Windows.Forms.TableLayoutPanel();
-            this.btnVerBajas = new System.Windows.Forms.Button();
-            this.btnConfirmarBaja = new System.Windows.Forms.Button();
-            this.DGResultadosBaja = new System.Windows.Forms.DataGridView();
-            this.Baja = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Familia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TLPBaja = new System.Windows.Forms.TableLayoutPanel();
-            this.tlpBuscarBaja = new System.Windows.Forms.TableLayoutPanel();
-            this.cbxProveedorBaja = new System.Windows.Forms.ComboBox();
-            this.cbxMarcaBaja = new System.Windows.Forms.ComboBox();
-            this.lblProveedorBaja = new System.Windows.Forms.Label();
-            this.lblNombreBaja = new System.Windows.Forms.Label();
-            this.lblMarcaBaja = new System.Windows.Forms.Label();
-            this.lblFamiliaBaja = new System.Windows.Forms.Label();
-            this.cbxFamiliaBaja = new System.Windows.Forms.ComboBox();
-            this.txtNombreBaja = new System.Windows.Forms.TextBox();
-            this.pnlBoton = new System.Windows.Forms.Panel();
-            this.btnBuscarBaja = new System.Windows.Forms.Button();
             this.PModificacion = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -112,16 +104,19 @@
             this.button3 = new System.Windows.Forms.Button();
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblProveedorBaja = new System.Windows.Forms.Label();
+            this.cbxProveedorBaja = new System.Windows.Forms.ComboBox();
+            this.Baja = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Familia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TLPMain.SuspendLayout();
             this.panel1.SuspendLayout();
             this.PNav.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.pnlContenido.SuspendLayout();
-            this.PAlta.SuspendLayout();
-            this.tlpAlta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudUnidadesIniciales)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBultosIniciales)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudUPB)).BeginInit();
             this.PBaja.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tlpBotonesBV.SuspendLayout();
@@ -129,6 +124,11 @@
             this.TLPBaja.SuspendLayout();
             this.tlpBuscarBaja.SuspendLayout();
             this.pnlBoton.SuspendLayout();
+            this.PAlta.SuspendLayout();
+            this.tlpAlta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudUnidadesIniciales)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBultosIniciales)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudUPB)).BeginInit();
             this.PModificacion.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -272,6 +272,250 @@
             this.pnlContenido.Padding = new System.Windows.Forms.Padding(8);
             this.pnlContenido.Size = new System.Drawing.Size(1144, 414);
             this.pnlContenido.TabIndex = 2;
+            // 
+            // PBaja
+            // 
+            this.PBaja.Controls.Add(this.tableLayoutPanel2);
+            this.PBaja.Controls.Add(this.TLPBaja);
+            this.PBaja.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PBaja.Location = new System.Drawing.Point(8, 8);
+            this.PBaja.Margin = new System.Windows.Forms.Padding(0);
+            this.PBaja.Name = "PBaja";
+            this.PBaja.Size = new System.Drawing.Size(1128, 398);
+            this.PBaja.TabIndex = 5;
+            this.PBaja.Visible = false;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.51543F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.98387F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.56452F));
+            this.tableLayoutPanel2.Controls.Add(this.tlpBotonesBV, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.DGResultadosBaja, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 49);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.25359F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.74641F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1240, 340);
+            this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // tlpBotonesBV
+            // 
+            this.tlpBotonesBV.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.tlpBotonesBV.ColumnCount = 2;
+            this.tlpBotonesBV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpBotonesBV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpBotonesBV.Controls.Add(this.btnVerBajas, 1, 0);
+            this.tlpBotonesBV.Controls.Add(this.btnConfirmarBaja, 0, 0);
+            this.tlpBotonesBV.Location = new System.Drawing.Point(311, 286);
+            this.tlpBotonesBV.Margin = new System.Windows.Forms.Padding(2);
+            this.tlpBotonesBV.Name = "tlpBotonesBV";
+            this.tlpBotonesBV.RowCount = 1;
+            this.tlpBotonesBV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpBotonesBV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tlpBotonesBV.Size = new System.Drawing.Size(627, 52);
+            this.tlpBotonesBV.TabIndex = 0;
+            // 
+            // btnVerBajas
+            // 
+            this.btnVerBajas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnVerBajas.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnVerBajas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerBajas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerBajas.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnVerBajas.Location = new System.Drawing.Point(366, 3);
+            this.btnVerBajas.Name = "btnVerBajas";
+            this.btnVerBajas.Size = new System.Drawing.Size(208, 46);
+            this.btnVerBajas.TabIndex = 7;
+            this.btnVerBajas.TabStop = false;
+            this.btnVerBajas.Text = "Ver productos dados de baja";
+            this.btnVerBajas.UseVisualStyleBackColor = false;
+            // 
+            // btnConfirmarBaja
+            // 
+            this.btnConfirmarBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnConfirmarBaja.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnConfirmarBaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmarBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmarBaja.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnConfirmarBaja.Location = new System.Drawing.Point(52, 3);
+            this.btnConfirmarBaja.Name = "btnConfirmarBaja";
+            this.btnConfirmarBaja.Size = new System.Drawing.Size(208, 46);
+            this.btnConfirmarBaja.TabIndex = 6;
+            this.btnConfirmarBaja.TabStop = false;
+            this.btnConfirmarBaja.Text = "Confirmar baja de productos seleccionados";
+            this.btnConfirmarBaja.UseVisualStyleBackColor = false;
+            // 
+            // DGResultadosBaja
+            // 
+            this.DGResultadosBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DGResultadosBaja.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGResultadosBaja.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.DGResultadosBaja.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DGResultadosBaja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGResultadosBaja.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Baja,
+            this.Precio,
+            this.Nombre,
+            this.Familia,
+            this.Marca,
+            this.Proveedor});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGResultadosBaja.DefaultCellStyle = dataGridViewCellStyle1;
+            this.DGResultadosBaja.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
+            this.DGResultadosBaja.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.DGResultadosBaja.Location = new System.Drawing.Point(205, 4);
+            this.DGResultadosBaja.Margin = new System.Windows.Forms.Padding(1, 4, 1, 1);
+            this.DGResultadosBaja.Name = "DGResultadosBaja";
+            this.DGResultadosBaja.RowHeadersVisible = false;
+            this.DGResultadosBaja.RowHeadersWidth = 51;
+            this.DGResultadosBaja.RowTemplate.Height = 24;
+            this.DGResultadosBaja.Size = new System.Drawing.Size(840, 278);
+            this.DGResultadosBaja.TabIndex = 1;
+            // 
+            // TLPBaja
+            // 
+            this.TLPBaja.ColumnCount = 3;
+            this.TLPBaja.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9686F));
+            this.TLPBaja.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.97102F));
+            this.TLPBaja.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TLPBaja.Controls.Add(this.tlpBuscarBaja, 1, 0);
+            this.TLPBaja.Location = new System.Drawing.Point(0, 0);
+            this.TLPBaja.Margin = new System.Windows.Forms.Padding(0);
+            this.TLPBaja.Name = "TLPBaja";
+            this.TLPBaja.RowCount = 1;
+            this.TLPBaja.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TLPBaja.Size = new System.Drawing.Size(1242, 54);
+            this.TLPBaja.TabIndex = 0;
+            // 
+            // tlpBuscarBaja
+            // 
+            this.tlpBuscarBaja.ColumnCount = 6;
+            this.tlpBuscarBaja.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpBuscarBaja.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpBuscarBaja.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpBuscarBaja.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpBuscarBaja.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpBuscarBaja.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tlpBuscarBaja.Controls.Add(this.cbxMarcaBaja, 2, 1);
+            this.tlpBuscarBaja.Controls.Add(this.lblMarcaBaja, 2, 0);
+            this.tlpBuscarBaja.Controls.Add(this.txtNombreBaja, 3, 1);
+            this.tlpBuscarBaja.Controls.Add(this.pnlBoton, 5, 1);
+            this.tlpBuscarBaja.Controls.Add(this.cbxProveedorBaja, 0, 1);
+            this.tlpBuscarBaja.Controls.Add(this.lblProveedorBaja, 0, 0);
+            this.tlpBuscarBaja.Controls.Add(this.lblNombreBaja, 3, 0);
+            this.tlpBuscarBaja.Controls.Add(this.lblFamiliaBaja, 4, 0);
+            this.tlpBuscarBaja.Controls.Add(this.cbxFamiliaBaja, 4, 1);
+            this.tlpBuscarBaja.Location = new System.Drawing.Point(210, 0);
+            this.tlpBuscarBaja.Margin = new System.Windows.Forms.Padding(0);
+            this.tlpBuscarBaja.Name = "tlpBuscarBaja";
+            this.tlpBuscarBaja.RowCount = 2;
+            this.tlpBuscarBaja.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.47619F));
+            this.tlpBuscarBaja.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59.52381F));
+            this.tlpBuscarBaja.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tlpBuscarBaja.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tlpBuscarBaja.Size = new System.Drawing.Size(673, 54);
+            this.tlpBuscarBaja.TabIndex = 0;
+            // 
+            // cbxMarcaBaja
+            // 
+            this.cbxMarcaBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbxMarcaBaja.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxMarcaBaja.FormattingEnabled = true;
+            this.cbxMarcaBaja.Location = new System.Drawing.Point(208, 27);
+            this.cbxMarcaBaja.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxMarcaBaja.Name = "cbxMarcaBaja";
+            this.cbxMarcaBaja.Size = new System.Drawing.Size(120, 21);
+            this.cbxMarcaBaja.TabIndex = 9;
+            // 
+            // lblNombreBaja
+            // 
+            this.lblNombreBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblNombreBaja.AutoSize = true;
+            this.lblNombreBaja.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreBaja.Location = new System.Drawing.Point(361, 0);
+            this.lblNombreBaja.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombreBaja.Name = "lblNombreBaja";
+            this.lblNombreBaja.Size = new System.Drawing.Size(81, 21);
+            this.lblNombreBaja.TabIndex = 3;
+            this.lblNombreBaja.Text = "Nombre";
+            // 
+            // lblMarcaBaja
+            // 
+            this.lblMarcaBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblMarcaBaja.AutoSize = true;
+            this.lblMarcaBaja.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarcaBaja.Location = new System.Drawing.Point(235, 0);
+            this.lblMarcaBaja.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMarcaBaja.Name = "lblMarcaBaja";
+            this.lblMarcaBaja.Size = new System.Drawing.Size(65, 21);
+            this.lblMarcaBaja.TabIndex = 2;
+            this.lblMarcaBaja.Text = "Marca";
+            // 
+            // lblFamiliaBaja
+            // 
+            this.lblFamiliaBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblFamiliaBaja.AutoSize = true;
+            this.lblFamiliaBaja.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFamiliaBaja.Location = new System.Drawing.Point(500, 0);
+            this.lblFamiliaBaja.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFamiliaBaja.Name = "lblFamiliaBaja";
+            this.lblFamiliaBaja.Size = new System.Drawing.Size(71, 21);
+            this.lblFamiliaBaja.TabIndex = 0;
+            this.lblFamiliaBaja.Text = "Familia";
+            // 
+            // cbxFamiliaBaja
+            // 
+            this.cbxFamiliaBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbxFamiliaBaja.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxFamiliaBaja.FormattingEnabled = true;
+            this.cbxFamiliaBaja.Location = new System.Drawing.Point(483, 27);
+            this.cbxFamiliaBaja.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxFamiliaBaja.Name = "cbxFamiliaBaja";
+            this.cbxFamiliaBaja.Size = new System.Drawing.Size(106, 21);
+            this.cbxFamiliaBaja.TabIndex = 5;
+            // 
+            // txtNombreBaja
+            // 
+            this.txtNombreBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNombreBaja.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreBaja.Location = new System.Drawing.Point(346, 26);
+            this.txtNombreBaja.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombreBaja.Name = "txtNombreBaja";
+            this.txtNombreBaja.Size = new System.Drawing.Size(112, 23);
+            this.txtNombreBaja.TabIndex = 12;
+            // 
+            // pnlBoton
+            // 
+            this.pnlBoton.Controls.Add(this.btnBuscarBaja);
+            this.pnlBoton.Location = new System.Drawing.Point(605, 23);
+            this.pnlBoton.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlBoton.Name = "pnlBoton";
+            this.pnlBoton.Size = new System.Drawing.Size(64, 28);
+            this.pnlBoton.TabIndex = 13;
+            // 
+            // btnBuscarBaja
+            // 
+            this.btnBuscarBaja.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnBuscarBaja.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnBuscarBaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarBaja.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBuscarBaja.Location = new System.Drawing.Point(0, 0);
+            this.btnBuscarBaja.Margin = new System.Windows.Forms.Padding(1);
+            this.btnBuscarBaja.Name = "btnBuscarBaja";
+            this.btnBuscarBaja.Size = new System.Drawing.Size(64, 28);
+            this.btnBuscarBaja.TabIndex = 0;
+            this.btnBuscarBaja.Text = "Buscar";
+            this.btnBuscarBaja.UseVisualStyleBackColor = false;
             // 
             // PAlta
             // 
@@ -568,318 +812,6 @@
             this.cbxPresentacion.Size = new System.Drawing.Size(178, 21);
             this.cbxPresentacion.TabIndex = 66;
             // 
-            // PBaja
-            // 
-            this.PBaja.Controls.Add(this.tableLayoutPanel2);
-            this.PBaja.Controls.Add(this.TLPBaja);
-            this.PBaja.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PBaja.Location = new System.Drawing.Point(8, 8);
-            this.PBaja.Margin = new System.Windows.Forms.Padding(0);
-            this.PBaja.Name = "PBaja";
-            this.PBaja.Size = new System.Drawing.Size(1128, 398);
-            this.PBaja.TabIndex = 5;
-            this.PBaja.Visible = false;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.51543F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.98387F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.56452F));
-            this.tableLayoutPanel2.Controls.Add(this.tlpBotonesBV, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.DGResultadosBaja, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 49);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.25359F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.74641F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1240, 340);
-            this.tableLayoutPanel2.TabIndex = 1;
-            // 
-            // tlpBotonesBV
-            // 
-            this.tlpBotonesBV.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.tlpBotonesBV.ColumnCount = 2;
-            this.tlpBotonesBV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpBotonesBV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpBotonesBV.Controls.Add(this.btnVerBajas, 1, 0);
-            this.tlpBotonesBV.Controls.Add(this.btnConfirmarBaja, 0, 0);
-            this.tlpBotonesBV.Location = new System.Drawing.Point(311, 286);
-            this.tlpBotonesBV.Margin = new System.Windows.Forms.Padding(2);
-            this.tlpBotonesBV.Name = "tlpBotonesBV";
-            this.tlpBotonesBV.RowCount = 1;
-            this.tlpBotonesBV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpBotonesBV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-            this.tlpBotonesBV.Size = new System.Drawing.Size(627, 52);
-            this.tlpBotonesBV.TabIndex = 0;
-            // 
-            // btnVerBajas
-            // 
-            this.btnVerBajas.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnVerBajas.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnVerBajas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerBajas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerBajas.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnVerBajas.Location = new System.Drawing.Point(366, 3);
-            this.btnVerBajas.Name = "btnVerBajas";
-            this.btnVerBajas.Size = new System.Drawing.Size(208, 46);
-            this.btnVerBajas.TabIndex = 7;
-            this.btnVerBajas.TabStop = false;
-            this.btnVerBajas.Text = "Ver productos dados de baja";
-            this.btnVerBajas.UseVisualStyleBackColor = false;
-            // 
-            // btnConfirmarBaja
-            // 
-            this.btnConfirmarBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnConfirmarBaja.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnConfirmarBaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmarBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmarBaja.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnConfirmarBaja.Location = new System.Drawing.Point(52, 3);
-            this.btnConfirmarBaja.Name = "btnConfirmarBaja";
-            this.btnConfirmarBaja.Size = new System.Drawing.Size(208, 46);
-            this.btnConfirmarBaja.TabIndex = 6;
-            this.btnConfirmarBaja.TabStop = false;
-            this.btnConfirmarBaja.Text = "Confirmar baja de productos seleccionados";
-            this.btnConfirmarBaja.UseVisualStyleBackColor = false;
-            // 
-            // DGResultadosBaja
-            // 
-            this.DGResultadosBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.DGResultadosBaja.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DGResultadosBaja.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.DGResultadosBaja.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DGResultadosBaja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGResultadosBaja.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Baja,
-            this.Precio,
-            this.Nombre,
-            this.Familia,
-            this.Marca,
-            this.Proveedor});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGResultadosBaja.DefaultCellStyle = dataGridViewCellStyle1;
-            this.DGResultadosBaja.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
-            this.DGResultadosBaja.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.DGResultadosBaja.Location = new System.Drawing.Point(205, 4);
-            this.DGResultadosBaja.Margin = new System.Windows.Forms.Padding(1, 4, 1, 1);
-            this.DGResultadosBaja.Name = "DGResultadosBaja";
-            this.DGResultadosBaja.RowHeadersVisible = false;
-            this.DGResultadosBaja.RowHeadersWidth = 51;
-            this.DGResultadosBaja.RowTemplate.Height = 24;
-            this.DGResultadosBaja.Size = new System.Drawing.Size(840, 278);
-            this.DGResultadosBaja.TabIndex = 1;
-
-            // 
-            // Baja
-            // 
-            this.Baja.DataPropertyName = "Seleccionado";
-            this.Baja.HeaderText = "Dar de baja";
-            this.Baja.MinimumWidth = 6;
-            this.Baja.Name = "Baja";
-            this.Baja.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Baja.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Precio
-            // 
-            this.Precio.DataPropertyName = "PrecioLista";
-            this.Precio.HeaderText = "Precio unitario";
-            this.Precio.MinimumWidth = 6;
-            this.Precio.Name = "Precio";
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            // 
-            // Familia
-            // 
-            this.Familia.DataPropertyName = "Familia";
-            this.Familia.HeaderText = "Familia";
-            this.Familia.MinimumWidth = 6;
-            this.Familia.Name = "Familia";
-            // 
-            // Marca
-            // 
-            this.Marca.DataPropertyName = "Marca";
-            this.Marca.HeaderText = "Marca";
-            this.Marca.MinimumWidth = 6;
-            this.Marca.Name = "Marca";
-            // 
-            // Proveedor
-            // 
-            this.Proveedor.DataPropertyName = "Proveedor";
-            this.Proveedor.HeaderText = "Proveedor";
-            this.Proveedor.MinimumWidth = 6;
-            this.Proveedor.Name = "Proveedor";
-            // 
-            // TLPBaja
-            // 
-            this.TLPBaja.ColumnCount = 3;
-            this.TLPBaja.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9686F));
-            this.TLPBaja.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.97102F));
-            this.TLPBaja.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.TLPBaja.Controls.Add(this.tlpBuscarBaja, 1, 0);
-            this.TLPBaja.Location = new System.Drawing.Point(0, 0);
-            this.TLPBaja.Margin = new System.Windows.Forms.Padding(0);
-            this.TLPBaja.Name = "TLPBaja";
-            this.TLPBaja.RowCount = 1;
-            this.TLPBaja.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TLPBaja.Size = new System.Drawing.Size(1242, 54);
-            this.TLPBaja.TabIndex = 0;
-            // 
-            // tlpBuscarBaja
-            // 
-            this.tlpBuscarBaja.ColumnCount = 6;
-            this.tlpBuscarBaja.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlpBuscarBaja.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpBuscarBaja.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpBuscarBaja.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpBuscarBaja.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpBuscarBaja.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tlpBuscarBaja.Controls.Add(this.cbxProveedorBaja, 4, 1);
-            this.tlpBuscarBaja.Controls.Add(this.cbxMarcaBaja, 2, 1);
-            this.tlpBuscarBaja.Controls.Add(this.lblProveedorBaja, 4, 0);
-            this.tlpBuscarBaja.Controls.Add(this.lblNombreBaja, 3, 0);
-            this.tlpBuscarBaja.Controls.Add(this.lblMarcaBaja, 2, 0);
-            this.tlpBuscarBaja.Controls.Add(this.lblFamiliaBaja, 1, 0);
-            this.tlpBuscarBaja.Controls.Add(this.cbxFamiliaBaja, 1, 1);
-            this.tlpBuscarBaja.Controls.Add(this.txtNombreBaja, 3, 1);
-            this.tlpBuscarBaja.Controls.Add(this.pnlBoton, 5, 1);
-            this.tlpBuscarBaja.Location = new System.Drawing.Point(210, 0);
-            this.tlpBuscarBaja.Margin = new System.Windows.Forms.Padding(0);
-            this.tlpBuscarBaja.Name = "tlpBuscarBaja";
-            this.tlpBuscarBaja.RowCount = 2;
-            this.tlpBuscarBaja.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.47619F));
-            this.tlpBuscarBaja.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59.52381F));
-            this.tlpBuscarBaja.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tlpBuscarBaja.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tlpBuscarBaja.Size = new System.Drawing.Size(673, 54);
-            this.tlpBuscarBaja.TabIndex = 0;
-            // 
-            // cbxProveedorBaja
-            // 
-            this.cbxProveedorBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbxProveedorBaja.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxProveedorBaja.FormattingEnabled = true;
-            this.cbxProveedorBaja.Location = new System.Drawing.Point(476, 27);
-            this.cbxProveedorBaja.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxProveedorBaja.Name = "cbxProveedorBaja";
-            this.cbxProveedorBaja.Size = new System.Drawing.Size(120, 21);
-            this.cbxProveedorBaja.TabIndex = 11;
-            // 
-            // cbxMarcaBaja
-            // 
-            this.cbxMarcaBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbxMarcaBaja.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxMarcaBaja.FormattingEnabled = true;
-            this.cbxMarcaBaja.Location = new System.Drawing.Point(208, 27);
-            this.cbxMarcaBaja.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxMarcaBaja.Name = "cbxMarcaBaja";
-            this.cbxMarcaBaja.Size = new System.Drawing.Size(120, 21);
-            this.cbxMarcaBaja.TabIndex = 9;
-            // 
-            // lblProveedorBaja
-            // 
-            this.lblProveedorBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblProveedorBaja.AutoSize = true;
-            this.lblProveedorBaja.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProveedorBaja.Location = new System.Drawing.Point(486, 0);
-            this.lblProveedorBaja.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblProveedorBaja.Name = "lblProveedorBaja";
-            this.lblProveedorBaja.Size = new System.Drawing.Size(99, 21);
-            this.lblProveedorBaja.TabIndex = 4;
-            this.lblProveedorBaja.Text = "Proveedor";
-            // 
-            // lblNombreBaja
-            // 
-            this.lblNombreBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblNombreBaja.AutoSize = true;
-            this.lblNombreBaja.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreBaja.Location = new System.Drawing.Point(361, 0);
-            this.lblNombreBaja.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNombreBaja.Name = "lblNombreBaja";
-            this.lblNombreBaja.Size = new System.Drawing.Size(81, 21);
-            this.lblNombreBaja.TabIndex = 3;
-            this.lblNombreBaja.Text = "Nombre";
-            // 
-            // lblMarcaBaja
-            // 
-            this.lblMarcaBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblMarcaBaja.AutoSize = true;
-            this.lblMarcaBaja.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarcaBaja.Location = new System.Drawing.Point(235, 0);
-            this.lblMarcaBaja.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblMarcaBaja.Name = "lblMarcaBaja";
-            this.lblMarcaBaja.Size = new System.Drawing.Size(65, 21);
-            this.lblMarcaBaja.TabIndex = 2;
-            this.lblMarcaBaja.Text = "Marca";
-            // 
-            // lblFamiliaBaja
-            // 
-            this.lblFamiliaBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblFamiliaBaja.AutoSize = true;
-            this.lblFamiliaBaja.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFamiliaBaja.Location = new System.Drawing.Point(98, 0);
-            this.lblFamiliaBaja.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblFamiliaBaja.Name = "lblFamiliaBaja";
-            this.lblFamiliaBaja.Size = new System.Drawing.Size(71, 21);
-            this.lblFamiliaBaja.TabIndex = 0;
-            this.lblFamiliaBaja.Text = "Familia";
-            // 
-            // cbxFamiliaBaja
-            // 
-            this.cbxFamiliaBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbxFamiliaBaja.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxFamiliaBaja.FormattingEnabled = true;
-            this.cbxFamiliaBaja.Location = new System.Drawing.Point(81, 27);
-            this.cbxFamiliaBaja.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxFamiliaBaja.Name = "cbxFamiliaBaja";
-            this.cbxFamiliaBaja.Size = new System.Drawing.Size(106, 21);
-            this.cbxFamiliaBaja.TabIndex = 5;
-            // 
-            // txtNombreBaja
-            // 
-            this.txtNombreBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNombreBaja.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreBaja.Location = new System.Drawing.Point(346, 26);
-            this.txtNombreBaja.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNombreBaja.Name = "txtNombreBaja";
-            this.txtNombreBaja.Size = new System.Drawing.Size(112, 23);
-            this.txtNombreBaja.TabIndex = 12;
-            // 
-            // pnlBoton
-            // 
-            this.pnlBoton.Controls.Add(this.btnBuscarBaja);
-            this.pnlBoton.Location = new System.Drawing.Point(605, 23);
-            this.pnlBoton.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlBoton.Name = "pnlBoton";
-            this.pnlBoton.Size = new System.Drawing.Size(64, 28);
-            this.pnlBoton.TabIndex = 13;
-            // 
-            // btnBuscarBaja
-            // 
-            this.btnBuscarBaja.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnBuscarBaja.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnBuscarBaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarBaja.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBuscarBaja.Location = new System.Drawing.Point(0, 0);
-            this.btnBuscarBaja.Margin = new System.Windows.Forms.Padding(1);
-            this.btnBuscarBaja.Name = "btnBuscarBaja";
-            this.btnBuscarBaja.Size = new System.Drawing.Size(64, 28);
-            this.btnBuscarBaja.TabIndex = 0;
-            this.btnBuscarBaja.Text = "Buscar";
-            this.btnBuscarBaja.UseVisualStyleBackColor = false;
-            // 
             // PModificacion
             // 
             this.PModificacion.Controls.Add(this.tableLayoutPanel3);
@@ -1157,6 +1089,76 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // lblProveedorBaja
+            // 
+            this.lblProveedorBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblProveedorBaja.AutoSize = true;
+            this.lblProveedorBaja.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProveedorBaja.Location = new System.Drawing.Point(3, 0);
+            this.lblProveedorBaja.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblProveedorBaja.Name = "lblProveedorBaja";
+            this.lblProveedorBaja.Size = new System.Drawing.Size(60, 21);
+            this.lblProveedorBaja.TabIndex = 4;
+            this.lblProveedorBaja.Text = "Proveedor";
+            this.lblProveedorBaja.Visible = false;
+            // 
+            // cbxProveedorBaja
+            // 
+            this.cbxProveedorBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbxProveedorBaja.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxProveedorBaja.FormattingEnabled = true;
+            this.cbxProveedorBaja.Location = new System.Drawing.Point(2, 27);
+            this.cbxProveedorBaja.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxProveedorBaja.Name = "cbxProveedorBaja";
+            this.cbxProveedorBaja.Size = new System.Drawing.Size(63, 21);
+            this.cbxProveedorBaja.TabIndex = 11;
+            this.cbxProveedorBaja.Visible = false;
+            // 
+            // Baja
+            // 
+            this.Baja.DataPropertyName = "Seleccionado";
+            this.Baja.HeaderText = "Dar de baja";
+            this.Baja.MinimumWidth = 6;
+            this.Baja.Name = "Baja";
+            this.Baja.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Baja.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Precio
+            // 
+            this.Precio.DataPropertyName = "PrecioLista";
+            this.Precio.HeaderText = "Precio unitario";
+            this.Precio.MinimumWidth = 6;
+            this.Precio.Name = "Precio";
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            // 
+            // Familia
+            // 
+            this.Familia.DataPropertyName = "Familia";
+            this.Familia.HeaderText = "Familia";
+            this.Familia.MinimumWidth = 6;
+            this.Familia.Name = "Familia";
+            // 
+            // Marca
+            // 
+            this.Marca.DataPropertyName = "Marca";
+            this.Marca.HeaderText = "Marca";
+            this.Marca.MinimumWidth = 6;
+            this.Marca.Name = "Marca";
+            // 
+            // Proveedor
+            // 
+            this.Proveedor.DataPropertyName = "Proveedor";
+            this.Proveedor.HeaderText = "Proveedor";
+            this.Proveedor.MinimumWidth = 6;
+            this.Proveedor.Name = "Proveedor";
+            this.Proveedor.Visible = false;
+            // 
             // FormABM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1174,12 +1176,6 @@
             this.PNav.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.pnlContenido.ResumeLayout(false);
-            this.PAlta.ResumeLayout(false);
-            this.tlpAlta.ResumeLayout(false);
-            this.tlpAlta.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudUnidadesIniciales)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBultosIniciales)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudUPB)).EndInit();
             this.PBaja.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tlpBotonesBV.ResumeLayout(false);
@@ -1188,6 +1184,12 @@
             this.tlpBuscarBaja.ResumeLayout(false);
             this.tlpBuscarBaja.PerformLayout();
             this.pnlBoton.ResumeLayout(false);
+            this.PAlta.ResumeLayout(false);
+            this.tlpAlta.ResumeLayout(false);
+            this.tlpAlta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudUnidadesIniciales)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBultosIniciales)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudUPB)).EndInit();
             this.PModificacion.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -1256,17 +1258,9 @@
         private System.Windows.Forms.Button btnVerBajas;
         private System.Windows.Forms.Button btnConfirmarBaja;
         private System.Windows.Forms.DataGridView DGResultadosBaja;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Baja;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Familia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Proveedor;
         private System.Windows.Forms.TableLayoutPanel TLPBaja;
         private System.Windows.Forms.TableLayoutPanel tlpBuscarBaja;
-        private System.Windows.Forms.ComboBox cbxProveedorBaja;
         private System.Windows.Forms.ComboBox cbxMarcaBaja;
-        private System.Windows.Forms.Label lblProveedorBaja;
         private System.Windows.Forms.Label lblNombreBaja;
         private System.Windows.Forms.Label lblMarcaBaja;
         private System.Windows.Forms.Label lblFamiliaBaja;
@@ -1283,5 +1277,13 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label lblPresentacion;
         private System.Windows.Forms.ComboBox cbxPresentacion;
+        private System.Windows.Forms.ComboBox cbxProveedorBaja;
+        private System.Windows.Forms.Label lblProveedorBaja;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Baja;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Familia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Proveedor;
     }
 }

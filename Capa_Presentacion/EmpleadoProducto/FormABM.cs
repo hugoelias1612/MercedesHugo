@@ -563,7 +563,11 @@ namespace ArimaERP.EmpleadoProducto
 
             foreach (var producto in productos)
             {
-                int index = DGResultadosBaja.Rows.Add(false, producto.PrecioLista, producto.Nombre, producto.Familia, producto.Marca, producto.Proveedor);
+                string proveedorMostrado = string.IsNullOrWhiteSpace(producto.Proveedor)
+                    ? "Sin proveedor asignado"
+                    : producto.Proveedor;
+
+                int index = DGResultadosBaja.Rows.Add(false, producto.PrecioLista, producto.Nombre, producto.Familia, producto.Marca, proveedorMostrado);
                 DGResultadosBaja.Rows[index].Tag = producto;
             }
 

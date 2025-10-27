@@ -402,6 +402,7 @@ namespace Capa_Datos
         }
 
         //buscar productos con filtros flexibles
+        //buscar productos con filtros flexibles
         public List<ProductoCatalogoDto> BuscarCatalogoProductos(string termino, int? idFamilia, int? idMarca, int? idProveedor, bool? activo)
         {
             try
@@ -461,28 +462,40 @@ namespace Capa_Datos
                     return query
                         .OrderBy(x => x.producto.nombre)
                         .ThenBy(x => x.presentacion.descripcion)
-                        .Select(x => new ProductoCatalogoDto
+                        .Select(x => new
                         {
-                            IdProducto = x.pp.id_producto,
-                            IdPresentacion = x.pp.ID_presentacion,
-                            Codigo = x.pp.cod_producto,
-                            Nombre = x.producto.nombre,
-                            Marca = x.marca.nombre,
-                            Familia = x.familia.descripcion,
-                            Presentacion = x.presentacion.descripcion,
-                            PrecioLista = x.pp.precioLista,
-                            UnidadesPorBulto = x.pp.unidades_bulto,
-                            Activo = x.pp.activo,
-                            StockActual = x.stockRegistro != null ? x.stockRegistro.stock_actual : 0,
-                            UmbralStock = x.stockRegistro != null ? x.stockRegistro.umbral_stock : 0,
-                            Proveedor = x.proveedor != null ? x.proveedor.nombre : string.Empty
+                            Dto = new ProductoCatalogoDto
+                            {
+                                IdProducto = x.pp.id_producto,
+                                IdPresentacion = x.pp.ID_presentacion,
+                                Codigo = x.pp.cod_producto,
+                                Nombre = x.producto.nombre,
+                                Marca = x.marca.nombre,
+                                Familia = x.familia.descripcion,
+                                Presentacion = x.presentacion.descripcion,
+                                PrecioLista = x.pp.precioLista,
+                                UnidadesPorBulto = x.pp.unidades_bulto,
+                                Activo = x.pp.activo,
+                                StockActual = x.stockRegistro != null ? x.stockRegistro.stock_actual : 0,
+                                UmbralStock = x.stockRegistro != null ? x.stockRegistro.umbral_stock : 0
+                            },
+                            ProveedorNombre = x.proveedor != null ? x.proveedor.nombre : string.Empty
                         })
                         .AsEnumerable()
-                        .GroupBy(p => new { p.IdProducto, p.IdPresentacion })
+                        .GroupBy(x => new { x.Dto.IdProducto, x.Dto.IdPresentacion })
                         .Select(g =>
                         {
-                            var producto = g.First();
-                            producto.Proveedor = g.Select(x => x.Proveedor).FirstOrDefault(nombre => !string.IsNullOrWhiteSpace(nombre)) ?? string.Empty;
+                            var producto = g.First().Dto;
+                            var proveedores = g
+                                .Select(x => x.ProveedorNombre)
+                                .Where(nombre => !string.IsNullOrWhiteSpace(nombre))
+                                .Distinct()
+                                .ToList();
+
+                            producto.Proveedor = proveedores.Any()
+                                ? string.Join(" / ", proveedores)
+                                : string.Empty;
+
                             return producto;
                         })
                         .ToList();
