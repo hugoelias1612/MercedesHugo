@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 using Capa_Entidades.DTOs;
@@ -35,6 +36,8 @@ namespace ArimaERP.EmpleadoProducto
             var productos = _productoLogica.BuscarCatalogoProductos(null, null, null, null, false)
                 ?? new List<ProductoCatalogoDto>();
 
+            var culturaMoneda = CultureInfo.GetCultureInfo("es-AR");
+
             foreach (var producto in productos
                          .OrderBy(p => p.Nombre)
                          .ThenBy(p => p.Presentacion))
@@ -43,10 +46,12 @@ namespace ArimaERP.EmpleadoProducto
                     ? "Sin proveedor asignado"
                     : producto.Proveedor;
 
+                string precioFormateado = producto.PrecioLista.ToString("C2", culturaMoneda);
+
                 int index = DGResultadosBaja.Rows.Add(
                     false,
                     producto.Nombre,
-                    producto.PrecioLista,
+                    precioFormateado,
                     producto.Familia,
                     producto.Marca,
                     proveedorMostrado);

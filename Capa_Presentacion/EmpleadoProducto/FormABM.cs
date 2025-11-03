@@ -568,7 +568,11 @@ namespace ArimaERP.EmpleadoProducto
                     ? "Sin proveedor asignado"
                     : producto.Proveedor;
 
-                int index = DGResultadosBaja.Rows.Add(false, producto.PrecioLista, producto.Nombre, producto.Familia, producto.Marca, proveedorMostrado);
+                var culturaMoneda = CultureInfo.GetCultureInfo("es-AR");
+
+                string precioFormateado = producto.PrecioLista.ToString("C2", culturaMoneda);
+
+                int index = DGResultadosBaja.Rows.Add(false, precioFormateado, producto.Nombre, producto.Familia, producto.Marca, proveedorMostrado);
                 DGResultadosBaja.Rows[index].Tag = producto;
             }
 
