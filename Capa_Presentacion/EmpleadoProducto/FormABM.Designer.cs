@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TLPMain = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -46,16 +46,24 @@
             this.btnVerBajas = new System.Windows.Forms.Button();
             this.btnConfirmarBaja = new System.Windows.Forms.Button();
             this.DGResultadosBaja = new System.Windows.Forms.DataGridView();
+            this.Baja = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Familia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TLPBaja = new System.Windows.Forms.TableLayoutPanel();
             this.tlpBuscarBaja = new System.Windows.Forms.TableLayoutPanel();
             this.cbxMarcaBaja = new System.Windows.Forms.ComboBox();
-            this.lblNombreBaja = new System.Windows.Forms.Label();
             this.lblMarcaBaja = new System.Windows.Forms.Label();
-            this.lblFamiliaBaja = new System.Windows.Forms.Label();
-            this.cbxFamiliaBaja = new System.Windows.Forms.ComboBox();
             this.txtNombreBaja = new System.Windows.Forms.TextBox();
             this.pnlBoton = new System.Windows.Forms.Panel();
             this.btnBuscarBaja = new System.Windows.Forms.Button();
+            this.cbxProveedorBaja = new System.Windows.Forms.ComboBox();
+            this.lblProveedorBaja = new System.Windows.Forms.Label();
+            this.lblNombreBaja = new System.Windows.Forms.Label();
+            this.lblFamiliaBaja = new System.Windows.Forms.Label();
+            this.cbxFamiliaBaja = new System.Windows.Forms.ComboBox();
             this.PAlta = new System.Windows.Forms.Panel();
             this.tlpAlta = new System.Windows.Forms.TableLayoutPanel();
             this.lblMarca = new System.Windows.Forms.Label();
@@ -104,14 +112,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lblProveedorBaja = new System.Windows.Forms.Label();
-            this.cbxProveedorBaja = new System.Windows.Forms.ComboBox();
-            this.Baja = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Familia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.TLPMain.SuspendLayout();
             this.panel1.SuspendLayout();
             this.PNav.SuspendLayout();
@@ -262,9 +263,9 @@
             // pnlContenido
             // 
             this.pnlContenido.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pnlContenido.Controls.Add(this.PModificacion);
             this.pnlContenido.Controls.Add(this.PBaja);
             this.pnlContenido.Controls.Add(this.PAlta);
-            this.pnlContenido.Controls.Add(this.PModificacion);
             this.pnlContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenido.Location = new System.Drawing.Point(0, 102);
             this.pnlContenido.Margin = new System.Windows.Forms.Padding(0);
@@ -363,14 +364,14 @@
             this.Familia,
             this.Marca,
             this.Proveedor});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGResultadosBaja.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGResultadosBaja.DefaultCellStyle = dataGridViewCellStyle3;
             this.DGResultadosBaja.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.DGResultadosBaja.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DGResultadosBaja.Location = new System.Drawing.Point(205, 4);
@@ -381,6 +382,51 @@
             this.DGResultadosBaja.RowTemplate.Height = 24;
             this.DGResultadosBaja.Size = new System.Drawing.Size(840, 278);
             this.DGResultadosBaja.TabIndex = 1;
+            // 
+            // Baja
+            // 
+            this.Baja.DataPropertyName = "Seleccionado";
+            this.Baja.HeaderText = "Dar de baja";
+            this.Baja.MinimumWidth = 6;
+            this.Baja.Name = "Baja";
+            this.Baja.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Baja.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Precio
+            // 
+            this.Precio.DataPropertyName = "PrecioLista";
+            this.Precio.HeaderText = "Precio unitario";
+            this.Precio.MinimumWidth = 6;
+            this.Precio.Name = "Precio";
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            // 
+            // Familia
+            // 
+            this.Familia.DataPropertyName = "Familia";
+            this.Familia.HeaderText = "Familia";
+            this.Familia.MinimumWidth = 6;
+            this.Familia.Name = "Familia";
+            // 
+            // Marca
+            // 
+            this.Marca.DataPropertyName = "Marca";
+            this.Marca.HeaderText = "Marca";
+            this.Marca.MinimumWidth = 6;
+            this.Marca.Name = "Marca";
+            // 
+            // Proveedor
+            // 
+            this.Proveedor.DataPropertyName = "Proveedor";
+            this.Proveedor.HeaderText = "Proveedor";
+            this.Proveedor.MinimumWidth = 6;
+            this.Proveedor.Name = "Proveedor";
+            this.Proveedor.Visible = false;
             // 
             // TLPBaja
             // 
@@ -437,18 +483,6 @@
             this.cbxMarcaBaja.Size = new System.Drawing.Size(120, 21);
             this.cbxMarcaBaja.TabIndex = 9;
             // 
-            // lblNombreBaja
-            // 
-            this.lblNombreBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblNombreBaja.AutoSize = true;
-            this.lblNombreBaja.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreBaja.Location = new System.Drawing.Point(361, 0);
-            this.lblNombreBaja.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNombreBaja.Name = "lblNombreBaja";
-            this.lblNombreBaja.Size = new System.Drawing.Size(81, 21);
-            this.lblNombreBaja.TabIndex = 3;
-            this.lblNombreBaja.Text = "Nombre";
-            // 
             // lblMarcaBaja
             // 
             this.lblMarcaBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -460,29 +494,6 @@
             this.lblMarcaBaja.Size = new System.Drawing.Size(65, 21);
             this.lblMarcaBaja.TabIndex = 2;
             this.lblMarcaBaja.Text = "Marca";
-            // 
-            // lblFamiliaBaja
-            // 
-            this.lblFamiliaBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblFamiliaBaja.AutoSize = true;
-            this.lblFamiliaBaja.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFamiliaBaja.Location = new System.Drawing.Point(500, 0);
-            this.lblFamiliaBaja.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblFamiliaBaja.Name = "lblFamiliaBaja";
-            this.lblFamiliaBaja.Size = new System.Drawing.Size(71, 21);
-            this.lblFamiliaBaja.TabIndex = 0;
-            this.lblFamiliaBaja.Text = "Familia";
-            // 
-            // cbxFamiliaBaja
-            // 
-            this.cbxFamiliaBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbxFamiliaBaja.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxFamiliaBaja.FormattingEnabled = true;
-            this.cbxFamiliaBaja.Location = new System.Drawing.Point(483, 27);
-            this.cbxFamiliaBaja.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxFamiliaBaja.Name = "cbxFamiliaBaja";
-            this.cbxFamiliaBaja.Size = new System.Drawing.Size(106, 21);
-            this.cbxFamiliaBaja.TabIndex = 5;
             // 
             // txtNombreBaja
             // 
@@ -516,6 +527,66 @@
             this.btnBuscarBaja.TabIndex = 0;
             this.btnBuscarBaja.Text = "Buscar";
             this.btnBuscarBaja.UseVisualStyleBackColor = false;
+            // 
+            // cbxProveedorBaja
+            // 
+            this.cbxProveedorBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbxProveedorBaja.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxProveedorBaja.FormattingEnabled = true;
+            this.cbxProveedorBaja.Location = new System.Drawing.Point(2, 27);
+            this.cbxProveedorBaja.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxProveedorBaja.Name = "cbxProveedorBaja";
+            this.cbxProveedorBaja.Size = new System.Drawing.Size(63, 21);
+            this.cbxProveedorBaja.TabIndex = 11;
+            this.cbxProveedorBaja.Visible = false;
+            // 
+            // lblProveedorBaja
+            // 
+            this.lblProveedorBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblProveedorBaja.AutoSize = true;
+            this.lblProveedorBaja.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProveedorBaja.Location = new System.Drawing.Point(3, 0);
+            this.lblProveedorBaja.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblProveedorBaja.Name = "lblProveedorBaja";
+            this.lblProveedorBaja.Size = new System.Drawing.Size(60, 21);
+            this.lblProveedorBaja.TabIndex = 4;
+            this.lblProveedorBaja.Text = "Proveedor";
+            this.lblProveedorBaja.Visible = false;
+            // 
+            // lblNombreBaja
+            // 
+            this.lblNombreBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblNombreBaja.AutoSize = true;
+            this.lblNombreBaja.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreBaja.Location = new System.Drawing.Point(361, 0);
+            this.lblNombreBaja.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombreBaja.Name = "lblNombreBaja";
+            this.lblNombreBaja.Size = new System.Drawing.Size(81, 21);
+            this.lblNombreBaja.TabIndex = 3;
+            this.lblNombreBaja.Text = "Nombre";
+            // 
+            // lblFamiliaBaja
+            // 
+            this.lblFamiliaBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblFamiliaBaja.AutoSize = true;
+            this.lblFamiliaBaja.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFamiliaBaja.Location = new System.Drawing.Point(500, 0);
+            this.lblFamiliaBaja.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFamiliaBaja.Name = "lblFamiliaBaja";
+            this.lblFamiliaBaja.Size = new System.Drawing.Size(71, 21);
+            this.lblFamiliaBaja.TabIndex = 0;
+            this.lblFamiliaBaja.Text = "Familia";
+            // 
+            // cbxFamiliaBaja
+            // 
+            this.cbxFamiliaBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbxFamiliaBaja.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxFamiliaBaja.FormattingEnabled = true;
+            this.cbxFamiliaBaja.Location = new System.Drawing.Point(483, 27);
+            this.cbxFamiliaBaja.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxFamiliaBaja.Name = "cbxFamiliaBaja";
+            this.cbxFamiliaBaja.Size = new System.Drawing.Size(106, 21);
+            this.cbxFamiliaBaja.TabIndex = 5;
             // 
             // PAlta
             // 
@@ -814,6 +885,7 @@
             // 
             // PModificacion
             // 
+            this.PModificacion.Controls.Add(this.btnEditar);
             this.PModificacion.Controls.Add(this.tableLayoutPanel3);
             this.PModificacion.Controls.Add(this.tableLayoutPanel5);
             this.PModificacion.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -837,7 +909,7 @@
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 340F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1240, 340);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1240, 311);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // dataGridView1
@@ -855,14 +927,14 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.UnidadesBulto});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.Location = new System.Drawing.Point(133, 4);
@@ -871,7 +943,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(977, 335);
+            this.dataGridView1.Size = new System.Drawing.Size(977, 306);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
             // 
@@ -941,15 +1013,15 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel6.Controls.Add(this.comboBox1, 4, 1);
             this.tableLayoutPanel6.Controls.Add(this.comboBox2, 2, 1);
-            this.tableLayoutPanel6.Controls.Add(this.label1, 4, 0);
             this.tableLayoutPanel6.Controls.Add(this.label2, 3, 0);
             this.tableLayoutPanel6.Controls.Add(this.label3, 2, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label4, 1, 0);
-            this.tableLayoutPanel6.Controls.Add(this.comboBox3, 1, 1);
             this.tableLayoutPanel6.Controls.Add(this.txtBuscarDni, 3, 1);
             this.tableLayoutPanel6.Controls.Add(this.panel3, 5, 1);
+            this.tableLayoutPanel6.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.comboBox1, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.label4, 4, 0);
+            this.tableLayoutPanel6.Controls.Add(this.comboBox3, 4, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(210, 0);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
@@ -967,11 +1039,12 @@
             this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(516, 27);
+            this.comboBox1.Location = new System.Drawing.Point(2, 27);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(120, 21);
+            this.comboBox1.Size = new System.Drawing.Size(68, 21);
             this.comboBox1.TabIndex = 11;
+            this.comboBox1.Visible = false;
             // 
             // comboBox2
             // 
@@ -989,12 +1062,13 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(526, 0);
+            this.label1.Location = new System.Drawing.Point(6, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 21);
+            this.label1.Size = new System.Drawing.Size(60, 21);
             this.label1.TabIndex = 4;
             this.label1.Text = "Proveedor";
+            this.label1.Visible = false;
             // 
             // label2
             // 
@@ -1025,7 +1099,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(108, 0);
+            this.label4.Location = new System.Drawing.Point(540, 0);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 21);
@@ -1037,7 +1111,7 @@
             this.comboBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(91, 27);
+            this.comboBox3.Location = new System.Drawing.Point(523, 27);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(106, 21);
@@ -1089,75 +1163,20 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // lblProveedorBaja
+            // btnEditar
             // 
-            this.lblProveedorBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblProveedorBaja.AutoSize = true;
-            this.lblProveedorBaja.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProveedorBaja.Location = new System.Drawing.Point(3, 0);
-            this.lblProveedorBaja.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblProveedorBaja.Name = "lblProveedorBaja";
-            this.lblProveedorBaja.Size = new System.Drawing.Size(60, 21);
-            this.lblProveedorBaja.TabIndex = 4;
-            this.lblProveedorBaja.Text = "Proveedor";
-            this.lblProveedorBaja.Visible = false;
-            // 
-            // cbxProveedorBaja
-            // 
-            this.cbxProveedorBaja.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbxProveedorBaja.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxProveedorBaja.FormattingEnabled = true;
-            this.cbxProveedorBaja.Location = new System.Drawing.Point(2, 27);
-            this.cbxProveedorBaja.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxProveedorBaja.Name = "cbxProveedorBaja";
-            this.cbxProveedorBaja.Size = new System.Drawing.Size(63, 21);
-            this.cbxProveedorBaja.TabIndex = 11;
-            this.cbxProveedorBaja.Visible = false;
-            // 
-            // Baja
-            // 
-            this.Baja.DataPropertyName = "Seleccionado";
-            this.Baja.HeaderText = "Dar de baja";
-            this.Baja.MinimumWidth = 6;
-            this.Baja.Name = "Baja";
-            this.Baja.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Baja.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Precio
-            // 
-            this.Precio.DataPropertyName = "PrecioLista";
-            this.Precio.HeaderText = "Precio unitario";
-            this.Precio.MinimumWidth = 6;
-            this.Precio.Name = "Precio";
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            // 
-            // Familia
-            // 
-            this.Familia.DataPropertyName = "Familia";
-            this.Familia.HeaderText = "Familia";
-            this.Familia.MinimumWidth = 6;
-            this.Familia.Name = "Familia";
-            // 
-            // Marca
-            // 
-            this.Marca.DataPropertyName = "Marca";
-            this.Marca.HeaderText = "Marca";
-            this.Marca.MinimumWidth = 6;
-            this.Marca.Name = "Marca";
-            // 
-            // Proveedor
-            // 
-            this.Proveedor.DataPropertyName = "Proveedor";
-            this.Proveedor.HeaderText = "Proveedor";
-            this.Proveedor.MinimumWidth = 6;
-            this.Proveedor.Name = "Proveedor";
-            this.Proveedor.Visible = false;
+            this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEditar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnEditar.Location = new System.Drawing.Point(385, 363);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(352, 29);
+            this.btnEditar.TabIndex = 3;
+            this.btnEditar.TabStop = false;
+            this.btnEditar.Text = "Editar producto seleccionado.";
+            this.btnEditar.UseVisualStyleBackColor = false;
             // 
             // FormABM
             // 
@@ -1285,5 +1304,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Familia;
         private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn Proveedor;
+        private System.Windows.Forms.Button btnEditar;
     }
 }

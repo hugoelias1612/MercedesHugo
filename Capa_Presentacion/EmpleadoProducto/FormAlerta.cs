@@ -76,7 +76,7 @@ namespace ArimaERP.EmpleadoProducto
             CbFamilia.SelectedIndex = -1;
             CbProveedor.SelectedIndex = -1;
             TNombreContiene.Clear();
-            CheckBoxAgotados.Checked = false;
+            CheckBoxUmbral.Checked = false;
             NStockMax.Value = 10;
             CbOrden.SelectedIndex = 0;
 

@@ -115,24 +115,26 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.82879F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 86.17121F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 303F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 227F));
             this.tableLayoutPanel1.Controls.Add(this.lblPagos, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1366, 62);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1024, 50);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // lblPagos
             // 
             this.lblPagos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPagos.AutoSize = true;
-            this.lblPagos.Location = new System.Drawing.Point(553, 15);
+            this.lblPagos.Location = new System.Drawing.Point(410, 12);
+            this.lblPagos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPagos.Name = "lblPagos";
-            this.lblPagos.Size = new System.Drawing.Size(103, 31);
+            this.lblPagos.Size = new System.Drawing.Size(86, 25);
             this.lblPagos.TabIndex = 0;
             this.lblPagos.Text = "Consulta";
             this.lblPagos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -144,11 +146,11 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.4477F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.61088F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.94142F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 195F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 203F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 248F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 223F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 146F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 152F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 186F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 167F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 22F));
             this.tableLayoutPanel2.Controls.Add(this.comboBox3, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 7, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtBuscarCliente, 1, 0);
@@ -159,22 +161,24 @@
             this.tableLayoutPanel2.Controls.Add(this.dateTimePicker1, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.comboBoxClienteZona, 4, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 62);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 50);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1366, 39);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1024, 32);
             this.tableLayoutPanel2.TabIndex = 4;
             // 
             // comboBox3
             // 
             this.comboBox3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(3, 42);
+            this.comboBox3.Location = new System.Drawing.Point(2, 34);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(138, 31);
+            this.comboBox3.Size = new System.Drawing.Size(104, 27);
             this.comboBox3.TabIndex = 45;
             this.comboBox3.Text = "Seleccione Zona";
             // 
@@ -185,24 +189,25 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.15152F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.57576F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.27273F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 152F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 264F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 229F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 198F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tableLayoutPanel3.Controls.Add(this.label3, 5, 0);
             this.tableLayoutPanel3.Controls.Add(this.textBox2, 6, 0);
             this.tableLayoutPanel3.Controls.Add(this.comboBox1, 4, 0);
             this.tableLayoutPanel3.Controls.Add(this.button2, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.dateTimePicker2, 3, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(1339, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(1003, 2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(24, 33);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(19, 27);
             this.tableLayoutPanel3.TabIndex = 44;
             // 
             // label3
@@ -211,9 +216,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(-442, 0);
+            this.label3.Location = new System.Drawing.Point(-340, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(215, 39);
+            this.label3.Size = new System.Drawing.Size(172, 32);
             this.label3.TabIndex = 40;
             this.label3.Text = "Ingrese Número de Pedido";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -222,27 +228,30 @@
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(-221, 4);
+            this.textBox2.Location = new System.Drawing.Point(-164, 3);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(185, 30);
+            this.textBox2.Size = new System.Drawing.Size(140, 26);
             this.textBox2.TabIndex = 3;
             // 
             // comboBox1
             // 
             this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(-655, 3);
+            this.comboBox1.Location = new System.Drawing.Point(-490, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(164, 31);
+            this.comboBox1.Size = new System.Drawing.Size(124, 27);
             this.comboBox1.TabIndex = 10;
             this.comboBox1.Text = "Seleccione Zona";
             // 
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(-586, 3);
+            this.button2.Location = new System.Drawing.Point(-439, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(1, 33);
+            this.button2.Size = new System.Drawing.Size(1, 28);
             this.button2.TabIndex = 42;
             this.button2.Text = "Fecha Entrega";
             this.button2.UseVisualStyleBackColor = true;
@@ -252,17 +261,19 @@
             this.dateTimePicker2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(-807, 3);
+            this.dateTimePicker2.Location = new System.Drawing.Point(-604, 2);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(146, 30);
+            this.dateTimePicker2.Size = new System.Drawing.Size(110, 26);
             this.dateTimePicker2.TabIndex = 43;
             // 
             // txtBuscarCliente
             // 
             this.txtBuscarCliente.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarCliente.Location = new System.Drawing.Point(178, 3);
+            this.txtBuscarCliente.Location = new System.Drawing.Point(133, 2);
+            this.txtBuscarCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBuscarCliente.Name = "txtBuscarCliente";
-            this.txtBuscarCliente.Size = new System.Drawing.Size(165, 30);
+            this.txtBuscarCliente.Size = new System.Drawing.Size(124, 26);
             this.txtBuscarCliente.TabIndex = 7;
             // 
             // label2
@@ -271,9 +282,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(895, 0);
+            this.label2.Location = new System.Drawing.Point(660, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(215, 39);
+            this.label2.Size = new System.Drawing.Size(172, 32);
             this.label2.TabIndex = 40;
             this.label2.Text = "Ingrese Número de Pedido";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -282,9 +294,10 @@
             // 
             this.textBoxNumeroPedido.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxNumeroPedido.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNumeroPedido.Location = new System.Drawing.Point(1116, 4);
+            this.textBoxNumeroPedido.Location = new System.Drawing.Point(836, 3);
+            this.textBoxNumeroPedido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxNumeroPedido.Name = "textBoxNumeroPedido";
-            this.textBoxNumeroPedido.Size = new System.Drawing.Size(185, 30);
+            this.textBoxNumeroPedido.Size = new System.Drawing.Size(140, 26);
             this.textBoxNumeroPedido.TabIndex = 3;
             this.textBoxNumeroPedido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeroPedido_KeyPress);
             // 
@@ -294,9 +307,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelClientes.AutoSize = true;
             this.labelClientes.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelClientes.Location = new System.Drawing.Point(48, 0);
+            this.labelClientes.Location = new System.Drawing.Point(29, 0);
+            this.labelClientes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelClientes.Name = "labelClientes";
-            this.labelClientes.Size = new System.Drawing.Size(124, 39);
+            this.labelClientes.Size = new System.Drawing.Size(100, 32);
             this.labelClientes.TabIndex = 41;
             this.labelClientes.Text = "Ingrese Cliente";
             this.labelClientes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -304,9 +318,10 @@
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(349, 3);
+            this.button1.Location = new System.Drawing.Point(261, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 33);
+            this.button1.Size = new System.Drawing.Size(87, 28);
             this.button1.TabIndex = 42;
             this.button1.Text = "Fecha Entrega";
             this.button1.UseVisualStyleBackColor = true;
@@ -316,18 +331,20 @@
             this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(470, 3);
+            this.dateTimePicker1.Location = new System.Drawing.Point(352, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(189, 30);
+            this.dateTimePicker1.Size = new System.Drawing.Size(142, 26);
             this.dateTimePicker1.TabIndex = 43;
             // 
             // comboBoxClienteZona
             // 
             this.comboBoxClienteZona.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxClienteZona.FormattingEnabled = true;
-            this.comboBoxClienteZona.Location = new System.Drawing.Point(665, 3);
+            this.comboBoxClienteZona.Location = new System.Drawing.Point(498, 2);
+            this.comboBoxClienteZona.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxClienteZona.Name = "comboBoxClienteZona";
-            this.comboBoxClienteZona.Size = new System.Drawing.Size(197, 31);
+            this.comboBoxClienteZona.Size = new System.Drawing.Size(148, 27);
             this.comboBoxClienteZona.TabIndex = 10;
             this.comboBoxClienteZona.Text = "Seleccione Zona";
             // 
@@ -338,11 +355,11 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.31343F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.46056F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.22601F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 192F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 213F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 240F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 229F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 17F));
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 7, 0);
             this.tableLayoutPanel4.Controls.Add(this.textBox5, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.MontoMaximo, 5, 0);
@@ -351,13 +368,14 @@
             this.tableLayoutPanel4.Controls.Add(this.Creacion, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.dateTimePicker4, 3, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 101);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 82);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1366, 39);
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1024, 32);
             this.tableLayoutPanel4.TabIndex = 5;
             // 
             // tableLayoutPanel5
@@ -367,11 +385,11 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.15152F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.57576F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.27273F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 152F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 264F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 229F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 198F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tableLayoutPanel5.Controls.Add(this.textBox3, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.label5, 5, 0);
             this.tableLayoutPanel5.Controls.Add(this.textBox4, 6, 0);
@@ -380,21 +398,23 @@
             this.tableLayoutPanel5.Controls.Add(this.button3, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.dateTimePicker3, 3, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(1346, 3);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(1007, 2);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(17, 33);
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(15, 27);
             this.tableLayoutPanel5.TabIndex = 44;
             // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(-284, 3);
+            this.textBox3.Location = new System.Drawing.Point(-213, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(1, 30);
+            this.textBox3.Size = new System.Drawing.Size(1, 26);
             this.textBox3.TabIndex = 7;
             // 
             // label5
@@ -403,9 +423,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(-449, 0);
+            this.label5.Location = new System.Drawing.Point(-344, 0);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(215, 39);
+            this.label5.Size = new System.Drawing.Size(172, 32);
             this.label5.TabIndex = 40;
             this.label5.Text = "Ingrese Número de Pedido";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -414,9 +435,10 @@
             // 
             this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBox4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(-228, 4);
+            this.textBox4.Location = new System.Drawing.Point(-168, 3);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(185, 30);
+            this.textBox4.Size = new System.Drawing.Size(140, 26);
             this.textBox4.TabIndex = 3;
             // 
             // label6
@@ -425,9 +447,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Location = new System.Drawing.Point(2, 0);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(1, 39);
+            this.label6.Size = new System.Drawing.Size(1, 32);
             this.label6.TabIndex = 41;
             this.label6.Text = "Ingrese Cliente";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -436,18 +459,20 @@
             // 
             this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(-662, 3);
+            this.comboBox2.Location = new System.Drawing.Point(-494, 2);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(164, 31);
+            this.comboBox2.Size = new System.Drawing.Size(124, 27);
             this.comboBox2.TabIndex = 10;
             this.comboBox2.Text = "Seleccione Zona";
             // 
             // button3
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(-591, 3);
+            this.button3.Location = new System.Drawing.Point(-442, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(1, 33);
+            this.button3.Size = new System.Drawing.Size(1, 28);
             this.button3.TabIndex = 42;
             this.button3.Text = "Fecha Entrega";
             this.button3.UseVisualStyleBackColor = true;
@@ -457,17 +482,19 @@
             this.dateTimePicker3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(-814, 3);
+            this.dateTimePicker3.Location = new System.Drawing.Point(-608, 2);
+            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(146, 30);
+            this.dateTimePicker3.Size = new System.Drawing.Size(110, 26);
             this.dateTimePicker3.TabIndex = 43;
             // 
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(178, 3);
+            this.textBox5.Location = new System.Drawing.Point(132, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(165, 30);
+            this.textBox5.Size = new System.Drawing.Size(123, 26);
             this.textBox5.TabIndex = 7;
             // 
             // MontoMaximo
@@ -476,9 +503,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MontoMaximo.AutoSize = true;
             this.MontoMaximo.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MontoMaximo.Location = new System.Drawing.Point(923, 0);
+            this.MontoMaximo.Location = new System.Drawing.Point(678, 0);
+            this.MontoMaximo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.MontoMaximo.Name = "MontoMaximo";
-            this.MontoMaximo.Size = new System.Drawing.Size(188, 39);
+            this.MontoMaximo.Size = new System.Drawing.Size(153, 32);
             this.MontoMaximo.TabIndex = 40;
             this.MontoMaximo.Text = "Ingrese Monto Máximo";
             this.MontoMaximo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -487,9 +515,10 @@
             // 
             this.txtBoxMontoMaximo.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtBoxMontoMaximo.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxMontoMaximo.Location = new System.Drawing.Point(1117, 4);
+            this.txtBoxMontoMaximo.Location = new System.Drawing.Point(835, 3);
+            this.txtBoxMontoMaximo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBoxMontoMaximo.Name = "txtBoxMontoMaximo";
-            this.txtBoxMontoMaximo.Size = new System.Drawing.Size(185, 30);
+            this.txtBoxMontoMaximo.Size = new System.Drawing.Size(140, 26);
             this.txtBoxMontoMaximo.TabIndex = 3;
             this.txtBoxMontoMaximo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxMontoMaximo_KeyPress);
             // 
@@ -499,9 +528,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPreventista.AutoSize = true;
             this.labelPreventista.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPreventista.Location = new System.Drawing.Point(17, 0);
+            this.labelPreventista.Location = new System.Drawing.Point(2, 0);
+            this.labelPreventista.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPreventista.Name = "labelPreventista";
-            this.labelPreventista.Size = new System.Drawing.Size(155, 39);
+            this.labelPreventista.Size = new System.Drawing.Size(126, 32);
             this.labelPreventista.TabIndex = 41;
             this.labelPreventista.Text = "Ingrese Preventista";
             this.labelPreventista.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -509,9 +539,10 @@
             // Creacion
             // 
             this.Creacion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Creacion.Location = new System.Drawing.Point(349, 3);
+            this.Creacion.Location = new System.Drawing.Point(259, 2);
+            this.Creacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Creacion.Name = "Creacion";
-            this.Creacion.Size = new System.Drawing.Size(117, 33);
+            this.Creacion.Size = new System.Drawing.Size(88, 28);
             this.Creacion.TabIndex = 42;
             this.Creacion.Text = "Fecha Creación";
             this.Creacion.UseVisualStyleBackColor = true;
@@ -521,9 +552,10 @@
             this.dateTimePicker4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker4.Location = new System.Drawing.Point(472, 3);
+            this.dateTimePicker4.Location = new System.Drawing.Point(351, 2);
+            this.dateTimePicker4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(186, 30);
+            this.dateTimePicker4.Size = new System.Drawing.Size(140, 26);
             this.dateTimePicker4.TabIndex = 43;
             // 
             // dataGridViewModificarPedidos
@@ -543,12 +575,13 @@
             this.Column10});
             this.dataGridViewModificarPedidos.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridViewModificarPedidos.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dataGridViewModificarPedidos.Location = new System.Drawing.Point(0, 140);
+            this.dataGridViewModificarPedidos.Location = new System.Drawing.Point(0, 114);
+            this.dataGridViewModificarPedidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewModificarPedidos.Name = "dataGridViewModificarPedidos";
             this.dataGridViewModificarPedidos.RowHeadersVisible = false;
             this.dataGridViewModificarPedidos.RowHeadersWidth = 51;
             this.dataGridViewModificarPedidos.RowTemplate.Height = 24;
-            this.dataGridViewModificarPedidos.Size = new System.Drawing.Size(1366, 126);
+            this.dataGridViewModificarPedidos.Size = new System.Drawing.Size(1024, 102);
             this.dataGridViewModificarPedidos.TabIndex = 6;
             this.dataGridViewModificarPedidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewModificarPedidos_CellContentClick);
             // 
@@ -638,20 +671,22 @@
             this.tableLayoutPanel6.Controls.Add(this.lblDetalles, 1, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 266);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 216);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(1366, 62);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(1024, 50);
             this.tableLayoutPanel6.TabIndex = 7;
             // 
             // lblDetalles
             // 
             this.lblDetalles.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDetalles.AutoSize = true;
-            this.lblDetalles.Location = new System.Drawing.Point(595, 15);
+            this.lblDetalles.Location = new System.Drawing.Point(439, 12);
+            this.lblDetalles.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDetalles.Name = "lblDetalles";
-            this.lblDetalles.Size = new System.Drawing.Size(175, 31);
+            this.lblDetalles.Size = new System.Drawing.Size(144, 25);
             this.lblDetalles.TabIndex = 0;
             this.lblDetalles.Text = "Detalle de Pago";
             this.lblDetalles.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -668,11 +703,12 @@
             this.Column14});
             this.dataGridViewDetallePagos.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridViewDetallePagos.GridColor = System.Drawing.SystemColors.Window;
-            this.dataGridViewDetallePagos.Location = new System.Drawing.Point(0, 328);
+            this.dataGridViewDetallePagos.Location = new System.Drawing.Point(0, 266);
+            this.dataGridViewDetallePagos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewDetallePagos.Name = "dataGridViewDetallePagos";
             this.dataGridViewDetallePagos.RowHeadersWidth = 51;
             this.dataGridViewDetallePagos.RowTemplate.Height = 24;
-            this.dataGridViewDetallePagos.Size = new System.Drawing.Size(1366, 108);
+            this.dataGridViewDetallePagos.Size = new System.Drawing.Size(1024, 88);
             this.dataGridViewDetallePagos.TabIndex = 8;
             this.dataGridViewDetallePagos.Visible = false;
             // 
@@ -721,20 +757,22 @@
             this.tableLayoutPanel7.Controls.Add(this.lblRegistrarPago, 1, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel7.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 436);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 354);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1366, 62);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1024, 50);
             this.tableLayoutPanel7.TabIndex = 9;
             // 
             // lblRegistrarPago
             // 
             this.lblRegistrarPago.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblRegistrarPago.AutoSize = true;
-            this.lblRegistrarPago.Location = new System.Drawing.Point(601, 15);
+            this.lblRegistrarPago.Location = new System.Drawing.Point(445, 12);
+            this.lblRegistrarPago.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRegistrarPago.Name = "lblRegistrarPago";
-            this.lblRegistrarPago.Size = new System.Drawing.Size(162, 31);
+            this.lblRegistrarPago.Size = new System.Drawing.Size(133, 25);
             this.lblRegistrarPago.TabIndex = 0;
             this.lblRegistrarPago.Text = "Registrar Pago";
             this.lblRegistrarPago.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -745,9 +783,9 @@
             this.tableLayoutPanelRegistrarPago.ColumnCount = 5;
             this.tableLayoutPanelRegistrarPago.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.95615F));
             this.tableLayoutPanelRegistrarPago.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.04385F));
-            this.tableLayoutPanelRegistrarPago.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
-            this.tableLayoutPanelRegistrarPago.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 289F));
-            this.tableLayoutPanelRegistrarPago.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 377F));
+            this.tableLayoutPanelRegistrarPago.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
+            this.tableLayoutPanelRegistrarPago.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 217F));
+            this.tableLayoutPanelRegistrarPago.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 284F));
             this.tableLayoutPanelRegistrarPago.Controls.Add(this.textBox8, 3, 0);
             this.tableLayoutPanelRegistrarPago.Controls.Add(this.lblCliente, 0, 0);
             this.tableLayoutPanelRegistrarPago.Controls.Add(this.lblFecha, 0, 1);
@@ -758,12 +796,13 @@
             this.tableLayoutPanelRegistrarPago.Controls.Add(this.textBoxCliente, 1, 0);
             this.tableLayoutPanelRegistrarPago.Controls.Add(this.comboBoxMetodoPago, 3, 1);
             this.tableLayoutPanelRegistrarPago.Controls.Add(this.lblFechaActual, 1, 1);
-            this.tableLayoutPanelRegistrarPago.Location = new System.Drawing.Point(86, 504);
+            this.tableLayoutPanelRegistrarPago.Location = new System.Drawing.Point(64, 410);
+            this.tableLayoutPanelRegistrarPago.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanelRegistrarPago.Name = "tableLayoutPanelRegistrarPago";
             this.tableLayoutPanelRegistrarPago.RowCount = 2;
             this.tableLayoutPanelRegistrarPago.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelRegistrarPago.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanelRegistrarPago.Size = new System.Drawing.Size(1190, 100);
+            this.tableLayoutPanelRegistrarPago.Size = new System.Drawing.Size(892, 81);
             this.tableLayoutPanelRegistrarPago.TabIndex = 10;
             this.tableLayoutPanelRegistrarPago.Visible = false;
             // 
@@ -771,9 +810,10 @@
             // 
             this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox8.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(546, 9);
+            this.textBox8.Location = new System.Drawing.Point(407, 6);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(243, 31);
+            this.textBox8.Size = new System.Drawing.Size(183, 27);
             this.textBox8.TabIndex = 8;
             this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
@@ -782,9 +822,10 @@
             this.lblCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCliente.AutoSize = true;
             this.lblCliente.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCliente.Location = new System.Drawing.Point(25, 12);
+            this.lblCliente.Location = new System.Drawing.Point(16, 10);
+            this.lblCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(65, 25);
+            this.lblCliente.Size = new System.Drawing.Size(55, 20);
             this.lblCliente.TabIndex = 0;
             this.lblCliente.Text = "Cliente";
             // 
@@ -793,9 +834,10 @@
             this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(29, 62);
+            this.lblFecha.Location = new System.Drawing.Point(20, 50);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(57, 25);
+            this.lblFecha.Size = new System.Drawing.Size(47, 20);
             this.lblFecha.TabIndex = 1;
             this.lblFecha.Text = "Fecha";
             // 
@@ -804,9 +846,10 @@
             this.lblMonto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMonto.AutoSize = true;
             this.lblMonto.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMonto.Location = new System.Drawing.Point(405, 12);
+            this.lblMonto.Location = new System.Drawing.Point(300, 10);
+            this.lblMonto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMonto.Name = "lblMonto";
-            this.lblMonto.Size = new System.Drawing.Size(66, 25);
+            this.lblMonto.Size = new System.Drawing.Size(53, 20);
             this.lblMonto.TabIndex = 2;
             this.lblMonto.Text = "Monto";
             // 
@@ -815,9 +858,10 @@
             this.lblMetodoPago.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMetodoPago.AutoSize = true;
             this.lblMetodoPago.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMetodoPago.Location = new System.Drawing.Point(378, 62);
+            this.lblMetodoPago.Location = new System.Drawing.Point(277, 50);
+            this.lblMetodoPago.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMetodoPago.Name = "lblMetodoPago";
-            this.lblMetodoPago.Size = new System.Drawing.Size(121, 25);
+            this.lblMetodoPago.Size = new System.Drawing.Size(99, 20);
             this.lblMetodoPago.TabIndex = 3;
             this.lblMetodoPago.Text = "Método Pago";
             // 
@@ -825,9 +869,10 @@
             // 
             this.btnGenerarRecibo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGenerarRecibo.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerarRecibo.Location = new System.Drawing.Point(917, 56);
+            this.btnGenerarRecibo.Location = new System.Drawing.Point(686, 45);
+            this.btnGenerarRecibo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGenerarRecibo.Name = "btnGenerarRecibo";
-            this.btnGenerarRecibo.Size = new System.Drawing.Size(168, 37);
+            this.btnGenerarRecibo.Size = new System.Drawing.Size(126, 30);
             this.btnGenerarRecibo.TabIndex = 4;
             this.btnGenerarRecibo.Text = "Generar Recibo";
             this.btnGenerarRecibo.UseVisualStyleBackColor = true;
@@ -836,9 +881,10 @@
             // 
             this.btnRegistrarNuevo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRegistrarNuevo.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarNuevo.Location = new System.Drawing.Point(918, 3);
+            this.btnRegistrarNuevo.Location = new System.Drawing.Point(687, 2);
+            this.btnRegistrarNuevo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRegistrarNuevo.Name = "btnRegistrarNuevo";
-            this.btnRegistrarNuevo.Size = new System.Drawing.Size(166, 44);
+            this.btnRegistrarNuevo.Size = new System.Drawing.Size(124, 36);
             this.btnRegistrarNuevo.TabIndex = 5;
             this.btnRegistrarNuevo.Text = "Registrar";
             this.btnRegistrarNuevo.UseVisualStyleBackColor = true;
@@ -848,9 +894,10 @@
             // 
             this.textBoxCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxCliente.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCliente.Location = new System.Drawing.Point(119, 9);
+            this.textBoxCliente.Location = new System.Drawing.Point(89, 6);
+            this.textBoxCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCliente.Name = "textBoxCliente";
-            this.textBoxCliente.Size = new System.Drawing.Size(232, 31);
+            this.textBoxCliente.Size = new System.Drawing.Size(172, 27);
             this.textBoxCliente.TabIndex = 6;
             // 
             // comboBoxMetodoPago
@@ -863,9 +910,10 @@
             "Transferencia",
             "Tarjeta Débito",
             "Tarjeta Crédito"});
-            this.comboBoxMetodoPago.Location = new System.Drawing.Point(547, 58);
+            this.comboBoxMetodoPago.Location = new System.Drawing.Point(407, 47);
+            this.comboBoxMetodoPago.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxMetodoPago.Name = "comboBoxMetodoPago";
-            this.comboBoxMetodoPago.Size = new System.Drawing.Size(241, 33);
+            this.comboBoxMetodoPago.Size = new System.Drawing.Size(182, 27);
             this.comboBoxMetodoPago.TabIndex = 9;
             this.comboBoxMetodoPago.Text = "Seleccione";
             // 
@@ -874,18 +922,20 @@
             this.lblFechaActual.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFechaActual.AutoSize = true;
             this.lblFechaActual.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaActual.Location = new System.Drawing.Point(235, 62);
+            this.lblFechaActual.Location = new System.Drawing.Point(175, 50);
+            this.lblFechaActual.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFechaActual.Name = "lblFechaActual";
-            this.lblFechaActual.Size = new System.Drawing.Size(0, 25);
+            this.lblFechaActual.Size = new System.Drawing.Size(0, 20);
             this.lblFechaActual.TabIndex = 10;
             // 
             // btnVolver
             // 
             this.btnVolver.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnVolver.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(1022, 628);
+            this.btnVolver.Location = new System.Drawing.Point(766, 510);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(134, 43);
+            this.btnVolver.Size = new System.Drawing.Size(100, 35);
             this.btnVolver.TabIndex = 11;
             this.btnVolver.Text = "Salir";
             this.btnVolver.UseVisualStyleBackColor = true;
@@ -899,9 +949,10 @@
             // 
             this.btnNuevoPago.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnNuevoPago.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoPago.Location = new System.Drawing.Point(26, 628);
+            this.btnNuevoPago.Location = new System.Drawing.Point(20, 510);
+            this.btnNuevoPago.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNuevoPago.Name = "btnNuevoPago";
-            this.btnNuevoPago.Size = new System.Drawing.Size(134, 43);
+            this.btnNuevoPago.Size = new System.Drawing.Size(100, 35);
             this.btnNuevoPago.TabIndex = 12;
             this.btnNuevoPago.Text = "Nuevo Pago";
             this.btnNuevoPago.UseVisualStyleBackColor = true;
@@ -909,9 +960,9 @@
             // 
             // FormPagos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1366, 731);
+            this.ClientSize = new System.Drawing.Size(1024, 594);
             this.Controls.Add(this.btnNuevoPago);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.tableLayoutPanelRegistrarPago);
@@ -922,6 +973,7 @@
             this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormPagos";
             this.Text = "Pagos";
             this.Load += new System.EventHandler(this.FormPagos_Load);
