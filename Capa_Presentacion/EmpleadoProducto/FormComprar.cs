@@ -16,5 +16,10 @@ namespace ArimaERP.EmpleadoProducto
         {
             InitializeComponent();
         }
+
+        private void TLPFooter_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

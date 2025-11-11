@@ -150,13 +150,13 @@
             this.tableLayoutPanel1.Controls.Add(this.cbxMarca, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.cbxFamilia, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblFamilia, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblBuscar, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txtBuscar, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button5, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblProveedor, 7, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button4, 6, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblMarca, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnFiltrar, 4, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnFiltrar, 6, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button4, 6, 1);
+            this.tableLayoutPanel1.Controls.Add(this.button5, 5, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtBuscar, 4, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblBuscar, 3, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 31);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(10);
@@ -173,7 +173,7 @@
             this.button5.BackColor = System.Drawing.Color.LightSteelBlue;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(322, 44);
+            this.button5.Location = new System.Drawing.Point(790, 44);
             this.button5.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(37, 31);
@@ -187,7 +187,7 @@
             this.button4.BackColor = System.Drawing.Color.LightSteelBlue;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(965, 4);
+            this.button4.Location = new System.Drawing.Point(965, 44);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(98, 31);
             this.button4.TabIndex = 21;
@@ -268,7 +268,7 @@
             this.btnFiltrar.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFiltrar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltrar.Location = new System.Drawing.Point(629, 44);
+            this.btnFiltrar.Location = new System.Drawing.Point(941, 4);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(145, 31);
             this.btnFiltrar.TabIndex = 10;
@@ -280,7 +280,7 @@
             this.lblBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscar.Location = new System.Drawing.Point(6, 49);
+            this.lblBuscar.Location = new System.Drawing.Point(474, 49);
             this.lblBuscar.Name = "lblBuscar";
             this.lblBuscar.Size = new System.Drawing.Size(143, 21);
             this.lblBuscar.TabIndex = 16;
@@ -290,7 +290,7 @@
             // 
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(164, 45);
+            this.txtBuscar.Location = new System.Drawing.Point(632, 45);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(139, 29);
             this.txtBuscar.TabIndex = 17;
@@ -408,10 +408,10 @@
             this.TLPFooter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66333F));
             this.TLPFooter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66333F));
             this.TLPFooter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.005F));
-            this.TLPFooter.Controls.Add(this.btnConfirmar, 1, 1);
-            this.TLPFooter.Controls.Add(this.btnCancelar, 2, 1);
-            this.TLPFooter.Controls.Add(this.btnGuardar, 3, 1);
+            this.TLPFooter.Controls.Add(this.btnGuardar, 4, 1);
+            this.TLPFooter.Controls.Add(this.btnConfirmar, 2, 1);
             this.TLPFooter.Controls.Add(this.lblTotal, 2, 0);
+            this.TLPFooter.Controls.Add(this.btnCancelar, 4, 0);
             this.TLPFooter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TLPFooter.Location = new System.Drawing.Point(3, 454);
             this.TLPFooter.Name = "TLPFooter";
@@ -420,6 +420,7 @@
             this.TLPFooter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TLPFooter.Size = new System.Drawing.Size(1258, 72);
             this.TLPFooter.TabIndex = 2;
+            this.TLPFooter.Paint += new System.Windows.Forms.PaintEventHandler(this.TLPFooter_Paint);
             // 
             // btnConfirmar
             // 
@@ -427,7 +428,7 @@
             this.btnConfirmar.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmar.Location = new System.Drawing.Point(323, 39);
+            this.btnConfirmar.Location = new System.Drawing.Point(532, 39);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(191, 30);
             this.btnConfirmar.TabIndex = 11;
@@ -440,12 +441,13 @@
             this.btnCancelar.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(546, 39);
+            this.btnCancelar.Location = new System.Drawing.Point(1018, 3);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(163, 30);
             this.btnCancelar.TabIndex = 12;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Visible = false;
             // 
             // btnGuardar
             // 
@@ -453,12 +455,13 @@
             this.btnGuardar.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(758, 39);
+            this.btnGuardar.Location = new System.Drawing.Point(1021, 39);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(157, 30);
             this.btnGuardar.TabIndex = 13;
             this.btnGuardar.Text = "Guardar Borrador";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Visible = false;
             // 
             // lblTotal
             // 
