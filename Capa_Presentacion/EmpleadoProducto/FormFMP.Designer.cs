@@ -61,6 +61,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblCodigoPostal = new System.Windows.Forms.Label();
+            this.txtCodigoPostal = new System.Windows.Forms.TextBox();
+            this.lblCUIT = new System.Windows.Forms.Label();
+            this.txtCuit = new System.Windows.Forms.TextBox();
+            this.lblRazonSocial = new System.Windows.Forms.Label();
+            this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -82,7 +88,7 @@
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1146, 100);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1146, 126);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // groupBox1
@@ -168,12 +174,11 @@
             // 
             // gbxProveedor
             // 
-            this.gbxProveedor.Controls.Add(this.btnEditarProveedor);
             this.gbxProveedor.Controls.Add(this.tableLayoutPanel1);
             this.gbxProveedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbxProveedor.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxProveedor.Location = new System.Drawing.Point(5, 120);
-            this.gbxProveedor.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.gbxProveedor.Margin = new System.Windows.Forms.Padding(5);
             this.gbxProveedor.Name = "gbxProveedor";
             this.gbxProveedor.Size = new System.Drawing.Size(1254, 190);
             this.gbxProveedor.TabIndex = 0;
@@ -187,9 +192,9 @@
             this.btnEditarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarProveedor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarProveedor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEditarProveedor.Location = new System.Drawing.Point(413, 145);
+            this.btnEditarProveedor.Location = new System.Drawing.Point(868, 117);
             this.btnEditarProveedor.Name = "btnEditarProveedor";
-            this.btnEditarProveedor.Size = new System.Drawing.Size(359, 38);
+            this.btnEditarProveedor.Size = new System.Drawing.Size(224, 33);
             this.btnEditarProveedor.TabIndex = 1;
             this.btnEditarProveedor.Text = "Editar proveedor existente";
             this.btnEditarProveedor.UseVisualStyleBackColor = false;
@@ -203,7 +208,14 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Controls.Add(this.txtRazonSocial, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lblRazonSocial, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.txtCuit, 5, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lblCUIT, 4, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtCodigoPostal, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lblCodigoPostal, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.textBoxNroCalle, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnEditarProveedor, 5, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtCalle, 5, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtCiudad, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtProvincia, 1, 1);
@@ -216,25 +228,25 @@
             this.tableLayoutPanel1.Controls.Add(this.lblCalle, 4, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblNroCalle, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtNombre, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnCrear, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btnLimpiar, 5, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtEmail, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnLimpiar, 4, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btnCrear, 3, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 24);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(10, 20, 10, 10);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1095, 115);
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1095, 153);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // textBoxNroCalle
             // 
             this.textBoxNroCalle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxNroCalle.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNroCalle.Location = new System.Drawing.Point(170, 82);
+            this.textBoxNroCalle.Location = new System.Drawing.Point(170, 81);
             this.textBoxNroCalle.Name = "textBoxNroCalle";
             this.textBoxNroCalle.Size = new System.Drawing.Size(170, 27);
             this.textBoxNroCalle.TabIndex = 13;
@@ -351,7 +363,7 @@
             this.lblNroCalle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNroCalle.AutoSize = true;
             this.lblNroCalle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNroCalle.Location = new System.Drawing.Point(31, 85);
+            this.lblNroCalle.Location = new System.Drawing.Point(31, 84);
             this.lblNroCalle.Name = "lblNroCalle";
             this.lblNroCalle.Size = new System.Drawing.Size(78, 21);
             this.lblNroCalle.TabIndex = 6;
@@ -373,7 +385,7 @@
             this.btnCrear.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrear.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrear.Location = new System.Drawing.Point(554, 80);
+            this.btnCrear.Location = new System.Drawing.Point(554, 118);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(180, 31);
             this.btnCrear.TabIndex = 14;
@@ -387,9 +399,9 @@
             this.btnLimpiar.CausesValidation = false;
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(890, 80);
+            this.btnLimpiar.Location = new System.Drawing.Point(762, 118);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(180, 31);
+            this.btnLimpiar.Size = new System.Drawing.Size(100, 31);
             this.btnLimpiar.TabIndex = 15;
             this.btnLimpiar.Text = "Limpiar campos";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -463,6 +475,66 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // lblCodigoPostal
+            // 
+            this.lblCodigoPostal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCodigoPostal.AutoSize = true;
+            this.lblCodigoPostal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoPostal.Location = new System.Drawing.Point(396, 84);
+            this.lblCodigoPostal.Name = "lblCodigoPostal";
+            this.lblCodigoPostal.Size = new System.Drawing.Size(106, 21);
+            this.lblCodigoPostal.TabIndex = 16;
+            this.lblCodigoPostal.Text = "Codigo postal";
+            // 
+            // txtCodigoPostal
+            // 
+            this.txtCodigoPostal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCodigoPostal.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoPostal.Location = new System.Drawing.Point(532, 81);
+            this.txtCodigoPostal.Name = "txtCodigoPostal";
+            this.txtCodigoPostal.Size = new System.Drawing.Size(224, 27);
+            this.txtCodigoPostal.TabIndex = 17;
+            // 
+            // lblCUIT
+            // 
+            this.lblCUIT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCUIT.AutoSize = true;
+            this.lblCUIT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCUIT.Location = new System.Drawing.Point(790, 84);
+            this.lblCUIT.Name = "lblCUIT";
+            this.lblCUIT.Size = new System.Drawing.Size(43, 21);
+            this.lblCUIT.TabIndex = 18;
+            this.lblCUIT.Text = "CUIT";
+            // 
+            // txtCuit
+            // 
+            this.txtCuit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCuit.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCuit.Location = new System.Drawing.Point(894, 81);
+            this.txtCuit.Name = "txtCuit";
+            this.txtCuit.Size = new System.Drawing.Size(172, 27);
+            this.txtCuit.TabIndex = 19;
+            // 
+            // lblRazonSocial
+            // 
+            this.lblRazonSocial.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblRazonSocial.AutoSize = true;
+            this.lblRazonSocial.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRazonSocial.Location = new System.Drawing.Point(21, 123);
+            this.lblRazonSocial.Name = "lblRazonSocial";
+            this.lblRazonSocial.Size = new System.Drawing.Size(98, 21);
+            this.lblRazonSocial.TabIndex = 20;
+            this.lblRazonSocial.Text = "Razon Social";
+            // 
+            // txtRazonSocial
+            // 
+            this.txtRazonSocial.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtRazonSocial.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRazonSocial.Location = new System.Drawing.Point(170, 120);
+            this.txtRazonSocial.Name = "txtRazonSocial";
+            this.txtRazonSocial.Size = new System.Drawing.Size(170, 27);
+            this.txtRazonSocial.TabIndex = 21;
+            // 
             // FormFMP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -523,5 +595,11 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.TextBox txtRazonSocial;
+        private System.Windows.Forms.Label lblRazonSocial;
+        private System.Windows.Forms.TextBox txtCuit;
+        private System.Windows.Forms.Label lblCUIT;
+        private System.Windows.Forms.TextBox txtCodigoPostal;
+        private System.Windows.Forms.Label lblCodigoPostal;
     }
 }

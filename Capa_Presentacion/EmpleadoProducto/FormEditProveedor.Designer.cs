@@ -34,6 +34,7 @@
             // 
             // cbxProveedores
             // 
+            this.cbxProveedores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProveedores.FormattingEnabled = true;
             this.cbxProveedores.Location = new System.Drawing.Point(51, 47);
             this.cbxProveedores.Name = "cbxProveedores";
@@ -50,6 +51,7 @@
             this.lblEditar.TabIndex = 1;
             this.lblEditar.Text = "Editar";
             this.lblEditar.UseVisualStyleBackColor = false;
+            this.lblEditar.Click += new System.EventHandler(this.lblEditar_Click);
             // 
             // FormEditProveedor
             // 

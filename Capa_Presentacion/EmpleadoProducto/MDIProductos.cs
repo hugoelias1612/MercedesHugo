@@ -77,5 +77,10 @@ namespace ArimaERP.EmpleadoProducto
             // cerrar formulario MDIProductos
             this.Close();
         }
+
+        private void MDIProductos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
