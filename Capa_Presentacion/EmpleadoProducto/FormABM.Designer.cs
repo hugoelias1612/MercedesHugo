@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TLPMain = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -40,6 +40,22 @@
             this.btnBaja = new System.Windows.Forms.Button();
             this.btnAlta = new System.Windows.Forms.Button();
             this.pnlContenido = new System.Windows.Forms.Panel();
+            this.PModificacion = new System.Windows.Forms.Panel();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.DGResultadosMod = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbxMarcaMod = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNombreMod = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnBuscarMod = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbxFamiliaMod = new System.Windows.Forms.ComboBox();
             this.PBaja = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tlpBotonesBV = new System.Windows.Forms.TableLayoutPanel();
@@ -88,36 +104,25 @@
             this.txtPrecioUnit = new System.Windows.Forms.TextBox();
             this.lblPresentacion = new System.Windows.Forms.Label();
             this.cbxPresentacion = new System.Windows.Forms.ComboBox();
-            this.PModificacion = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnidadesBulto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.txtBuscarDni = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnEditar = new System.Windows.Forms.Button();
+            this.colSeleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFamilia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colUnidadesPorBulto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TLPMain.SuspendLayout();
             this.panel1.SuspendLayout();
             this.PNav.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.pnlContenido.SuspendLayout();
+            this.PModificacion.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGResultadosMod)).BeginInit();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.PBaja.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tlpBotonesBV.SuspendLayout();
@@ -130,12 +135,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudUnidadesIniciales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudBultosIniciales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudUPB)).BeginInit();
-            this.PModificacion.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -274,6 +273,247 @@
             this.pnlContenido.Size = new System.Drawing.Size(1144, 414);
             this.pnlContenido.TabIndex = 2;
             // 
+            // PModificacion
+            // 
+            this.PModificacion.Controls.Add(this.btnEditar);
+            this.PModificacion.Controls.Add(this.tableLayoutPanel3);
+            this.PModificacion.Controls.Add(this.tableLayoutPanel5);
+            this.PModificacion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PModificacion.Location = new System.Drawing.Point(8, 8);
+            this.PModificacion.Margin = new System.Windows.Forms.Padding(0);
+            this.PModificacion.Name = "PModificacion";
+            this.PModificacion.Size = new System.Drawing.Size(1128, 398);
+            this.PModificacion.TabIndex = 6;
+            this.PModificacion.Visible = false;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEditar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnEditar.Location = new System.Drawing.Point(385, 363);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(352, 29);
+            this.btnEditar.TabIndex = 3;
+            this.btnEditar.TabStop = false;
+            this.btnEditar.Text = "Editar producto seleccionado.";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.7078F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.03226F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.32258F));
+            this.tableLayoutPanel3.Controls.Add(this.DGResultadosMod, 1, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(2, 49);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 311F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1240, 311);
+            this.tableLayoutPanel3.TabIndex = 1;
+            // 
+            // DGResultadosMod
+            // 
+            this.DGResultadosMod.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DGResultadosMod.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGResultadosMod.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.DGResultadosMod.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DGResultadosMod.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGResultadosMod.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colSeleccionar,
+            this.colPrecio,
+            this.colNombre,
+            this.colFamilia,
+            this.colMarca,
+            this.colUnidadesPorBulto});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGResultadosMod.DefaultCellStyle = dataGridViewCellStyle1;
+            this.DGResultadosMod.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
+            this.DGResultadosMod.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.DGResultadosMod.Location = new System.Drawing.Point(133, 4);
+            this.DGResultadosMod.Margin = new System.Windows.Forms.Padding(1, 4, 1, 1);
+            this.DGResultadosMod.Name = "DGResultadosMod";
+            this.DGResultadosMod.RowHeadersVisible = false;
+            this.DGResultadosMod.RowHeadersWidth = 51;
+            this.DGResultadosMod.RowTemplate.Height = 24;
+            this.DGResultadosMod.Size = new System.Drawing.Size(977, 306);
+            this.DGResultadosMod.TabIndex = 1;
+            this.DGResultadosMod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9686F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.97102F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 1, 0);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1242, 54);
+            this.tableLayoutPanel5.TabIndex = 0;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 6;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel6.Controls.Add(this.cbxMarcaMod, 2, 1);
+            this.tableLayoutPanel6.Controls.Add(this.label2, 3, 0);
+            this.tableLayoutPanel6.Controls.Add(this.label3, 2, 0);
+            this.tableLayoutPanel6.Controls.Add(this.txtNombreMod, 3, 1);
+            this.tableLayoutPanel6.Controls.Add(this.panel3, 5, 1);
+            this.tableLayoutPanel6.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.comboBox1, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.label4, 4, 0);
+            this.tableLayoutPanel6.Controls.Add(this.cbxFamiliaMod, 4, 1);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(210, 0);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 2;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.47619F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59.52381F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(720, 54);
+            this.tableLayoutPanel6.TabIndex = 0;
+            // 
+            // cbxMarcaMod
+            // 
+            this.cbxMarcaMod.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbxMarcaMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxMarcaMod.FormattingEnabled = true;
+            this.cbxMarcaMod.Location = new System.Drawing.Point(228, 27);
+            this.cbxMarcaMod.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxMarcaMod.Name = "cbxMarcaMod";
+            this.cbxMarcaMod.Size = new System.Drawing.Size(120, 21);
+            this.cbxMarcaMod.TabIndex = 9;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(391, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 21);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Nombre";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(255, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 21);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Marca";
+            // 
+            // txtNombreMod
+            // 
+            this.txtNombreMod.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNombreMod.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreMod.Location = new System.Drawing.Point(376, 26);
+            this.txtNombreMod.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombreMod.Name = "txtNombreMod";
+            this.txtNombreMod.Size = new System.Drawing.Size(112, 23);
+            this.txtNombreMod.TabIndex = 12;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnBuscarMod);
+            this.panel3.Location = new System.Drawing.Point(650, 23);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(64, 28);
+            this.panel3.TabIndex = 13;
+            // 
+            // btnBuscarMod
+            // 
+            this.btnBuscarMod.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnBuscarMod.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnBuscarMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarMod.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBuscarMod.Location = new System.Drawing.Point(0, 0);
+            this.btnBuscarMod.Margin = new System.Windows.Forms.Padding(1);
+            this.btnBuscarMod.Name = "btnBuscarMod";
+            this.btnBuscarMod.Size = new System.Drawing.Size(64, 28);
+            this.btnBuscarMod.TabIndex = 0;
+            this.btnBuscarMod.Text = "Buscar";
+            this.btnBuscarMod.UseVisualStyleBackColor = false;
+            this.btnBuscarMod.Click += new System.EventHandler(this.btnBuscarMod_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 21);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Proveedor";
+            this.label1.Visible = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(2, 27);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(68, 21);
+            this.comboBox1.TabIndex = 11;
+            this.comboBox1.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(540, 0);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 21);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Familia";
+            // 
+            // cbxFamiliaMod
+            // 
+            this.cbxFamiliaMod.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbxFamiliaMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxFamiliaMod.FormattingEnabled = true;
+            this.cbxFamiliaMod.Location = new System.Drawing.Point(523, 27);
+            this.cbxFamiliaMod.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxFamiliaMod.Name = "cbxFamiliaMod";
+            this.cbxFamiliaMod.Size = new System.Drawing.Size(106, 21);
+            this.cbxFamiliaMod.TabIndex = 5;
+            // 
             // PBaja
             // 
             this.PBaja.Controls.Add(this.tableLayoutPanel2);
@@ -364,14 +604,14 @@
             this.Familia,
             this.Marca,
             this.Proveedor});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGResultadosBaja.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGResultadosBaja.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGResultadosBaja.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.DGResultadosBaja.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DGResultadosBaja.Location = new System.Drawing.Point(205, 4);
@@ -883,273 +1123,6 @@
             this.cbxPresentacion.Size = new System.Drawing.Size(178, 21);
             this.cbxPresentacion.TabIndex = 66;
             // 
-            // PModificacion
-            // 
-            this.PModificacion.Controls.Add(this.btnEditar);
-            this.PModificacion.Controls.Add(this.tableLayoutPanel3);
-            this.PModificacion.Controls.Add(this.tableLayoutPanel5);
-            this.PModificacion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PModificacion.Location = new System.Drawing.Point(8, 8);
-            this.PModificacion.Margin = new System.Windows.Forms.Padding(0);
-            this.PModificacion.Name = "PModificacion";
-            this.PModificacion.Size = new System.Drawing.Size(1128, 398);
-            this.PModificacion.TabIndex = 6;
-            this.PModificacion.Visible = false;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.7078F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.03226F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.32258F));
-            this.tableLayoutPanel3.Controls.Add(this.dataGridView1, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(2, 49);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 340F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1240, 311);
-            this.tableLayoutPanel3.TabIndex = 1;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.UnidadesBulto});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.Location = new System.Drawing.Point(133, 4);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(1, 4, 1, 1);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(977, 306);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Modificar";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Precio unitario";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Familia";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Marca";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Proveedor";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // UnidadesBulto
-            // 
-            this.UnidadesBulto.HeaderText = "U. x Bulto";
-            this.UnidadesBulto.MinimumWidth = 6;
-            this.UnidadesBulto.Name = "UnidadesBulto";
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 3;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9686F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.97102F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 1, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1242, 54);
-            this.tableLayoutPanel5.TabIndex = 0;
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 6;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel6.Controls.Add(this.comboBox2, 2, 1);
-            this.tableLayoutPanel6.Controls.Add(this.label2, 3, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label3, 2, 0);
-            this.tableLayoutPanel6.Controls.Add(this.txtBuscarDni, 3, 1);
-            this.tableLayoutPanel6.Controls.Add(this.panel3, 5, 1);
-            this.tableLayoutPanel6.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.comboBox1, 0, 1);
-            this.tableLayoutPanel6.Controls.Add(this.label4, 4, 0);
-            this.tableLayoutPanel6.Controls.Add(this.comboBox3, 4, 1);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(210, 0);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 2;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.47619F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59.52381F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(720, 54);
-            this.tableLayoutPanel6.TabIndex = 0;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(2, 27);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(68, 21);
-            this.comboBox1.TabIndex = 11;
-            this.comboBox1.Visible = false;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(228, 27);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(120, 21);
-            this.comboBox2.TabIndex = 9;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 21);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Proveedor";
-            this.label1.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(391, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 21);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Nombre";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(255, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 21);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Marca";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(540, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 21);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Familia";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(523, 27);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(106, 21);
-            this.comboBox3.TabIndex = 5;
-            // 
-            // txtBuscarDni
-            // 
-            this.txtBuscarDni.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBuscarDni.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarDni.Location = new System.Drawing.Point(376, 26);
-            this.txtBuscarDni.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBuscarDni.Name = "txtBuscarDni";
-            this.txtBuscarDni.Size = new System.Drawing.Size(112, 23);
-            this.txtBuscarDni.TabIndex = 12;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Location = new System.Drawing.Point(650, 23);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(64, 28);
-            this.panel3.TabIndex = 13;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Margin = new System.Windows.Forms.Padding(1);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(64, 28);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Buscar";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // pnlFooter
             // 
             this.pnlFooter.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -1163,20 +1136,43 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // btnEditar
+            // colSeleccionar
             // 
-            this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEditar.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnEditar.Location = new System.Drawing.Point(385, 363);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(352, 29);
-            this.btnEditar.TabIndex = 3;
-            this.btnEditar.TabStop = false;
-            this.btnEditar.Text = "Editar producto seleccionado.";
-            this.btnEditar.UseVisualStyleBackColor = false;
+            this.colSeleccionar.HeaderText = "Modificar";
+            this.colSeleccionar.MinimumWidth = 6;
+            this.colSeleccionar.Name = "colSeleccionar";
+            this.colSeleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colSeleccionar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // colPrecio
+            // 
+            this.colPrecio.HeaderText = "Precio unitario";
+            this.colPrecio.MinimumWidth = 6;
+            this.colPrecio.Name = "colPrecio";
+            // 
+            // colNombre
+            // 
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.MinimumWidth = 6;
+            this.colNombre.Name = "colNombre";
+            // 
+            // colFamilia
+            // 
+            this.colFamilia.HeaderText = "Familia";
+            this.colFamilia.MinimumWidth = 6;
+            this.colFamilia.Name = "colFamilia";
+            // 
+            // colMarca
+            // 
+            this.colMarca.HeaderText = "Marca";
+            this.colMarca.MinimumWidth = 6;
+            this.colMarca.Name = "colMarca";
+            // 
+            // colUnidadesPorBulto
+            // 
+            this.colUnidadesPorBulto.HeaderText = "U. x Bulto";
+            this.colUnidadesPorBulto.MinimumWidth = 6;
+            this.colUnidadesPorBulto.Name = "colUnidadesPorBulto";
             // 
             // FormABM
             // 
@@ -1195,6 +1191,13 @@
             this.PNav.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.pnlContenido.ResumeLayout(false);
+            this.PModificacion.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DGResultadosMod)).EndInit();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.PBaja.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tlpBotonesBV.ResumeLayout(false);
@@ -1209,13 +1212,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudUnidadesIniciales)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudBultosIniciales)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudUPB)).EndInit();
-            this.PModificacion.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel6.ResumeLayout(false);
-            this.tableLayoutPanel6.PerformLayout();
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
@@ -1231,26 +1227,19 @@
         private System.Windows.Forms.Panel pnlContenido;
         private System.Windows.Forms.Panel PModificacion;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UnidadesBulto;
+        private System.Windows.Forms.DataGridView DGResultadosMod;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbxMarcaMod;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox txtBuscarDni;
+        private System.Windows.Forms.ComboBox cbxFamiliaMod;
+        private System.Windows.Forms.TextBox txtNombreMod;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnBuscarMod;
         private System.Windows.Forms.Panel PAlta;
         private System.Windows.Forms.TableLayoutPanel tlpAlta;
         private System.Windows.Forms.Label lblUnidadesIniciales;
@@ -1305,5 +1294,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn Proveedor;
         private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn colSeleccionar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFamilia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMarca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colUnidadesPorBulto;
     }
 }

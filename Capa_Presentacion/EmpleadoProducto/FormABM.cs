@@ -27,6 +27,8 @@ namespace ArimaERP.EmpleadoProducto
                 { 4, (51, 60) },  // Higiene personal
                 { 6, (61, 70) }   // Cuidado doméstico
             };
+        private bool _modificacionInicializada = false;
+        private bool _cargandoFiltrosMod = false;
 
         public FormABM()
         {
@@ -46,6 +48,14 @@ namespace ArimaERP.EmpleadoProducto
             DGResultadosBaja.CellContentClick += DGResultadosBaja_CellContentClick;
             btnVerBajas.Click += btnVerBajas_Click;
 
+            btnBuscarMod.Click += btnBuscarMod_Click;
+            btnEditar.Click += btnEditar_Click;
+            cbxFamiliaMod.SelectedIndexChanged += FiltrosModificacion_Changed;
+            cbxMarcaMod.SelectedIndexChanged += FiltrosModificacion_Changed;
+            txtNombreMod.KeyDown += TxtNombreMod_KeyDown;
+            DGResultadosMod.CurrentCellDirtyStateChanged += DGResultadosMod_CurrentCellDirtyStateChanged;
+
+            InicializarGrillaMod();
             InicializarGrillaBaja();
         }
 
@@ -55,18 +65,7 @@ namespace ArimaERP.EmpleadoProducto
             CargarProveedores();
             CargarMarcas();
             CargarFiltrosBaja();
-
-            LimpiarPresentaciones();
-
-            // Inicializar NumericUpDown
-            nudUPB.Value = 0;
-            nudBultosIniciales.Value = 0;
-            nudUnidadesIniciales.Value = 0;
-
-            // Mostrar panel Alta por defecto
-            PAlta.Visible = true;
-            PBaja.Visible = false;
-            PModificacion.Visible = false;
+            CargarFiltrosModificacion();
         }
 
         // Validar que Nombre solo contenga letras y espacios
@@ -277,6 +276,13 @@ namespace ArimaERP.EmpleadoProducto
         {
             PAlta.Visible = false;
             PBaja.Visible = false;
+            PModificacion.Visible = true;
+
+        }
+
+        private void DGResultadosMod_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Lógica adicional si se necesita
         }
 
         private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
@@ -445,6 +451,223 @@ namespace ArimaERP.EmpleadoProducto
             {
                 DGResultadosBaja.Columns["Precio"].DefaultCellStyle.Format = "C2";
                 DGResultadosBaja.Columns["Precio"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            }
+        }
+        private void InicializarGrillaMod()
+        {
+            DGResultadosMod.AutoGenerateColumns = false;
+            DGResultadosMod.DataSource = null;
+            DGResultadosMod.Rows.Clear();
+            DGResultadosMod.AllowUserToAddRows = false;
+            DGResultadosMod.MultiSelect = false;
+            DGResultadosMod.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            if (DGResultadosMod.Columns["colPrecio"] != null)
+            {
+                DGResultadosMod.Columns["colPrecio"].DefaultCellStyle.Format = "C2";
+                DGResultadosMod.Columns["colPrecio"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            }
+        }
+
+        private void CargarFiltrosModificacion()
+        {
+            _cargandoFiltrosMod = true;
+
+            try
+            {
+                CargarFamiliasMod();
+                CargarMarcasMod();
+            }
+            finally
+            {
+                _cargandoFiltrosMod = false;
+            }
+        }
+
+        private void CargarFamiliasMod()
+        {
+            var familias = _familiaLogica.ObtenerTodasLasFamilias() ?? new List<FAMILIA>();
+
+            if (familias.Count == 0 && _familiaLogica.ErroresValidacion.Any())
+            {
+                MessageBox.Show(
+                    string.Join(Environment.NewLine, _familiaLogica.ErroresValidacion),
+                    "Error al cargar familias",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+
+            var familiasConOpcionTodas = new List<FAMILIA>
+            {
+                new FAMILIA { id_familia = 0, descripcion = "Todas" }
+            };
+            familiasConOpcionTodas.AddRange(familias.OrderBy(f => f.descripcion));
+
+            cbxFamiliaMod.DataSource = familiasConOpcionTodas;
+            cbxFamiliaMod.DisplayMember = nameof(FAMILIA.descripcion);
+            cbxFamiliaMod.ValueMember = nameof(FAMILIA.id_familia);
+            cbxFamiliaMod.SelectedIndex = 0;
+        }
+
+        private void CargarMarcasMod()
+        {
+            var marcas = _marcaLogica.ObtenerTodasLasMarcas() ?? new List<MARCA>();
+
+            if (marcas.Count == 0 && _marcaLogica.ErroresValidacion.Any())
+            {
+                MessageBox.Show(
+                    string.Join(Environment.NewLine, _marcaLogica.ErroresValidacion),
+                    "Error al cargar marcas",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+
+            var marcasConOpcionTodas = new List<MARCA>
+            {
+                new MARCA { id_marca = 0, nombre = "Todas" }
+            };
+            marcasConOpcionTodas.AddRange(marcas.OrderBy(m => m.nombre));
+
+            cbxMarcaMod.DataSource = marcasConOpcionTodas;
+            cbxMarcaMod.DisplayMember = nameof(MARCA.nombre);
+            cbxMarcaMod.ValueMember = nameof(MARCA.id_marca);
+            cbxMarcaMod.SelectedIndex = 0;
+        }
+
+        private void btnBuscarMod_Click(object sender, EventArgs e)
+        {
+            EjecutarBusquedaModificacion();
+        }
+
+        private void FiltrosModificacion_Changed(object sender, EventArgs e)
+        {
+            if (_cargandoFiltrosMod)
+            {
+                return;
+            }
+
+            if (PModificacion.Visible)
+            {
+                EjecutarBusquedaModificacion();
+            }
+        }
+
+        private void TxtNombreMod_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+                EjecutarBusquedaModificacion();
+            }
+        }
+
+        private void DGResultadosMod_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        {
+            if (DGResultadosMod.IsCurrentCellDirty)
+            {
+                DGResultadosMod.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            }
+        }
+
+        private void DGResultadosMod_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.ColumnIndex < 0)
+            {
+                return;
+            }
+
+            if (DGResultadosMod.Columns[e.ColumnIndex].Name == "colSeleccionar")
+            {
+                DGResultadosMod.EndEdit();
+
+                bool marcado = Convert.ToBoolean(DGResultadosMod.Rows[e.RowIndex].Cells[e.ColumnIndex].Value ?? false);
+
+                if (marcado)
+                {
+                    foreach (DataGridViewRow row in DGResultadosMod.Rows)
+                    {
+                        if (row.Index != e.RowIndex)
+                        {
+                            row.Cells[e.ColumnIndex].Value = false;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void EjecutarBusquedaModificacion()
+        {
+            string termino = txtNombreMod.Text.Trim();
+            int? familiaId = cbxFamiliaMod.SelectedValue is int idFamilia && idFamilia != 0 ? idFamilia : (int?)null;
+            int? marcaId = cbxMarcaMod.SelectedValue is int idMarca && idMarca != 0 ? idMarca : (int?)null;
+
+            var productos = _productoLogica.BuscarCatalogoProductos(termino, familiaId, marcaId, null, true);
+
+            if (_productoLogica.ErroresValidacion.Any())
+            {
+                MessageBox.Show(
+                    string.Join(Environment.NewLine, _productoLogica.ErroresValidacion),
+                    "Error al buscar productos",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
+
+            ActualizarResultadosMod(productos);
+            _modificacionInicializada = true;
+        }
+
+        private void ActualizarResultadosMod(IEnumerable<ProductoCatalogoDto> productos)
+        {
+            DGResultadosMod.EndEdit();
+            DGResultadosMod.Rows.Clear();
+
+            foreach (var producto in productos)
+            {
+                string proveedorMostrado = string.IsNullOrWhiteSpace(producto.Proveedor)
+                    ? "Sin proveedor asignado"
+                    : producto.Proveedor;
+
+                var culturaMoneda = CultureInfo.GetCultureInfo("es-AR");
+
+                string precioFormateado = producto.PrecioLista.ToString("C2", culturaMoneda);
+
+                int index = DGResultadosMod.Rows.Add(false, precioFormateado, producto.Nombre, producto.Familia, producto.Marca, proveedorMostrado, producto.UnidadesPorBulto);
+                DGResultadosMod.Rows[index].Tag = producto;
+            }
+
+            if (!DGResultadosMod.Rows.Cast<DataGridViewRow>().Any(r => !r.IsNewRow))
+            {
+                MessageBox.Show("No se encontraron productos con los filtros seleccionados.", "Sin resultados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private ProductoCatalogoDto ObtenerProductoSeleccionadoParaModificar()
+        {
+            return DGResultadosMod.Rows
+                .Cast<DataGridViewRow>()
+                .Where(r => !r.IsNewRow && Convert.ToBoolean(r.Cells["colSeleccionar"].Value ?? false))
+                .Select(r => r.Tag as ProductoCatalogoDto)
+                .FirstOrDefault(p => p != null);
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            var productoSeleccionado = ObtenerProductoSeleccionadoParaModificar();
+
+            if (productoSeleccionado == null)
+            {
+                MessageBox.Show("Seleccione un producto para editar.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            using (var form = new FormEditarProducto(productoSeleccionado))
+            {
+                if (form.ShowDialog(this) == DialogResult.OK)
+                {
+                    EjecutarBusquedaModificacion();
+                }
             }
         }
 
@@ -655,7 +878,6 @@ namespace ArimaERP.EmpleadoProducto
                 form.ShowDialog(this);
             }
         }
-
 
     }
 }
