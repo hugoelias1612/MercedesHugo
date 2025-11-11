@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ArimaERP;
+
 
 namespace ArimaERP.EmpleadoProducto
 {
@@ -80,7 +82,9 @@ namespace ArimaERP.EmpleadoProducto
 
         private void MDIProductos_Load(object sender, EventArgs e)
         {
-
+            lblNombre.Text = $"Nombre: {UsuarioSesion.Nombre}";
+            lblRol.Text = $"Rol: {UsuarioSesion.RolDescripcion}";
+            lblFecha.Text = $"Fecha: {DateTime.Now:dd/MM/yyyy}";
         }
     }
 }
