@@ -516,7 +516,13 @@ namespace Capa_Datos
         }
 
         //obtener productos con stock crítico
-        public List<ProductoCatalogoDto> ObtenerProductosConStockCritico()
+
+        //obtener productos con stock crítico
+        public List<ProductoCatalogoDto> ObtenerProductosConStockCritico(
+             int? idFamilia = null,
+             int? idProveedor = null,
+             int? stockMaximo = null,
+             bool soloStockInsuficiente = false)
         {
             try
             {
@@ -530,26 +536,71 @@ namespace Capa_Datos
                                 join familia in context.FAMILIA on producto.id_familia equals familia.id_familia
                                 join marca in context.MARCA on producto.id_marca equals marca.id_marca
                                 join presentacion in context.PRESENTACION on stockRegistro.ID_presentacion equals presentacion.ID_presentacion
-                                where stockRegistro.stock_actual <= stockRegistro.umbral_stock
-                                select new ProductoCatalogoDto
-                                {
-                                    IdProducto = producto.id_producto,
-                                    IdPresentacion = presentacion.ID_presentacion,
-                                    Codigo = pp.cod_producto,
-                                    Nombre = producto.nombre,
-                                    Marca = marca.nombre,
-                                    Familia = familia.descripcion,
-                                    Presentacion = presentacion.descripcion,
-                                    PrecioLista = pp.precioLista,
-                                    UnidadesPorBulto = pp.unidades_bulto,
-                                    Activo = pp.activo,
-                                    StockActual = stockRegistro.stock_actual,
-                                    UmbralStock = stockRegistro.umbral_stock
-                                };
+                                from proveedor in marca.PROVEEDOR.DefaultIfEmpty()
+                                select new { stockRegistro, pp, producto, familia, marca, presentacion, proveedor };
+
+                    if (soloStockInsuficiente)
+                    {
+                        query = query.Where(x => x.stockRegistro.stock_actual < x.stockRegistro.umbral_stock);
+                    }
+
+                    if (stockMaximo.HasValue)
+                    {
+                        int maximo = stockMaximo.Value;
+                        query = query.Where(x => x.stockRegistro.stock_actual <= maximo);
+                    }
+
+                    if (idFamilia.HasValue)
+                    {
+                        int familiaId = idFamilia.Value;
+                        query = query.Where(x => x.producto.id_familia == familiaId);
+                    }
+
+                    if (idProveedor.HasValue)
+                    {
+                        int proveedorId = idProveedor.Value;
+                        query = query.Where(x => x.proveedor != null && x.proveedor.id_proveedor == proveedorId);
+                    }
 
                     return query
-                        .OrderBy(x => x.StockActual - x.UmbralStock)
-                        .ThenBy(x => x.Nombre)
+                        .OrderBy(x => x.stockRegistro.stock_actual - x.stockRegistro.umbral_stock)
+                        .ThenBy(x => x.producto.nombre)
+                        .Select(x => new
+                        {
+                            Dto = new ProductoCatalogoDto
+                            {
+                                IdProducto = x.pp.id_producto,
+                                IdPresentacion = x.pp.ID_presentacion,
+                                Codigo = x.pp.cod_producto,
+                                Nombre = x.producto.nombre,
+                                Marca = x.marca.nombre,
+                                Familia = x.familia.descripcion,
+                                Presentacion = x.presentacion.descripcion,
+                                PrecioLista = x.pp.precioLista,
+                                UnidadesPorBulto = x.pp.unidades_bulto,
+                                Activo = x.pp.activo,
+                                StockActual = x.stockRegistro.stock_actual,
+                                UmbralStock = x.stockRegistro.umbral_stock
+                            },
+                            ProveedorNombre = x.proveedor != null ? x.proveedor.nombre : string.Empty
+                        })
+                        .AsEnumerable()
+                        .GroupBy(x => new { x.Dto.IdProducto, x.Dto.IdPresentacion })
+                        .Select(g =>
+                        {
+                            var producto = g.First().Dto;
+                            var proveedores = g
+                                .Select(x => x.ProveedorNombre)
+                                .Where(nombre => !string.IsNullOrWhiteSpace(nombre))
+                                .Distinct()
+                                .ToList();
+
+                            producto.Proveedor = proveedores.Any()
+                                ? string.Join(" / ", proveedores)
+                                : string.Empty;
+
+                            return producto;
+                        })
                         .ToList();
                 }
             }
