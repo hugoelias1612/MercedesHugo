@@ -155,7 +155,7 @@ namespace Capa_Logica
             return resultado;
         }
 
-        //ajustar stock actual en base a un movimiento
+        //ajustar stock actual en base a un movimientoS
         public bool AjustarStock(int idProducto, int idPresentacion, int cantidad)
         {
             var resultado = classProducto.AjustarStock(idProducto, idPresentacion, cantidad);
@@ -180,9 +180,17 @@ namespace Capa_Logica
         }
 
         //obtener productos con stock crítico
-        public List<ProductoCatalogoDto> ObtenerProductosConStockCritico()
+        public List<ProductoCatalogoDto> ObtenerProductosConStockCritico(
+               int? idFamilia = null,
+               int? idProveedor = null,
+               int? stockMaximo = null,
+               bool soloStockInsuficiente = false)
         {
-            var productos = classProducto.ObtenerProductosConStockCritico();
+            var productos = classProducto.ObtenerProductosConStockCritico(
+                idFamilia,
+                idProveedor,
+                stockMaximo,
+                soloStockInsuficiente);
             ErroresValidacion = classProducto.ErroresValidacion;
             return productos;
         }

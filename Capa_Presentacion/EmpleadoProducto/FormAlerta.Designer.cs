@@ -119,17 +119,17 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.Controls.Add(this.CbOrden, 6, 1);
-            this.tableLayoutPanel2.Controls.Add(this.CbProveedor, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.lblMenorUmbral, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.label8, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.LProveedor, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label11, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.CbFamilia, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.NStockMax, 4, 1);
             this.tableLayoutPanel2.Controls.Add(this.CheckBoxUmbral, 5, 1);
             this.tableLayoutPanel2.Controls.Add(this.TNombreContiene, 3, 1);
             this.tableLayoutPanel2.Controls.Add(this.label12, 6, 0);
             this.tableLayoutPanel2.Controls.Add(this.label9, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label11, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.CbFamilia, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.CbProveedor, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.LProveedor, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 54);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
@@ -163,10 +163,11 @@
             this.CbProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbProveedor.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbProveedor.FormattingEnabled = true;
-            this.CbProveedor.Location = new System.Drawing.Point(381, 34);
+            this.CbProveedor.Location = new System.Drawing.Point(255, 34);
             this.CbProveedor.Name = "CbProveedor";
             this.CbProveedor.Size = new System.Drawing.Size(120, 21);
             this.CbProveedor.TabIndex = 11;
+            this.CbProveedor.Visible = false;
             // 
             // lblMenorUmbral
             // 
@@ -195,11 +196,12 @@
             this.LProveedor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LProveedor.AutoSize = true;
             this.LProveedor.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LProveedor.Location = new System.Drawing.Point(391, 3);
+            this.LProveedor.Location = new System.Drawing.Point(265, 3);
             this.LProveedor.Name = "LProveedor";
             this.LProveedor.Size = new System.Drawing.Size(99, 25);
             this.LProveedor.TabIndex = 3;
             this.LProveedor.Text = "Proveedor";
+            this.LProveedor.Visible = false;
             // 
             // label11
             // 
@@ -207,7 +209,7 @@
             this.label11.AutoSize = true;
             this.label11.Cursor = System.Windows.Forms.Cursors.SizeNESW;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(279, 3);
+            this.label11.Location = new System.Drawing.Point(405, 3);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(71, 25);
             this.label11.TabIndex = 0;
@@ -220,7 +222,7 @@
             this.CbFamilia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbFamilia.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbFamilia.FormattingEnabled = true;
-            this.CbFamilia.Location = new System.Drawing.Point(255, 34);
+            this.CbFamilia.Location = new System.Drawing.Point(381, 34);
             this.CbFamilia.Name = "CbFamilia";
             this.CbFamilia.Size = new System.Drawing.Size(120, 21);
             this.CbFamilia.TabIndex = 1;
@@ -231,7 +233,7 @@
             this.NStockMax.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NStockMax.Location = new System.Drawing.Point(665, 34);
             this.NStockMax.Maximum = new decimal(new int[] {
-            1000,
+            400,
             0,
             0,
             0});
@@ -410,6 +412,7 @@
             this.DGResultados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGResultados.Size = new System.Drawing.Size(1264, 322);
             this.DGResultados.TabIndex = 0;
+            this.DGResultados.Visible = false;
             // 
             // ColumnaNombre
             // 
