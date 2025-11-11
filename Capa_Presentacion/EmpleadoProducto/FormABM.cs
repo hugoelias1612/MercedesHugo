@@ -172,16 +172,8 @@ namespace ArimaERP.EmpleadoProducto
                 errorProvider1.SetError(txtPrecioUnit, string.Empty);
             }
 
-            int unidadesPorBulto = (int)nudUPB.Value;
-            if (unidadesPorBulto <= 0)
-            {
-                mensajesError.Add("Las unidades por bulto deben ser mayores a cero.");
-                errorProvider1.SetError(nudUPB, "Ingrese un valor mayor a cero.");
-            }
-            else
-            {
-                errorProvider1.SetError(nudUPB, string.Empty);
-            }
+            // Se elimina la validación que obligaba unidadesPorBulto > 0.
+            int unidadesPorBulto = (int)nudBultosIniciales.Value;
 
             int bultosIniciales = (int)nudBultosIniciales.Value;
             if (bultosIniciales < 0)
@@ -211,14 +203,27 @@ namespace ArimaERP.EmpleadoProducto
                 return;
             }
 
-            int stockInicial = (bultosIniciales * unidadesPorBulto) + unidadesIniciales;
-            int umbralStock = unidadesPorBulto > 0 ? unidadesPorBulto : 0;
+            int stockInicial = unidadesIniciales;
+            int umbralStock = unidadesPorBulto;
 
-            bool creado = _productoLogica.CrearProducto(nombre, familiaId, marcaId, codigoProducto, precioLista, unidadesPorBulto, presentacionId, stockInicial, umbralStock);
+            bool creado;
+            try
+            {
+                creado = _productoLogica.CrearProducto(nombre, familiaId, marcaId, codigoProducto, precioLista, presentacionId, stockInicial, umbralStock);
+            }
+            catch (Exception ex)
+            {
+                // Mostrar la excepción interna para facilitar el diagnóstico (no cambiar lógica de negocio)
+                string detalle = ex.Message;
+                if (ex.InnerException != null)
+                    detalle += Environment.NewLine + "Inner: " + ex.InnerException.Message;
+                MessageBox.Show($"Error al crear el producto: {detalle}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             if (!creado)
             {
-                string mensajeError = _productoLogica.ErroresValidacion.Any()
+                string mensajeError = (_productoLogica.ErroresValidacion != null && _productoLogica.ErroresValidacion.Any())
                     ? string.Join(Environment.NewLine, _productoLogica.ErroresValidacion)
                     : "No se pudo crear el producto. Intente nuevamente.";
 
