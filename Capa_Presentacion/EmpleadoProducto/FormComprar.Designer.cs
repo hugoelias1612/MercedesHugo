@@ -57,15 +57,15 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Agregar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Agregar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Familia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TLPBase.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -484,6 +484,28 @@
             this.panel1.Size = new System.Drawing.Size(1264, 40);
             this.panel1.TabIndex = 3;
             // 
+            // Producto
+            // 
+            this.Producto.HeaderText = "Producto";
+            this.Producto.MinimumWidth = 6;
+            this.Producto.Name = "Producto";
+            this.Producto.Width = 200;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.FillWeight = 150F;
+            this.Cantidad.HeaderText = "Cantidad a comprar";
+            this.Cantidad.MinimumWidth = 6;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.Width = 130;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.MinimumWidth = 6;
+            this.Total.Name = "Total";
+            this.Total.Width = 110;
+            // 
             // Agregar
             // 
             this.Agregar.HeaderText = "Agregar";
@@ -492,6 +514,8 @@
             this.Agregar.ReadOnly = true;
             this.Agregar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Agregar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Agregar.Text = "Agregar";
+            this.Agregar.UseColumnTextForButtonValue = true;
             this.Agregar.Width = 125;
             // 
             // Nombre
@@ -533,28 +557,6 @@
             this.Marca.Name = "Marca";
             this.Marca.ReadOnly = true;
             this.Marca.Width = 125;
-            // 
-            // Producto
-            // 
-            this.Producto.HeaderText = "Producto";
-            this.Producto.MinimumWidth = 6;
-            this.Producto.Name = "Producto";
-            this.Producto.Width = 200;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.FillWeight = 150F;
-            this.Cantidad.HeaderText = "Cantidad a comprar";
-            this.Cantidad.MinimumWidth = 6;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Width = 130;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.MinimumWidth = 6;
-            this.Total.Name = "Total";
-            this.Total.Width = 110;
             // 
             // FormComprar
             // 
@@ -615,14 +617,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label labelTitulo;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Agregar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewButtonColumn Agregar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
         private System.Windows.Forms.DataGridViewTextBoxColumn Familia;
         private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
     }
 }

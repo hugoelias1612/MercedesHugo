@@ -44,6 +44,12 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.DGResultadosMod = new System.Windows.Forms.DataGridView();
+            this.colSeleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFamilia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colUnidadesPorBulto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.cbxMarcaMod = new System.Windows.Forms.ComboBox();
@@ -106,12 +112,6 @@
             this.cbxPresentacion = new System.Windows.Forms.ComboBox();
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.colSeleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFamilia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colUnidadesPorBulto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TLPMain.SuspendLayout();
             this.panel1.SuspendLayout();
             this.PNav.SuspendLayout();
@@ -262,9 +262,9 @@
             // pnlContenido
             // 
             this.pnlContenido.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pnlContenido.Controls.Add(this.PAlta);
             this.pnlContenido.Controls.Add(this.PModificacion);
             this.pnlContenido.Controls.Add(this.PBaja);
-            this.pnlContenido.Controls.Add(this.PAlta);
             this.pnlContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenido.Location = new System.Drawing.Point(0, 102);
             this.pnlContenido.Margin = new System.Windows.Forms.Padding(0);
@@ -351,6 +351,44 @@
             this.DGResultadosMod.Size = new System.Drawing.Size(977, 306);
             this.DGResultadosMod.TabIndex = 1;
             this.DGResultadosMod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
+            // 
+            // colSeleccionar
+            // 
+            this.colSeleccionar.HeaderText = "Modificar";
+            this.colSeleccionar.MinimumWidth = 6;
+            this.colSeleccionar.Name = "colSeleccionar";
+            this.colSeleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colSeleccionar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // colPrecio
+            // 
+            this.colPrecio.HeaderText = "Precio unitario";
+            this.colPrecio.MinimumWidth = 6;
+            this.colPrecio.Name = "colPrecio";
+            // 
+            // colNombre
+            // 
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.MinimumWidth = 6;
+            this.colNombre.Name = "colNombre";
+            // 
+            // colFamilia
+            // 
+            this.colFamilia.HeaderText = "Familia";
+            this.colFamilia.MinimumWidth = 6;
+            this.colFamilia.Name = "colFamilia";
+            // 
+            // colMarca
+            // 
+            this.colMarca.HeaderText = "Marca";
+            this.colMarca.MinimumWidth = 6;
+            this.colMarca.Name = "colMarca";
+            // 
+            // colUnidadesPorBulto
+            // 
+            this.colUnidadesPorBulto.HeaderText = "U. x Bulto";
+            this.colUnidadesPorBulto.MinimumWidth = 6;
+            this.colUnidadesPorBulto.Name = "colUnidadesPorBulto";
             // 
             // tableLayoutPanel5
             // 
@@ -1135,44 +1173,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // colSeleccionar
-            // 
-            this.colSeleccionar.HeaderText = "Modificar";
-            this.colSeleccionar.MinimumWidth = 6;
-            this.colSeleccionar.Name = "colSeleccionar";
-            this.colSeleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colSeleccionar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // colPrecio
-            // 
-            this.colPrecio.HeaderText = "Precio unitario";
-            this.colPrecio.MinimumWidth = 6;
-            this.colPrecio.Name = "colPrecio";
-            // 
-            // colNombre
-            // 
-            this.colNombre.HeaderText = "Nombre";
-            this.colNombre.MinimumWidth = 6;
-            this.colNombre.Name = "colNombre";
-            // 
-            // colFamilia
-            // 
-            this.colFamilia.HeaderText = "Familia";
-            this.colFamilia.MinimumWidth = 6;
-            this.colFamilia.Name = "colFamilia";
-            // 
-            // colMarca
-            // 
-            this.colMarca.HeaderText = "Marca";
-            this.colMarca.MinimumWidth = 6;
-            this.colMarca.Name = "colMarca";
-            // 
-            // colUnidadesPorBulto
-            // 
-            this.colUnidadesPorBulto.HeaderText = "U. x Bulto";
-            this.colUnidadesPorBulto.MinimumWidth = 6;
-            this.colUnidadesPorBulto.Name = "colUnidadesPorBulto";
             // 
             // FormABM
             // 
