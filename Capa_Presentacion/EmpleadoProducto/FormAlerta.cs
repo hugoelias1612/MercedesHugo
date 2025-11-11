@@ -107,15 +107,77 @@ namespace ArimaERP.EmpleadoProducto
             int? proveedorId = ObtenerValorCombo(CbProveedor);
             int? stockMaximo = ObtenerStockMaximo();
             bool soloStockInsuficiente = CheckBoxUmbral.Checked;
+            string termino = string.IsNullOrWhiteSpace(TNombreContiene.Text) ? null : TNombreContiene.Text.Trim();
 
-            var productos = _productoLogica.ObtenerProductosConStockCritico(
+            // Intentar interpretar término como código si es numérico
+            int codigoBuscado;
+            bool terminoEsCodigo = int.TryParse(termino, out codigoBuscado);
+
+            List<ProductoCatalogoDto> productos;
+            try
+            {
+                productos = _productoLogica.ObtenerProductosConStockCritico(
                     familiaId,
                     proveedorId,
                     stockMaximo,
-                    soloStockInsuficiente)
-                ?? new List<ProductoCatalogoDto>();
+                    soloStockInsuficiente) ?? new List<ProductoCatalogoDto>();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    $"Ocurrió un error al obtener los productos: {ex.Message}",
+                    "Error al buscar productos",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
 
-            if (_productoLogica.ErroresValidacion.Any())
+            // Aplicar filtro por término: buscar en Nombre, Familia, Marca, Presentacion o Codigo
+            if (!string.IsNullOrEmpty(termino))
+            {
+                productos = productos
+                    .Where(p =>
+                        (terminoEsCodigo && p.Codigo == codigoBuscado) ||
+                        (!string.IsNullOrWhiteSpace(p.Nombre) && p.Nombre.IndexOf(termino, StringComparison.OrdinalIgnoreCase) >= 0) ||
+                        (!string.IsNullOrWhiteSpace(p.Familia) && p.Familia.IndexOf(termino, StringComparison.OrdinalIgnoreCase) >= 0) ||
+                        (!string.IsNullOrWhiteSpace(p.Marca) && p.Marca.IndexOf(termino, StringComparison.OrdinalIgnoreCase) >= 0) ||
+                        (!string.IsNullOrWhiteSpace(p.Presentacion) && p.Presentacion.IndexOf(termino, StringComparison.OrdinalIgnoreCase) >= 0))
+                    .ToList();
+            }
+
+            // Aplicar orden según SelectedIndex de CbOrden (si tiene ítems)
+            if (CbOrden.Items.Count > 0)
+            {
+                switch (CbOrden.SelectedIndex)
+                {
+                    case 1:
+                        productos = productos.OrderBy(p => p.Nombre).ToList();
+                        break;
+                    case 2:
+                        productos = productos.OrderBy(p => p.StockActual).ToList();
+                        break;
+                    case 3:
+                        productos = productos.OrderByDescending(p => p.StockActual).ToList();
+                        break;
+                    case 4:
+                        productos = productos.OrderBy(p => p.PrecioLista).ToList();
+                        break;
+                    case 5:
+                        productos = productos.OrderByDescending(p => p.PrecioLista).ToList();
+                        break;
+                    case 6:
+                        productos = productos.OrderBy(p => p.Presentacion).ToList();
+                        break;
+                    case 7:
+                        productos = productos.OrderBy(p => p.Codigo).ToList();
+                        break;
+                    default:
+                        // índice 0 o desconocido => mantener el orden original
+                        break;
+                }
+            }
+
+            if (_productoLogica.ErroresValidacion != null && _productoLogica.ErroresValidacion.Any())
             {
                 MessageBox.Show(
                     string.Join(Environment.NewLine, _productoLogica.ErroresValidacion),
@@ -139,8 +201,11 @@ namespace ArimaERP.EmpleadoProducto
             var datos = productos
                 .Select(p => new
                 {
+                    Codigo = p.Codigo,
                     Producto = p.Nombre,
+                    Marca = string.IsNullOrWhiteSpace(p.Marca) ? "—" : p.Marca,
                     Familia = p.Familia,
+                    Presentacion = string.IsNullOrWhiteSpace(p.Presentacion) ? "—" : p.Presentacion,
                     Proveedor = string.IsNullOrWhiteSpace(p.Proveedor) ? "—" : p.Proveedor,
                     Precio = p.PrecioLista,
                     Stock = p.StockActual,

@@ -60,7 +60,8 @@ namespace Capa_Logica
         }
 
         //crear producto y su presentación asociada
-        public bool CrearProducto(string nombre, int idFamilia, int idMarca, int codigoProducto, decimal precioLista, int unidadesPorBulto, int idPresentacion, int stockInicial, int umbralStock, bool activo = true)
+        // Se añadió 'unidadesPorBulto' en la firma y se asigna a presentacion.unidades_bulto
+        public bool CrearProducto(string nombre, int idFamilia, int idMarca, int codigoProducto, decimal precioLista,  int idPresentacion, int stockInicial, int umbralStock, bool activo = true)
         {
             try
             {
@@ -76,7 +77,7 @@ namespace Capa_Logica
                     ID_presentacion = idPresentacion,
                     cod_producto = codigoProducto,
                     precioLista = precioLista,
-                    unidades_bulto = unidadesPorBulto,
+                    unidades_bulto = umbralStock,
                     activo = activo
                 };
 

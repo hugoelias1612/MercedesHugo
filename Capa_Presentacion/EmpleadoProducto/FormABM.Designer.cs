@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TLPMain = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -332,14 +332,14 @@
             this.colFamilia,
             this.colMarca,
             this.colUnidadesPorBulto});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGResultadosMod.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGResultadosMod.DefaultCellStyle = dataGridViewCellStyle5;
             this.DGResultadosMod.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.DGResultadosMod.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DGResultadosMod.Location = new System.Drawing.Point(133, 4);
@@ -642,14 +642,14 @@
             this.Familia,
             this.Marca,
             this.Proveedor});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGResultadosBaja.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGResultadosBaja.DefaultCellStyle = dataGridViewCellStyle6;
             this.DGResultadosBaja.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.DGResultadosBaja.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DGResultadosBaja.Location = new System.Drawing.Point(205, 4);
@@ -896,16 +896,16 @@
             this.tlpAlta.Controls.Add(this.lblCodigo, 1, 0);
             this.tlpAlta.Controls.Add(this.textBoxCodigo, 2, 0);
             this.tlpAlta.Controls.Add(this.txtNombre, 2, 1);
-            this.tlpAlta.Controls.Add(this.lblUnidadesIniciales, 1, 9);
-            this.tlpAlta.Controls.Add(this.nudUnidadesIniciales, 2, 9);
             this.tlpAlta.Controls.Add(this.nudBultosIniciales, 2, 8);
-            this.tlpAlta.Controls.Add(this.nudUPB, 2, 7);
             this.tlpAlta.Controls.Add(this.lblBultosIniciales, 1, 8);
-            this.tlpAlta.Controls.Add(this.lblUPB, 1, 7);
             this.tlpAlta.Controls.Add(this.lblPrecio, 1, 6);
             this.tlpAlta.Controls.Add(this.txtPrecioUnit, 2, 6);
             this.tlpAlta.Controls.Add(this.lblPresentacion, 1, 5);
             this.tlpAlta.Controls.Add(this.cbxPresentacion, 2, 5);
+            this.tlpAlta.Controls.Add(this.lblUPB, 1, 9);
+            this.tlpAlta.Controls.Add(this.lblUnidadesIniciales, 1, 7);
+            this.tlpAlta.Controls.Add(this.nudUPB, 2, 9);
+            this.tlpAlta.Controls.Add(this.nudUnidadesIniciales, 2, 7);
             this.tlpAlta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpAlta.Location = new System.Drawing.Point(0, 0);
             this.tlpAlta.Margin = new System.Windows.Forms.Padding(0);
@@ -1068,7 +1068,7 @@
             this.lblUnidadesIniciales.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblUnidadesIniciales.AutoSize = true;
             this.lblUnidadesIniciales.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnidadesIniciales.Location = new System.Drawing.Point(308, 321);
+            this.lblUnidadesIniciales.Location = new System.Drawing.Point(308, 249);
             this.lblUnidadesIniciales.Name = "lblUnidadesIniciales";
             this.lblUnidadesIniciales.Size = new System.Drawing.Size(230, 36);
             this.lblUnidadesIniciales.TabIndex = 52;
@@ -1077,7 +1077,7 @@
             // nudUnidadesIniciales
             // 
             this.nudUnidadesIniciales.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nudUnidadesIniciales.Location = new System.Drawing.Point(645, 329);
+            this.nudUnidadesIniciales.Location = new System.Drawing.Point(645, 257);
             this.nudUnidadesIniciales.Name = "nudUnidadesIniciales";
             this.nudUnidadesIniciales.Size = new System.Drawing.Size(120, 20);
             this.nudUnidadesIniciales.TabIndex = 58;
@@ -1093,32 +1093,34 @@
             // nudUPB
             // 
             this.nudUPB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nudUPB.Location = new System.Drawing.Point(645, 257);
+            this.nudUPB.Location = new System.Drawing.Point(645, 329);
             this.nudUPB.Name = "nudUPB";
             this.nudUPB.Size = new System.Drawing.Size(120, 20);
             this.nudUPB.TabIndex = 57;
+            this.nudUPB.Visible = false;
             // 
             // lblBultosIniciales
             // 
             this.lblBultosIniciales.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblBultosIniciales.AutoSize = true;
             this.lblBultosIniciales.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBultosIniciales.Location = new System.Drawing.Point(327, 285);
+            this.lblBultosIniciales.Location = new System.Drawing.Point(307, 285);
             this.lblBultosIniciales.Name = "lblBultosIniciales";
-            this.lblBultosIniciales.Size = new System.Drawing.Size(191, 36);
+            this.lblBultosIniciales.Size = new System.Drawing.Size(231, 36);
             this.lblBultosIniciales.TabIndex = 29;
-            this.lblBultosIniciales.Text = "Bultos Iniciales";
+            this.lblBultosIniciales.Text = "Umbral stock min.";
             // 
             // lblUPB
             // 
             this.lblUPB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblUPB.AutoSize = true;
             this.lblUPB.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUPB.Location = new System.Drawing.Point(299, 249);
+            this.lblUPB.Location = new System.Drawing.Point(299, 321);
             this.lblUPB.Name = "lblUPB";
             this.lblUPB.Size = new System.Drawing.Size(247, 36);
             this.lblUPB.TabIndex = 25;
             this.lblUPB.Text = "Unidades por bulto";
+            this.lblUPB.Visible = false;
             // 
             // lblPrecio
             // 

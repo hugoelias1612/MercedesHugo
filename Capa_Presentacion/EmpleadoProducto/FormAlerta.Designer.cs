@@ -32,17 +32,17 @@
             this.TLPHeader = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.CbOrden = new System.Windows.Forms.ComboBox();
-            this.CbProveedor = new System.Windows.Forms.ComboBox();
             this.lblMenorUmbral = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.LProveedor = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.CbFamilia = new System.Windows.Forms.ComboBox();
             this.NStockMax = new System.Windows.Forms.NumericUpDown();
             this.CheckBoxUmbral = new System.Windows.Forms.CheckBox();
             this.TNombreContiene = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.CbFamilia = new System.Windows.Forms.ComboBox();
+            this.CbProveedor = new System.Windows.Forms.ComboBox();
+            this.LProveedor = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TLPFooter = new System.Windows.Forms.TableLayoutPanel();
             this.BLimpiar = new System.Windows.Forms.Button();
@@ -156,19 +156,6 @@
             this.CbOrden.Size = new System.Drawing.Size(115, 21);
             this.CbOrden.TabIndex = 15;
             // 
-            // CbProveedor
-            // 
-            this.CbProveedor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CbProveedor.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CbProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbProveedor.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CbProveedor.FormattingEnabled = true;
-            this.CbProveedor.Location = new System.Drawing.Point(255, 34);
-            this.CbProveedor.Name = "CbProveedor";
-            this.CbProveedor.Size = new System.Drawing.Size(120, 21);
-            this.CbProveedor.TabIndex = 11;
-            this.CbProveedor.Visible = false;
-            // 
             // lblMenorUmbral
             // 
             this.lblMenorUmbral.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -190,42 +177,6 @@
             this.label8.Size = new System.Drawing.Size(92, 25);
             this.label8.TabIndex = 5;
             this.label8.Text = "StockMax";
-            // 
-            // LProveedor
-            // 
-            this.LProveedor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LProveedor.AutoSize = true;
-            this.LProveedor.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LProveedor.Location = new System.Drawing.Point(265, 3);
-            this.LProveedor.Name = "LProveedor";
-            this.LProveedor.Size = new System.Drawing.Size(99, 25);
-            this.LProveedor.TabIndex = 3;
-            this.LProveedor.Text = "Proveedor";
-            this.LProveedor.Visible = false;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Cursor = System.Windows.Forms.Cursors.SizeNESW;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(405, 3);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 25);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Familia";
-            // 
-            // CbFamilia
-            // 
-            this.CbFamilia.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CbFamilia.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CbFamilia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbFamilia.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CbFamilia.FormattingEnabled = true;
-            this.CbFamilia.Location = new System.Drawing.Point(381, 34);
-            this.CbFamilia.Name = "CbFamilia";
-            this.CbFamilia.Size = new System.Drawing.Size(120, 21);
-            this.CbFamilia.TabIndex = 1;
             // 
             // NStockMax
             // 
@@ -288,6 +239,55 @@
             this.label9.Size = new System.Drawing.Size(81, 25);
             this.label9.TabIndex = 4;
             this.label9.Text = "Nombre";
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.Cursor = System.Windows.Forms.Cursors.SizeNESW;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(405, 3);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(71, 25);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Familia";
+            // 
+            // CbFamilia
+            // 
+            this.CbFamilia.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CbFamilia.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.CbFamilia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbFamilia.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbFamilia.FormattingEnabled = true;
+            this.CbFamilia.Location = new System.Drawing.Point(381, 34);
+            this.CbFamilia.Name = "CbFamilia";
+            this.CbFamilia.Size = new System.Drawing.Size(120, 21);
+            this.CbFamilia.TabIndex = 1;
+            // 
+            // CbProveedor
+            // 
+            this.CbProveedor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CbProveedor.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.CbProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbProveedor.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbProveedor.FormattingEnabled = true;
+            this.CbProveedor.Location = new System.Drawing.Point(255, 34);
+            this.CbProveedor.Name = "CbProveedor";
+            this.CbProveedor.Size = new System.Drawing.Size(120, 21);
+            this.CbProveedor.TabIndex = 11;
+            this.CbProveedor.Visible = false;
+            // 
+            // LProveedor
+            // 
+            this.LProveedor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LProveedor.AutoSize = true;
+            this.LProveedor.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LProveedor.Location = new System.Drawing.Point(265, 3);
+            this.LProveedor.Name = "LProveedor";
+            this.LProveedor.Size = new System.Drawing.Size(99, 25);
+            this.LProveedor.TabIndex = 3;
+            this.LProveedor.Text = "Proveedor";
+            this.LProveedor.Visible = false;
             // 
             // label1
             // 
@@ -412,7 +412,6 @@
             this.DGResultados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGResultados.Size = new System.Drawing.Size(1264, 322);
             this.DGResultados.TabIndex = 0;
-            this.DGResultados.Visible = false;
             // 
             // ColumnaNombre
             // 
