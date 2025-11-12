@@ -16,6 +16,7 @@ namespace ArimaERP.Preventista
         private readonly ClassFamiliaLogica _familiaLogica = new ClassFamiliaLogica();
         private readonly ClassMarcaLogica _marcaLogica = new ClassMarcaLogica();
         private readonly ClassPedidoLogica _pedidoLogica = new ClassPedidoLogica();
+        private readonly ClassEmpleadoLogica _empleadoLogica = new ClassEmpleadoLogica();
         private readonly CultureInfo _culturaMoneda = CultureInfo.GetCultureInfo("es-AR");
         private CLIENTE _clienteSeleccionado;
         private ZONA _zonaSeleccionada;
@@ -223,7 +224,7 @@ namespace ArimaERP.Preventista
                 return;
             }
 
-            int fila = dataGridView1.Rows.Add(producto.Nombre, 1, FormatearMoneda(producto.PrecioLista));
+            int fila = dataGridView1.Rows.Add(producto.Nombre, 1, FormatearMoneda(CalcularPrecioUnitario(producto.PrecioLista)));
             var filaCarrito = dataGridView1.Rows[fila];
             filaCarrito.Tag = producto;
 
@@ -325,7 +326,7 @@ namespace ArimaERP.Preventista
                 int.TryParse(fila.Cells["Cantidad"].Value.ToString(), out cantidad);
             }
 
-            decimal total = producto.PrecioLista * cantidad;
+            decimal total = CalcularPrecioUnitario(producto.PrecioLista) * cantidad;
             fila.Cells["Total"].Value = FormatearMoneda(total);
         }
 
@@ -343,11 +344,17 @@ namespace ArimaERP.Preventista
                         int.TryParse(r.Cells["Cantidad"].Value.ToString(), out cantidad);
                     }
 
-                    return producto.PrecioLista * cantidad;
+                    return CalcularPrecioUnitario(producto.PrecioLista) * cantidad;
                 });
 
             ActualizarLabelTotal(total);
         }
+
+        private decimal CalcularPrecioUnitario(decimal precioLista)
+        {
+            return Math.Round(precioLista, 1, MidpointRounding.AwayFromZero);
+        }
+
 
         private void ActualizarLabelTotal(decimal total)
         {
@@ -425,13 +432,13 @@ namespace ArimaERP.Preventista
                 }
             }
 
-            string vendedor = UsuarioSesion.Nombre;
+            string vendedor = ObtenerVendedorParaPedido();
 
             if (string.IsNullOrWhiteSpace(vendedor))
             {
                 MessageBox.Show(
-                    "No se pudo identificar al usuario actual. Inicie sesión nuevamente.",
-                    "Usuario no válido",
+                    "No se pudo identificar un vendedor válido para el pedido. Verifique que el usuario actual esté registrado como empleado.",
+                    "Vendedor no encontrado",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
                 return;
@@ -443,7 +450,7 @@ namespace ArimaERP.Preventista
                 fecha_entrega = DateTime.Now,
                 id_cliente = _clienteSeleccionado.id_cliente,
                 id_estado = 1,
-                total = items.Sum(i => i.Producto.PrecioLista * i.Cantidad),
+                total = CalcularTotalPedido(items),
                 numero_factura = null,
                 vendedor = vendedor
             };
@@ -456,7 +463,7 @@ namespace ArimaERP.Preventista
                     ID_presentacion = item.Producto.IdPresentacion,
                     cantidad = item.Cantidad,
                     cantidad_bultos = CalcularCantidadBultos(item.Producto, item.Cantidad),
-                    precio_unitario = item.Producto.PrecioLista,
+                    precio_unitario = CalcularPrecioUnitario(item.Producto.PrecioLista),
                     descuento = 0m
                 })
                 .ToList();
@@ -500,6 +507,7 @@ namespace ArimaERP.Preventista
             }
         }
 
+
         private List<ItemCarrito> ObtenerItemsDelCarrito()
         {
             var items = new List<ItemCarrito>();
@@ -539,6 +547,39 @@ namespace ArimaERP.Preventista
                 MessageBoxIcon.Error);
         }
 
+        private string ObtenerVendedorParaPedido()
+        {
+            var posiblesUsuarios = new List<string>();
+
+            if (!string.IsNullOrWhiteSpace(UsuarioSesion.Nombre))
+            {
+                posiblesUsuarios.Add(UsuarioSesion.Nombre);
+            }
+
+            if (!string.IsNullOrWhiteSpace(_zonaSeleccionada?.preventista) &&
+                !posiblesUsuarios.Contains(_zonaSeleccionada.preventista))
+            {
+                posiblesUsuarios.Add(_zonaSeleccionada.preventista);
+            }
+
+            foreach (var usuario in posiblesUsuarios)
+            {
+                var empleado = _empleadoLogica.ObtenerEmpleadoPorNombreUsuario(usuario);
+                if (empleado != null)
+                {
+                    return empleado.nombre_usuario;
+                }
+            }
+
+            return null;
+        }
+
+        private decimal CalcularTotalPedido(IEnumerable<ItemCarrito> items)
+        {
+            decimal total = items.Sum(item => CalcularPrecioUnitario(item.Producto.PrecioLista) * item.Cantidad);
+            return Math.Round(total, 2, MidpointRounding.AwayFromZero);
+        }
+
         private class ItemCarrito
         {
             public ItemCarrito(ProductoCatalogoDto producto, int cantidad)
@@ -560,7 +601,6 @@ namespace ArimaERP.Preventista
 
             return (int)Math.Ceiling(cantidad / (decimal)producto.UnidadesPorBulto);
         }
-
 
         private void TLPFooter_Paint(object sender, PaintEventArgs e)
         {

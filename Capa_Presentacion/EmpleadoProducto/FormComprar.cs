@@ -9,14 +9,14 @@ using Capa_Logica;
 
 namespace ArimaERP.EmpleadoProducto
 {
-    public partial class FormPedido : Form
+    public partial class FormComprar : Form
     {
         private readonly ClassProductoLogica _productoLogica = new ClassProductoLogica();
         private readonly ClassFamiliaLogica _familiaLogica = new ClassFamiliaLogica();
         private readonly ClassMarcaLogica _marcaLogica = new ClassMarcaLogica();
         private readonly CultureInfo _culturaMoneda = CultureInfo.GetCultureInfo("es-AR");
 
-        public FormPedido()
+        public FormComprar()
         {
             InitializeComponent();
 

@@ -62,7 +62,7 @@ namespace ArimaERP.Preventista
             //AbrirFormEnPanel(new FormHistorialPedidos());
 
             //abrir crear pedido en panel pnlContent
-            AbrirFormEnPanel(new FormCrearPedido());
+            AbrirFormEnPanel(new FormPedido());
         }
 
         private void btnComprar_Click(object sender, EventArgs e)
