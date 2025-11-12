@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
+using System.Data.Entity.Validation;
 using Capa_Entidades;
 
 namespace Capa_Datos
@@ -66,6 +68,66 @@ namespace Capa_Datos
                 return false;
             }
         }
+
+        public bool GuardarPedidoCompleto(PEDIDO pedido, IEnumerable<DETALLE_PEDIDO> detalles, PAGO pago, pedido_pago pedidoPago)
+        {
+            try
+            {
+                using (var context = new ArimaERPEntities())
+                using (var transaction = context.Database.BeginTransaction())
+                {
+                    context.PEDIDO.Add(pedido);
+                    context.SaveChanges();
+
+                    if (detalles != null)
+                    {
+                        foreach (var detalle in detalles)
+                        {
+                            detalle.id_pedido = pedido.id_pedido;
+                            context.DETALLE_PEDIDO.Add(detalle);
+                        }
+                    }
+
+                    PAGO pagoPersistido = null;
+
+                    if (pago != null)
+                    {
+                        context.PAGO.Add(pago);
+                        context.SaveChanges();
+                        pagoPersistido = pago;
+                    }
+
+                    if (pedidoPago != null && pagoPersistido != null)
+                    {
+                        pedidoPago.id_pedido = pedido.id_pedido;
+                        pedidoPago.id_pago = pagoPersistido.id_pago;
+                        context.pedido_pago.Add(pedidoPago);
+                    }
+
+                    context.SaveChanges();
+                    transaction.Commit();
+                    return true;
+                }
+            }
+            catch (DbEntityValidationException ex)
+            {
+                ErroresValidacion.Clear();
+                foreach (var validationErrors in ex.EntityValidationErrors)
+                {
+                    foreach (var error in validationErrors.ValidationErrors)
+                    {
+                        string mensaje = $"Entidad: {validationErrors.Entry.Entity.GetType().Name}, Campo: {error.PropertyName}, Error: {error.ErrorMessage}";
+                        ErroresValidacion.Add(mensaje);
+                    }
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                ErroresValidacion.Clear();
+                ErroresValidacion.Add(ex.Message);
+                return false;
+            }
+        }
     }
 }
-

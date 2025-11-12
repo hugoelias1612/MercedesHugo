@@ -1,6 +1,6 @@
 ﻿namespace ArimaERP.EmpleadoProducto
 {
-    partial class FormComprar
+    partial class FormPedido
     {
         /// <summary>
         /// Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace ArimaERP.Preventista
 {
-    partial class FormComprar
+    partial class FormPedido
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.TLPBase = new System.Windows.Forms.TableLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.labelTitulo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.cbxProveedor = new System.Windows.Forms.ComboBox();
@@ -54,16 +56,19 @@
             this.gbxCarrito = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCarrito = new System.Windows.Forms.Button();
             this.TLPFooter = new System.Windows.Forms.TableLayoutPanel();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnElegir = new System.Windows.Forms.Button();
             this.TLPBase.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.TLPCentral.SuspendLayout();
@@ -79,28 +84,53 @@
             // 
             this.TLPBase.ColumnCount = 1;
             this.TLPBase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TLPBase.Controls.Add(this.groupBox1, 0, 0);
-            this.TLPBase.Controls.Add(this.TLPCentral, 0, 1);
-            this.TLPBase.Controls.Add(this.TLPFooter, 0, 2);
+            this.TLPBase.Controls.Add(this.panel2, 0, 0);
+            this.TLPBase.Controls.Add(this.groupBox1, 0, 1);
+            this.TLPBase.Controls.Add(this.TLPCentral, 0, 2);
+            this.TLPBase.Controls.Add(this.TLPFooter, 0, 3);
+            this.TLPBase.Controls.Add(this.panel1, 0, 4);
             this.TLPBase.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TLPBase.Location = new System.Drawing.Point(0, 0);
             this.TLPBase.Margin = new System.Windows.Forms.Padding(0);
             this.TLPBase.Name = "TLPBase";
-            this.TLPBase.RowCount = 3;
+            this.TLPBase.RowCount = 5;
+            this.TLPBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.TLPBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.TLPBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TLPBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78F));
-            this.TLPBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TLPBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.TLPBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.TLPBase.Size = new System.Drawing.Size(1264, 569);
             this.TLPBase.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel2.Controls.Add(this.labelTitulo);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1264, 60);
+            this.panel2.TabIndex = 4;
+            // 
+            // labelTitulo
+            // 
+            this.labelTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTitulo.AutoSize = true;
+            this.labelTitulo.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitulo.Location = new System.Drawing.Point(513, 9);
+            this.labelTitulo.Name = "labelTitulo";
+            this.labelTitulo.Size = new System.Drawing.Size(205, 45);
+            this.labelTitulo.TabIndex = 8;
+            this.labelTitulo.Text = "Crear pedido";
+            this.labelTitulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.tableLayoutPanel1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Location = new System.Drawing.Point(3, 63);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1258, 114);
             this.groupBox1.TabIndex = 0;
@@ -126,9 +156,10 @@
             this.tableLayoutPanel1.Controls.Add(this.lblMarca, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnFiltrar, 6, 0);
             this.tableLayoutPanel1.Controls.Add(this.button4, 6, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button5, 5, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txtBuscar, 4, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblBuscar, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblBuscar, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtBuscar, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button5, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnElegir, 3, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 31);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(10);
@@ -239,7 +270,7 @@
             this.button5.BackColor = System.Drawing.Color.LightSteelBlue;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(790, 44);
+            this.button5.Location = new System.Drawing.Point(166, 44);
             this.button5.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(37, 31);
@@ -251,7 +282,7 @@
             // 
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(632, 45);
+            this.txtBuscar.Location = new System.Drawing.Point(8, 5);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(139, 29);
             this.txtBuscar.TabIndex = 17;
@@ -261,7 +292,7 @@
             this.lblBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscar.Location = new System.Drawing.Point(474, 49);
+            this.lblBuscar.Location = new System.Drawing.Point(6, 49);
             this.lblBuscar.Name = "lblBuscar";
             this.lblBuscar.Size = new System.Drawing.Size(143, 21);
             this.lblBuscar.TabIndex = 16;
@@ -275,12 +306,12 @@
             this.TLPCentral.Controls.Add(this.gbxProductos, 0, 0);
             this.TLPCentral.Controls.Add(this.gbxCarrito, 1, 0);
             this.TLPCentral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TLPCentral.Location = new System.Drawing.Point(3, 123);
+            this.TLPCentral.Location = new System.Drawing.Point(3, 183);
             this.TLPCentral.Name = "TLPCentral";
             this.TLPCentral.RowCount = 1;
             this.TLPCentral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TLPCentral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TLPCentral.Size = new System.Drawing.Size(1258, 365);
+            this.TLPCentral.Size = new System.Drawing.Size(1258, 265);
             this.TLPCentral.TabIndex = 1;
             // 
             // gbxProductos
@@ -315,9 +346,8 @@
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersWidth = 51;
-            this.dgvProductos.Size = new System.Drawing.Size(739, 273);
+            this.dgvProductos.Size = new System.Drawing.Size(739, 234);
             this.dgvProductos.TabIndex = 0;
-            this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick_1);
             // 
             // Agregar
             // 
@@ -378,10 +408,10 @@
             this.gbxCarrito.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxCarrito.Location = new System.Drawing.Point(754, 3);
             this.gbxCarrito.Name = "gbxCarrito";
-            this.gbxCarrito.Size = new System.Drawing.Size(501, 359);
+            this.gbxCarrito.Size = new System.Drawing.Size(501, 259);
             this.gbxCarrito.TabIndex = 1;
             this.gbxCarrito.TabStop = false;
-            this.gbxCarrito.Text = "Productos a vender";
+            this.gbxCarrito.Text = "Pedido";
             // 
             // tableLayoutPanel2
             // 
@@ -395,7 +425,7 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.54978F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.45022F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(495, 331);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(495, 231);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // dataGridView1
@@ -409,30 +439,8 @@
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(487, 270);
+            this.dataGridView1.Size = new System.Drawing.Size(487, 187);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // Producto
-            // 
-            this.Producto.HeaderText = "Producto";
-            this.Producto.MinimumWidth = 6;
-            this.Producto.Name = "Producto";
-            this.Producto.Width = 200;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.FillWeight = 150F;
-            this.Cantidad.HeaderText = "Cantidad a comprar";
-            this.Cantidad.MinimumWidth = 6;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Width = 130;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.MinimumWidth = 6;
-            this.Total.Name = "Total";
-            this.Total.Width = 110;
             // 
             // btnCarrito
             // 
@@ -440,11 +448,11 @@
             this.btnCarrito.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCarrito.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCarrito.Location = new System.Drawing.Point(158, 287);
+            this.btnCarrito.Location = new System.Drawing.Point(158, 196);
             this.btnCarrito.Name = "btnCarrito";
             this.btnCarrito.Size = new System.Drawing.Size(179, 32);
             this.btnCarrito.TabIndex = 22;
-            this.btnCarrito.Text = "Limipar.";
+            this.btnCarrito.Text = "Limpiar.";
             this.btnCarrito.UseVisualStyleBackColor = false;
             // 
             // TLPFooter
@@ -460,7 +468,7 @@
             this.TLPFooter.Controls.Add(this.lblTotal, 2, 0);
             this.TLPFooter.Controls.Add(this.btnCancelar, 4, 0);
             this.TLPFooter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TLPFooter.Location = new System.Drawing.Point(3, 494);
+            this.TLPFooter.Location = new System.Drawing.Point(3, 454);
             this.TLPFooter.Name = "TLPFooter";
             this.TLPFooter.RowCount = 2;
             this.TLPFooter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -493,7 +501,7 @@
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(191, 30);
             this.btnConfirmar.TabIndex = 11;
-            this.btnConfirmar.Text = "Confirmar productos";
+            this.btnConfirmar.Text = "Confirmar pedido";
             this.btnConfirmar.UseVisualStyleBackColor = false;
             // 
             // lblTotal
@@ -521,17 +529,64 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Visible = false;
             // 
-            // FormComprar
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 529);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1264, 40);
+            this.panel1.TabIndex = 3;
+            // 
+            // Producto
+            // 
+            this.Producto.HeaderText = "Producto";
+            this.Producto.MinimumWidth = 6;
+            this.Producto.Name = "Producto";
+            this.Producto.Width = 200;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.FillWeight = 150F;
+            this.Cantidad.HeaderText = "Cantidad a pagar";
+            this.Cantidad.MinimumWidth = 6;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.Width = 130;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.MinimumWidth = 6;
+            this.Total.Name = "Total";
+            this.Total.Width = 110;
+            // 
+            // btnElegir
+            // 
+            this.btnElegir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnElegir.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnElegir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnElegir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnElegir.Location = new System.Drawing.Point(478, 44);
+            this.btnElegir.Name = "btnElegir";
+            this.btnElegir.Size = new System.Drawing.Size(135, 31);
+            this.btnElegir.TabIndex = 23;
+            this.btnElegir.Text = "Elegir cliente";
+            this.btnElegir.UseVisualStyleBackColor = false;
+            // 
+            // FormPedido
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1264, 569);
             this.Controls.Add(this.TLPBase);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormComprar";
+            this.Name = "FormPedido";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "FormComprar";
             this.TLPBase.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -575,14 +630,18 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label labelTitulo;
         private System.Windows.Forms.DataGridViewButtonColumn Agregar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
         private System.Windows.Forms.DataGridViewTextBoxColumn Familia;
         private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
+        private System.Windows.Forms.Button btnElegir;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
     }
 }

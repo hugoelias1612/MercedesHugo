@@ -9,14 +9,14 @@ using Capa_Logica;
 
 namespace ArimaERP.Preventista
 {
-    public partial class FormComprar : Form
+    public partial class FormPedido : Form
     {
         private readonly ClassProductoLogica _productoLogica = new ClassProductoLogica();
         private readonly ClassFamiliaLogica _familiaLogica = new ClassFamiliaLogica();
         private readonly ClassMarcaLogica _marcaLogica = new ClassMarcaLogica();
         private readonly CultureInfo _culturaMoneda = CultureInfo.GetCultureInfo("es-AR");
 
-        public FormComprar()
+        public FormPedido()
         {
             InitializeComponent();
 
@@ -461,11 +461,6 @@ namespace ArimaERP.Preventista
 
         private void TLPFooter_Paint(object sender, PaintEventArgs e)
         {
-        }
-
-        private void dgvProductos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

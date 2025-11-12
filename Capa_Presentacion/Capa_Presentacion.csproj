@@ -252,17 +252,11 @@
     <Compile Include="Preventista\FormAltaBajaCliente.Designer.cs">
       <DependentUpon>FormAltaBajaCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Preventista\FormComprar.cs">
+    <Compile Include="Preventista\FormPedido.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Preventista\FormComprar.Designer.cs">
-      <DependentUpon>FormComprar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Preventista\FormCrearPedido.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Preventista\FormCrearPedido.Designer.cs">
-      <DependentUpon>FormCrearPedido.cs</DependentUpon>
+    <Compile Include="Preventista\FormPedido.Designer.cs">
+      <DependentUpon>FormPedido.cs</DependentUpon>
     </Compile>
     <Compile Include="Preventista\FormHistorialPedidos.cs">
       <SubType>Form</SubType>
@@ -392,11 +386,8 @@
     <EmbeddedResource Include="Preventista\FormAltaBajaCliente.resx">
       <DependentUpon>FormAltaBajaCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Preventista\FormComprar.resx">
-      <DependentUpon>FormComprar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Preventista\FormCrearPedido.resx">
-      <DependentUpon>FormCrearPedido.cs</DependentUpon>
+    <EmbeddedResource Include="Preventista\FormPedido.resx">
+      <DependentUpon>FormPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Preventista\FormHistorialPedidos.resx">
       <DependentUpon>FormHistorialPedidos.cs</DependentUpon>

@@ -66,5 +66,11 @@ namespace Capa_Logica
                 return false;
             }
         }
-    } 
-}
+
+        public bool GuardarPedidoCompleto(PEDIDO nuevoPedido, IEnumerable<DETALLE_PEDIDO> detalles, PAGO pago, pedido_pago pedidoPago)
+        {
+            return pedido.GuardarPedidoCompleto(nuevoPedido, detalles, pago, pedidoPago);
+        }
+    }
+} 
+
