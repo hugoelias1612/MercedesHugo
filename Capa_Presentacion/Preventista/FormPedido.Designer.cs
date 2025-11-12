@@ -67,6 +67,7 @@
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnElegir = new System.Windows.Forms.Button();
+            this.lblClienteSeleccionado = new System.Windows.Forms.Label();
             this.TLPBase.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -160,6 +161,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txtBuscar, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.button5, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnElegir, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblClienteSeleccionado, 4, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 31);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(10);
@@ -277,6 +279,7 @@
             this.button5.TabIndex = 22;
             this.button5.Text = "🔍";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Visible = false;
             // 
             // txtBuscar
             // 
@@ -286,6 +289,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(139, 29);
             this.txtBuscar.TabIndex = 17;
+            this.txtBuscar.Visible = false;
             // 
             // lblBuscar
             // 
@@ -297,6 +301,7 @@
             this.lblBuscar.Size = new System.Drawing.Size(143, 21);
             this.lblBuscar.TabIndex = 16;
             this.lblBuscar.Text = "Buscar por nombre";
+            this.lblBuscar.Visible = false;
             // 
             // TLPCentral
             // 
@@ -574,6 +579,18 @@
             this.btnElegir.Text = "Elegir cliente";
             this.btnElegir.UseVisualStyleBackColor = false;
             // 
+            // lblClienteSeleccionado
+            // 
+            this.lblClienteSeleccionado.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblClienteSeleccionado.AutoSize = true;
+            this.lblClienteSeleccionado.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClienteSeleccionado.Location = new System.Drawing.Point(695, 49);
+            this.lblClienteSeleccionado.Name = "lblClienteSeleccionado";
+            this.lblClienteSeleccionado.Size = new System.Drawing.Size(13, 21);
+            this.lblClienteSeleccionado.TabIndex = 24;
+            this.lblClienteSeleccionado.Text = ".";
+            this.lblClienteSeleccionado.Visible = false;
+            // 
             // FormPedido
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -643,5 +660,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.Label lblClienteSeleccionado;
     }
 }

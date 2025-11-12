@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
+using ArimaERP;
 using Capa_Entidades;
 using Capa_Entidades.DTOs;
 using Capa_Logica;
@@ -14,7 +15,10 @@ namespace ArimaERP.Preventista
         private readonly ClassProductoLogica _productoLogica = new ClassProductoLogica();
         private readonly ClassFamiliaLogica _familiaLogica = new ClassFamiliaLogica();
         private readonly ClassMarcaLogica _marcaLogica = new ClassMarcaLogica();
+        private readonly ClassPedidoLogica _pedidoLogica = new ClassPedidoLogica();
         private readonly CultureInfo _culturaMoneda = CultureInfo.GetCultureInfo("es-AR");
+        private CLIENTE _clienteSeleccionado;
+        private ZONA _zonaSeleccionada;
 
         public FormPedido()
         {
@@ -26,6 +30,7 @@ namespace ArimaERP.Preventista
             button5.Click += BtnBuscarPorNombre_Click;
             btnCarrito.Click += BtnCarrito_Click;
             btnConfirmar.Click += BtnConfirmar_Click;
+            btnElegir.Click += BtnElegir_Click;
             dgvProductos.CellContentClick += DgvProductos_CellContentClick;
             dataGridView1.CellEndEdit += DataGridView1_CellEndEdit;
             dataGridView1.CellValidating += DataGridView1_CellValidating;
@@ -55,7 +60,21 @@ namespace ArimaERP.Preventista
             CargarFamilias();
             CargarMarcas();
             ActualizarLabelTotal(0m);
+            LimpiarClienteSeleccionado();
             CargarProductos();
+        }
+
+        private void BtnElegir_Click(object sender, EventArgs e)
+        {
+            using (var modal = new ModalSeleccionarCliente())
+            {
+                if (modal.ShowDialog(this) == DialogResult.OK)
+                {
+                    _clienteSeleccionado = modal.ClienteSeleccionado;
+                    _zonaSeleccionada = modal.ZonaSeleccionada;
+                    ActualizarLabelCliente();
+                }
+            }
         }
 
         private void CargarFamilias()
@@ -204,7 +223,7 @@ namespace ArimaERP.Preventista
                 return;
             }
 
-            int fila = dataGridView1.Rows.Add(producto.Nombre, 0, FormatearMoneda(0m));
+            int fila = dataGridView1.Rows.Add(producto.Nombre, 1, FormatearMoneda(producto.PrecioLista));
             var filaCarrito = dataGridView1.Rows[fila];
             filaCarrito.Tag = producto;
 
@@ -335,6 +354,34 @@ namespace ArimaERP.Preventista
             lblTotal.Text = $"Total: {FormatearMoneda(total)}";
         }
 
+        private void ActualizarLabelCliente()
+        {
+            if (_clienteSeleccionado == null)
+            {
+                lblClienteSeleccionado.Text = "Cliente: Ninguno";
+                return;
+            }
+
+            string nombreCompleto = $"{_clienteSeleccionado.nombre} {_clienteSeleccionado.apellido}".Trim();
+            string zonaDescripcion = _zonaSeleccionada?.nombre;
+
+            if (!string.IsNullOrWhiteSpace(zonaDescripcion))
+            {
+                lblClienteSeleccionado.Text = $"Cliente: {nombreCompleto} (Zona: {zonaDescripcion})";
+            }
+            else
+            {
+                lblClienteSeleccionado.Text = $"Cliente: {nombreCompleto}";
+            }
+        }
+
+        private void LimpiarClienteSeleccionado()
+        {
+            _clienteSeleccionado = null;
+            _zonaSeleccionada = null;
+            ActualizarLabelCliente();
+        }
+
         private string FormatearMoneda(decimal valor)
         {
             return valor.ToString("C2", _culturaMoneda);
@@ -342,13 +389,23 @@ namespace ArimaERP.Preventista
 
         private void BtnConfirmar_Click(object sender, EventArgs e)
         {
+            if (_clienteSeleccionado == null)
+            {
+                MessageBox.Show(
+                    "Debe seleccionar un cliente antes de confirmar el pedido.",
+                    "Cliente no seleccionado",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+
             var items = ObtenerItemsDelCarrito();
 
             if (!items.Any())
             {
                 MessageBox.Show(
-                    "Debe agregar al menos un producto al carrito para confirmar la compra.",
-                    "Carrito vacío",
+                    "Debe agregar al menos un producto al pedido.",
+                    "Pedido vacío",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
                 return;
@@ -359,7 +416,7 @@ namespace ArimaERP.Preventista
                 if (item.Cantidad <= 0)
                 {
                     MessageBox.Show(
-                        "La cantidad a comprar de un producto no puede ser cero.",
+                        "La cantidad de cada producto debe ser mayor a cero.",
                         "Cantidad inválida",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
@@ -368,23 +425,58 @@ namespace ArimaERP.Preventista
                 }
             }
 
-            foreach (var item in items)
+            string vendedor = UsuarioSesion.Nombre;
+
+            if (string.IsNullOrWhiteSpace(vendedor))
             {
-                bool resultado = _productoLogica.AjustarStock(item.Producto.IdProducto, item.Producto.IdPresentacion, item.Cantidad);
-                if (!resultado)
+                MessageBox.Show(
+                    "No se pudo identificar al usuario actual. Inicie sesión nuevamente.",
+                    "Usuario no válido",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
+
+            var pedido = new PEDIDO
+            {
+                fecha_creacion = DateTime.Now,
+                fecha_entrega = DateTime.Now,
+                id_cliente = _clienteSeleccionado.id_cliente,
+                id_estado = 1,
+                total = items.Sum(i => i.Producto.PrecioLista * i.Cantidad),
+                numero_factura = null,
+                vendedor = vendedor
+            };
+
+            var detalles = items
+                .Select((item, index) => new DETALLE_PEDIDO
                 {
-                    MostrarErrores("Error al actualizar el stock", _productoLogica.ErroresValidacion);
-                    return;
-                }
+                    ID_detalle_pedido = index + 1,
+                    id_producto = item.Producto.IdProducto,
+                    ID_presentacion = item.Producto.IdPresentacion,
+                    cantidad = item.Cantidad,
+                    cantidad_bultos = CalcularCantidadBultos(item.Producto, item.Cantidad),
+                    precio_unitario = item.Producto.PrecioLista,
+                    descuento = 0m
+                })
+                .ToList();
+
+            bool guardado = _pedidoLogica.GuardarPedidoCompleto(pedido, detalles, null, null);
+
+            if (!guardado)
+            {
+                MostrarErrores("Error al guardar el pedido", _pedidoLogica.ErroresValidacion);
+                return;
             }
 
             MessageBox.Show(
-                "La compra se confirmó correctamente y el stock fue actualizado.",
-                "Compra confirmada",
+                $"El pedido N° {pedido.id_pedido} se creó correctamente.",
+                "Pedido confirmado",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
 
             BtnCarrito_Click(this, EventArgs.Empty);
+            LimpiarClienteSeleccionado();
             CargarProductos();
         }
 
@@ -458,6 +550,17 @@ namespace ArimaERP.Preventista
             public ProductoCatalogoDto Producto { get; }
             public int Cantidad { get; }
         }
+
+        private int? CalcularCantidadBultos(ProductoCatalogoDto producto, int cantidad)
+        {
+            if (producto == null || producto.UnidadesPorBulto <= 0 || cantidad <= 0)
+            {
+                return null;
+            }
+
+            return (int)Math.Ceiling(cantidad / (decimal)producto.UnidadesPorBulto);
+        }
+
 
         private void TLPFooter_Paint(object sender, PaintEventArgs e)
         {
